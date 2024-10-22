@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Estrutura from '../Estrutura';
 import './PaginaCurso6.css';
 import eIcon from '../assets/eIcon.png'; 
 import portugueseIcon from '../assets/pIcon.png'; 
 import volumeReduzidoIcon from '../assets/volumeReduzido.png'; 
+import vSquare from '../assets/vSquare.png'; // Imagem para resposta correta
+import xSquare from '../assets/xSquare.png'; // Imagem para resposta incorreta
 import e1 from './assets/e1.mp3';
 import e2 from './assets/e2.mp3';
 import e3 from './assets/e3.mp3';
@@ -47,6 +49,8 @@ const audios = {
 
 function PaginaCurso6() {
     const navigate = useNavigate();
+    const location = useLocation(); // Obtém as informações da localização
+    const { respostas } = location.state || { respostas: {} }; // Desestrutura as respostas
     const [isSpeedReduced, setIsSpeedReduced] = useState(false);
     const [playingAudio, setPlayingAudio] = useState(null); 
 
@@ -59,7 +63,6 @@ function PaginaCurso6() {
     };
 
     const playAudio = (index, language) => {
-        
         if (playingAudio) {
             playingAudio.pause();
             playingAudio.currentTime = 0; 
@@ -69,7 +72,6 @@ function PaginaCurso6() {
         audioToPlay.play();
         setPlayingAudio(audioToPlay); 
 
-        
         audioToPlay.onended = () => {
             setPlayingAudio(null);
         };
@@ -84,41 +86,56 @@ function PaginaCurso6() {
         setIsSpeedReduced(!isSpeedReduced);
     };
 
+    // Respostas corretas
+    const respostasCorretas = [
+        'There is a bird in the nest',
+        "There aren't any clouds in the sky",
+        'There are three books on the shelf',
+        "There aren't many people at the party",
+        'There is a pencil on the table',
+        'There is a couch in the living room',
+        "There isn't any milk in the fridge",
+        "There isn't a grocery store in this neighborhood",
+    ];
+
     return (
         <Estrutura>
             <div className="respostas-container">
                 <h2>Answers</h2>
+                <h3>Para reduzir a velocidade da reprodução para 0.75x, clique no </h3>
+                <img src={volumeReduzidoIcon} className='iconTitle' />
                 <div className="respostas-lista">
-                    {[
-                        'There is a bird in the nest.',
-                        "There aren't any clouds in the sky.",
-                        'There are three books on the shelf.',
-                        "There aren't many people at the party.",
-                        'There is a pencil on the table.',
-                        'There is a couch in the living room.',
-                        "There isn't any milk in the fridge.",
-                        "There isn't a grocery store in this neighborhood.",
-                    ].map((resposta, index) => (
+                    {respostasCorretas.map((resposta, index) => (
                         <div key={index} className="resposta-item">
-                            {resposta}
+                            {respostas[index] ? respostas[index].join(' ') : ''} {/* Exibe as respostas do usuário */}
+                            {/* Lógica para exibir as imagens corretas ou incorretas */}
                             <img
-                                className={`englishAudio ${playingAudio === audios.english[index] ? 'pulse' : ''}`} 
-                                src={eIcon}
-                                alt="Play English Audio"
-                                onClick={() => playAudio(index, 'english')}
+                                src={respostas[index] && respostas[index].join(' ') === resposta ? vSquare : xSquare}
+                                alt={respostas[index] && respostas[index].join(' ') === resposta ? 'Correct' : 'Incorrect'}
+                                className={`resposta-status ${respostas[index] && respostas[index].join(' ') === resposta ? 'correta' : 'incorreta'}`} // Adiciona classe para correto/incorreto
                             />
-                            <img
-                                className={`portugueseAudio ${playingAudio === audios.portuguese[index] ? 'pulse' : ''}`} 
-                                src={portugueseIcon}
-                                alt="Play Portuguese Audio"
-                                onClick={() => playAudio(index, 'portuguese')}
-                            />
-                            <img
-                                className="volumeReduzido"
-                                src={volumeReduzidoIcon}
-                                alt="Toggle Speed"
-                                onClick={reduzirVelocidade}
-                            />
+                            {respostas[index] && respostas[index].join(' ') === resposta && ( // Ícones de áudio aparecem apenas se a resposta estiver correta
+                                <>
+                                    <img
+                                        className={`englishAudio ${playingAudio === audios.english[index] ? 'pulse' : ''}`} 
+                                        src={eIcon}
+                                        alt="Play English Audio"
+                                        onClick={() => playAudio(index, 'english')}
+                                    />
+                                    <img
+                                        className={`portugueseAudio ${playingAudio === audios.portuguese[index] ? 'pulse' : ''}`} 
+                                        src={portugueseIcon}
+                                        alt="Play Portuguese Audio"
+                                        onClick={() => playAudio(index, 'portuguese')}
+                                    />
+                                    <img
+                                        className="volumeReduzido"
+                                        src={volumeReduzidoIcon}
+                                        alt="Toggle Speed"
+                                        onClick={reduzirVelocidade}
+                                    />
+                                </>
+                            )}
                         </div>
                     ))}
                 </div>

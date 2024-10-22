@@ -16,7 +16,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename='words-worlds'>
+    <Router>
       <Routes>
         <Route path="/" element={<Navigate to="/pagina/1" />} />
 

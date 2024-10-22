@@ -15,6 +15,7 @@ import audioB from './assets/audioB.mp3';
 import audioC from './assets/audioC.mp3';
 import audioD from './assets/audioD.mp3';
 import audioE from './assets/audioE.mp3';
+import volumeReduzidoIcon from '../assets/volumeReduzido.png';
 
 const PaginaCurso8 = () => {
     const [inputValues, setInputValues] = useState(['', '', '', '', '']); // Inicializa os inputs vazios
@@ -22,7 +23,7 @@ const PaginaCurso8 = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentAudio, setCurrentAudio] = useState(null);
     const [pulsingAudioIndex, setPulsingAudioIndex] = useState(null); // Novo estado para rastrear qual áudio está pulsando
-
+    const [isSpeedReduced, setIsSpeedReduced] = useState(false);
     const navigate = useNavigate();
 
     const irParaPaginaAnterior = () => {
@@ -76,18 +77,33 @@ const PaginaCurso8 = () => {
         if (currentAudio) {
             currentAudio.pause(); // Para o áudio atual, se houver
         }
-
+    
         const audio = new Audio(audioFiles[index]); // Cria uma nova instância de áudio
+    
+        // Define a velocidade do áudio com base na velocidade atual (normal ou lenta)
+        audio.playbackRate = isSpeedReduced ? 0.5 : 1; // Se 'isSpeedReduced' for true, fica lento (0.5), senão, normal (1)
+        
         setCurrentAudio(audio);
         setIsPlaying(true);
         setPulsingAudioIndex(index); // Define qual áudio está pulsando
-
+    
         audio.play();
         audio.onended = () => {
             setIsPlaying(false); // Reseta o estado quando o áudio terminar
             setPulsingAudioIndex(null); // Remove o pulso após o término
         };
     };
+    
+    // Função para alternar a velocidade
+    const reduzirVelocidade = () => {
+        setIsSpeedReduced((prev) => !prev); // Alterna o estado de 'isSpeedReduced'
+        
+        // Se um áudio estiver tocando, ajuste sua velocidade imediatamente
+        if (currentAudio) {
+            currentAudio.playbackRate = !isSpeedReduced ? 0.5 : 1; // Se a velocidade não estiver reduzida, reduz para 0.5x, caso contrário, volta para 1x
+        }
+    };
+    
 
     return (
         <Estrutura>
@@ -156,56 +172,87 @@ const PaginaCurso8 = () => {
                         <p onClick={() => handleSentenceClick("She is drinking coffee.")} style={{ cursor: 'pointer' }}>
                             A) She is drinking coffee.
                         </p>
-                        <img 
-                            src={eIcon} 
-                            alt="Audio Icon" 
+                        <img
+                            src={eIcon}
+                            alt="Audio Icon"
                             className={`audio-icon-1 ${pulsingAudioIndex === 0 ? 'pulse' : ''}`} // Atualizado
-                            onClick={() => handleAudioClick(0)} 
+                            onClick={() => handleAudioClick(0)}
                         />
                     </div>
                     <div className="sentence">
                         <p onClick={() => handleSentenceClick("They are playing basketball.")} style={{ cursor: 'pointer' }}>
                             B) They are playing basketball.
                         </p>
-                        <img 
-                            src={eIcon} 
-                            alt="Audio Icon" 
+                        <img
+                            src={eIcon}
+                            alt="Audio Icon"
                             className={`audio-icon-2 ${pulsingAudioIndex === 1 ? 'pulse' : ''}`} // Atualizado
-                            onClick={() => handleAudioClick(1)} 
+                            onClick={() => handleAudioClick(1)}
                         />
                     </div>
                     <div className="sentence">
                         <p onClick={() => handleSentenceClick("The dog is sleeping on the floor.")} style={{ cursor: 'pointer' }}>
                             C) The dog is sleeping on the floor.
                         </p>
-                        <img 
-                            src={eIcon} 
-                            alt="Audio Icon" 
+                        <img
+                            src={eIcon}
+                            alt="Audio Icon"
                             className={`audio-icon-3 ${pulsingAudioIndex === 2 ? 'pulse' : ''}`} // Atualizado
-                            onClick={() => handleAudioClick(2)} 
+                            onClick={() => handleAudioClick(2)}
                         />
                     </div>
                     <div className="sentence">
                         <p onClick={() => handleSentenceClick("He is writing a letter.")} style={{ cursor: 'pointer' }}>
                             D) He is writing a letter.
                         </p>
-                        <img 
-                            src={eIcon} 
-                            alt="Audio Icon" 
+                        <img
+                            src={eIcon}
+                            alt="Audio Icon"
                             className={`audio-icon-4 ${pulsingAudioIndex === 3 ? 'pulse' : ''}`} // Atualizado
-                            onClick={() => handleAudioClick(3)} 
+                            onClick={() => handleAudioClick(3)}
+                        />
+                        <img
+                            src={volumeReduzidoIcon}
+                            alt="Toggle Speed"
+                            className="volumeR1"
+                            onClick={reduzirVelocidade}
+                        />
+                        <img
+                            src={volumeReduzidoIcon}
+                            alt="Toggle Speed"
+                            className="volumeR2"
+                            onClick={reduzirVelocidade}
+                        />
+                        <img
+                            src={volumeReduzidoIcon}
+                            alt="Toggle Speed"
+                            className="volumeR3"
+                            onClick={reduzirVelocidade}
+                        />
+                        <img
+                            src={volumeReduzidoIcon}
+                            alt="Toggle Speed"
+                            className="volumeR4"
+                            onClick={reduzirVelocidade}
+                        />
+                          <img
+                            src={volumeReduzidoIcon}
+                            alt="Toggle Speed"
+                            className="volumeR5"
+                            onClick={reduzirVelocidade}
                         />
                     </div>
                     <div className="sentence">
                         <p onClick={() => handleSentenceClick("We are cooking dinner.")} style={{ cursor: 'pointer' }}>
                             E) We are cooking dinner.
                         </p>
-                        <img 
-                            src={eIcon} 
-                            alt="Audio Icon" 
+                        <img
+                            src={eIcon}
+                            alt="Audio Icon"
                             className={`audio-icon-5 ${pulsingAudioIndex === 4 ? 'pulse' : ''}`} // Atualizado
-                            onClick={() => handleAudioClick(4)} 
+                            onClick={() => handleAudioClick(4)}
                         />
+                    
                     </div>
                 </div>
 
@@ -214,8 +261,8 @@ const PaginaCurso8 = () => {
                 </button>
 
                 <div className="botoes-navegacao">
-                    <button className="anterior-button" id='anterior8'onClick={irParaPaginaAnterior}>Anterior</button>
-                    <button className="proximo-button" id='proximo8'onClick={irParaProximaPagina}>Próximo</button>
+                    <button className="anterior-button" id='anterior8' onClick={irParaPaginaAnterior}>Anterior</button>
+                    <button className="proximo-button" id='proximo8' onClick={irParaProximaPagina}>Próximo</button>
                 </div>
 
                 <div className="marcador-pagina">

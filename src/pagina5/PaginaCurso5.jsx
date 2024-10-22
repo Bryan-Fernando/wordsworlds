@@ -16,14 +16,14 @@ const shuffleArray = (array) => {
 
 function PaginaCurso5() {
     const navigate = useNavigate();
-
     const [respostas, setRespostas] = useState({});
     const [frasesEmbaralhadas, setFrasesEmbaralhadas] = useState({});
+    const [palavrasClicadas, setPalavrasClicadas] = useState({}); // Estado para controle individual de palavras
 
     const respostasCorretas = [
         ['There is', 'a bird', 'in the nest'],
         ["There aren't", 'any clouds', 'in the sky'],
-        ['There are', 'three books', 'in the shelf'],
+        ['There are', 'three books', 'on the shelf'],
         ["There aren't", 'many people', 'at the party'],
         ['There is', 'a pencil', 'on the table'],
         ['There is', 'a couch', 'in the living room'],
@@ -50,20 +50,26 @@ function PaginaCurso5() {
     const handleWordClick = (fraseIndex, word) => {
         setRespostas((prev) => {
             const palavrasAtuais = prev[fraseIndex] || [];
-            
             const isFirstWord = palavrasAtuais.length === 0;
-
             const palavraFormatada = formatarPalavra(word, isFirstWord);
 
+            // Verifica se a palavra já está nas respostas
             if (palavrasAtuais.includes(palavraFormatada)) {
-                return prev; 
+                return prev; // Não faz nada se a palavra já estiver
             }
 
+            // Adiciona a palavra se ela não estiver nas respostas
             return {
                 ...prev,
                 [fraseIndex]: [...palavrasAtuais, palavraFormatada],
             };
         });
+
+        // Atualiza o estado das palavras clicadas
+        setPalavrasClicadas((prev) => ({
+            ...prev,
+            [`${fraseIndex}-${word}`]: true, // Define como clicada a palavra específica
+        }));
     };
 
     const handleChipClick = (fraseIndex, word) => {
@@ -81,7 +87,7 @@ function PaginaCurso5() {
     }
     
     const irParaProximaPagina = () => {
-        navigate('/pagina/6'); 
+        navigate('/pagina/6', { state: { respostas } }); // Passa as respostas
     };
     
     return (
@@ -98,7 +104,7 @@ function PaginaCurso5() {
                                     {frasesEmbaralhadas[fraseIndex] && frasesEmbaralhadas[fraseIndex].map((word, wordIndex) => (
                                         <div
                                             key={wordIndex}
-                                            className="word"
+                                            className={`word ${respostas[fraseIndex]?.includes(formatarPalavra(word, true)) ? 'disabled' : ''} ${palavrasClicadas[`${fraseIndex}-${word}`] ? 'clicada' : ''}`}
                                             onClick={() => handleWordClick(fraseIndex, word)}
                                         >
                                             {word}
@@ -113,7 +119,7 @@ function PaginaCurso5() {
                                     ))}
                                 </div>
                             </div>
-                        ))}
+                        ))} 
                     </div>
 
                     <div>
@@ -122,7 +128,7 @@ function PaginaCurso5() {
                     </div>
 
                     <button className="check-button" id='check5' onClick={irParaProximaPagina}>Check</button>
-                    <button className="anterior-button-p5" id='anterior5'onClick={irParaPaginaAnterior}>Anterior</button>
+                    <button className="anterior-button-p5" id='anterior5' onClick={irParaPaginaAnterior}>Anterior</button>
                 </div>
                 <div className="marcador-pagina">
                     <strong>5</strong>

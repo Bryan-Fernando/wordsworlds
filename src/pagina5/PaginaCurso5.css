@@ -175,3 +175,12 @@ h2 {
     top: 1810px;
     left: 1390px;
 }
+
+.word.disabled {
+    pointer-events: none; 
+    opacity: 0.5;
+}
+
+.word.clicada {
+    opacity: 0.5; /* Ajuste a opacidade conforme necessário */
+}

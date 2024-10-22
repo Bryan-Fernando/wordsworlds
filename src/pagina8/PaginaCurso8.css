@@ -77,6 +77,7 @@
     left: 120px; 
     text-align: left;
     color: black;
+    font-weight: 600;
 }
 
 .check-button {
@@ -131,4 +132,44 @@
     position: absolute;
     top: 160px;
     left: -10px;
+}
+
+.volumeR1{
+    position: absolute;
+    height: 40px;
+    cursor: pointer;
+    left: 580px;
+    top: 55px;
+}
+
+.volumeR2{
+    position: absolute;
+    height: 40px;
+    cursor: pointer;
+    left: 580px;
+    top: 95px;
+}
+
+.volumeR3{
+    position: absolute;
+    height: 40px;
+    cursor: pointer;
+    left: 580px;
+    top: 135px;
+}
+
+.volumeR4{
+    position: absolute;
+    height: 40px;
+    cursor: pointer;
+    left: 580px;
+    top: 175px;
+}
+
+.volumeR5{
+    position: absolute;
+    height: 40px;
+    cursor: pointer;
+    left: 580px;
+    top: 215px;
 }

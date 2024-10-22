@@ -60,42 +60,37 @@ function PaginaCurso7() {
         audioRef.current.play();
     };
 
-    const gravarAudio = async (setRecordedAudio, audioRef, setGravando, audioToPlay, setAnimandoMegafone) => {
+    const gravarAudio = async (setRecordedAudio, audioRef, setGravando) => {
         try {
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
             const mediaRecorder = new MediaRecorder(stream);
-
+    
             const audioChunks = [];
             setGravando(true);
-
+    
             mediaRecorder.ondataavailable = (event) => {
                 audioChunks.push(event.data);
             };
-
+    
             mediaRecorder.onstop = () => {
                 const audioBlob = new Blob(audioChunks, { type: 'audio/mp3' });
                 const audioUrl = URL.createObjectURL(audioBlob);
                 setRecordedAudio(audioUrl);
                 audioRef.current.src = audioUrl;
                 setGravando(false);
-
-                // Apenas toque o áudio se não for o B2
-                if (audioToPlay !== null) {
-                    tocarAudio(audioToPlay);
-                }
             };
-
+    
             mediaRecorder.start();
-
+    
             setTimeout(() => {
                 mediaRecorder.stop();
-            }, 10000);
+            }, 20000); // Grava por 10 segundos
         } catch (error) {
             console.error('Erro ao gravar áudio:', error);
             setGravando(false);
         }
     };
-
+    
     const animarMegafone = (setAnimandoMegafone) => {
         setAnimandoMegafone(true);
         setTimeout(() => {

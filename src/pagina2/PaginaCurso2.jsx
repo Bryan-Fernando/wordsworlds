@@ -39,10 +39,10 @@ function PaginaCurso1() {
                                 <td className="tabelaIntroducao"></td>
                                 <td className="adverbio"></td>
                                 <td className="sujeito">I</td>
-                                <td className="verboAuxiliar">ain't</td>
-                                <td className="adverbio2"></td>
+                                <td className="verboAuxiliar">am</td>
+                                <td className="adverbio2">not</td>
                                 <td className="verbo"></td>
-                                <td className="objetivoComplemento"></td>
+                                <td className="objetivoComplemento">years old</td>
                                 <td className="place"></td>
                                 <td className="time"></td>
                                 <td className="tresPontos"></td>
@@ -63,10 +63,10 @@ function PaginaCurso1() {
                             <td className="tabelaIntroducao"></td>
                                 <td className="adverbio"></td>
                                 <td className="sujeito">I</td>
-                                <td className="verboAuxiliar">am</td>
-                                <td className="adverbio2">not</td>
+                                <td className="verboAuxiliar">ain't</td>
+                                <td className="adverbio2"></td>
                                 <td className="verbo"></td>
-                                <td className="objetivoComplemento">years old</td>
+                                <td className="objetivoComplemento"></td>
                                 <td className="place"></td>
                                 <td className="time"></td>
                                 <td className="tresPontos"></td>

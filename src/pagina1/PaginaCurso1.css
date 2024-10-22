@@ -166,7 +166,7 @@ th{
     padding: 8px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 20px !important;
     font-weight: bold;
     color: black;
     background-color: #f9f9f9; 
