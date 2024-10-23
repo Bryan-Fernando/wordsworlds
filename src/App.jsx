@@ -18,7 +18,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/wordsworlds" element={<Navigate to="/pagina/1" />} />
+        <Route path="/" element={<Navigate to="/pagina/1" />} />
 
         <Route path="/pagina/1" element={<PaginaCurso1 />} />
         <Route path="/pagina/2" element={<PaginaCurso2 />} />
