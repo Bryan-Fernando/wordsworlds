@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? '/wordsworlds/' : '/', 
+  base: '/wordsworlds/',  // isso garante que os caminhos estarão corretos para o GitHub Pages
 });

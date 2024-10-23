@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import PaginaCurso1 from './pagina1/PaginaCurso1';
 import PaginaCurso2 from './pagina2/PaginaCurso2';
 import PaginaCurso3 from './pagina3/PaginaCurso3';
