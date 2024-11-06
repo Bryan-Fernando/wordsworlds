@@ -129,6 +129,7 @@ function PaginaCurso5() {
 
                     <button className="check-button" id='check5' onClick={irParaProximaPagina}>Check</button>
                     <button className="anterior-button-p5" id='anterior5' onClick={irParaPaginaAnterior}>Anterior</button>
+                    <button className="proximo-button-p5" id='anterior5' onClick={irParaProximaPagina}>Próximo</button>
                 </div>
                 <div className="marcador-pagina">
                     <strong>5</strong>

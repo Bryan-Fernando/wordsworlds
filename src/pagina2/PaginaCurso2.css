@@ -138,20 +138,6 @@
     width: 150px;
 }
 
-.proximo-button-p1{
-    background-color: #A61C28;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s;
-    position: relative;
-    top: 390px;
-    right: -955px;
-}
 
 .styled-table th, .styled-table td {
     border: 1px solid #A61C28;
@@ -201,9 +187,43 @@
     background-color: #8a1720;
 }
 
+.anterior-button-p4{
+    position: absolute;
+    top: 150px;
+    left: 1100px;
+}
+
 .anterior-button-p2{
-    position: relative;
-    left: 870px;
+    position: absolute;
+    left: 1050px;
+    top: 130px;
+}
+
+.proximo-button-p2{
+    position: absolute;
+    left: 1286px;
+    top: 130px;
+}
+
+.proximo-button-p3{
+    position: absolute;
+    top: 150px;
+    left: 1290px;
+}
+
+.proximo-button-p4{
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    position: absolute;
+    top: 150px;
+    right: 20px;
 }
 
 .botoes-navegacao-p2 {

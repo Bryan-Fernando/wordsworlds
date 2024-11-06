@@ -228,8 +228,8 @@ function PaginaCurso7() {
                 </div>
 
                 <div className="botoes-navegacao">
-                    <button className="anterior-button" id='anterior7' onClick={irParaPaginaAnterior}>Anterior</button>
-                    <button className="proximo-button" id='proximo7' onClick={irParaProximaPagina}>Próximo</button>
+                    <button className="anterior-button-p7" id='anterior7' onClick={irParaPaginaAnterior}>Anterior</button>
+                    <button className="proximo-button-p7" id='proximo7' onClick={irParaProximaPagina}>Próximo</button>
                 </div>
 
                 <div className="marcador-pagina">

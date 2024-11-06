@@ -239,7 +239,7 @@
     margin-top: 20px;
 }
 
-.anterior-button-p12, .proximo-button-p12 {
+.anterior-button-p7, .proximo-button-p7 {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -249,12 +249,9 @@
     font-weight: bold;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
-    position: relative;
-    top: 550px;
-    right: -805px;
 }
 
-.anterior-button-p12:hover, .proximo-button-p12:hover {
+.anterior-button-p7:hover, .proximo-button-p7:hover {
     background-color: #8a1720;
 }
 

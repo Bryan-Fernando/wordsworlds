@@ -139,21 +139,6 @@
     width: 150px;
 }
 
-.proximo-button-p1{
-    background-color: #A61C28;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s;
-    position: relative;
-    top: 390px;
-    right: -955px;
-}
-
 .styled-table th, .styled-table td {
     border: 1px solid #A61C28;
     padding: 10px;
@@ -185,7 +170,7 @@
 }
 
 .anterior-button-p4,
-.proximo-button-p4 {
+.proximo-button-p3 {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -200,11 +185,6 @@
 .anterior-button-p4:hover,
 .proximo-button-p4:hover {
     background-color: #8a1720;
-}
-
-.anterior-button-p4{
-    position: relative;
-    left: 870px;
 }
 
 .botoes-navegacao-p4 {

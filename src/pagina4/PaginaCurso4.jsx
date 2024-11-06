@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Estrutura from '../Estrutura';
 import '../pagina4/PaginaCurso4.css';
 
 function PaginaCurso1() {
     const navigate = useNavigate();
+    const [inputValues, setInputValues] = useState(
+        Array.from({ length: 6 }, () => Array(10).fill('')) // Cria uma matriz de inputs vazios
+    );
 
     const irParaPaginaAnterior = () => {
         navigate('/pagina/3');
@@ -13,66 +17,33 @@ function PaginaCurso1() {
         navigate('/pagina/5');
     };
 
+    const handleInputChange = (rowIndex, colIndex, e) => {
+        const newValue = e.target.value;
+        const updatedValues = inputValues.map((row, i) =>
+            row.map((value, j) => (i === rowIndex && j === colIndex ? newValue : value))
+        );
+
+        setInputValues(updatedValues);
+
+        // Verifica o comprimento do texto e passa para o próximo input abaixo
+        if (newValue.length > 8 && rowIndex < inputValues.length - 1) { // Limite de caracteres (ajustável)
+            document.getElementById(`input-${rowIndex + 1}-${colIndex}`).focus();
+        }
+    };
+
+    const handleKeyDown = (rowIndex, colIndex, e) => {
+        // Se a tecla Enter for pressionada, mova para o input da linha abaixo
+        if (e.key === 'Enter' && rowIndex < inputValues.length - 1) {
+            e.preventDefault(); // Evita quebra de linha no input
+            document.getElementById(`input-${rowIndex + 1}-${colIndex}`).focus();
+        }
+    };
+
     return (
         <Estrutura>
             <div className="content">
-               
                 <div className="table-container">
-                    <div className="table-header">PERGUNTAS / INTERROGATIVA NEGATIVA + (Forma Contráida)</div>
-                    <table className="styled-table">
-                        <thead>
-                            <tr>
-                                <th>Introdução<br/> Advérbio <br/>Conjunção</th>
-                                <th>Palavras <br/> Interrogativas</th>
-                                <th>Verbo <br /> Auxiliar</th>
-                                <th>Sujeito</th>
-                                <th><span style={{ color: 'red'}}>Not</span><br /> Advérbio</th>
-                                <th>Verbo(s)</th>
-                                <th>Objeto <br /> Complemento</th>
-                                <th>Place <br />(where)</th>
-                                <th>Time <br /> (when)</th>
-                                <th>...</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="tabelaIntroducao"></td>
-                                <td className="adverbio"></td>
-                                <td className="verboAuxiliar">Am</td>
-                                <td className="sujeito">I</td>
-                                <td className="notAdverbio">not</td>
-                                <td className="verbo"></td>
-                                <td className="objetivoComplemento">a good student?</td>
-                                <td className="place"></td>
-                                <td className="time"></td>
-                                <td className="tresPontos"></td>
-                            </tr>
-                            <tr>
-                                <td className="tabelaIntroducao"></td>
-                                <td className="adverbio"></td>
-                                <td className="verboAuxiliar">Ain't</td>
-                                <td className="sujeito">I</td>
-                                <td className="notAdverbio"></td>
-                                <td className="verbo"></td>
-                                <td className="objetivoComplemento">in class A or B?</td>
-                                <td className="place"></td>
-                                <td className="time"></td>
-                                <td className="tresPontos"></td>
-                            </tr>
-                            <tr>
-                                <td className="tabelaIntroducao"></td>
-                                <td className="adverbio"></td>
-                                <td className="verboAuxiliar">Ain't</td>
-                                <td className="sujeito">I</td>
-                                <td className="notAdverbio"></td>
-                                <td className="verbo"></td>
-                                <td className="objetivoComplemento">over 3?</td>
-                                <td className="place"></td>
-                                <td className="time"></td>
-                                <td className="tresPontos"></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div className="table-header">PERGUNTAS / INTERROGATIVA NEGATIVA + (Forma Contraída)</div>
 
                     <table className="styled-table">
                         <thead>
@@ -84,34 +55,36 @@ function PaginaCurso1() {
                                 <th><span style={{ color: 'red'}}>Not</span><br /> Advérbio</th>
                                 <th>Verbo(s)</th>
                                 <th>Objeto <br /> Complemento</th>
-                                <th>Place <br />(where)</th>
-                                <th>Time <br /> (when)</th>
+                                <th>Time <br />(when)</th>
+                                <th>Place <br /> (where)</th>
                                 <th>...</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {[...Array(6)].map((_, idx) => (
-                                <tr key={idx}>
-                                    <td className="tabelaIntroducao"><input type="text" className="input-cell" /></td>
-                                    <td className="adverbio"><input type="text" className="input-cell" /></td>
-                                    <td className="verboAuxiliar"><input type="text" className="input-cell" /></td>
-                                    <td className="sujeito"><input type="text" className="input-cell" /></td>
-                                    <td className="notAdverbio"><input type="text" className="input-cell" /></td>
-                                    <td className="verbo"><input type="text" className="input-cell" /></td>
-                                    <td className="objetivoComplemento"><input type="text" className="input-cell" /></td>
-                                    <td className="place"><input type="text" className="input-cell" /></td>
-                                    <td className="time"><input type="text" className="input-cell" /></td>
-                                    <td className="tresPontos"><input type="text" className="input-cell" /></td>
+                            {inputValues.map((row, rowIndex) => (
+                                <tr key={rowIndex}>
+                                    {row.map((value, colIndex) => (
+                                        <td key={colIndex}>
+                                            <input
+                                                id={`input-${rowIndex}-${colIndex}`}
+                                                type="text"
+                                                className="input-cell"
+                                                value={value}
+                                                onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
+                                                onKeyDown={(e) => handleKeyDown(rowIndex, colIndex, e)} // Adiciona o evento onKeyDown
+                                            />
+                                        </td>
+                                    ))}
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 </div>
                 <div className="botoes-navegacao-p4">
-                <button className="anterior-button" onClick={irParaPaginaAnterior}>
-                    Anterior
-                </button>
-                    <button className="proximo-button" onClick={irParaProximaPagina}>Próximo</button>
+                    <button className="anterior-button-p4" onClick={irParaPaginaAnterior}>
+                        Anterior
+                    </button>
+                    <button className="proximo-button-p4" onClick={irParaProximaPagina}>Próximo</button>
                 </div>
                 <div className="marcador-pagina">
                     <strong>4</strong>

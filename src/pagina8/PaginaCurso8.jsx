@@ -23,7 +23,8 @@ const PaginaCurso8 = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentAudio, setCurrentAudio] = useState(null);
     const [pulsingAudioIndex, setPulsingAudioIndex] = useState(null); // Novo estado para rastrear qual áudio está pulsando
-    const [isSpeedReduced, setIsSpeedReduced] = useState(false);
+    const [isSpeedReduced, setIsSpeedReduced] = useState([false, false, false, false, false]); // Altera para uma lista de booleanos
+
     const navigate = useNavigate();
 
     const irParaPaginaAnterior = () => {
@@ -75,35 +76,35 @@ const PaginaCurso8 = () => {
 
     const handleAudioClick = (index) => {
         if (currentAudio) {
-            currentAudio.pause(); // Para o áudio atual, se houver
+            currentAudio.pause();
         }
-    
-        const audio = new Audio(audioFiles[index]); // Cria uma nova instância de áudio
-    
-        // Define a velocidade do áudio com base na velocidade atual (normal ou lenta)
-        audio.playbackRate = isSpeedReduced ? 0.5 : 1; // Se 'isSpeedReduced' for true, fica lento (0.5), senão, normal (1)
-        
+
+        const audio = new Audio(audioFiles[index]);
+        audio.playbackRate = isSpeedReduced[index] ? 0.5 : 1; // Define a velocidade com base na lista de velocidades
         setCurrentAudio(audio);
         setIsPlaying(true);
-        setPulsingAudioIndex(index); // Define qual áudio está pulsando
-    
+        setPulsingAudioIndex(index);
+
         audio.play();
         audio.onended = () => {
-            setIsPlaying(false); // Reseta o estado quando o áudio terminar
-            setPulsingAudioIndex(null); // Remove o pulso após o término
+            setIsPlaying(false);
+            setPulsingAudioIndex(null);
         };
     };
-    
+
     // Função para alternar a velocidade
-    const reduzirVelocidade = () => {
-        setIsSpeedReduced((prev) => !prev); // Alterna o estado de 'isSpeedReduced'
-        
-        // Se um áudio estiver tocando, ajuste sua velocidade imediatamente
-        if (currentAudio) {
-            currentAudio.playbackRate = !isSpeedReduced ? 0.5 : 1; // Se a velocidade não estiver reduzida, reduz para 0.5x, caso contrário, volta para 1x
+    const reduzirVelocidade = (index) => {
+        setIsSpeedReduced((prev) => {
+            const newSpeeds = [...prev];
+            newSpeeds[index] = !newSpeeds[index]; // Alterna a velocidade apenas para o índice específico
+            return newSpeeds;
+        });
+
+        if (currentAudio && pulsingAudioIndex === index) {
+            currentAudio.playbackRate = !isSpeedReduced[index] ? 0.5 : 1;
         }
     };
-    
+
 
     return (
         <Estrutura>
@@ -178,6 +179,12 @@ const PaginaCurso8 = () => {
                             className={`audio-icon-1 ${pulsingAudioIndex === 0 ? 'pulse' : ''}`} // Atualizado
                             onClick={() => handleAudioClick(0)}
                         />
+                        <img
+                            src={volumeReduzidoIcon}
+                            alt="Toggle Speed"
+                            className={`volumeR1 ${isSpeedReduced[0] ? 'pulsing' : ''}`} // Para o índice 0
+                            onClick={() => reduzirVelocidade(0)} // Passa o índice 0
+                        />
                     </div>
                     <div className="sentence">
                         <p onClick={() => handleSentenceClick("They are playing basketball.")} style={{ cursor: 'pointer' }}>
@@ -189,6 +196,12 @@ const PaginaCurso8 = () => {
                             className={`audio-icon-2 ${pulsingAudioIndex === 1 ? 'pulse' : ''}`} // Atualizado
                             onClick={() => handleAudioClick(1)}
                         />
+                        <img
+                            src={volumeReduzidoIcon}
+                            alt="Toggle Speed"
+                            className={`volumeR2 ${isSpeedReduced[1] ? 'pulsing' : ''}`} // Para o índice 1
+                            onClick={() => reduzirVelocidade(1)} // Passa o índice 1
+                        />
                     </div>
                     <div className="sentence">
                         <p onClick={() => handleSentenceClick("The dog is sleeping on the floor.")} style={{ cursor: 'pointer' }}>
@@ -199,6 +212,12 @@ const PaginaCurso8 = () => {
                             alt="Audio Icon"
                             className={`audio-icon-3 ${pulsingAudioIndex === 2 ? 'pulse' : ''}`} // Atualizado
                             onClick={() => handleAudioClick(2)}
+                        />
+                        <img
+                            src={volumeReduzidoIcon}
+                            alt="Toggle Speed"
+                            className={`volumeR3 ${isSpeedReduced[2] ? 'pulsing' : ''}`} // Para o índice 2
+                            onClick={() => reduzirVelocidade(2)} // Passa o índice 2
                         />
                     </div>
                     <div className="sentence">
@@ -214,32 +233,8 @@ const PaginaCurso8 = () => {
                         <img
                             src={volumeReduzidoIcon}
                             alt="Toggle Speed"
-                            className="volumeR1"
-                            onClick={reduzirVelocidade}
-                        />
-                        <img
-                            src={volumeReduzidoIcon}
-                            alt="Toggle Speed"
-                            className="volumeR2"
-                            onClick={reduzirVelocidade}
-                        />
-                        <img
-                            src={volumeReduzidoIcon}
-                            alt="Toggle Speed"
-                            className="volumeR3"
-                            onClick={reduzirVelocidade}
-                        />
-                        <img
-                            src={volumeReduzidoIcon}
-                            alt="Toggle Speed"
-                            className="volumeR4"
-                            onClick={reduzirVelocidade}
-                        />
-                          <img
-                            src={volumeReduzidoIcon}
-                            alt="Toggle Speed"
-                            className="volumeR5"
-                            onClick={reduzirVelocidade}
+                            className={`volumeR4 ${isSpeedReduced[3] ? 'pulsing' : ''}`} // Para o índice 3
+                            onClick={() => reduzirVelocidade(3)} // Passa o índice 3
                         />
                     </div>
                     <div className="sentence">
@@ -252,7 +247,12 @@ const PaginaCurso8 = () => {
                             className={`audio-icon-5 ${pulsingAudioIndex === 4 ? 'pulse' : ''}`} // Atualizado
                             onClick={() => handleAudioClick(4)}
                         />
-                    
+                        <img
+                            src={volumeReduzidoIcon}
+                            alt="Toggle Speed"
+                            className={`volumeR5 ${isSpeedReduced[4] ? 'pulsing' : ''}`} // Para o índice 4
+                            onClick={() => reduzirVelocidade(4)} // Passa o índice 4
+                        />
                     </div>
                 </div>
 

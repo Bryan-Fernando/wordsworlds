@@ -158,9 +158,17 @@ h2 {
 }
 
 .anterior-button-p5{
-    position: relative;
-    top: 685px;
-    left: 1115px;
+    position: absolute;
+    top: 1820px;
+    left: 1180px;
+    background-color: #A61C28; 
+    color: white; 
+}
+
+.proximo-button-p5{
+    position: absolute;
+    top: 1820px;
+    left: 1390px;
     background-color: #A61C28; 
     color: white; 
 }
@@ -170,11 +178,7 @@ h2 {
     top: 1150px;
 }
 
-#anterior5{
-    position: absolute;
-    top: 1810px;
-    left: 1390px;
-}
+
 
 .word.disabled {
     pointer-events: none; 

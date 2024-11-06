@@ -142,19 +142,10 @@ th{
     width: 150px;
 }
 
-.proximo-button-p1{
-    background-color: #A61C28;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s;
-    position: relative;
-    top: 390px;
-    right: -955px;
+.proximo-button{
+    position: absolute;
+    right: 1300px;
+    top: 130px;
 }
 
 .table-container .styled-table .translation {
@@ -166,11 +157,12 @@ th{
     padding: 8px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px !important;
+    font-size: 28px !important;
     font-weight: bold;
     color: black;
     background-color: #f9f9f9; 
 }
+
 
 .input-cell:focus {
     outline: none;
