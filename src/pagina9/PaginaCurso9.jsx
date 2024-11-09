@@ -10,11 +10,17 @@ import imagem5 from './assets/imagem5.png';
 import vSquare from '../assets/vSquare.png'; // Imagem de verificação correta
 import xSquare from '../assets/xSquare.png'; // Imagem de verificação incorreta
 import eIcon from '../assets/eIcon.png'; // Importando ícone de áudio
+import pIcon from '../assets/pIcon.png';
 import audioA from './assets/audioA.mp3';
 import audioB from './assets/audioB.mp3';
 import audioC from './assets/audioC.mp3';
 import audioD from './assets/audioD.mp3';
 import audioE from './assets/audioE.mp3';
+import audio1 from './assets/audio1.mp3';
+import audio2 from './assets/audio2.mp3';
+import audio3 from './assets/audio3.mp3';
+import audio4 from './assets/audio4.mp3';
+import audio5 from './assets/audio5.mp3';
 import volumeReduzidoIcon from '../assets/volumeReduzido.png';
 
 const PaginaCurso9 = () => {
@@ -24,14 +30,15 @@ const PaginaCurso9 = () => {
     const [currentAudio, setCurrentAudio] = useState(null);
     const [pulsingAudioIndex, setPulsingAudioIndex] = useState(null); // Novo estado para rastrear qual áudio está pulsando
     const [isSpeedReduced, setIsSpeedReduced] = useState([false, false, false, false, false]); // Para cada áudio
-
     const navigate = useNavigate();
 
     const irParaPaginaAnterior = () => {
+        window.scrollTo(0, 0);
         navigate('/pagina/8');
     };
 
     const irParaProximaPagina = () => {
+        window.scrollTo(0, 0);
         navigate('/pagina/10');
     };
 
@@ -73,23 +80,27 @@ const PaginaCurso9 = () => {
         console.log("Verificar respostas:", inputValues);
     };
 
-    const handleAudioClick = (index) => {
+    const handleAudioClick = (index, isPortuguese = false) => {
         if (currentAudio) {
             currentAudio.pause(); // Para o áudio atual, se houver
         }
-
-        const audio = new Audio(audioFiles[index]); // Cria uma nova instância de áudio
-        audio.playbackRate = isSpeedReduced[index] ? 0.5 : 1; // Ajusta a velocidade do áudio específico
+    
+        // Se for o ícone português, usa os áudios audio1 a audio5, caso contrário, usa audioA a audioE
+        const audioFile = isPortuguese ? [audio1, audio2, audio3, audio4, audio5][index] : audioFiles[index];
+        
+        const audio = new Audio(audioFile); // Cria uma nova instância de áudio
+        audio.playbackRate = isSpeedReduced[index] ? 0.75 : 1; // Ajusta a velocidade do áudio específico
         setCurrentAudio(audio);
         setIsPlaying(true);
         setPulsingAudioIndex(index); // Define qual áudio está pulsando
-
+    
         audio.play();
         audio.onended = () => {
             setIsPlaying(false); // Reseta o estado quando o áudio terminar
             setPulsingAudioIndex(null); // Remove o pulso após o término
         };
     };
+    
 
     // Função para alternar a velocidade
     const reduzirVelocidade = (index) => {
@@ -175,6 +186,13 @@ const PaginaCurso9 = () => {
                             className={`audio-icon-1 ${pulsingAudioIndex === 0 ? 'pulse' : ''}`} // Atualizado
                             onClick={() => handleAudioClick(0)}
                         />
+                        <img
+                            src={pIcon}
+                            alt="Portuguese Audio Icon"
+                            className={`portugueseIcon ${pulsingAudioIndex === 0 ? 'pulse' : ''}`}
+                            id='p1' // Atualizado
+                            onClick={() => handleAudioClick(0, true)} // Passa o índice 0 para o áudio português
+                        />
                     </div>
                     <div className="sentence">
                         <p onClick={() => handleSentenceClick("He is cleaning the house.")} style={{ cursor: 'pointer' }}>
@@ -185,6 +203,13 @@ const PaginaCurso9 = () => {
                             alt="Audio Icon"
                             className={`audio-icon-2 ${pulsingAudioIndex === 1 ? 'pulse' : ''}`} // Atualizado
                             onClick={() => handleAudioClick(1)}
+                        />
+                        <img
+                            src={pIcon}
+                            alt="Portuguese Audio Icon"
+                            className={`portugueseIcon ${pulsingAudioIndex === 1 ? 'pulse' : ''}`}
+                            id='p2' // Atualizado
+                            onClick={() => handleAudioClick(1, true)} // Passa o índice 0 para o áudio português
                         />
                     </div>
                     <div className="sentence">
@@ -197,6 +222,13 @@ const PaginaCurso9 = () => {
                             className={`audio-icon-3 ${pulsingAudioIndex === 2 ? 'pulse' : ''}`} // Atualizado
                             onClick={() => handleAudioClick(2)}
                         />
+                        <img
+                            src={pIcon}
+                            alt="Portuguese Audio Icon"
+                            className={`portugueseIcon ${pulsingAudioIndex === 2 ? 'pulse' : ''}`}
+                            id='p3' // Atualizado
+                            onClick={() => handleAudioClick(2, true)} // Passa o índice 0 para o áudio português
+                        />
                     </div>
                     <div className="sentence">
                         <p onClick={() => handleSentenceClick("They are swimming in the pool.")} style={{ cursor: 'pointer' }}>
@@ -208,6 +240,13 @@ const PaginaCurso9 = () => {
                             className={`audio-icon-4 ${pulsingAudioIndex === 3 ? 'pulse' : ''}`} // Atualizado
                             onClick={() => handleAudioClick(3)}
                         />
+                        <img
+                            src={pIcon}
+                            alt="Portuguese Audio Icon"
+                            className={`portugueseIcon ${pulsingAudioIndex === 3 ? 'pulse' : ''}`}
+                            id='p4' // Atualizado
+                            onClick={() => handleAudioClick(3, true)} // Passa o índice 0 para o áudio português
+                        />
                     </div>
                     <div className="sentence">
                         <p onClick={() => handleSentenceClick("She is playing the piano.")} style={{ cursor: 'pointer' }}>
@@ -218,6 +257,13 @@ const PaginaCurso9 = () => {
                             alt="Audio Icon"
                             className={`audio-icon-5 ${pulsingAudioIndex === 4 ? 'pulse' : ''}`} // Atualizado
                             onClick={() => handleAudioClick(4)}
+                        />
+                        <img
+                            src={pIcon}
+                            alt="Portuguese Audio Icon"
+                            className={`portugueseIcon ${pulsingAudioIndex === 4 ? 'pulse' : ''}`}
+                            id='p5' // Atualizado
+                            onClick={() => handleAudioClick(4, true)} // Passa o índice 0 para o áudio português
                         />
                         <img
                             src={volumeReduzidoIcon}
@@ -257,8 +303,8 @@ const PaginaCurso9 = () => {
                 </button>
 
                 <div className="botoes-navegacao">
-                    <button className="anterior-button" id='anterior9' onClick={irParaPaginaAnterior}>Anterior</button>
-                    <button className="proximo-button" id='proximo9' onClick={irParaProximaPagina}>Próximo</button>
+                    <button className="anterior-button-p9" onClick={irParaPaginaAnterior}>Anterior</button>
+                    <button className="proximo-button-p9" onClick={irParaProximaPagina}>Próximo</button>
                 </div>
 
                 <div className="marcador-pagina">

@@ -10,10 +10,12 @@ function PaginaCurso1() {
     );
 
     const irParaPaginaAnterior = () => {
+        window.scrollTo(0, 0);
         navigate('/pagina/3');
     };
 
     const irParaProximaPagina = () => {
+        window.scrollTo(0, 0);
         navigate('/pagina/5');
     };
 
@@ -26,7 +28,7 @@ function PaginaCurso1() {
         setInputValues(updatedValues);
 
         // Verifica o comprimento do texto e passa para o próximo input abaixo
-        if (newValue.length > 8 && rowIndex < inputValues.length - 1) { // Limite de caracteres (ajustável)
+        if (newValue.length > 15 && rowIndex < inputValues.length - 1) { // Limite de caracteres (ajustável)
             document.getElementById(`input-${rowIndex + 1}-${colIndex}`).focus();
         }
     };
@@ -43,7 +45,7 @@ function PaginaCurso1() {
         <Estrutura>
             <div className="content">
                 <div className="table-container">
-                    <div className="table-header">PERGUNTAS / INTERROGATIVA NEGATIVA + (Forma Contraída)</div>
+                    <div className="table-header">INTERROGATIVA NEGATIVA (PERGUNTAS)</div>
 
                     <table className="styled-table">
                         <thead>
@@ -55,8 +57,8 @@ function PaginaCurso1() {
                                 <th><span style={{ color: 'red'}}>Not</span><br /> Advérbio</th>
                                 <th>Verbo(s)</th>
                                 <th>Objeto <br /> Complemento</th>
-                                <th>Time <br />(when)</th>
-                                <th>Place <br /> (where)</th>
+                                <th>Tempo <br />(Quando)</th>
+                                <th>Lugar <br /> (Onde)</th>
                                 <th>...</th>
                             </tr>
                         </thead>

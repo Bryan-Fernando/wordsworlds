@@ -48,22 +48,43 @@ h3 {
     text-align: left;
 }
 
-.botoes-navegacao {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.anterior-button-p11, .proximo-button-p11 {
+.anterior-button-p6,
+.proximo-button-p6{
     background-color: #A61C28;
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 10px 20px;
+    height: 45px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
+}
+
+.anterior-button-p6:hover,
+.proximo-button-p6:hover{
+    background-color: #8a1720;
+}
+
+.botoes-navegacao-p6{
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão à direita */
+    align-items: center;
+    gap: 20px; 
+    margin-top: 20px;
+}
+
+.anterior-button-p6{
+    position: absolute;
+    top: 1730px;
+    left: 950px;
+}
+
+.proximo-button-p6{
+    position: absolute;
+    top: 1730px;
+    left: 1200px;
 }
 
 .try-again-button-p2 {
@@ -126,17 +147,6 @@ h3 {
     animation: pulse 1s infinite;
 }
 
-#anterior6{
-    position: absolute;
-    right: 700px;
-    top: -100px;
-}
-
-#proximo6{
-    position: absolute;
-    right: 500px;
-    top: -100px;
-}
 
 #try6{
     position: absolute;
@@ -167,4 +177,20 @@ h3 {
 .incorreta {
     position: absolute;
     left: 540px;
+}
+
+.percentual-acertos {
+    width: 400px;
+    height: 200px;
+    border: 2px dotted #A61C28;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #A61C28; /* Cor padrão */
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    right: 50px; /* Ajuste conforme a necessidade */
+    top: 140px; /* Ajuste conforme a necessidade */
 }

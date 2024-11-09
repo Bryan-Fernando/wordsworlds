@@ -83,10 +83,12 @@ function PaginaCurso5() {
     };
 
     const irParaPaginaAnterior = () => {
+        window.scrollTo(0, 0);
         navigate('/pagina/4'); 
     }
     
     const irParaProximaPagina = () => {
+        window.scrollTo(0, 0);
         navigate('/pagina/6', { state: { respostas } }); // Passa as respostas
     };
     
@@ -96,7 +98,19 @@ function PaginaCurso5() {
                 <div className="exercicio-ordenacao">
                     <h2>Learning Language Exercises</h2>
                     <p className="questionText">Put the words in the correct order.</p>
-                    
+                    <table className="styled-table" id='tabela5'>
+                        <thead>
+                                <tr>
+                                    <th>Introdução<br />Conjunção</th>
+                                    <th>Advérbio</th>
+                                    <th>Sujeito</th>
+                                    <th>Verbo <br /> Auxiliar</th>
+                                    <th>Advérbio</th>
+                                    <th>Verbo(s)</th>
+                                    <th>Objeto <br /> Complemento</th>
+                                </tr>
+                            </thead>
+                        </table>
                     <div className="frases">
                         {respostasCorretas.map((_, fraseIndex) => (
                             <div key={fraseIndex}>
@@ -128,8 +142,10 @@ function PaginaCurso5() {
                     </div>
 
                     <button className="check-button" id='check5' onClick={irParaProximaPagina}>Check</button>
-                    <button className="anterior-button-p5" id='anterior5' onClick={irParaPaginaAnterior}>Anterior</button>
-                    <button className="proximo-button-p5" id='anterior5' onClick={irParaProximaPagina}>Próximo</button>
+                    <div className='botoes-navegacao-p5'>
+                        <button className="anterior-button-p5" id='anterior5' onClick={irParaPaginaAnterior}>Anterior</button>
+                        <button className="proximo-button-p5" id='anterior5' onClick={irParaProximaPagina}>Próximo</button>
+                    </div>
                 </div>
                 <div className="marcador-pagina">
                     <strong>5</strong>

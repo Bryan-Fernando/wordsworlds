@@ -71,7 +71,7 @@
 .sentences-container {
     font-size: 30px;
     position: absolute; 
-    top: 1450px;
+    top: 1100px;
     left: 120px; 
     text-align: left;
 }
@@ -90,7 +90,7 @@
     width: 120px;
     text-align: center;
     position: absolute;
-    top: 1100px;
+    top: 1380px;
 }
 
 .check-button:hover {
@@ -176,39 +176,41 @@
     }
 }
 
-.botoes-navegacao {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.anterior-button-p12, .proximo-button-p12 {
+.anterior-button-p9,
+.proximo-button-p9{
     background-color: #A61C28;
     color: white;
     border: none;
     padding: 10px 20px;
+    height: 45px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
-    position: relative;
-    top: 550px;
-    right: -805px;
 }
 
-.anterior-button-p12:hover, .proximo-button-p12:hover {
+.anterior-button-p9:hover,
+.proximo-button-p9:hover{
     background-color: #8a1720;
 }
 
-#anterior9{
-    position: absolute;
-    top: 160px;
-    left: -200px;
+.botoes-navegacao-p9{
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão à direita */
+    align-items: center;
+    gap: 20px; 
+    margin-top: 20px;
 }
 
-#proximo9{
+.anterior-button-p9{
     position: absolute;
-    top: 160px;
-    right: 1280px;
+    top: 1730px;
+    left: 950px;
+}
+
+.proximo-button-p9{
+    position: absolute;
+    top: 1730px;
+    left: 1200px;
 }

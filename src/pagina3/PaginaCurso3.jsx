@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Estrutura from '../Estrutura';
-import '../pagina2/PaginaCurso2.css';
+import '../pagina3/PaginaCurso3.css';
 
 function PaginaCurso1() {
     const navigate = useNavigate();
@@ -10,10 +10,12 @@ function PaginaCurso1() {
     );
 
     const irParaPaginaAnterior = () => {
+        window.scrollTo(0, 0);
         navigate('/pagina/2');
     };
 
     const irParaProximaPagina = () => {
+        window.scrollTo(0, 0);
         navigate('/pagina/4');
     };
 
@@ -26,7 +28,7 @@ function PaginaCurso1() {
         setInputValues(updatedValues);
 
         // Verifica o comprimento do texto e passa para o próximo input abaixo
-        if (newValue.length > 8 && rowIndex < inputValues.length - 1) { // Limite de caracteres (ajustável)
+        if (newValue.length > 15 && rowIndex < inputValues.length - 1) { // Limite de caracteres (ajustável)
             document.getElementById(`input-${rowIndex + 1}-${colIndex}`).focus();
         }
     };
@@ -43,7 +45,7 @@ function PaginaCurso1() {
         <Estrutura>
             <div className="content">
                 <div className="table-container">
-                    <div className="table-header">PERGUNTAS / INTERROGATIVA AFIRMATIVA</div>
+                    <div className="table-header"> INTERROGATIVA AFIRMATIVA (PERGUNTAS)</div>
 
                     <table className="styled-table">
                         <thead>
@@ -55,8 +57,8 @@ function PaginaCurso1() {
                                 <th>Advérbio</th>
                                 <th>Verbo(s)</th>
                                 <th>Objeto <br /> Complemento</th>
-                                <th>Time <br />(when)</th>
-                                <th>Place <br /> (where)</th>
+                                <th>Tempo <br />(Quando)</th>
+                                <th>Lugar <br /> (Onde)</th>
                                 <th>...</th>
                             </tr>
                         </thead>
@@ -80,11 +82,14 @@ function PaginaCurso1() {
                         </tbody>
                     </table>
                 </div>
-                <div className="botoes-navegacao-p4">
-                    <button className="anterior-button-p4" onClick={irParaPaginaAnterior}>
-                        Anterior
-                    </button>
-                    <button className="proximo-button-p3" onClick={irParaProximaPagina}>Próximo</button>
+                <div className="botoes-navegacao-p3">
+                    <div>
+                        <button className="anterior-button-p3" onClick={irParaPaginaAnterior}>
+                            Anterior
+                        </button>
+
+                        <button className="proximo-button-p3" onClick={irParaProximaPagina}>Próximo</button>
+                    </div>
                 </div>
                 <div className="marcador-pagina">
                     <strong>3</strong>

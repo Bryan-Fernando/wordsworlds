@@ -48,11 +48,13 @@ th{
 .table-header {
     background-color: #A61C28;
     color: white;
-    text-align: center !important;
     padding: 10px;
     font-weight: bold;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    height: 4vh;
+    font-style: italic;
+    font-size: 25px;
 }
 
 .styled-table {
@@ -70,8 +72,9 @@ th{
     border: 1px solid #A61C28;
     padding: 10px;
     text-align: left;
-    color: #000; /* Texto em preto para células padrão */
+    color: #000;
     font-weight: bold;
+    font-style: italic;
 }
 
 .styled-table tbody tr {
@@ -144,8 +147,8 @@ th{
 
 .proximo-button{
     position: absolute;
-    right: 1300px;
-    top: 130px;
+    left: 1200px;
+    top: 1735px
 }
 
 .table-container .styled-table .translation {
@@ -157,10 +160,10 @@ th{
     padding: 8px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px !important;
+    font-size: 26px !important;
     font-weight: bold;
     color: black;
-    background-color: #f9f9f9; 
+    font-style: italic;
 }
 
 
@@ -170,12 +173,12 @@ th{
     background-color: #f1f1f1; 
 }
 
-.anterior-button,
 .proximo-button{
     background-color: #A61C28;
     color: white;
     border: none;
     padding: 10px 20px;
+    height: 45px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
@@ -183,41 +186,32 @@ th{
     transition: background-color 0.3s;
 }
 
-.anterior-button:hover,
 .proximo-button:hover{
     background-color: #8a1720;
 }
 
-.anterior-button{
-    position: relative;
-    left: 870px;
-}
-
 .botoes-navegacao{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Alinha o botão à direita */
+    align-items: center;
+    gap: 20px; 
     margin-top: 20px;
-    padding: 0 20px;
-    position: relative;
-    top: 1120px;
-    left: 1300px;
 }
 
+.proximo-button{
+    position: absolute;
+    top: 1730px;
+    left: 1200px;
+}
 .marcador-pagina {
-    position: absolute; 
-    bottom: 20px; 
-    right: 20px; 
-    background-color: #A61C28; 
-    color: white; 
-    padding: 10px 15px; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
-    font-size: 24px; 
+    background-color: #A61C28;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
     text-align: center;
-    z-index: 10; 
 }
-
-/* A partir daqui começa o style do conteudo */
 
 .englishAudio, .portugueseAudio, .volumeReduzido {
     cursor: pointer;

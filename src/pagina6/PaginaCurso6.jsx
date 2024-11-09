@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Estrutura from '../Estrutura';
 import './PaginaCurso6.css';
 import eIcon from '../assets/eIcon.png'; 
 import portugueseIcon from '../assets/pIcon.png'; 
 import volumeReduzidoIcon from '../assets/volumeReduzido.png'; 
-import vSquare from '../assets/vSquare.png'; // Imagem para resposta correta
-import xSquare from '../assets/xSquare.png'; // Imagem para resposta incorreta
+import vSquare from '../assets/vSquare.png';
+import xSquare from '../assets/xSquare.png';
 import e1 from './assets/e1.mp3';
 import e2 from './assets/e2.mp3';
 import e3 from './assets/e3.mp3';
@@ -49,44 +49,55 @@ const audios = {
 
 function PaginaCurso6() {
     const navigate = useNavigate();
-    const location = useLocation(); // Obtém as informações da localização
-    const { respostas } = location.state || { respostas: {} }; // Desestrutura as respostas
+    const location = useLocation();
+    const { respostas } = location.state || { respostas: {} };
     const [isSpeedReduced, setIsSpeedReduced] = useState(false);
-    const [playingAudio, setPlayingAudio] = useState(null); 
+    const [playingAudio, setPlayingAudio] = useState(null);
+    const [percentualAcertos, setPercentualAcertos] = useState(0);
+
+    useEffect(() => {
+        const acertos = respostasCorretas.filter((resposta, index) => respostas[index]?.join(' ') === resposta).length;
+        const percentual = (acertos / respostasCorretas.length) * 100;
+        setPercentualAcertos(percentual);
+    }, [respostas]);
 
     const irParaPaginaAnterior = () => {
+        window.scrollTo(0, 0);
         navigate('/pagina/5');
     };
 
     const irParaProximaPagina = () => {
+        window.scrollTo(0, 0);
         navigate('/pagina/7');
     };
 
     const playAudio = (index, language) => {
         if (playingAudio) {
             playingAudio.pause();
-            playingAudio.currentTime = 0; 
+            playingAudio.currentTime = 0;
         }
-
+    
         const audioToPlay = audios[language][index];
-        audioToPlay.play();
-        setPlayingAudio(audioToPlay); 
-
-        audioToPlay.onended = () => {
-            setPlayingAudio(null);
-        };
+        
+        setTimeout(() => {
+            audioToPlay.play();
+            setPlayingAudio(audioToPlay);
+    
+            audioToPlay.onended = () => {
+                setPlayingAudio(null);
+            };
+        }, 700); 
     };
 
     const reduzirVelocidade = () => {
         Object.keys(audios).forEach(language => {
             audios[language].forEach(audio => {
-                audio.playbackRate = isSpeedReduced ? 1 : 0.5; 
+                audio.playbackRate = isSpeedReduced ? 1 : 0.75;
             });
         });
         setIsSpeedReduced(!isSpeedReduced);
     };
 
-    // Respostas corretas
     const respostasCorretas = [
         'There is a bird in the nest',
         "There aren't any clouds in the sky",
@@ -103,27 +114,31 @@ function PaginaCurso6() {
             <div className="respostas-container">
                 <h2>Answers</h2>
                 <h3>Para reduzir a velocidade da reprodução para 0.75x, clique no </h3>
-                <img src={volumeReduzidoIcon} className='iconTitle' />
+                <img src={volumeReduzidoIcon} className='iconTitle' alt="Ícone de volume reduzido" />
+                
+                <div className="percentual-acertos">
+                    <span>{percentualAcertos.toFixed(0)}%</span>
+                </div>
+
                 <div className="respostas-lista">
                     {respostasCorretas.map((resposta, index) => (
                         <div key={index} className="resposta-item">
-                            {respostas[index] ? respostas[index].join(' ') : ''} {/* Exibe as respostas do usuário */}
-                            {/* Lógica para exibir as imagens corretas ou incorretas */}
+                            {respostas[index] ? respostas[index].join(' ') : ''}
                             <img
                                 src={respostas[index] && respostas[index].join(' ') === resposta ? vSquare : xSquare}
                                 alt={respostas[index] && respostas[index].join(' ') === resposta ? 'Correct' : 'Incorrect'}
-                                className={`resposta-status ${respostas[index] && respostas[index].join(' ') === resposta ? 'correta' : 'incorreta'}`} // Adiciona classe para correto/incorreto
+                                className={`resposta-status ${respostas[index] && respostas[index].join(' ') === resposta ? 'correta' : 'incorreta'}`}
                             />
-                            {respostas[index] && respostas[index].join(' ') === resposta && ( // Ícones de áudio aparecem apenas se a resposta estiver correta
+                            {respostas[index] && respostas[index].join(' ') === resposta && (
                                 <>
                                     <img
-                                        className={`englishAudio ${playingAudio === audios.english[index] ? 'pulse' : ''}`} 
+                                        className={`englishAudio ${playingAudio === audios.english[index] ? 'pulse' : ''}`}
                                         src={eIcon}
                                         alt="Play English Audio"
                                         onClick={() => playAudio(index, 'english')}
                                     />
                                     <img
-                                        className={`portugueseAudio ${playingAudio === audios.portuguese[index] ? 'pulse' : ''}`} 
+                                        className={`portugueseAudio ${playingAudio === audios.portuguese[index] ? 'pulse' : ''}`}
                                         src={portugueseIcon}
                                         alt="Play Portuguese Audio"
                                         onClick={() => playAudio(index, 'portuguese')}
@@ -139,11 +154,13 @@ function PaginaCurso6() {
                         </div>
                     ))}
                 </div>
+
                 <div className="botoes-navegacao">
-                    <button className="anterior-button-p11" id='anterior6'onClick={irParaPaginaAnterior}>Anterior</button>
-                    <button className="proximo-button-p11" id='proximo6' onClick={irParaProximaPagina}>Próximo</button>
-                    <button className="try-again-button" id='try6'onClick={() => navigate('/pagina/5')}>Try Again</button>
+                    <button className="anterior-button-p6" id="anterior6" onClick={irParaPaginaAnterior}>Anterior</button>
+                    <button className="proximo-button-p6" id="proximo6" onClick={irParaProximaPagina}>Próximo</button>
+                    <button className="try-again-button" id="try6" onClick={() => navigate('/pagina/5')}>Try Again</button>
                 </div>
+
                 <div className="marcador-pagina">
                     <strong>6</strong>
                 </div>

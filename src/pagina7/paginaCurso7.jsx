@@ -44,10 +44,12 @@ function PaginaCurso7() {
     const audioD2 = useRef(new Audio(d2));
 
     const irParaPaginaAnterior = () => {
+        window.scrollTo(0, 0);
         navigate('/pagina/6');
     };
 
     const irParaProximaPagina = () => {
+        window.scrollTo(0, 0);
         navigate('/pagina/8');
     };
 
@@ -57,7 +59,9 @@ function PaginaCurso7() {
     const [animandoMegafoneB2, setAnimandoMegafoneB2] = useState(false);
 
     const tocarAudio = (audioRef) => {
-        audioRef.current.play();
+        setTimeout(() => {
+            audioRef.current.play();
+        }, 700);
     };
 
     const gravarAudio = async (setRecordedAudio, audioRef, setGravando) => {

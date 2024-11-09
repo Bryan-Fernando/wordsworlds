@@ -10,6 +10,7 @@ function PaginaCurso1() {
     );
 
     const irParaProximaPagina = () => {
+        window.scrollTo(0, 0);
         navigate('/pagina/2');
     };
 
@@ -22,7 +23,7 @@ function PaginaCurso1() {
         setInputValues(updatedValues);
 
         // Verifica o comprimento do texto e passa para o próximo input abaixo
-        if (newValue.length > 8 && rowIndex < inputValues.length - 1) { // Ajuste o número máximo de caracteres conforme necessário
+        if (newValue.length > 15 && rowIndex < inputValues.length - 1) { // Ajuste o número máximo de caracteres conforme necessário
             document.getElementById(`input-${rowIndex + 1}-${colIndex}`).focus();
         }
     };
@@ -51,8 +52,8 @@ function PaginaCurso1() {
                                 <th>Advérbio</th>
                                 <th>Verbo(s)</th>
                                 <th>Objeto <br /> Complemento</th>
-                                <th>Time <br />(when)</th>
-                                <th>Place <br /> (where)</th>
+                                <th>Tempo <br />(Quando)</th>
+                                <th>Lugar <br /> (Onde)</th>
                                 <th>...</th>
                             </tr>
                         </thead>
@@ -77,11 +78,14 @@ function PaginaCurso1() {
                     </table>
                 </div>
                 <div className="botoes-navegacao">
+                    <div>
                     <button className="proximo-button" onClick={irParaProximaPagina}>Próximo</button>
+                    </div>
+                    <div className="marcador-pagina">
+                        <strong>1</strong>
+                    </div>
                 </div>
-                <div className="marcador-pagina">
-                    <strong>1</strong>
-                </div>
+
             </div>
         </Estrutura>
     );

@@ -54,7 +54,7 @@ button:disabled {
 .imagemP1{
     position: absolute;
     left: 780px;
-    top: 210px;
+    top: 290px;
     border-radius: 10px;
     width: 560px;
 }
@@ -62,7 +62,7 @@ button:disabled {
 .imagemP1_2{
     position: absolute;
     left: 780px;
-    top: 694px;
+    top: 774px;
     border-radius: 10px;
     width: 560px;
 }
@@ -157,21 +157,6 @@ h2 {
     left: 460px;
 }
 
-.anterior-button-p5{
-    position: absolute;
-    top: 1820px;
-    left: 1180px;
-    background-color: #A61C28; 
-    color: white; 
-}
-
-.proximo-button-p5{
-    position: absolute;
-    top: 1820px;
-    left: 1390px;
-    background-color: #A61C28; 
-    color: white; 
-}
 
 #check5{
     position: absolute;
@@ -187,4 +172,53 @@ h2 {
 
 .word.clicada {
     opacity: 0.5; /* Ajuste a opacidade conforme necessário */
+}
+
+
+.anterior-button-p5,
+.proximo-button-p5{
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.anterior-button-p5:hover,
+.proximo-button-p5:hover{
+    background-color: #8a1720;
+}
+
+.botoes-navegacao-p5{
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão à direita */
+    align-items: center;
+    gap: 20px; 
+    margin-top: 20px;
+}
+
+
+
+.anterior-button-p5{
+    position: absolute;
+    top: 1730px;
+    left: 950px;
+}
+
+.proximo-button-p5{
+    position: absolute;
+    top: 1730px;
+    left: 1200px;
+}
+
+#tabela5{
+    position: absolute;
+    width: 300px;
+    left: 700px;
+    top: 120px;
 }

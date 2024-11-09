@@ -15,6 +15,12 @@ import audioB from './assets/audioB.mp3';
 import audioC from './assets/audioC.mp3';
 import audioD from './assets/audioD.mp3';
 import audioE from './assets/audioE.mp3';
+import pIcon from '../assets/pIcon.png'; // Ícone adicional para o áudio em português
+import audio1 from './assets/audio1.mp3';
+import audio2 from './assets/audio2.mp3';
+import audio3 from './assets/audio3.mp3';
+import audio4 from './assets/audio4.mp3';
+import audio5 from './assets/audio5.mp3';
 import volumeReduzidoIcon from '../assets/volumeReduzido.png';
 
 const PaginaCurso8 = () => {
@@ -28,10 +34,12 @@ const PaginaCurso8 = () => {
     const navigate = useNavigate();
 
     const irParaPaginaAnterior = () => {
+        window.scrollTo(0, 0);
         navigate('/pagina/7');
     };
 
     const irParaProximaPagina = () => {
+        window.scrollTo(0, 0);
         navigate('/pagina/9');
     };
 
@@ -80,7 +88,7 @@ const PaginaCurso8 = () => {
         }
 
         const audio = new Audio(audioFiles[index]);
-        audio.playbackRate = isSpeedReduced[index] ? 0.5 : 1; // Define a velocidade com base na lista de velocidades
+        audio.playbackRate = isSpeedReduced[index] ? 0.75 : 1; // Define a velocidade com base na lista de velocidades
         setCurrentAudio(audio);
         setIsPlaying(true);
         setPulsingAudioIndex(index);
@@ -101,7 +109,7 @@ const PaginaCurso8 = () => {
         });
 
         if (currentAudio && pulsingAudioIndex === index) {
-            currentAudio.playbackRate = !isSpeedReduced[index] ? 0.5 : 1;
+            currentAudio.playbackRate = !isSpeedReduced[index] ? 0.75 : 1;
         }
     };
 
@@ -185,7 +193,16 @@ const PaginaCurso8 = () => {
                             className={`volumeR1 ${isSpeedReduced[0] ? 'pulsing' : ''}`} // Para o índice 0
                             onClick={() => reduzirVelocidade(0)} // Passa o índice 0
                         />
+                        {/* Novo ícone português */}
+                        <img
+                            src={pIcon}
+                            alt="Portuguese Audio Icon"
+                            className={`portugueseIcon ${pulsingAudioIndex === 0 ? 'pulse' : ''}`}
+                            id='p1' // Atualizado
+                            onClick={() => handleAudioClick(0, true)} 
+                        />
                     </div>
+
                     <div className="sentence">
                         <p onClick={() => handleSentenceClick("They are playing basketball.")} style={{ cursor: 'pointer' }}>
                             B) They are playing basketball.
@@ -202,7 +219,16 @@ const PaginaCurso8 = () => {
                             className={`volumeR2 ${isSpeedReduced[1] ? 'pulsing' : ''}`} // Para o índice 1
                             onClick={() => reduzirVelocidade(1)} // Passa o índice 1
                         />
+                        {/* Novo ícone português */}
+                        <img
+                            src={pIcon}
+                            alt="Portuguese Audio Icon"
+                            className={`portugueseIcon ${pulsingAudioIndex === 1 ? 'pulse' : ''}`}
+                            id='p2'// Atualizado
+                            onClick={() => handleAudioClick(1, true)} // Passa o índice 1 para o áudio português
+                        />
                     </div>
+
                     <div className="sentence">
                         <p onClick={() => handleSentenceClick("The dog is sleeping on the floor.")} style={{ cursor: 'pointer' }}>
                             C) The dog is sleeping on the floor.
@@ -219,7 +245,16 @@ const PaginaCurso8 = () => {
                             className={`volumeR3 ${isSpeedReduced[2] ? 'pulsing' : ''}`} // Para o índice 2
                             onClick={() => reduzirVelocidade(2)} // Passa o índice 2
                         />
+                        {/* Novo ícone português */}
+                        <img
+                            src={pIcon}
+                            alt="Portuguese Audio Icon"
+                            className={`portugueseIcon ${pulsingAudioIndex === 2 ? 'pulse' : ''}`}
+                            id='p3' // Atualizado
+                            onClick={() => handleAudioClick(2, true)} // Passa o índice 2 para o áudio português
+                        />
                     </div>
+
                     <div className="sentence">
                         <p onClick={() => handleSentenceClick("He is writing a letter.")} style={{ cursor: 'pointer' }}>
                             D) He is writing a letter.
@@ -236,7 +271,16 @@ const PaginaCurso8 = () => {
                             className={`volumeR4 ${isSpeedReduced[3] ? 'pulsing' : ''}`} // Para o índice 3
                             onClick={() => reduzirVelocidade(3)} // Passa o índice 3
                         />
+                        {/* Novo ícone português */}
+                        <img
+                            src={pIcon}
+                            alt="Portuguese Audio Icon"
+                            className={`portugueseIcon ${pulsingAudioIndex === 3 ? 'pulse' : ''}`}
+                            id='p4' // Atualizado
+                            onClick={() => handleAudioClick(3, true)} // Passa o índice 3 para o áudio português
+                        />
                     </div>
+
                     <div className="sentence">
                         <p onClick={() => handleSentenceClick("We are cooking dinner.")} style={{ cursor: 'pointer' }}>
                             E) We are cooking dinner.
@@ -244,7 +288,8 @@ const PaginaCurso8 = () => {
                         <img
                             src={eIcon}
                             alt="Audio Icon"
-                            className={`audio-icon-5 ${pulsingAudioIndex === 4 ? 'pulse' : ''}`} // Atualizado
+                            className={`audio-icon-5 ${pulsingAudioIndex === 4 ? 'pulse' : ''}`} 
+                            // Atualizado
                             onClick={() => handleAudioClick(4)}
                         />
                         <img
@@ -253,16 +298,25 @@ const PaginaCurso8 = () => {
                             className={`volumeR5 ${isSpeedReduced[4] ? 'pulsing' : ''}`} // Para o índice 4
                             onClick={() => reduzirVelocidade(4)} // Passa o índice 4
                         />
+                        {/* Novo ícone português */}
+                        <img
+                            src={pIcon}
+                            alt="Portuguese Audio Icon"
+                            className={`portugueseIcon ${pulsingAudioIndex === 4 ? 'pulse' : ''}`}
+                            id='p5' // Atualizado
+                            onClick={() => handleAudioClick(4, true)} // Passa o índice 4 para o áudio português
+                        />
                     </div>
+
                 </div>
 
                 <button className="check-button" onClick={handleCheckClick}>
                     Check
                 </button>
 
-                <div className="botoes-navegacao">
-                    <button className="anterior-button" id='anterior8' onClick={irParaPaginaAnterior}>Anterior</button>
-                    <button className="proximo-button" id='proximo8' onClick={irParaProximaPagina}>Próximo</button>
+                <div className="botoes-navegacao-p8">
+                    <button className="anterior-button-p8" onClick={irParaPaginaAnterior}>Anterior</button>
+                    <button className="proximo-button-p8" onClick={irParaProximaPagina}>Próximo</button>
                 </div>
 
                 <div className="marcador-pagina">
