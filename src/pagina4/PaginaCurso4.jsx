@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Estrutura from '../Estrutura';
-import '../pagina4/PaginaCurso4.css';
+import './PaginaCurso4.css';
 
-function PaginaCurso1() {
+function PaginaCurso4() {
     const navigate = useNavigate();
     const [inputValues, setInputValues] = useState(
         Array.from({ length: 6 }, () => Array(10).fill('')) // Cria uma matriz de inputs vazios
@@ -50,11 +50,11 @@ function PaginaCurso1() {
                     <table className="styled-table">
                         <thead>
                             <tr>
-                                <th>Introdução<br/> Advérbio <br/>Conjunção</th>
-                                <th>Palavras <br/> Interrogativas</th>
+                                <th>Introdução<br /> Advérbio <br />Conjunção</th>
+                                <th>Palavras <br /> Interrogativas</th>
                                 <th>Verbo <br /> Auxiliar</th>
                                 <th>Sujeito</th>
-                                <th><span style={{ color: 'red'}}>Not</span><br /> Advérbio</th>
+                                <th><span style={{ color: 'red' }}>Not</span><br /> Advérbio</th>
                                 <th>Verbo(s)</th>
                                 <th>Objeto <br /> Complemento</th>
                                 <th>Tempo <br />(Quando)</th>
@@ -67,13 +67,13 @@ function PaginaCurso1() {
                                 <tr key={rowIndex}>
                                     {row.map((value, colIndex) => (
                                         <td key={colIndex}>
-                                            <input
+                                            <textarea
                                                 id={`input-${rowIndex}-${colIndex}`}
-                                                type="text"
                                                 className="input-cell"
                                                 value={value}
                                                 onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
                                                 onKeyDown={(e) => handleKeyDown(rowIndex, colIndex, e)} // Adiciona o evento onKeyDown
+                                                rows={1} // Altura inicial em linhas
                                             />
                                         </td>
                                     ))}
@@ -96,4 +96,4 @@ function PaginaCurso1() {
     );
 }
 
-export default PaginaCurso1;
+export default PaginaCurso4;

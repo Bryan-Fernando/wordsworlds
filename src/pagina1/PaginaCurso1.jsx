@@ -21,11 +21,6 @@ function PaginaCurso1() {
         );
 
         setInputValues(updatedValues);
-
-        // Verifica o comprimento do texto e passa para o próximo input abaixo
-        if (newValue.length > 15 && rowIndex < inputValues.length - 1) { // Ajuste o número máximo de caracteres conforme necessário
-            document.getElementById(`input-${rowIndex + 1}-${colIndex}`).focus();
-        }
     };
 
     const handleKeyDown = (rowIndex, colIndex, e) => {
@@ -62,13 +57,13 @@ function PaginaCurso1() {
                                 <tr key={rowIndex}>
                                     {row.map((value, colIndex) => (
                                         <td key={colIndex}>
-                                            <input
+                                            <textarea
                                                 id={`input-${rowIndex}-${colIndex}`}
-                                                type="text"
                                                 className="input-cell"
                                                 value={value}
                                                 onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
-                                                onKeyDown={(e) => handleKeyDown(rowIndex, colIndex, e)} // Adiciona o evento onKeyDown
+                                                onKeyDown={(e) => handleKeyDown(rowIndex, colIndex, e)}
+                                                rows={1} // Altura inicial em linhas
                                             />
                                         </td>
                                     ))}
@@ -79,13 +74,12 @@ function PaginaCurso1() {
                 </div>
                 <div className="botoes-navegacao">
                     <div>
-                    <button className="proximo-button" onClick={irParaProximaPagina}>Próximo</button>
+                        <button className="proximo-button" onClick={irParaProximaPagina}>Próximo</button>
                     </div>
                     <div className="marcador-pagina">
                         <strong>1</strong>
                     </div>
                 </div>
-
             </div>
         </Estrutura>
     );

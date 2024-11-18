@@ -11,6 +11,7 @@ import PaginaCurso6 from './pagina6/PaginaCurso6';
 import PaginaCurso7 from './pagina7/PaginaCurso7';
 import PaginaCurso8 from './pagina8/PaginaCurso8';
 import PaginaCurso9 from './pagina9/PaginaCurso9';
+import PaginaCurso10 from './pagina10/PaginaCurso10';
 import './App.css';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/pagina/7" element={<PaginaCurso7 />} />
         <Route path="/pagina/8" element={<PaginaCurso8 />} />
         <Route path="/pagina/9" element={<PaginaCurso9 />} />
+        <Route path="/pagina/10" element={<PaginaCurso10 />} />
       </Routes>
     </Router>
   );

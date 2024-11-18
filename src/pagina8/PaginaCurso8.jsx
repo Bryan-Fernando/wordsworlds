@@ -82,23 +82,26 @@ const PaginaCurso8 = () => {
         console.log("Verificar respostas:", inputValues);
     };
 
-    const handleAudioClick = (index) => {
+    const handleAudioClick = (index, isPortuguese = false) => {
         if (currentAudio) {
-            currentAudio.pause();
+            currentAudio.pause(); // Para o áudio atual
         }
-
-        const audio = new Audio(audioFiles[index]);
-        audio.playbackRate = isSpeedReduced[index] ? 0.75 : 1; // Define a velocidade com base na lista de velocidades
+    
+        // Escolha o arquivo de áudio com base no idioma
+        const audioFile = isPortuguese ? [audio1, audio2, audio3, audio4, audio5][index] : audioFiles[index];
+        const audio = new Audio(audioFile);
+    
+        // Ajusta a velocidade de reprodução com base no estado de `isSpeedReduced`
+        audio.playbackRate = isSpeedReduced[index] ? 0.75 : 1; 
         setCurrentAudio(audio);
-        setIsPlaying(true);
-        setPulsingAudioIndex(index);
-
+        setPulsingAudioIndex(index); // Atualiza o índice do áudio pulsante
+    
         audio.play();
         audio.onended = () => {
-            setIsPlaying(false);
-            setPulsingAudioIndex(null);
+            setPulsingAudioIndex(null); // Limpa o estado do áudio pulsante
         };
     };
+    
 
     // Função para alternar a velocidade
     const reduzirVelocidade = (index) => {

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Estrutura from '../Estrutura';
-import '../pagina2/PaginaCurso2.css';
+import './PaginaCurso2.css';
 
-function PaginaCurso1() {
+function PaginaCurso2() {
     const navigate = useNavigate();
     const [inputValues, setInputValues] = useState(
         Array.from({ length: 6 }, () => Array(10).fill('')) // Cria uma matriz de inputs vazios
@@ -67,13 +67,13 @@ function PaginaCurso1() {
                                 <tr key={rowIndex}>
                                     {row.map((value, colIndex) => (
                                         <td key={colIndex}>
-                                            <input
+                                            <textarea
                                                 id={`input-${rowIndex}-${colIndex}`}
-                                                type="text"
                                                 className="input-cell"
                                                 value={value}
                                                 onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
                                                 onKeyDown={(e) => handleKeyDown(rowIndex, colIndex, e)} // Adiciona o evento onKeyDown
+                                                rows={1} // Altura inicial em linhas
                                             />
                                         </td>
                                     ))}
@@ -99,4 +99,4 @@ function PaginaCurso1() {
     );
 }
 
-export default PaginaCurso1;
+export default PaginaCurso2;

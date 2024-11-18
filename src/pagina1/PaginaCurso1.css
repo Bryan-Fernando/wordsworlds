@@ -160,10 +160,15 @@ th{
     padding: 8px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 26px !important;
+    font-size: 25px !important;
     font-weight: bold;
     color: black;
     font-style: italic;
+    width: 101% !important; /* Para ocupar toda a célula */
+    resize: none; /* Remove a opção de redimensionamento manual */
+    overflow-wrap: break-word; /* Quebra as palavras que excedem o espaço */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical, se necessário */
+    height: 70px; /* Altura inicial */
 }
 
 
@@ -252,4 +257,18 @@ th{
 
 .audio-icon.pulse {
     animation: pulse 1s infinite;
+}
+
+textarea {
+    resize: none; /* Remove o redimensionamento manual */
+    overflow: hidden; /* Remove a barra de rolagem */
+}
+
+textarea::-webkit-scrollbar {
+    display: none; /* Remove a barra de rolagem no Chrome, Safari e Edge */
+}
+
+textarea {
+    -ms-overflow-style: none; /* Remove a barra de rolagem no Internet Explorer e Edge */
+    scrollbar-width: none; /* Remove a barra de rolagem no Firefox */
 }

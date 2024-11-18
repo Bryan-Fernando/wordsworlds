@@ -117,7 +117,7 @@ function PaginaCurso6() {
                 <img src={volumeReduzidoIcon} className='iconTitle' alt="Ícone de volume reduzido" />
                 
                 <div className="percentual-acertos">
-                    <span>{percentualAcertos.toFixed(0)}%</span>
+                    <span>{percentualAcertos.toFixed(0)}% Out of 100</span>
                 </div>
 
                 <div className="respostas-lista">
@@ -156,6 +156,7 @@ function PaginaCurso6() {
                 </div>
 
                 <div className="botoes-navegacao">
+                    <button className='try-again-button-p2' onClick={irParaPaginaAnterior}>Try again</button>
                     <button className="anterior-button-p6" id="anterior6" onClick={irParaPaginaAnterior}>Anterior</button>
                     <button className="proximo-button-p6" id="proximo6" onClick={irParaProximaPagina}>Próximo</button>
                     <button className="try-again-button" id="try6" onClick={() => navigate('/pagina/5')}>Try Again</button>

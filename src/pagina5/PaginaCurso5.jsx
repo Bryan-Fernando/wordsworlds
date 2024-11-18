@@ -84,33 +84,50 @@ function PaginaCurso5() {
 
     const irParaPaginaAnterior = () => {
         window.scrollTo(0, 0);
-        navigate('/pagina/4'); 
+        navigate('/pagina/4');
     }
-    
+
     const irParaProximaPagina = () => {
         window.scrollTo(0, 0);
         navigate('/pagina/6', { state: { respostas } }); // Passa as respostas
     };
-    
+
     return (
         <Estrutura>
             <div>
                 <div className="exercicio-ordenacao">
                     <h2>Learning Language Exercises</h2>
                     <p className="questionText">Put the words in the correct order.</p>
-                    <table className="styled-table" id='tabela5'>
-                        <thead>
-                                <tr>
-                                    <th>Introdução<br />Conjunção</th>
-                                    <th>Advérbio</th>
-                                    <th>Sujeito</th>
-                                    <th>Verbo <br /> Auxiliar</th>
-                                    <th>Advérbio</th>
-                                    <th>Verbo(s)</th>
-                                    <th>Objeto <br /> Complemento</th>
-                                </tr>
-                            </thead>
-                        </table>
+                    <div className="container-tabelas">
+                        <div>
+                            <div className="table-header-p5">AFIRMATIVA</div>
+                            <table className="styled-table">
+                                <thead>
+                                    <tr>
+                                        <th>Sujeito</th>
+                                        <th>Verbo Auxiliar</th>
+                                        <th>Advérbio</th>
+                                        <th>Verbo(s)</th>
+                                        <th>Objeto Complemento</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <div className="table-header-p5">NEGATIVA</div>
+                            <table className="styled-table">
+                                <thead>
+                                    <tr>
+                                        <th>Sujeito</th>
+                                        <th>Verbo Auxiliar</th>
+                                        <th><span style={{ color: 'red' }}>Not</span> Advérbio</th>
+                                        <th>Verbo(s)</th>
+                                        <th>Objeto Complemento</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
                     <div className="frases">
                         {respostasCorretas.map((_, fraseIndex) => (
                             <div key={fraseIndex}>
@@ -123,7 +140,7 @@ function PaginaCurso5() {
                                         >
                                             {word}
                                         </div>
-                                    ))} 
+                                    ))}
                                 </div>
                                 <div className="input-frase">
                                     {respostas[fraseIndex] && respostas[fraseIndex].map((palavra, index) => (
@@ -133,7 +150,7 @@ function PaginaCurso5() {
                                     ))}
                                 </div>
                             </div>
-                        ))} 
+                        ))}
                     </div>
 
                     <div>
