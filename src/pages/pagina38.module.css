@@ -1,0 +1,134 @@
+.pg38Container {
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Cabeçalho com Grid */
+.pg38Header {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Estilo do Título (coluna esquerda) */
+.pg38HeaderText {
+    text-align: left;
+}
+
+.pg38HeaderText h1 {
+    font-size: 70px;
+    color: black;
+    margin: 0;
+}
+
+.pg38HeaderText h2 {
+    font-size: 40px;
+    color: #A61C28;
+    margin: 0;
+}
+
+/* Estilo da imagem (coluna direita) */
+.pg38HeaderImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pg38Image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Container dos diálogos */
+.pg38DialogContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Cada coluna dos diálogos */
+.pg38DialogColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Blocos de diálogo */
+.pg38DialogBox {
+    background-color: #f9f9f9;
+    border: 4px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 250px; /* Altura fixa para uniformizar */
+}
+
+/* Estilo das caixas de Emma */
+.pg38DialogColumn:nth-child(2) .pg38DialogBox {
+    background-color: #fff7f7;
+    border-color: #A61C28;
+    color: #8a1720;
+}
+
+/* Ícones de áudio fora dos blocos */
+.pg38AudioIcons {
+    position: absolute;
+    top: 50px;
+    right: -38px; /* Move os ícones para fora do bloco */
+    display: flex;
+    flex-direction: column; /* Alinha os ícones verticalmente */
+    gap: 50px;
+}
+
+.pg38AudioControls{
+    position: relative;
+    right: 190px;
+}
+
+.pg38AudioControls img:last-child {
+    margin-left: 20px; /* Espaço adicional somente para o megafone */
+}
+
+.pg38Icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Animação de pulsar para ícones de áudio */
+.pg38Icon.pulsando {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pg38Icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Título em negrito para texto em inglês */
+.pg38DialogBox strong {
+    font-weight: bold;
+}

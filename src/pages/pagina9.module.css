@@ -1,0 +1,141 @@
+.Pg9Container{
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'main main'
+    ;
+    gap: 30px;
+}
+
+.Pg9Header{
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.Pg9HeaderH2{
+    color: black;
+}
+
+.Pg9Main{
+    width: 100%;
+    text-align: center;
+}
+
+/* Este é um comentário */
+
+.Pg9TableHeader {
+    background-color: #A61C28;
+    color: white;
+    text-align: center !important;
+    padding: 10px;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.Pg9StyledTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed;
+}
+
+.Pg9StyledTable thead tr {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+}
+
+
+.Pg9StyledTable th, .Pg9StyledTable td {
+    border: 1px solid #A61C28;
+    padding: 10px;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.Pg9StyledTable tbody tr {
+    background-color: white;
+}
+
+.Pg9StyledTable tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.Pg9InputCell {
+    width: 100%;
+    height: 7vh;
+    border: none;
+    padding: 8px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+}
+
+.Pg9InputCell:focus {
+    outline: none;
+    border: 1px solid #F2F2F2;
+    background-color: white;
+}
+
+.Pg9InputCell::-webkit-scrollbar {
+    display: none;
+}
+
+.Pg9Sujeito {
+    width: 130px;
+    min-height: 50px;
+}
+
+.Pg9VerboAuxiliar {
+    width: 170px;
+    min-height: 50px;
+}
+
+.Pg9Adverbio {
+    width: 140px;
+    min-height: 50px;
+}
+
+.Pg9Verbo {
+    width: 210px;
+    min-height: 50px;
+}
+
+.Pg9ObjetivoComplemento {
+    width: 260px;
+    min-height: 50px;
+}
+
+.Pg9Traducao {
+    height: 80px;
+    width: 390px;
+}
+
+@media (max-width: 1080px) {
+    .Pg9StyledTable{
+        margin-bottom: 15%;
+    }
+
+    .Pg9StyledTable th, 
+    .Pg9StyledTable td {
+        padding: 5px;
+    }
+
+    .Pg9InputCell {
+        height: 3vw;
+        padding: 0px;
+    }
+
+    .Pg9Traducao {
+        height: auto;
+        width: 100%;
+    }
+}

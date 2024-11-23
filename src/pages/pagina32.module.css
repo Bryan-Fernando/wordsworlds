@@ -1,0 +1,140 @@
+.Pg32Container {
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'main main';
+    gap: 30px;
+}
+
+.Pg32Header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.Pg32HeaderH2 {
+    color: black;
+}
+
+.Pg32Main {
+    width: 100%;
+    text-align: center;
+}
+
+/* Este é um comentário */
+
+.Pg32TableHeader {
+    background-color: #A61C28;
+    color: white;
+    text-align: center !important;
+    padding: 10px;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.Pg32StyledTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed;
+}
+
+.Pg32StyledTable thead tr {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+}
+
+.Pg32StyledTable th,
+.Pg32StyledTable td {
+    border: 1px solid #A61C28;
+    padding: 10px;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.Pg32StyledTable tbody tr {
+    background-color: white;
+}
+
+.Pg32StyledTable tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.Pg32InputCell {
+    width: 100%;
+    height: 7vh;
+    border: none;
+    padding: 8px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+}
+
+.Pg32InputCell:focus {
+    outline: none;
+    border: 1px solid #F2F2F2;
+    background-color: white;
+}
+
+.Pg32InputCell::-webkit-scrollbar {
+    display: none;
+}
+
+.Pg32Sujeito {
+    width: 130px;
+    min-height: 50px;
+}
+
+.Pg32VerboAuxiliar {
+    width: 170px;
+    min-height: 50px;
+}
+
+.Pg32Adverbio {
+    width: 140px;
+    min-height: 50px;
+}
+
+.Pg32Verbo {
+    width: 210px;
+    min-height: 50px;
+}
+
+.Pg32ObjetivoComplemento {
+    width: 260px;
+    min-height: 50px;
+}
+
+.Pg32Traducao {
+    height: 80px;
+    width: 390px;
+}
+
+@media (max-width: 1080px) {
+    .Pg32StyledTable{
+        margin-bottom: 15%;
+    }
+
+    .Pg32StyledTable th, 
+    .Pg32StyledTable td {
+        padding: 5px;
+    }
+
+    .Pg32InputCell {
+        height: 3vw;
+        padding: 0px;
+    }
+
+    .Pg32Traducao {
+        height: auto;
+        width: 100%;
+    }
+}

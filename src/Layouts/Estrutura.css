@@ -1,0 +1,235 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    height: auto;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: italic;
+}
+
+body {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+}
+
+header{
+    grid-area: header;
+    background-color: white;
+}
+
+main{
+    grid-area: main;
+    background-color: white;
+    display: flex;
+    justify-content: left;
+    color: black;
+}
+
+aside{
+    grid-area: aside;
+    background-color: white;
+    display: flex;
+    justify-content: space-between
+
+}
+th {
+    text-align: center !important;
+    color: white !important;
+}
+
+li {
+    font-size: calc(10px + 1vw);
+}
+
+.mainEstrutura {
+    background-color: #EEF4ED;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #0235357a;
+    width: 85%;
+    min-width: 85%;
+    height: 100%;
+    min-height: 180vh;
+    margin: auto;
+    display: flex; /* Usando Flexbox */
+    position: relative;
+}
+
+.side {
+    width: 8%;
+    height: auto;
+    min-height: 100%;
+    background-color: #A61C28;
+    position: relative;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    writing-mode: vertical-rl;
+    rotate: 180deg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.wordside {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.englishside {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Content {
+    padding-right: 4%;
+    padding-left: 4%;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    display: flex;
+    width: calc(100% - 45px); /* Subtrai o padding-right */
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.navButtons {
+    display: flex;
+    justify-content: flex-end; /* Garante alinhamento à direita */
+    gap: 20px; /* Espaçamento entre os botões */
+    margin-top: auto; /* Empurra os botões para o final do contêiner */
+    align-items: center; /* Centraliza os botões verticalmente */
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.navButton {
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    min-width: 100px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    width: 20%;
+}
+
+.navButton:hover {
+    background-color: #870F21;
+}
+
+.marcador-pagina {
+    background-color: #A61C28; 
+    color: white; 
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+    font-size: 24px; 
+    text-align: center;
+    z-index: 10; 
+}
+
+
+/* Configuração para telas menores */
+
+/* Telas com até 1080p */
+
+@media (max-width: 1080px) {
+
+    #root {
+        margin: 0;
+    }
+    head {
+        margin: 0;
+    }
+    
+    header {
+        height: 100%;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    h2 {
+        font-size: 3.6vw;
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 2.4vw;
+    }
+
+    p {
+        font-size: 1.8vw;
+    }
+
+    .side {
+        width: 10%;
+    }
+
+    .wordside {
+        font-size: 3vw;
+    }
+    .englishside {
+        font-size: 2vw;
+    }
+    .mainEstrutura {
+        background-color: #EEF4ED;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        max-height: none;
+        margin: auto;
+        display: flex;
+        position: relative;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .Content {
+        padding-top: 10%;
+    }
+
+    .side {
+        border-radius: 0;
+    }
+
+    table thead {
+        font-size: 1.6vw;
+    }
+
+    table tbody {
+        font-size: 1.6vw;
+    }
+
+    table tbody tr {
+        height: 10px;
+    }
+
+    table tbody tr td, table tbody tr th, table thead tr th{
+        max-height: 10px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+

@@ -1,0 +1,141 @@
+.Pg16Container{
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'main main'
+    ;
+    gap: 30px;
+}
+
+.Pg16Header{
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.Pg16HeaderH2{
+    color: black;
+}
+
+.Pg16Main{
+    width: 100%;
+    text-align: center;
+}
+
+/* Este é um comentário */
+
+.Pg16TableHeader {
+    background-color: #A61C28;
+    color: white;
+    text-align: center !important;
+    padding: 10px;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.Pg16StyledTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed;
+}
+
+.Pg16StyledTable thead tr {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+}
+
+
+.Pg16StyledTable th, .Pg16StyledTable td {
+    border: 1px solid #A61C28;
+    padding: 10px;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.Pg16StyledTable tbody tr {
+    background-color: white;
+}
+
+.Pg16StyledTable tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.Pg16InputCell {
+    width: 100%;
+    height: 7vh;
+    border: none;
+    padding: 8px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+}
+
+.Pg16InputCell:focus {
+    outline: none;
+    border: 1px solid #F2F2F2;
+    background-color: white;
+}
+
+.Pg16InputCell::-webkit-scrollbar {
+    display: none;
+}
+
+.Pg16Sujeito {
+    width: 130px;
+    min-height: 50px;
+}
+
+.Pg16VerboAuxiliar {
+    width: 170px;
+    min-height: 50px;
+}
+
+.Pg16Adverbio {
+    width: 140px;
+    min-height: 50px;
+}
+
+.Pg16Verbo {
+    width: 210px;
+    min-height: 50px;
+}
+
+.Pg16ObjetivoComplemento {
+    width: 260px;
+    min-height: 50px;
+}
+
+.Pg16Traducao {
+    height: 80px;
+    width: 390px;
+}
+
+@media (max-width: 1080px) {
+    .Pg16StyledTable{
+        margin-bottom: 15%;
+    }
+
+    .Pg16StyledTable th, 
+    .Pg16StyledTable td {
+        padding: 5px;
+    }
+
+    .Pg16InputCell {
+        height: 3vw;
+        padding: 0px;
+    }
+
+    .Pg16Traducao {
+        height: auto;
+        width: 100%;
+    }
+}

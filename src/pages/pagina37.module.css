@@ -1,0 +1,117 @@
+.pg37Container {
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.pg37Title {
+    color: #a61c28;
+    font-size: 44px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.pg37Instruction {
+    color: #a61c28;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.pg37VolumeIcon {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+}
+
+.pg37PercentualAcertos {
+    width: 300px;
+    height: 100px;
+    border: 2px dotted #a61c28;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #a61c28;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    position: absolute;
+    left: 700px;
+    top: 200px;
+}
+
+.pg37ListaRespostas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pg37RespostaItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    position: relative;
+    width: 50%;
+    color: black;
+    right: 10px;
+}
+
+.pg37Input {
+    flex: 1;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    outline: none;
+    color: #000;
+    font-weight: bold; 
+    width: 100%;
+}
+
+.pg37Input:focus {
+    border-color: #000000;
+    box-shadow: 0 0 5px rgba(19, 19, 19, 0.5);
+}
+
+.pg37StatusCorreto {
+    color: green;
+    font-weight: bold;
+}
+
+.pg37StatusErrado {
+    color: red;
+    font-weight: bold;
+}
+
+.pg37AudioIcon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.pg37VolumeIcon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.pg37Status {
+    width: 24px;
+    height: 24px;
+}
+
+.pg37Input {
+    flex: 1;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    background-color: #f9f9f9;
+}
+

@@ -1,0 +1,61 @@
+
+.Pg3Container{
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'main main'
+    'aside aside'
+    ;
+    gap: 30px;
+}
+
+.Pg3Header{
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.Pg3Main{
+    width: 100%;
+    text-align: center;
+}
+
+.Pg3Main img {
+    width: 25%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.Pg3Aside{
+    margin: 0;
+    height: 200px;
+    width: 100%;
+    text-align: left;
+    padding-left: 0px; 
+    list-style-position: inside;
+}
+
+.Pg3AsideH1{
+    width: 50%;
+    color: #A61C28;
+}
+
+.Pg3AsideDivLista{
+    width: 50%;
+    font-size: 22px;
+}
+
+@media (max-width: 1080px) {
+    .Pg3Main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1px;
+    }
+
+    .Pg3Main img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+}

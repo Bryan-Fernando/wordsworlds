@@ -1,0 +1,142 @@
+.Pg8Container{
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'main main'
+    ;
+    gap: 30px;
+}
+
+.Pg8Header{
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.Pg8HeaderH2{
+    color: black;
+}
+
+.Pg8Main{
+    width: 100%;
+    text-align: center;
+}
+
+/* Este é um comentário */
+
+.Pg8TableHeader {
+    background-color: #A61C28;
+    color: white;
+    text-align: center !important;
+    padding: 10px;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.Pg8StyledTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed;
+}
+
+.Pg8StyledTable thead tr {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+}
+
+
+.Pg8StyledTable th, .Pg8StyledTable td {
+    border: 1px solid #A61C28;
+    padding: 10px;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.Pg8StyledTable tbody tr {
+    background-color: white;
+}
+
+.Pg8StyledTable tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.Pg8InputCell {
+    width: 100%;
+    height: 7vh;
+    border: none;
+    padding: 8px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+}
+
+.Pg8InputCell::-webkit-scrollbar {
+    display: none;
+}
+
+.Pg8InputCell:focus {
+    outline: none;
+    border: 1px solid #F2F2F2;
+    background-color: white;
+}
+
+
+.Pg8Sujeito {
+    width: 130px;
+    min-height: 50px;
+}
+
+.Pg8VerboAuxiliar {
+    width: 170px;
+    min-height: 50px;
+}
+
+.Pg8Adverbio {
+    width: 140px;
+    min-height: 50px;
+}
+
+.Pg8Verbo {
+    width: 210px;
+    min-height: 50px;
+}
+
+.Pg8ObjetivoComplemento {
+    width: 260px;
+    min-height: 50px;
+}
+
+.Pg8Traducao {
+    height: 80px;
+    width: 390px;
+}
+
+@media (max-width: 1080px) {
+    .Pg8StyledTable{
+        margin-bottom: 15%;
+    }
+
+    .Pg8StyledTable th, 
+    .Pg8StyledTable td {
+        padding: 5px;
+    }
+
+    .Pg8InputCell {
+        height: 3vw;
+        padding: 0px;
+    }
+
+    .Pg8Traducao {
+        height: auto;
+        width: 100%;
+    }
+}
