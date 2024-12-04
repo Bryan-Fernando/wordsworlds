@@ -5,18 +5,39 @@ import { useNavigate, useLocation } from 'react-router-dom';
 function Estrutura({ children, backgroundColor, routes = [] }) {
   const navigate = useNavigate();
   const location = useLocation();
-  const [paginaValida, setPaginaValida] = useState(false);
 
   const currentIndex = routes.findIndex((route) => route.path === location.pathname);
+
+  const [paginaValida, setPaginaValida] = useState(false);
+  const [pageInput, setPageInput] = useState(currentIndex + 1);
 
   const userNavigate = (path, state = {}) => {
     window.scrollTo(0, 0);
     navigate(path, { state });
   };
 
-  // Função de validação que será passada como prop
   const handleValidarPagina = (isValid) => {
     setPaginaValida(isValid);
+  };
+
+  const handlePageChangeInput = (e) => {
+    setPageInput(e.target.value);
+  };
+
+  const handlePageChangeKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      const selectedPage = parseInt(pageInput, 10) - 1;
+      if (selectedPage === 36) {
+        userNavigate(routes[35]?.path);
+        return;
+      }
+
+      if (selectedPage >= 0 && selectedPage < routes.length) {
+        userNavigate(routes[selectedPage]?.path);
+      } else {
+        alert('Número de página inválido!');
+      }
+    }
   };
 
   const handleAvancar = () => {
@@ -33,14 +54,12 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
     if (currentIndex > 0) {
       const previousPage = routes[currentIndex - 1]?.path;
       if (previousPage === '/pagina37') {
-        // Enviar dados armazenados no localStorage ao voltar para a página 37
-        const respostasUsuario = localStorage.getItem('respostasPagina36') 
-          ? JSON.parse(localStorage.getItem('respostasPagina36')) 
+        const respostasUsuario = localStorage.getItem('respostasPagina36')
+          ? JSON.parse(localStorage.getItem('respostasPagina36'))
           : [];
-        const resultado = localStorage.getItem('resultadoPagina36') 
-          ? JSON.parse(localStorage.getItem('resultadoPagina36')) 
+        const resultado = localStorage.getItem('resultadoPagina36')
+          ? JSON.parse(localStorage.getItem('resultadoPagina36'))
           : [];
-        
         userNavigate(previousPage, { respostasUsuario, resultado });
       } else {
         userNavigate(previousPage);
@@ -62,7 +81,30 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
           <div>
             {React.cloneElement(children, { onValidar: handleValidarPagina })}
           </div>
+
           <div className="navButtons">
+            <div className="pageSelector">
+              <label htmlFor="pageInput">Página</label>
+              <input
+                id="pageInput"
+                type="text"
+                value={pageInput}
+                onChange={(e) => {
+                  const value = e.target.value.replace(/\D/g, '');
+                  setPageInput(value ? Math.min(Math.max(Number(value), 1), routes.length) : '');
+                }}
+                onKeyPress={(e) => {
+                  if (e.key === 'Enter') handlePageChangeKeyPress(e);
+                }}
+                style={{
+                  width: '40px', 
+                  textAlign: 'center', 
+                  padding: '5px', 
+                }}
+              />
+
+              <span> / {routes.length}</span>
+            </div>
             <button
               className="navButton"
               onClick={handleVoltar}
@@ -78,6 +120,7 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
             >
               Avançar
             </button>
+
             <div className="marcador-pagina">
               <strong>{currentIndex + 1}</strong>
             </div>

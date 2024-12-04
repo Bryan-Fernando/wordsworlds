@@ -1,7 +1,38 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina4.module.css';
 
+// Importação dos áudios
+import imastu from '../assets/audios/imastu.mp3';
+import heisateacher from '../assets/audios/heisateacher.mp3';
+import sheismarried from '../assets/audios/sheismarried.mp3';
+import itshot from '../assets/audios/itshot.mp3';
+import wearebrazil from '../assets/audios/wearebrazil.mp3';
+import youaresingle from '../assets/audios/youaresingle.mp3';
+import theyarefromport from '../assets/audios/theyarefromport.mp3';
+import imnotspanish from '../assets/audios/imnotspanish.mp3';
+import heisnotalaw from '../assets/audios/heisnotalaw.mp3';
+import sheisnotsingle from '../assets/audios/sheisnotsingle.mp3';
+import itsnotcold from '../assets/audios/itsnotcold.mp3';
+import werenotportuguese from '../assets/audios/werenotportuguese.mp3';
+import yourenotitalian from '../assets/audios/yourenotitalian.mp3';
+import theyarenotbrazil from '../assets/audios/theyarenotbrazil.mp3';
+
 const Pagina4 = () => {
+    const currentAudioRef = useRef(null);
+
+    const playAudio = (audioFile) => {
+        // Parar o áudio atual, se existir
+        if (currentAudioRef.current) {
+            currentAudioRef.current.pause();
+            currentAudioRef.current.currentTime = 0;
+        }
+
+        // Criar um novo áudio e tocar
+        const audio = new Audio(audioFile);
+        currentAudioRef.current = audio;
+        audio.play();
+    };
+
     return (
         <div>
             <div className={styles.Pg4Container}>
@@ -50,29 +81,29 @@ const Pagina4 = () => {
                     <div className={styles.Pg4AsideAffirmative}>
                         <div>
                             <h3 className={styles.Pg4AsideDivH3}>AFFIRMATIVE</h3>
-                            <p>I am = I’m a student</p>
+                            <p onClick={() => playAudio(imastu)} className={styles.clickable}>I am = I’m a student</p>
                             <hr />
-                            <p>He is = He’s a teacher</p>
-                            <p>She is = She’s married</p>
-                            <p>It is = It’s hot</p>
+                            <p onClick={() => playAudio(heisateacher)} className={styles.clickable}>He is = He’s a teacher</p>
+                            <p onClick={() => playAudio(sheismarried)} className={styles.clickable}>She is = She’s married</p>
+                            <p onClick={() => playAudio(itshot)} className={styles.clickable}>It is = It’s hot</p>
                             <hr />
-                            <p>We are = We’re Brazilians</p>
-                            <p>You are = You’re single</p>
-                            <p>They are = They’re from Portugal</p>
+                            <p onClick={() => playAudio(wearebrazil)} className={styles.clickable}>We are = We’re Brazilians</p>
+                            <p onClick={() => playAudio(youaresingle)} className={styles.clickable}>You are = You’re single</p>
+                            <p onClick={() => playAudio(theyarefromport)} className={styles.clickable}>They are = They’re from Portugal</p>
                         </div>
                     </div>
                     <div className={styles.Pg4AsideNegative}>
                         <div>
                             <h3 className={styles.Pg4AsideDivH3}>NEGATIVE</h3>
-                            <p>I’m not Spanish</p>
+                            <p onClick={() => playAudio(imnotspanish)} className={styles.clickable}>I’m not Spanish</p>
                             <hr />
-                            <p>He’s not a lawyer</p>
-                            <p>She’s not single</p>
-                            <p>It’s not cold</p>
+                            <p onClick={() => playAudio(heisnotalaw)} className={styles.clickable}>He’s not a lawyer</p>
+                            <p onClick={() => playAudio(sheisnotsingle)} className={styles.clickable}>She’s not single</p>
+                            <p onClick={() => playAudio(itsnotcold)} className={styles.clickable}>It’s not cold</p>
                             <hr />
-                            <p>We’re not Portuguese</p>
-                            <p>You’re not Italian</p>
-                            <p>They’re not Brazilians</p>
+                            <p onClick={() => playAudio(werenotportuguese)} className={styles.clickable}>We’re not Portuguese</p>
+                            <p onClick={() => playAudio(yourenotitalian)} className={styles.clickable}>You’re not Italian</p>
+                            <p onClick={() => playAudio(theyarenotbrazil)} className={styles.clickable}>They’re not Brazilians</p>
                         </div>
                     </div>
                 </aside>

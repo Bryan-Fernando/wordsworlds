@@ -1,10 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from './pagina7.module.css';
+import interrogativaAudio from '../assets/audios/interrogativaA.mp3';
+import verboAuxiliarAudio from '../assets/audios/verboauxiliar.mp3';
+import sujeitoAudio from '../assets/audios/sujeito.mp3';
+import adverbioAudio from '../assets/audios/adverbio.mp3';
+import verboAudio from '../assets/audios/verbo.mp3';
+import objetoComplementoAudio from '../assets/audios/objetocomplemento.mp3';
+import traducaoAudio from '../assets/audios/traducao.mp3';
+import traducaoAudio1 from '../assets/audios/pg7_trad1.mp3';
+import traducaoAudio2 from '../assets/audios/pg7_trad2.mp3';
+import traducaoAudio3 from '../assets/audios/pg7_trad3.mp3';
+import amAudio from '../assets/audios/am.mp3';
+import iAudio from '../assets/audios/i.mp3';
+import goodStudentAudio from '../assets/audios/aGoodStudent.mp3';
+import inClassAudio from '../assets/audios/inClassAB.mp3';
+import overThreeAudio from '../assets/audios/over3.mp3';
 
 const Pagina7 = () => {
     const [inputValues, setInputValues] = useState(
         Array(6).fill(Array(6).fill(''))
     );
+    const currentAudioRef = useRef(null);
+
+    const playAudio = (audioFile) => {
+        if (currentAudioRef.current) {
+            currentAudioRef.current.pause();
+            currentAudioRef.current.currentTime = 0;
+        }
+
+        const audio = new Audio(audioFile);
+        currentAudioRef.current = audio;
+        audio.play();
+    };
 
     const handleInputChange = (rowIndex, colIndex, e) => {
         const newValue = e.target.value;
@@ -24,55 +51,141 @@ const Pagina7 = () => {
                 </header>
                 <main className={styles.Pg7Main}>
                     <div>
-                        <div className={styles.Pg7TableHeader}>INTERROGATIVA AFIRMATIVA</div>
+                        <div
+                            className={styles.Pg7TableHeader}
+                            onClick={() => playAudio(interrogativaAudio)}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            INTERROGATIVA AFIRMATIVA
+                        </div>
                         <table className={styles.Pg7StyledTable}>
                             <thead>
                                 <tr>
-                                    <th>Verbo <br /> Auxiliar</th>
-                                    <th>Sujeito</th>
-                                    <th>Advérbio</th>
-                                    <th>Verbo(s)</th>
-                                    <th>Objeto <br /> Complemento</th>
-                                    <th>Tradução</th>
+                                    <th onClick={() => playAudio(verboAuxiliarAudio)} style={{ cursor: 'pointer' }}>
+                                        Verbo <br /> Auxiliar
+                                    </th>
+                                    <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: 'pointer' }}>Sujeito</th>
+                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}>Advérbio</th>
+                                    <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>Verbo(s)</th>
+                                    <th onClick={() => playAudio(objetoComplementoAudio)} style={{ cursor: 'pointer' }}>
+                                        Objeto <br /> Complemento
+                                    </th>
+                                    <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: 'pointer' }}>Tradução</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td className={styles.Pg7Sujeito}>Am</td>
-                                    <td className={styles.Pg7VerboAuxiliar}>I</td>
+                                    <td
+                                        className={styles.Pg7Sujeito}
+                                        onClick={() => playAudio(amAudio)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        Am
+                                    </td>
+                                    <td
+                                        className={styles.Pg7VerboAuxiliar}
+                                        onClick={() => playAudio(iAudio)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        I
+                                    </td>
                                     <td className={styles.Pg7Adverbio}></td>
                                     <td className={styles.Pg7Verbo}></td>
-                                    <td className={styles.Pg7ObjetivoComplemento}>a good student?</td>
-                                    <td className={styles.Pg7Traducao}>Eu sou um bom aluno?</td>
+                                    <td
+                                        className={styles.Pg7ObjetivoComplemento}
+                                        onClick={() => playAudio(goodStudentAudio)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        a good student?
+                                    </td>
+                                    <td
+                                        className={styles.Pg7Traducao}
+                                        onClick={() => playAudio(traducaoAudio1)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        Eu sou um bom aluno?
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td className={styles.Pg7Sujeito}>Am</td>
-                                    <td className={styles.Pg7VerboAuxiliar}>I</td>
+                                    <td
+                                        className={styles.Pg7Sujeito}
+                                        onClick={() => playAudio(amAudio)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        Am
+                                    </td>
+                                    <td
+                                        className={styles.Pg7VerboAuxiliar}
+                                        onClick={() => playAudio(iAudio)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        I
+                                    </td>
                                     <td className={styles.Pg7Adverbio}></td>
                                     <td className={styles.Pg7Verbo}></td>
-                                    <td className={styles.Pg7ObjetivoComplemento}>In class A or B?</td>
-                                    <td className={styles.Pg7Traducao}>Eu estou na turma A ou B?</td>
+                                    <td
+                                        className={styles.Pg7ObjetivoComplemento}
+                                        onClick={() => playAudio(inClassAudio)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        In class A or B?
+                                    </td>
+                                    <td
+                                        className={styles.Pg7Traducao}
+                                        onClick={() => playAudio(traducaoAudio2)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        Eu estou na turma A ou B?
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td className={styles.Pg7Sujeito}>Am</td>
-                                    <td className={styles.Pg7VerboAuxiliar}>I</td>
+                                    <td
+                                        className={styles.Pg7Sujeito}
+                                        onClick={() => playAudio(amAudio)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        Am
+                                    </td>
+                                    <td
+                                        className={styles.Pg7VerboAuxiliar}
+                                        onClick={() => playAudio(iAudio)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        I
+                                    </td>
                                     <td className={styles.Pg7Adverbio}></td>
                                     <td className={styles.Pg7Verbo}></td>
-                                    <td className={styles.Pg7ObjetivoComplemento}>over 3?</td>
-                                    <td className={styles.Pg7Traducao}>Eu tenho mais de 3 anos?</td>
+                                    <td
+                                        className={styles.Pg7ObjetivoComplemento}
+                                        onClick={() => playAudio(overThreeAudio)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        over 3?
+                                    </td>
+                                    <td
+                                        className={styles.Pg7Traducao}
+                                        onClick={() => playAudio(traducaoAudio3)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        Eu tenho mais de 3 anos?
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
-
                         <table className={styles.Pg7StyledTable}>
                             <thead>
                                 <tr>
-                                    <th>Verbo <br /> Auxiliar</th>
-                                    <th>Sujeito</th>
-                                    <th>'Not'<br /> Advérbio</th>
-                                    <th>Verbo(s)</th>
-                                    <th>Objeto <br /> Complemento</th>
-                                    <th>Tradução</th>
+                                    <th onClick={() => playAudio(verboAuxiliarAudio)} style={{ cursor: 'pointer' }}>
+                                        Verbo <br /> Auxiliar
+                                    </th>
+                                    <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: 'pointer' }}>Sujeito</th>
+                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}>Advérbio</th>
+                                    <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>Verbo(s)</th>
+                                    <th onClick={() => playAudio(objetoComplementoAudio)} style={{ cursor: 'pointer' }}>
+                                        Objeto <br /> Complemento
+                                    </th>
+                                    <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: 'pointer' }}>Tradução</th>
+
                                 </tr>
                             </thead>
                             <tbody>
