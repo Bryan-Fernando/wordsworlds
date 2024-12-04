@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Estrutura.css';
 import { useNavigate, useLocation } from 'react-router-dom';
 
@@ -20,9 +20,9 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
     setPaginaValida(isValid);
   };
 
-  const handlePageChangeInput = (e) => {
-    setPageInput(e.target.value);
-  };
+  useEffect(() => {
+    setPageInput(currentIndex + 1); // Atualiza o valor do input ao trocar de página
+  }, [currentIndex]);
 
   const handlePageChangeKeyPress = (e) => {
     if (e.key === 'Enter') {
@@ -31,7 +31,6 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
         userNavigate(routes[35]?.path);
         return;
       }
-
       if (selectedPage >= 0 && selectedPage < routes.length) {
         userNavigate(routes[selectedPage]?.path);
       } else {
@@ -97,12 +96,11 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
                   if (e.key === 'Enter') handlePageChangeKeyPress(e);
                 }}
                 style={{
-                  width: '40px', 
-                  textAlign: 'center', 
-                  padding: '5px', 
+                  width: '40px',
+                  textAlign: 'center',
+                  padding: '5px',
                 }}
               />
-
               <span> / {routes.length}</span>
             </div>
             <button
