@@ -33,14 +33,32 @@ import Pagina32 from "../pages/pagina32";
 import Pagina33 from "../pages/pagina33";
 import Pagina34 from "../pages/pagina34";
 import Pagina35 from "../pages/pagina35";
-/*
 import Pagina36 from "../pages/pagina36";
 import Pagina37 from "../pages/pagina37";
-import Pagina38 from "../pages//pagina38";
+import Pagina38 from "../pages/pagina38";
 import Pagina39 from "../pages/pagina39";
 import Pagina40 from "../pages/pagina40";
 import Pagina41 from "../pages/pagina41";
-*/
+import Pagina42 from "../pages/pagina42";
+import Pagina43 from "../pages/pagina43";
+import Pagina44 from "../pages/pagina44";
+import Pagina45 from "../pages/pagina45";
+import Pagina46 from "../pages/pagina46";
+import Pagina47 from "../pages/pagina47";
+import Pagina48 from "../pages/pagina48";
+import Pagina49 from "../pages/pagina49";
+import Pagina50 from "../pages/pagina50";
+import Pagina51 from "../pages/pagina51";
+import Pagina52 from "../pages/pagina52";
+import Pagina53 from "../pages/pagina53";
+import Pagina54 from "../pages/pagina54";
+import Pagina55 from "../pages/pagina55";
+import Pagina56 from "../pages/pagina56";
+import Pagina57 from "../pages/pagina57";
+import Pagina58 from "../pages/pagina58";
+import Pagina59 from "../pages/pagina59";
+import Pagina60 from "../pages/pagina60";
+
 const routes = [
   { path: "/", Component: Pagina1 },
   { path: "/pagina2", Component: Pagina2 },
@@ -76,13 +94,32 @@ const routes = [
   { path: "/pagina32", Component: Pagina32 },
   { path: "/pagina33", Component: Pagina33 },
   { path: "/pagina34", Component: Pagina34 },
-  { path: "/pagina35", Component: Pagina35 }/*
+  { path: "/pagina35", Component: Pagina35 },
   { path: "/pagina36", Component: Pagina36 },
   { path: "/pagina37", Component: Pagina37 },
   { path: "/pagina38", Component: Pagina38 },
   { path: "/pagina39", Component: Pagina39 },
   { path: "/pagina40", Component: Pagina40 },
-  { path: "/pagina41", Component: Pagina41 }*/
+  { path: "/pagina41", Component: Pagina41 },
+  /*{ path: "/pagina42", Component: Pagina42 },
+  { path: "/pagina43", Component: Pagina43 },
+  { path: "/pagina44", Component: Pagina44 },
+  { path: "/pagina45", Component: Pagina45 },
+  { path: "/pagina46", Component: Pagina46 },
+  { path: "/pagina47", Component: Pagina47 },
+  { path: "/pagina48", Component: Pagina48 },
+  { path: "/pagina49", Component: Pagina49 },
+  { path: "/pagina50", Component: Pagina50 },
+  { path: "/pagina51", Component: Pagina51 },
+  { path: "/pagina52", Component: Pagina52 },
+  { path: "/pagina53", Component: Pagina53 },
+  { path: "/pagina54", Component: Pagina54 },
+  { path: "/pagina55", Component: Pagina55 },
+  { path: "/pagina56", Component: Pagina56 },*/
+  { path: "/pagina57", Component: Pagina57 },
+  //{ path: "/pagina58", Component: Pagina58 },
+ // { path: "/pagina59", Component: Pagina59 },
+ // { path: "/pagina60", Component: Pagina60 }
 ];
 
 export default routes;

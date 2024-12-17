@@ -1,10 +1,10 @@
 .Pg27Container {
     display: grid;
-    grid-template-areas: 
-    'header header'
-    'main main'
+    grid-template-areas:
+        'header header'
+        'main main'
     ;
-    gap: 30px;
+    gap: 3rem;
 }
 
 .Pg27Header {
@@ -28,17 +28,17 @@
     background-color: #A61C28;
     color: white;
     text-align: center !important;
-    padding: 10px;
+    padding: 1rem;
     font-weight: bold;
     width: 100%;
-    margin-bottom: 5px;
-    font-size: 20px;
+    margin-bottom: .5rem;
+    font-size: 2rem;
 }
 
 .Pg27StyledTable {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
     table-layout: fixed;
 }
 
@@ -48,17 +48,20 @@
     font-weight: bold;
 }
 
-.Pg27StyledTable th, .Pg27StyledTable td {
-    border: 1px solid #A61C28;
-    padding: 10px;
+
+.Pg27StyledTable th,
+.Pg27StyledTable td {
+    border: .1rem solid #A61C28;
+    padding: 1rem;
     text-align: left;
     color: black;
     font-weight: bold;
-    font-size: 14px;
 }
 
 .Pg27StyledTable tbody tr {
     background-color: white;
+    max-width: 100%;
+    height: calc(7vw * 0.85);
 }
 
 .Pg27StyledTable tbody tr:nth-child(even) {
@@ -67,12 +70,11 @@
 
 .Pg27InputCell {
     width: 100%;
-    height: 7vh;
+    height: calc(7vh * 0.85);
     border: none;
-    padding: 8px;
+    padding: .8rem;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
     font-weight: bold;
     color: black;
     background-color: white;
@@ -80,7 +82,7 @@
 
 .Pg27InputCell:focus {
     outline: none;
-    border: 1px solid #F2F2F2;
+    border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
@@ -89,52 +91,41 @@
 }
 
 .Pg27Sujeito {
-    width: 130px;
-    min-height: 50px;
+    width: calc(10vw * 0.85);
 }
 
 .Pg27VerboAuxiliar {
-    width: 170px;
-    min-height: 50px;
+    width: calc(10vw * 0.85)
 }
 
 .Pg27Adverbio {
-    width: 140px;
-    min-height: 50px;
+    width: calc(12vw * 0.85)
 }
 
 .Pg27Verbo {
-    width: 210px;
-    min-height: 50px;
+    width: calc(12vw * 0.85)
 }
 
 .Pg27ObjetivoComplemento {
-    width: 260px;
-    min-height: 50px;
+    width: calc(18vw * 0.85)
 }
 
 .Pg27Traducao {
-    height: 80px;
-    width: 390px;
+    width: (18vw * 0.85);
 }
 
-@media (max-width: 1080px) {
-    .Pg27StyledTable{
+@media (max-width: 1024px) {
+    .Pg27StyledTable {
         margin-bottom: 15%;
     }
 
-    .Pg27StyledTable th, 
+    .Pg27StyledTable th,
     .Pg27StyledTable td {
-        padding: 5px;
+        padding: .5rem;
+
     }
 
     .Pg27InputCell {
-        height: 3vw;
-        padding: 0px;
-    }
-
-    .Pg27Traducao {
-        height: auto;
-        width: 100%;
+        height: calc(6vw * 0.85);
     }
 }

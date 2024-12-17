@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* 
+Configurações Globais 
+
+Estilização da página
+*/
 * {
     font-family: Arial, Helvetica, sans-serif;
     height: auto;
@@ -22,12 +27,12 @@ body {
     margin: 0;
 }
 
-header{
+header {
     grid-area: header;
     background-color: white;
 }
 
-main{
+main {
     grid-area: main;
     background-color: white;
     display: flex;
@@ -35,32 +40,31 @@ main{
     color: black;
 }
 
-aside{
-    grid-area: aside;
-    background-color: white;
-    display: flex;
-    justify-content: space-between
-
-}
 th {
     text-align: center !important;
     color: white !important;
 }
 
-li {
-    font-size: calc(10px + 1vw);
+aside {
+    grid-area: aside;
+    background-color: white;
+    display: flex;
+    justify-content: space-between
 }
+
+/* Estilização da estrutura padrão de todas as páginas */
 
 .mainEstrutura {
     background-color: #EEF4ED;
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px #0235357a;
+    border-radius: 1rem;
+    box-shadow: .5rem .5rem 1.5rem #0235357a;
     width: 85%;
     min-width: 85%;
     height: 100%;
     min-height: 180vh;
     margin: auto;
-    display: flex; /* Usando Flexbox */
+    display: flex;
+    /* Usando Flexbox */
     position: relative;
 }
 
@@ -70,8 +74,8 @@ li {
     min-height: 100%;
     background-color: #A61C28;
     position: relative;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     writing-mode: vertical-rl;
     rotate: 180deg;
     display: flex;
@@ -83,13 +87,13 @@ li {
 
 .wordside {
     color: white;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bold;
 }
 
 .englishside {
     color: white;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -99,7 +103,8 @@ li {
     padding-bottom: 3%;
     padding-top: 3%;
     display: flex;
-    width: calc(100% - 45px); /* Subtrai o padding-right */
+    width: calc(100% - 45px);
+    /* Subtrai o padding-right */
     position: relative;
     overflow: visible;
     box-sizing: border-box;
@@ -108,28 +113,32 @@ li {
 
 .navButtons {
     display: flex;
-    justify-content: flex-end; /* Garante alinhamento à direita */
-    gap: 20px; /* Espaçamento entre os botões */
-    margin-top: auto; /* Empurra os botões para o final do contêiner */
-    align-items: center; /* Centraliza os botões verticalmente */
+    justify-content: flex-end;
+    /* Garante alinhamento à direita */
+    gap: 2rem;
+    /* Espaçamento entre os botões */
+    margin-top: auto;
+    /* Empurra os botões para o final do contêiner */
+    align-items: center;
+    /* Centraliza os botões verticalmente */
     width: 100%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 4%;
+    padding-bottom: 2%;
 }
 
 .navButton {
     background-color: #A61C28;
     color: white;
     border: none;
-    padding: 10px 20px;
-    min-width: 100px;
-    height: 45px;
+    margin: 1% 2%;
+    min-width: 8rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: .5rem;
     font-weight: bold;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
     width: 20%;
+    font-size: calc(6px + .8vw);
 }
 
 .navButton:hover {
@@ -137,14 +146,15 @@ li {
 }
 
 .marcador-pagina {
-    background-color: #A61C28; 
-    color: white; 
-    padding: 10px 15px; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
-    font-size: 24px; 
+    background-color: #A61C28;
+    color: white;
+    border-radius: 25%;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.3);
     text-align: center;
-    z-index: 10; 
+    align-items: center;
+    z-index: 10;
+    width: 7%;
+    font-size: calc(6px + 1.8vw);
 }
 
 .pageSelector {
@@ -163,51 +173,28 @@ li {
     font-weight: bold;
 }
 
+.pagina42Content {
+    padding-left: 0;
+    padding-right: 0;
+}
 
-/* Configuração para telas menores */
+.pagina42navButtons {
+    padding-right: 4%;
+}
 
-/* Telas com até 1080p */
-
-@media (max-width: 1080px) {
-
-    #root {
-        margin: 0;
-    }
-    head {
-        margin: 0;
-    }
-    
-    header {
-        height: 100%;
+@media (max-width: 1024px) {
+    .wordside {
+        font-size: 3vw;
     }
 
-    h1 {
-        font-size: 5vw;
-    }
-
-    h2 {
-        font-size: 3.6vw;
-        width: 100%;
-    }
-
-    h3 {
-        font-size: 2.4vw;
-    }
-
-    p {
-        font-size: 1.8vw;
+    .englishside {
+        font-size: 2vw;
     }
 
     .side {
         width: 10%;
     }
 
-    .wordside {
-        font-size: 3vw;
-    }
-    .englishside {
-        font-size: 2vw;
-    }
     .mainEstrutura {
         background-color: #EEF4ED;
         width: 100%;
@@ -228,24 +215,4 @@ li {
     .side {
         border-radius: 0;
     }
-
-    table thead {
-        font-size: 1.6vw;
-    }
-
-    table tbody {
-        font-size: 1.6vw;
-    }
-
-    table tbody tr {
-        height: 10px;
-    }
-
-    table tbody tr td, table tbody tr th, table thead tr th{
-        max-height: 10px;
-        margin: 0;
-        padding: 0;
-    }
 }
-
-

@@ -1,102 +1,107 @@
-.Pg4Container{
+.Pg4Container {
     display: grid;
-    grid-template-areas: 
-    'header header'
-    'main main'
-    'hr hr'
-    'aside aside'
+    grid-template-areas:
+        'header header'
+        'main main'
+        'hr hr'
+        'aside aside'
     ;
-    gap: 30px;
+    gap: 3rem;
 }
 
-hr{
+hr {
     grid-area: hr;
 }
 
 .p4Table {
+    table-layout: auto;
     border-collapse: collapse;
     width: 100%;
     background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: .1rem solid #ccc;
+    border-radius: .8rem;
     overflow: hidden;
 }
 
-.p4Table th, .p4Table td {
-    border: 1px solid #ddd;
-    padding: 12px;
+.p4Table th,
+.p4Table td {
+    border: .1rem solid #ddd;
+    padding: 1.2rem;
     text-align: center;
+    width: 0;
 }
 
 .p4Table th {
     background-color: #e7f3f9;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 2rem;
     color: black !important;
 }
 
 .p4Table td {
     background-color: #f9fbfc;
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 .p4Table tr:nth-child(even) td {
     background-color: #f3f8fc;
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 .Pg4MainHr {
-    border: 3px solid #b30000; 
-    width: 100%;       
-    margin: 20px 0;       
+    border: .3rem solid #b30000;
+    width: 100%;
+    margin: 2rem 0;
+    border: .3rem solid #b30000;
+    width: 100%;
+    margin: 2rem 0;
 }
 
 .Pg4Highlight {
     font-weight: bold;
-    color: #b30000; 
+    color: #b30000;
 }
 
-.Pg4Header{
+.Pg4Header {
     height: 100%;
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.Pg4HeaderH2{
+.Pg4HeaderH2 {
     color: black;
 }
 
-.Pg4Main{
+.Pg4Main {
     height: 100%;
     width: 100%;
     text-align: center;
 }
 
-.Pg4Aside{
+.Pg4Aside {
     margin: 0;
     height: 100%;
     width: 100%;
     text-align: left;
-    padding-left: 0px; 
+    padding-left: 0px;
     list-style-position: inside;
 }
 
-.Pg4AsideAffirmative{
+.Pg4AsideAffirmative {
     width: 100%;
-    font-size: 30px;
     display: flex;
     justify-content: center;
 }
 
-.Pg4AsideNegative{
+.Pg4AsideNegative {
     width: 100%;
-    font-size: 30px;
     display: flex;
     justify-content: center;
 }
 
-.Pg4AsideDivH3{
+.Pg4AsideDivH3 {
+    font-size: 3rem;
     color: #A61C28;
 }
 
@@ -110,20 +115,15 @@ hr{
         padding: 8px;
     }
 
-    .p4Table tr:nth-child(even) td {
-        font-size: 2vw;
-    }
+@media (max-width: 1024px) {
 
-    .Pg4MainHr {   
-        margin: 20% 0;    
+    .p4Table th,
+    .p4Table td {
+        padding: .8rem;
     }
 
     hr {
-        margin: 5px 0;
-    }
-    
-    .Pg4Aside h3, .Pg4Aside p {
-        font-size: 2.4vw;
+        margin: .5rem 0;
     }
 }
-
+}

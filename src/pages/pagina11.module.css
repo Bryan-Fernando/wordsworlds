@@ -1,25 +1,32 @@
-.Pg11Container{
+.Pg11Container {
     display: grid;
-    grid-template-areas: 
-    'header header'
-    'main main'
+    grid-template-areas:
+        'header header'
+        'main main'
+        'aside aside'
     ;
-    gap: 30px;
+    gap: 3rem;
 }
 
-.Pg11Header{
+.Pg11Header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.Pg11HeaderH2{
+.Pg11HeaderH2 {
     color: black;
 }
 
-.Pg11Main{
+.Pg11Main {
     width: 100%;
     text-align: center;
+}
+
+.Pg11Aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Este é um comentário */
@@ -28,17 +35,17 @@
     background-color: #A61C28;
     color: white;
     text-align: center !important;
-    padding: 10px;
+    padding: 1rem;
     font-weight: bold;
     width: 100%;
-    margin-bottom: 5px;
-    font-size: 20px;
+    margin-bottom: .5rem;
+    font-size: 2rem;
 }
 
 .Pg11StyledTable {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
     table-layout: fixed;
 }
 
@@ -49,17 +56,19 @@
 }
 
 
-.Pg11StyledTable th, .Pg11StyledTable td {
-    border: 1px solid #A61C28;
-    padding: 10px;
+.Pg11StyledTable th,
+.Pg11StyledTable td {
+    border: .1rem solid #A61C28;
+    padding: 1rem;
     text-align: left;
     color: black;
     font-weight: bold;
-    font-size: 14px;
 }
 
 .Pg11StyledTable tbody tr {
     background-color: white;
+    max-width: 100%;
+    height: calc(7vw * 0.85);
 }
 
 .Pg11StyledTable tbody tr:nth-child(even) {
@@ -68,12 +77,11 @@
 
 .Pg11InputCell {
     width: 100%;
-    height: 7vh;
+    height: calc(7vh * 0.85);
     border: none;
-    padding: 8px;
+    padding: .8rem;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
     font-weight: bold;
     color: black;
     background-color: white;
@@ -81,7 +89,7 @@
 
 .Pg11InputCell:focus {
     outline: none;
-    border: 1px solid #F2F2F2;
+    border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
@@ -90,52 +98,97 @@
 }
 
 .Pg11Sujeito {
-    width: 130px;
-    min-height: 50px;
+    width: calc(10vw * 0.85);
 }
 
 .Pg11VerboAuxiliar {
-    width: 170px;
-    min-height: 50px;
+    width: calc(10vw * 0.85)
 }
 
 .Pg11Adverbio {
-    width: 140px;
-    min-height: 50px;
+    width: calc(12vw * 0.85)
 }
 
 .Pg11Verbo {
-    width: 210px;
-    min-height: 50px;
+    width: calc(12vw * 0.85)
 }
 
 .Pg11ObjetivoComplemento {
-    width: 260px;
-    min-height: 50px;
+    width: calc(18vw * 0.85)
 }
 
 .Pg11Traducao {
-    height: 80px;
-    width: 390px;
+    width: (18vw * 0.85);
 }
 
-@media (max-width: 1080px) {
-    .Pg11StyledTable{
+.Pg11AsideNotes1 {
+    width: 50%;
+    height: 4.5rem;
+    border: .4rem solid #A61C28;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    background-color: white;
+    text-align: left;
+    padding-left: 1rem;
+    background-color: #A61C28;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.Pg11AsideNotes1 p {
+    font-size: 1.5rem;
+}
+
+.Pg11AsideImgNotes {
+    height: calc(10px + 0.8vw);
+    width: 2rem;
+    padding-right: .5rem;
+}
+
+.Pg11AsideNotes2 {
+    width: 50%;
+    height: 100%;
+    border: .4rem solid #A61C28;
+    border-top: .1rem;
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+    background-color: white;
+    text-align: left;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.Pg11AsideNotes2 p {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+
+@media (max-width: 1024px) {
+    .Pg11StyledTable {
         margin-bottom: 15%;
     }
 
-    .Pg11StyledTable th, 
+    .Pg11StyledTable th,
     .Pg11StyledTable td {
-        padding: 5px;
+        padding: .5rem;
+
     }
 
     .Pg11InputCell {
-        height: 3vw;
-        padding: 0px;
+        height: calc(6vw * 0.85);
     }
 
-    .Pg11Traducao {
-        height: auto;
+    .Pg11AsideNotes1,
+    .Pg11AsideNotes2 {
         width: 100%;
+    }
+
+    .Pg11AsideNotes1 p,
+    .Pg11AsideNotes2 p {
+        padding: 1rem;
+        font-size: 2.75rem;
     }
 }

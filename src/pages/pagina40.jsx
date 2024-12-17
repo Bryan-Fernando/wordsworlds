@@ -29,19 +29,19 @@ const Pagina40 = () => {
     const [isSpeedReduced, setIsSpeedReduced] = useState([false, false, false, false, false]);
 
     const correctSentences = [
-        "I am studying for my exam",  // Imagem 1
-        "They are swimming in the pool",  // Imagem 2
-        "We are watching a movie",  // Imagem 3
-        "He is cleaning the house",  // Imagem 4
-        "She is playing the piano"  // Imagem 5
+        "I am studying for my exam",
+        "They are swimming in the pool",
+        "We are watching a movie",
+        "He is cleaning the house",
+        "She is playing the piano"
     ];
 
-    const displaySentences = [
-        "I am studying for my exam",  // A
-        "He is cleaning the house",   // B
-        "We are watching a movie",    // C
-        "They are swimming in the pool", // D
-        "She is playing the piano"    // E
+    const displayedSentences = [
+        "I am studying for my exam",
+        "He is cleaning the house",
+        "We are watching a movie",
+        "They are swimming in the pool",
+        "She is playing the piano"
     ];
 
     const audioFiles = [
@@ -115,70 +115,75 @@ const Pagina40 = () => {
 
     return (
         <div className={styles.pg40Container}>
-            <h2 style={{ textAlign: 'left', color: '#A61C28', marginLeft: '25px' }}>Exercise:</h2>
-            <p className={styles.pg40ExerciseTitle}>2. Matching Exercises (Match the sentence with the correct image/description)</p>
-            <p className={styles.pg40ExerciseQuestion}>Match the sentence (A-E) with the correct picture or description (1-5):</p>
-
-            <div className={styles.pg40ImagesContainer}>
-                {[Pagina40_imagem1, Pagina40_imagem2, Pagina40_imagem3, Pagina40_imagem4, Pagina40_imagem5].map((image, index) => (
-                    <div key={index} className={styles.pg40ImageBox}>
-                        <img src={image} alt={`Image ${index + 1}`} />
-                        <div className={styles.pg40InputBoxContainer}>
-                            <input
-                                type="text"
-                                className={styles.pg40InputBox}
-                                placeholder="Place here"
-                                value={inputValues[index]}
-                                onChange={(e) => {
-                                    const newValues = [...inputValues];
-                                    newValues[index] = e.target.value;
-                                    setInputValues(newValues);
-                                }}
-                            />
-                            {results[index] !== null && (
-                                <img
-                                    src={results[index] ? vSquare : xSquare}
-                                    alt={results[index] ? "Correct" : "Incorrect"}
-                                    className={styles.pg40CheckmarkImage}
+            <header className={styles.pg40Header}>
+                <h1 style={{ textAlign: 'left', color: '#A61C28' }}>Exercise:</h1>
+                <h2 className={styles.pg40ExerciseTitle}>
+                    2. Matching Exercises (Match the sentence with the correct image/description)
+                </h2>
+                <p className={styles.pg40ExerciseQuestion}>
+                    Match the sentence (A-E) with the correct picture or description (1-5):
+                </p>
+            </header>
+            <main className={styles.pg40Main}>
+                <div className={styles.pg40ImagesContainer}>
+                    {[Pagina40_imagem1, Pagina40_imagem2, Pagina40_imagem3, Pagina40_imagem4, Pagina40_imagem5].map((image, index) => (
+                        <div key={index} className={styles.pg40ImageBox}>
+                            <img src={image} alt={`Image ${index + 1}`} />
+                            <div className={styles.pg40InputBoxContainer}>
+                                <input
+                                    type="text"
+                                    className={styles.pg40InputBox}
+                                    placeholder="Place here"
+                                    value={inputValues[index]}
+                                    onChange={(e) => {
+                                        const newValues = [...inputValues];
+                                        newValues[index] = e.target.value;
+                                        setInputValues(newValues);
+                                    }}
                                 />
-                            )}
+                                {results[index] !== null && (
+                                    <img
+                                        src={results[index] ? vSquare : xSquare}
+                                        alt={results[index] ? "Correct" : "Incorrect"}
+                                        className={styles.pg40CheckmarkImage}
+                                    />
+                                )}
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
-
-            <div className={styles.pg40SentencesContainer}>
-                <p><strong>Sentences:</strong></p>
-                {displaySentences.map((sentence, index) => (
-                    <div key={index} className={styles.pg40Sentence} onClick={() => handleSentenceClick(sentence)}>
-                        <p><strong>{String.fromCharCode(65 + index)}) {sentence}</strong></p>
-                        <div className={styles.pg40IconsContainer}>
-                            <img
-                                src={eIcon}
-                                alt="English Audio Icon"
-                                className={`${styles.pg40AudioIcon} ${pulsingAudioEnglishIndex === index ? styles.pg40Pulsing : ''}`}
-                                onClick={(e) => handleAudioClick(index, false, e)}
-                            />
-                            <img
-                                src={pIcon}
-                                alt="Portuguese Audio Icon"
-                                className={`${styles.pg40PortugueseIcon} ${pulsingAudioPortugueseIndex === index ? styles.pg40Pulsing : ''}`}
-                                onClick={(e) => handleAudioClick(index, true, e)}
-                            />
-                            <img
-                                src={volumeReduzidoIcon}
-                                alt="Reduce Speed Icon"
-                                className={`${styles.pg40VolumeIcon} ${isSpeedReduced[index] ? styles.pg40Active : ''}`}
-                                onClick={(e) => reduzirVelocidade(index, e)}
-                            />
+                    ))}
+                </div>
+                <div className={styles.pg40SentencesContainer}>
+                    <p><strong>Sentences:</strong></p>
+                    {displayedSentences.map((sentence, index) => (
+                        <div key={index} className={styles.pg40Sentence} onClick={() => handleSentenceClick(sentence)}>
+                            <p><strong>{String.fromCharCode(65 + index)}) {sentence}</strong></p>
+                            <div className={styles.pg40IconsContainer}>
+                                <img
+                                    src={eIcon}
+                                    alt="English Audio Icon"
+                                    className={`${styles.pg40AudioIcon} ${pulsingAudioEnglishIndex === index ? styles.pg40Pulsing : ''}`}
+                                    onClick={(e) => handleAudioClick(index, false, e)}
+                                />
+                                <img
+                                    src={pIcon}
+                                    alt="Portuguese Audio Icon"
+                                    className={`${styles.pg40PortugueseIcon} ${pulsingAudioPortugueseIndex === index ? styles.pg40Pulsing : ''}`}
+                                    onClick={(e) => handleAudioClick(index, true, e)}
+                                />
+                                <img
+                                    src={volumeReduzidoIcon}
+                                    alt="Reduce Speed Icon"
+                                    className={`${styles.pg40VolumeIcon} ${isSpeedReduced[index] ? styles.pg40Active : ''}`}
+                                    onClick={(e) => reduzirVelocidade(index, e)}
+                                />
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
-
-            <button className={styles.pg40CheckButton} onClick={handleCheckClick}>
-                Check
-            </button>
+                    ))}
+                </div>
+                <button className={styles.pg40CheckButton} onClick={handleCheckClick}>
+                    Check
+                </button>
+            </main>
         </div>
     );
 };

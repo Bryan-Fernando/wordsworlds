@@ -1,9 +1,9 @@
 .Pg24Container {
     display: grid;
-    grid-template-areas: 
-    'header header'
-    'main main';
-    gap: 30px;
+    grid-template-areas:
+        'header header'
+        'main main';
+    gap: 3rem;
 }
 
 .Pg24Header {
@@ -27,17 +27,17 @@
     background-color: #A61C28;
     color: white;
     text-align: center !important;
-    padding: 10px;
+    padding: 1rem;
     font-weight: bold;
     width: 100%;
-    margin-bottom: 5px;
-    font-size: 20px;
+    margin-bottom: .5rem;
+    font-size: 2rem;
 }
 
 .Pg24StyledTable {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
     table-layout: fixed;
 }
 
@@ -47,18 +47,20 @@
     font-weight: bold;
 }
 
+
 .Pg24StyledTable th,
 .Pg24StyledTable td {
-    border: 1px solid #A61C28;
-    padding: 10px;
+    border: .1rem solid #A61C28;
+    padding: 1rem;
     text-align: left;
     color: black;
     font-weight: bold;
-    font-size: 14px;
 }
 
 .Pg24StyledTable tbody tr {
     background-color: white;
+    max-width: 100%;
+    height: calc(7vw * 0.85);
 }
 
 .Pg24StyledTable tbody tr:nth-child(even) {
@@ -67,12 +69,11 @@
 
 .Pg24InputCell {
     width: 100%;
-    height: 7vh;
+    height: calc(7vh * 0.85);
     border: none;
-    padding: 8px;
+    padding: .8rem;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
     font-weight: bold;
     color: black;
     background-color: white;
@@ -80,7 +81,7 @@
 
 .Pg24InputCell:focus {
     outline: none;
-    border: 1px solid #F2F2F2;
+    border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
@@ -89,52 +90,41 @@
 }
 
 .Pg24Sujeito {
-    width: 130px;
-    min-height: 50px;
+    width: calc(10vw * 0.85);
 }
 
 .Pg24VerboAuxiliar {
-    width: 170px;
-    min-height: 50px;
+    width: calc(10vw * 0.85)
 }
 
 .Pg24Adverbio {
-    width: 140px;
-    min-height: 50px;
+    width: calc(12vw * 0.85)
 }
 
 .Pg24Verbo {
-    width: 210px;
-    min-height: 50px;
+    width: calc(12vw * 0.85)
 }
 
 .Pg24ObjetivoComplemento {
-    width: 260px;
-    min-height: 50px;
+    width: calc(18vw * 0.85)
 }
 
 .Pg24Traducao {
-    height: 80px;
-    width: 390px;
+    width: (18vw * 0.85);
 }
 
-@media (max-width: 1080px) {
-    .Pg24StyledTable{
+@media (max-width: 1024px) {
+    .Pg24StyledTable {
         margin-bottom: 15%;
     }
 
-    .Pg24StyledTable th, 
+    .Pg24StyledTable th,
     .Pg24StyledTable td {
-        padding: 5px;
+        padding: .5rem;
+
     }
 
     .Pg24InputCell {
-        height: 3vw;
-        padding: 0px;
-    }
-
-    .Pg24Traducao {
-        height: auto;
-        width: 100%;
+        height: calc(6vw * 0.85);
     }
 }

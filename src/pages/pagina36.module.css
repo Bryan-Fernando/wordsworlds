@@ -1,94 +1,44 @@
-.Pg36pageTitle {
-    text-align: left;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #A61C28;
-    padding-left: 20px;
+.Pg36Container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "main main aside";
+    gap: 3rem;
 }
 
+.Pg36Header {
+    width: 100%;
+}
+.Pg36MainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: left; 
+}
+
+.Pg36pageTitle,
 .Pg36questionText {
+    text-align: left;
+    padding-left: 0;
+    margin: 0; 
     color: #A61C28;
     font-weight: bold;
-    text-align: left;
-    margin-bottom: 20px;
-    padding-left: 20px;
 }
-
-/* Estilos para tabela afirmativa */
-.Pg36tableHeaderAfirmativa {
-    background-color: #A61C28;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 5px;
-}
-
-.Pg36styledTableAfirmativa th {
-    border: 1px solid #A61C28;
-    background-color: #888A8C;
-    padding: 10px;
-    text-align: left;
-    font-size: 14px;
-    font-weight: bold;
-    color: black;
-}
-
-.Pg36tabelaAfirmativaContainer{
-    position: absolute;
-    left: 540px;
-    top: 191px;
-}
-
-/* Estilos para tabela negativa */
-.Pg36tableHeaderNegativa {
-    background-color: #A61C28;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 5px;
-}
-
-.Pg36styledTableNegativa th {
-    border: 1px solid #A61C28;
-    background-color: #888A8C;
-    padding: 10px;
-    text-align: left;
-    font-size: 14px;
-    font-weight: bold;
-    color: black;
-}
-
-.Pg36tabelaNegativaContainer{
-    position: absolute;
-    left: 540px;
-    top: 315px;
-}
-
-.Pg36frases {
-    margin-top: 20px;
-    padding-left: 20px;
-}
-
-
 
 .Pg36fraseContainer {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 .Pg36frase {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 100%;
 }
 
 .Pg36word {
+    font-size: 1.5rem;
     background-color: #d3d3d3;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
     cursor: pointer;
     font-weight: bold;
 }
@@ -99,60 +49,156 @@
 }
 
 .Pg36inputFrase {
-    margin-top: 10px;
-    border: 1px solid rgb(0, 0, 0);
-    padding: 10px;
-    border-radius: 5px;
-    min-height: 50px;
-    width: 45%;
+    display: flex;
+    padding: 0.25rem; 
+    border: 1px solid rgb(0, 0, 0); 
+    border-radius: 0.25rem;
+    min-height: 4rem; 
+    width: 100%; 
     background-color: whitesmoke;
+    overflow-x: auto;
+    margin-top: 2%;
 }
 
 .Pg36chip {
+    font-size: 1.5rem;
+    display: inline-flex; 
     background-color: #d3d3d3;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin: 5px;
+    padding: 0.5rem 0.75rem; 
+    border-radius: 0.5rem;
+    font-weight: bold; 
+    color: black; 
+    margin-right: 0.5rem;
+    min-width: 1rem;
     cursor: pointer;
+    margin-left: 0.5rem;
+    
 }
 
-.Pg36imagens {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    position: absolute;
-    top: 470px;
-    left: 600px;
-}
-
-.Pg36imagem {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
+.Pg36AsideContainer {
+    grid-area: aside;
+    display: block;
 }
 
 .Pg36checkButton {
     background-color: #A61C28;
     color: white;
     border: none;
-    margin: 1% 2%;
-    min-width: 80px;
-    height: 45px;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: .5rem;
     font-weight: bold;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s;
-    position: absolute;
-    right: 805px;
-    width: 20%;
-    font-size: calc(6px + .8vw);
+    font-size: 2rem;
+    width: 25%;
 }
 
 .Pg36checkButton:hover {
     background-color: #821a22;
 }
 
+
+.Pg36tabelaAfirmativaContainer,
+.Pg36tabelaNegativaContainer {
+    display: block;
+    width: 37rem;
+    margin-left: auto;
+}
+
+.Pg36tableHeaderAfirmativa,
+.Pg36tableHeaderNegativa {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.Pg36styledTableAfirmativa,
+.Pg36styledTableNegativa {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+
+.Pg36styledTableAfirmativa th,
+.Pg36styledTableNegativa th {
+    background-color: #888A8C;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid #A61C28;
+}
+
+.Pg36ImagensContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    gap: 10px;
+    width: 37rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    
+}
+
+.Pg36Imagem {
+    border-radius: 5%;
+}
+
+
+
+@media (max-width: 768px) {
+    .Pg36Container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "aside"
+            "main";
+    }
+
+    .Pg36ImagensContainer {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .Pg36Imagem {
+        width: 49%;
+    }
+
+    .Pg36pageTitle {
+        font-size: 5rem;
+    }
+
+    .Pg36questionText {
+        font-size: 3rem;
+    }
+
+    .Pg36tabelaAfirmativaContainer,
+    .Pg36tabelaNegativaContainer {
+        width: 100%;
+    }
+
+    .Pg36tableHeaderAfirmativa,
+    .Pg36tableHeaderNegativa {
+        font-size: 2.5rem;
+    }
+
+    .Pg36styledTableAfirmativa th,
+    .Pg36styledTableNegativa th,
+    .Pg36word,
+    .Pg36chip {
+        font-size: 2rem;
+    }
+
+    .Pg36checkButton {
+        font-size: 2.5rem;
+    }
+}

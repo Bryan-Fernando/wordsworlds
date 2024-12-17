@@ -1,10 +1,10 @@
 .Pg23Container {
     display: grid;
-    grid-template-areas: 
-    'header header'
-    'main main'
+    grid-template-areas:
+        'header header'
+        'main main'
     ;
-    gap: 30px;
+    gap: 3rem;
 }
 
 .Pg23Header {
@@ -28,17 +28,17 @@
     background-color: #A61C28;
     color: white;
     text-align: center !important;
-    padding: 10px;
+    padding: 1rem;
     font-weight: bold;
     width: 100%;
-    margin-bottom: 5px;
-    font-size: 20px;
+    margin-bottom: .5rem;
+    font-size: 2rem;
 }
 
 .Pg23StyledTable {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
     table-layout: fixed;
 }
 
@@ -48,17 +48,20 @@
     font-weight: bold;
 }
 
-.Pg23StyledTable th, .Pg23StyledTable td {
-    border: 1px solid #A61C28;
-    padding: 10px;
+
+.Pg23StyledTable th,
+.Pg23StyledTable td {
+    border: .1rem solid #A61C28;
+    padding: 1rem;
     text-align: left;
     color: black;
     font-weight: bold;
-    font-size: 14px;
 }
 
 .Pg23StyledTable tbody tr {
     background-color: white;
+    max-width: 100%;
+    height: calc(7vw * 0.85);
 }
 
 .Pg23StyledTable tbody tr:nth-child(even) {
@@ -67,12 +70,11 @@
 
 .Pg23InputCell {
     width: 100%;
-    height: 7vh;
+    height: calc(7vh * 0.85);
     border: none;
-    padding: 8px;
+    padding: .8rem;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
     font-weight: bold;
     color: black;
     background-color: white;
@@ -80,7 +82,7 @@
 
 .Pg23InputCell:focus {
     outline: none;
-    border: 1px solid #F2F2F2;
+    border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
@@ -89,52 +91,41 @@
 }
 
 .Pg23Sujeito {
-    width: 130px;
-    min-height: 50px;
+    width: calc(10vw * 0.85);
 }
 
 .Pg23VerboAuxiliar {
-    width: 170px;
-    min-height: 50px;
+    width: calc(10vw * 0.85)
 }
 
 .Pg23Adverbio {
-    width: 140px;
-    min-height: 50px;
+    width: calc(12vw * 0.85)
 }
 
 .Pg23Verbo {
-    width: 210px;
-    min-height: 50px;
+    width: calc(12vw * 0.85)
 }
 
 .Pg23ObjetivoComplemento {
-    width: 260px;
-    min-height: 50px;
+    width: calc(18vw * 0.85)
 }
 
 .Pg23Traducao {
-    height: 80px;
-    width: 390px;
+    width: (18vw * 0.85);
 }
 
-@media (max-width: 1080px) {
-    .Pg23StyledTable{
+@media (max-width: 1024px) {
+    .Pg23StyledTable {
         margin-bottom: 15%;
     }
 
-    .Pg23StyledTable th, 
+    .Pg23StyledTable th,
     .Pg23StyledTable td {
-        padding: 5px;
+        padding: .5rem;
     }
 
     .Pg23InputCell {
-        height: 3vw;
-        padding: 0px;
+        height: calc(6vw * 0.85);
     }
 
-    .Pg23Traducao {
-        height: auto;
-        width: 100%;
-    }
 }

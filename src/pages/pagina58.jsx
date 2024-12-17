@@ -1,6 +1,6 @@
 import React from 'react';
-import Estrutura from './Layouts/Estrutura';
-import './pagina58.css';
+import Estrutura from '../Layouts/Estrutura';
+import styles from './pagina58.module.css';
 
 const Pagina58 = () => {
     return (

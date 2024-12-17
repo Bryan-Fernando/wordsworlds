@@ -1,21 +1,26 @@
 .pg41Container {
-    margin-left: 0; /* Remove margem à esquerda */
-    margin-right: auto; /* Mantém o alinhamento à esquerda */
-    padding-left: 0; /* Remove qualquer padding interno à esquerda */
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.Pg41Title {
+    text-align: left;
+    font-size: 6rem;
+    color: #8a1720;
 }
 
 .pg41ExerciseTitle {
-    font-size: 24px;
+    text-align: left;
+    font-size: 2.5rem;
     color: #8a1720;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     font-weight: bold;
-    position: relative;
-    right: 91px;
 }
 
 .pg41QuestionsContainer {
-    margin: 20px 0;
-    text-align: left; /* Garante que as questões fiquem alinhadas à esquerda */
+    margin-top: 2rem;
+    text-align: left;
 }
 
 .pg41Question {
@@ -24,41 +29,38 @@
     gap: 10px;
     margin-bottom: 15px;
     color: black;
-    text-align: left; /* Alinha os textos e inputs à esquerda */
-    margin-left: 25px; /* Move todo o bloco da questão para a esquerda */
+    text-align: left;
+    margin-left: 2.5rem;
 }
 
 .pg41Question span {
-    font-size: 18px;
+    font-size: 2rem;
     font-weight: bold;
     color: black;
 }
 
 .pg41InputBox {
-    width: 180px; /* Define uma largura fixa para uniformidade */
-    padding: 8px 35px 8px 8px; /* Espaço para o ícone */
-    font-size: 16px;
+    width: 18rem;
+    padding: 8px 35px 8px 8px;
+    font-size: 1.8rem;
     background-color: lightgray;
     border: none;
     border-radius: 5px;
     color: black;
     font-weight: bold;
-    text-align: left; /* Alinha o texto dentro do input à esquerda */
+    text-align: left;
 }
 
 .pg41InputContainer {
+    gap: 1rem;
     position: relative;
     display: inline-flex;
     align-items: center;
-    width: 200px; /* Ajusta a largura do bloco de input */
 }
 
 .pg41CheckmarkImage {
-    position: absolute;
-    right: -8px;
-    top: 2.5px;
-    width: 25px;
-    height: 25px;
+    width: 2.5rem;
+    height: 2.5rem;
     pointer-events: none;
 }
 
@@ -72,10 +74,10 @@
     font-weight: bold;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
-    margin-top: 20px;
+    margin: 2rem;
     text-align: center;
-    position: relative;
-    right: 445px;
+    display: block;
+    font-size: 2rem;
 }
 
 .pg41CheckButton:hover {
@@ -85,43 +87,27 @@
 .pg41ImagesContainer {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    gap: 50px;
     text-align: center;
 }
 
 .pg41ImageBasketball,
 .pg41ImageChoir {
-    width: 250px;
-    height: 250px;
+    width: 35rem;
+    height: 20rem;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
 .pg41ImageBasketball {
-    width: 350px; /* Largura da imagem do basquete */
-    height: 200px; /* Altura da imagem do basquete */
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
-    position: relative;
-    top: 10px; /* Ajusta a posição vertical */
-    left: -100px; /* Ajusta a posição horizontal */
+    margin-right: 10rem;
     transform: rotate(5deg);
-    transition: transform 0.3s ease; /* Efeito ao passar o mouse */
 }
 
 .pg41ImageChoir {
-    width: 350px; /* Largura da imagem do coral */
-    height: 200px; /* Altura da imagem do coral */
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
-    margin-right: 50px; /* Ajusta o espaçamento horizontal */
     position: absolute;
-    top: 720px;
-    left: 520px; /* Mantém a posição na linha */
+    margin-left: 10rem;
     transform: rotate(-2deg);
-    transition: transform 0.3s ease; /* Efeito ao passar o mouse */
 }
 
 .pg41ImageBasketball:hover,
@@ -132,13 +118,13 @@
 .pg41IconsContainer {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-left: 5px; /* Ajusta a posição dos ícones em relação ao texto */
+    gap: 1rem;
+    margin-left: 5px;
 }
 
 .pg41AdditionalIcon {
-    width: 30px;
-    height: 30px;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -155,9 +141,11 @@
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }

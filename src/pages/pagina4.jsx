@@ -1,7 +1,5 @@
 import React, { useRef } from 'react';
 import styles from './pagina4.module.css';
-
-// Importação dos áudios
 import imastu from '../assets/audios/imastu.mp3';
 import heisateacher from '../assets/audios/heisateacher.mp3';
 import sheismarried from '../assets/audios/sheismarried.mp3';
@@ -21,13 +19,13 @@ const Pagina4 = () => {
     const currentAudioRef = useRef(null);
 
     const playAudio = (audioFile) => {
-        // Parar o áudio atual, se existir
+        
         if (currentAudioRef.current) {
             currentAudioRef.current.pause();
             currentAudioRef.current.currentTime = 0;
         }
 
-        // Criar um novo áudio e tocar
+        
         const audio = new Audio(audioFile);
         currentAudioRef.current = audio;
         audio.play();
@@ -67,11 +65,8 @@ const Pagina4 = () => {
                             </tr>
                             <tr>
                                 <td className={`${styles.p4Table} ${styles.Pg4Highlight}`}>I am</td>
-                                <td className={styles.p4Table}>-</td>
-                                <td colSpan="2" className={`${styles.p4Table} ${styles.Pg4Highlight}`}>He is/ She is/ It is</td>
-                                <td className={styles.p4Table}>-</td>
-                                <td className={styles.p4Table}>-</td>
-                                <td colSpan="2" className={`${styles.p4Table} ${styles.Pg4Highlight}`}>We are/ You are/ They are</td>
+                                <td colSpan="3" className={`${styles.p4Table} ${styles.Pg4Highlight}`}>He is/ She is/ It is</td>
+                                <td colSpan="4" className={`${styles.p4Table} ${styles.Pg4Highlight}`}>We are/ You are/ They are</td>
                             </tr>
                         </tbody>
                     </table>

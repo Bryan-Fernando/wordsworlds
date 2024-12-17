@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './pagina1.module.css';
-import Pagina1_primeira_imagem from '../assets/Images/Pagina1_primeira_imagem.jpg';
-import Pagina1_segunda_imagem from '../assets/Images/Pagina1_segunda_imagem.jpg';
+import Pagina0Video from '../assets/pagina0Video.mp4'; 
 
 const Pagina1 = () => {
-    return (
-            <div>
-                <img className={styles.Pg1Imagem1} src={Pagina1_primeira_imagem} alt="" />
-                <img className={styles.Pg1Imagem2} src={Pagina1_segunda_imagem} alt="" />
-            </div>
-    
+  return (
+    <div className={styles.container}>
+      <video className={styles.fullScreenVideo} autoPlay muted loop>
+        <source src={Pagina0Video} type="video/mp4" />
+        Seu navegador não suporta vídeos em HTML5.
+      </video>
+    </div>
   );
 };
 

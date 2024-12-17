@@ -96,61 +96,65 @@ function Pagina37() {
 
     return (
         <div className={styles.pg37Container}>
-            <h2 className={styles.pg37Title}>Answers</h2>
-            <h3 className={styles.pg37Instruction}>
-                Para reduzir a velocidade da reprodução para 0.75x, clique no{' '}
-                <img
-                    src={volumeReduzidoIcon}
-                    className={styles.pg37VolumeIcon}
-                    alt="Speed icon"
-                />
-            </h3>
-
-            <div className={styles.pg37PercentualAcertos}>
-                <span>{Math.round(percentage)}% Out of 100</span>
-            </div>
-
-
-            <div className={styles.pg37ListaRespostas}>
-                {respostasCorretas.map((respostaCorreta, index) => (
-                    <div key={index} className={styles.pg37RespostaItem}>
-                        <input
-                            type="text"
-                            className={styles.pg37Input}
-                            value={respostasUsuario[index]?.join(' ') || ''}
-                            readOnly
-                        />
+            <header className={styles.Pg37Header}>
+                <h1 className={styles.pg37Title}>Answers</h1>
+                <h2 className={styles.pg37Instruction}>
+                    Para reduzir a velocidade da reprodução para 0.75x, clique no{' '}
+                    <span className={styles.pg37SpeedContainer}>
                         <img
-                            src={resultado[index] ? vSquare : xSquare}
-                            alt={resultado[index] ? 'Correct' : 'Incorrect'}
-                            className={`${styles.pg37Status} ${resultado[index] ? styles.pg37Correta : styles.pg37Incorreta
-                                }`}
+                            src={volumeReduzidoIcon}
+                            className={styles.pg37VolumeIcon}
+                            alt="Speed icon"
                         />
-                        {resultado[index] && (
-                            <>
-                                <img
-                                    className={styles.pg37AudioIcon}
-                                    src={eIcon}
-                                    alt="Play English Audio"
-                                    onClick={() => playAudio(index, 'english')}
-                                />
-                                <img
-                                    className={styles.pg37AudioIcon}
-                                    src={portugueseIcon}
-                                    alt="Play Portuguese Audio"
-                                    onClick={() => playAudio(index, 'portuguese')}
-                                />
-                                <img
-                                    className={styles.pg37VolumeIcon}
-                                    src={volumeReduzidoIcon}
-                                    alt="Toggle Speed"
-                                    onClick={reduzirVelocidade}
-                                />
-                            </>
-                        )}
-                    </div>
-                ))}
-            </div>
+                    </span>
+                </h2>
+            </header>
+
+            <main className={styles.Pg37Main}>
+                <div className={styles.pg37ListaRespostas}>
+                    {respostasCorretas.map((respostaCorreta, index) => (
+                        <div key={index} className={styles.pg37RespostaItem}>
+                            <input
+                                type="text"
+                                className={styles.pg37Input}
+                                value={respostasUsuario[index]?.join(' ') || ''}
+                                readOnly
+                            />
+                            <img
+                                src={resultado[index] ? vSquare : xSquare}
+                                alt={resultado[index] ? 'Correct' : 'Incorrect'}
+                                className={`${styles.pg37Status} ${resultado[index] ? styles.pg37Correta : styles.pg37Incorreta
+                                    }`}
+                            />
+                            {resultado[index] && (
+                                <>
+                                    <img
+                                        className={styles.pg37AudioIcon}
+                                        src={eIcon}
+                                        alt="Play English Audio"
+                                        onClick={() => playAudio(index, 'english')}
+                                    />
+                                    <img
+                                        className={styles.pg37AudioIcon}
+                                        src={portugueseIcon}
+                                        alt="Play Portuguese Audio"
+                                        onClick={() => playAudio(index, 'portuguese')}
+                                    />
+                                    <img
+                                        className={styles.pg37VolumeIcon}
+                                        src={volumeReduzidoIcon}
+                                        alt="Toggle Speed"
+                                        onClick={reduzirVelocidade}
+                                    />
+                                </>
+                            )}
+                        </div>
+                    ))}
+                </div>
+                <div className={styles.pg37PercentualAcertos}>
+                    <span>{Math.round(percentage)}% Out of 100</span>
+                </div>
+            </main>
         </div>
     );
 }

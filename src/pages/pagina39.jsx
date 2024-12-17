@@ -115,74 +115,75 @@ const Pagina39 = () => {
 
     return (
         <div className={styles.pg39Container}>
-            <h2 style={{ textAlign: 'left', color: '#A61C28',  marginLeft: '25px'  }}>Exercise:</h2>
-
-            <p className={styles.pg39ExerciseTitle}>
-                2. Matching Exercises (Match the sentence with the correct image/description)
-            </p>
-            <p className={styles.pg39ExerciseQuestion}>
-                Match the sentence (A-E) with the correct picture or description (1-5):
-            </p>
-            <div className={styles.pg39ImagesContainer}>
-                {[Pagina39_imagem1, Pagina39_imagem2, Pagina39_imagem3, Pagina39_imagem4, Pagina39_imagem5].map((image, index) => (
-                    <div key={index} className={styles.pg39ImageBox}>
-                        <img src={image} alt={`Image ${index + 1}`} />
-                        <div className={styles.pg39InputBoxContainer}>
-                            <input
-                                type="text"
-                                className={styles.pg39InputBox}
-                                placeholder="Place here"
-                                value={inputValues[index]}
-                                onChange={(e) => {
-                                    const newValues = [...inputValues];
-                                    newValues[index] = e.target.value;
-                                    setInputValues(newValues);
-                                }}
-                            />
-                            {results[index] !== null && (
-                                <img
-                                    src={results[index] ? vSquare : xSquare}
-                                    alt={results[index] ? "Correct" : "Incorrect"}
-                                    className={styles.pg39CheckmarkImage}
+            <header className={styles.pg39Header}>
+                <h1 style={{ textAlign: 'left', color: '#A61C28' }}>Exercise:</h1>
+                <h2 className={styles.pg39ExerciseTitle}>
+                    2. Matching Exercises (Match the sentence with the correct image/description)
+                </h2>
+                <p className={styles.pg39ExerciseQuestion}>
+                    Match the sentence (A-E) with the correct picture or description (1-5):
+                </p>
+            </header>
+            <main className={styles.pg39Main}>
+                <div className={styles.pg39ImagesContainer}>
+                    {[Pagina39_imagem1, Pagina39_imagem2, Pagina39_imagem3, Pagina39_imagem4, Pagina39_imagem5].map((image, index) => (
+                        <div key={index} className={styles.pg39ImageBox}>
+                            <img src={image} alt={`Image ${index + 1}`} />
+                            <div className={styles.pg39InputBoxContainer}>
+                                <input
+                                    type="text"
+                                    className={styles.pg39InputBox}
+                                    placeholder="Place here"
+                                    value={inputValues[index]}
+                                    onChange={(e) => {
+                                        const newValues = [...inputValues];
+                                        newValues[index] = e.target.value;
+                                        setInputValues(newValues);
+                                    }}
                                 />
-                            )}
+                                {results[index] !== null && (
+                                    <img
+                                        src={results[index] ? vSquare : xSquare}
+                                        alt={results[index] ? "Correct" : "Incorrect"}
+                                        className={styles.pg39CheckmarkImage}
+                                    />
+                                )}
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
-
-            <div className={styles.pg39SentencesContainer}>
-                <p><strong>Sentences:</strong></p>
-                {displayedSentences.map((sentence, index) => (
-                    <div key={index} className={styles.pg39Sentence} onClick={() => handleSentenceClick(sentence)}>
-                        <p><strong>{String.fromCharCode(65 + index)}) {sentence}</strong></p>
-                        <div className={styles.pg39IconsContainer}>
-                            <img
-                                src={eIcon}
-                                alt="English Audio Icon"
-                                className={`${styles.pg39AudioIcon} ${pulsingAudioEnglishIndex === index ? styles.pg39Pulsing : ''}`}
-                                onClick={(e) => handleAudioClick(index, false, e)}
-                            />
-                            <img
-                                src={pIcon}
-                                alt="Portuguese Audio Icon"
-                                className={`${styles.pg39PortugueseIcon} ${pulsingAudioPortugueseIndex === index ? styles.pg39Pulsing : ''}`}
-                                onClick={(e) => handleAudioClick(index, true, e)}
-                            />
-                            <img
-                                src={volumeReduzidoIcon}
-                                alt="Reduce Speed Icon"
-                                className={`${styles.pg39VolumeIcon} ${isSpeedReduced[index] ? styles.pg39Active : ''}`}
-                                onClick={(e) => reduzirVelocidade(index, e)}
-                            />
+                    ))}
+                </div>
+                <div className={styles.pg39SentencesContainer}>
+                    <p><strong>Sentences:</strong></p>
+                    {displayedSentences.map((sentence, index) => (
+                        <div key={index} className={styles.pg39Sentence} onClick={() => handleSentenceClick(sentence)}>
+                            <p><strong>{String.fromCharCode(65 + index)}) {sentence}</strong></p>
+                            <div className={styles.pg39IconsContainer}>
+                                <img
+                                    src={eIcon}
+                                    alt="English Audio Icon"
+                                    className={`${styles.pg39AudioIcon} ${pulsingAudioEnglishIndex === index ? styles.pg39Pulsing : ''}`}
+                                    onClick={(e) => handleAudioClick(index, false, e)}
+                                />
+                                <img
+                                    src={pIcon}
+                                    alt="Portuguese Audio Icon"
+                                    className={`${styles.pg39PortugueseIcon} ${pulsingAudioPortugueseIndex === index ? styles.pg39Pulsing : ''}`}
+                                    onClick={(e) => handleAudioClick(index, true, e)}
+                                />
+                                <img
+                                    src={volumeReduzidoIcon}
+                                    alt="Reduce Speed Icon"
+                                    className={`${styles.pg39VolumeIcon} ${isSpeedReduced[index] ? styles.pg39Active : ''}`}
+                                    onClick={(e) => reduzirVelocidade(index, e)}
+                                />
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
-
-            <button className={styles.pg39CheckButton} onClick={handleCheckClick}>
-                Check
-            </button>
+                    ))}
+                </div>
+                <button className={styles.pg39CheckButton} onClick={handleCheckClick}>
+                    Check
+                </button>
+            </main>
         </div>
     );
 };

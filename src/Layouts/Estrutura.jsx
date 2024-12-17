@@ -21,7 +21,7 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
   };
 
   useEffect(() => {
-    setPageInput(currentIndex + 1); // Atualiza o valor do input ao trocar de página
+    setPageInput(currentIndex + 1); 
   }, [currentIndex]);
 
   const handlePageChangeKeyPress = (e) => {
@@ -59,12 +59,15 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
         const resultado = localStorage.getItem('resultadoPagina36')
           ? JSON.parse(localStorage.getItem('resultadoPagina36'))
           : [];
+
         userNavigate(previousPage, { respostasUsuario, resultado });
       } else {
         userNavigate(previousPage);
       }
     }
   };
+
+  const contentClass = location.pathname === '/pagina42' ? 'pagina42' : '';
 
   return (
     <div>
@@ -76,10 +79,11 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
           <p className="wordside">Words and Worlds</p>
           <p className="englishside">ENGLISH COURSE</p>
         </div>
-        <div className="Content">
+        <div className={`Content ${contentClass}Content`}>
           <div>
             {React.cloneElement(children, { onValidar: handleValidarPagina })}
           </div>
+
 
           <div className="navButtons">
             <div className="pageSelector">
