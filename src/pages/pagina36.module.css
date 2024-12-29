@@ -1,22 +1,20 @@
-.Pg36Container {
-    display: grid;
-    grid-template-areas:
-        "header header header"
-        "main main aside";
+.pg36Container {
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
 }
 
-.Pg36Header {
+.pg36Header {
     width: 100%;
 }
-.Pg36MainContainer {
+.pg36MainContainer {
     display: flex;
     flex-direction: column;
     align-items: left; 
 }
 
-.Pg36pageTitle,
-.Pg36questionText {
+.pg36pageTitle,
+.pg36questionText {
     text-align: left;
     padding-left: 0;
     margin: 0; 
@@ -24,17 +22,17 @@
     font-weight: bold;
 }
 
-.Pg36fraseContainer {
+.pg36fraseContainer {
     margin-bottom: 1rem;
 }
 
-.Pg36frase {
+.pg36frase {
     display: flex;
     gap: 0.5rem;
     width: 100%;
 }
 
-.Pg36word {
+.pg36word {
     font-size: 1.5rem;
     background-color: #d3d3d3;
     padding: 0.5rem 0.75rem;
@@ -43,12 +41,12 @@
     font-weight: bold;
 }
 
-.Pg36word.Pg36disabled {
+.pg36word.pg36disabled {
     pointer-events: none;
     opacity: 0.5;
 }
 
-.Pg36inputFrase {
+.pg36inputFrase {
     display: flex;
     padding: 0.25rem; 
     border: 1px solid rgb(0, 0, 0); 
@@ -60,7 +58,7 @@
     margin-top: 2%;
 }
 
-.Pg36chip {
+.pg36chip {
     font-size: 1.5rem;
     display: inline-flex; 
     background-color: #d3d3d3;
@@ -75,12 +73,12 @@
     
 }
 
-.Pg36AsideContainer {
+.pg36AsideContainer {
     grid-area: aside;
     display: block;
 }
 
-.Pg36checkButton {
+.pg36checkButton {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -93,20 +91,20 @@
     width: 25%;
 }
 
-.Pg36checkButton:hover {
+.pg36checkButton:hover {
     background-color: #821a22;
 }
 
 
-.Pg36tabelaAfirmativaContainer,
-.Pg36tabelaNegativaContainer {
+.pg36tabelaAfirmativaContainer,
+.pg36tabelaNegativaContainer {
     display: block;
     width: 37rem;
     margin-left: auto;
 }
 
-.Pg36tableHeaderAfirmativa,
-.Pg36tableHeaderNegativa {
+.pg36tableHeaderAfirmativa,
+.pg36tableHeaderNegativa {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -118,8 +116,8 @@
     margin-bottom: 0.2rem;
 }
 
-.Pg36styledTableAfirmativa,
-.Pg36styledTableNegativa {
+.pg36styledTableAfirmativa,
+.pg36styledTableNegativa {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
@@ -127,8 +125,8 @@
 }
 
 
-.Pg36styledTableAfirmativa th,
-.Pg36styledTableNegativa th {
+.pg36styledTableAfirmativa th,
+.pg36styledTableNegativa th {
     background-color: #888A8C;
     color: white;
     text-align: center;
@@ -138,7 +136,7 @@
     border: 1px solid #A61C28;
 }
 
-.Pg36ImagensContainer {
+.pg36ImagensContainer {
     display: flex;
     flex-direction: column;
     align-items: right;
@@ -149,14 +147,14 @@
     
 }
 
-.Pg36Imagem {
+.pg36Imagem {
     border-radius: 5%;
 }
 
 
 
 @media (max-width: 768px) {
-    .Pg36Container {
+    .pg36Container {
         grid-template-columns: 1fr;
         grid-template-areas:
             "header"
@@ -164,41 +162,41 @@
             "main";
     }
 
-    .Pg36ImagensContainer {
+    .pg36ImagensContainer {
         flex-direction: row;
         width: 100%;
     }
 
-    .Pg36Imagem {
+    .pg36Imagem {
         width: 49%;
     }
 
-    .Pg36pageTitle {
+    .pg36pageTitle {
         font-size: 5rem;
     }
 
-    .Pg36questionText {
+    .pg36questionText {
         font-size: 3rem;
     }
 
-    .Pg36tabelaAfirmativaContainer,
-    .Pg36tabelaNegativaContainer {
+    .pg36tabelaAfirmativaContainer,
+    .pg36tabelaNegativaContainer {
         width: 100%;
     }
 
-    .Pg36tableHeaderAfirmativa,
-    .Pg36tableHeaderNegativa {
+    .pg36tableHeaderAfirmativa,
+    .pg36tableHeaderNegativa {
         font-size: 2.5rem;
     }
 
-    .Pg36styledTableAfirmativa th,
-    .Pg36styledTableNegativa th,
-    .Pg36word,
-    .Pg36chip {
+    .pg36styledTableAfirmativa th,
+    .pg36styledTableNegativa th,
+    .pg36word,
+    .pg36chip {
         font-size: 2rem;
     }
 
-    .Pg36checkButton {
+    .pg36checkButton {
         font-size: 2.5rem;
     }
 }

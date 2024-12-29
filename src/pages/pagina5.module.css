@@ -1,30 +1,27 @@
-.Pg5Container {
-    display: grid;
-    grid-template-areas:
-        'header header'
-        'main main'
-    ;
+.pg5Container {
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
 }
 
-.Pg5Header {
+.pg5Header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.Pg5HeaderH2 {
+.pg5HeaderH2 {
     color: black;
 }
 
-.Pg5Main {
+.pg5Main {
     width: 100%;
     text-align: center;
 }
 
 /* Este é um comentário */
 
-.Pg5TableHeader {
+.pg5TableHeader {
     background-color: #A61C28;
     color: white;
     text-align: center !important;
@@ -35,22 +32,22 @@
     font-size: 2rem;
 }
 
-.Pg5StyledTable {
+.pg5StyledTable {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 5%;
     table-layout: fixed;
 }
 
-.Pg5StyledTable thead tr {
+.pg5StyledTable thead tr {
     background-color: #888A8C;
     color: white;
     font-weight: bold;
 }
 
 
-.Pg5StyledTable th,
-.Pg5StyledTable td {
+.pg5StyledTable th,
+.pg5StyledTable td {
     border: .1rem solid #A61C28;
     padding: 1rem;
     text-align: left;
@@ -59,17 +56,17 @@
 }
 
 
-.Pg5StyledTable tbody tr {
+.pg5StyledTable tbody tr {
     background-color: white;
     max-width: 100%;
     height: calc(7vw * 0.85);
 }
 
-.Pg5StyledTable tbody tr:nth-child(even) {
+.pg5StyledTable tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.Pg5InputCell {
+.pg5InputCell {
     width: 100%;
     height: calc(7vh * 0.85);
     border: none;
@@ -81,52 +78,52 @@
     background-color: white;
 }
 
-.Pg5InputCell:focus {
+.pg5InputCell:focus {
     outline: none;
     border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
-.Pg5InputCell::-webkit-scrollbar {
+.pg5InputCell::-webkit-scrollbar {
     display: none;
 }
 
 
-.Pg5Sujeito {
+.pg5Sujeito {
     width: calc(10vw * 0.85);
 }
 
-.Pg5VerboAuxiliar {
+.pg5VerboAuxiliar {
     width: calc(10vw * 0.85)
 }
 
-.Pg5Adverbio {
+.pg5Adverbio {
     width: calc(12vw * 0.85)
 }
 
-.Pg5Verbo {
+.pg5Verbo {
     width: calc(12vw * 0.85)
 }
 
-.Pg5ObjetivoComplemento {
+.pg5ObjetivoComplemento {
     width: calc(18vw * 0.85)
 }
 
-.Pg5Traducao {
+.pg5Traducao {
     width: (18vw * 0.85);
 }
 
 @media (max-width: 1024px) {
-    .Pg5StyledTable {
+    .pg5StyledTable {
         margin-bottom: 15%;
     }
 
-    .Pg5StyledTable th,
-    .Pg5StyledTable td {
+    .pg5StyledTable th,
+    .pg5StyledTable td {
         padding: .5rem;
     }
 
-    .Pg5InputCell {
+    .pg5InputCell {
         height: calc(6vw * 0.85);
     }
 }

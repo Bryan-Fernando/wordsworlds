@@ -1,29 +1,27 @@
-.Pg21Container {
-    display: grid;
-    grid-template-areas:
-        'header header'
-        'main main';
+.pg21Container {
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
 }
 
-.Pg21Header {
+.pg21Header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.Pg21HeaderH2 {
+.pg21HeaderH2 {
     color: black;
 }
 
-.Pg21Main {
+.pg21Main {
     width: 100%;
     text-align: center;
 }
 
 /* Este é um comentário */
 
-.Pg21TableHeader {
+.pg21TableHeader {
     background-color: #A61C28;
     color: white;
     text-align: center !important;
@@ -34,22 +32,22 @@
     font-size: 2rem;
 }
 
-.Pg21StyledTable {
+.pg21StyledTable {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 5%;
     table-layout: fixed;
 }
 
-.Pg21StyledTable thead tr {
+.pg21StyledTable thead tr {
     background-color: #888A8C;
     color: white;
     font-weight: bold;
 }
 
 
-.Pg21StyledTable th,
-.Pg21StyledTable td {
+.pg21StyledTable th,
+.pg21StyledTable td {
     border: .1rem solid #A61C28;
     padding: 1rem;
     text-align: left;
@@ -57,17 +55,17 @@
     font-weight: bold;
 }
 
-.Pg21StyledTable tbody tr {
+.pg21StyledTable tbody tr {
     background-color: white;
     max-width: 100%;
     height: calc(7vw * 0.85);
 }
 
-.Pg21StyledTable tbody tr:nth-child(even) {
+.pg21StyledTable tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.Pg21InputCell {
+.pg21InputCell {
     width: 100%;
     height: calc(7vh * 0.85);
     border: none;
@@ -79,51 +77,51 @@
     background-color: white;
 }
 
-.Pg21InputCell:focus {
+.pg21InputCell:focus {
     outline: none;
     border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
-.Pg21InputCell::-webkit-scrollbar {
+.pg21InputCell::-webkit-scrollbar {
     display: none;
 }
 
-.Pg21Sujeito {
+.pg21Sujeito {
     width: calc(10vw * 0.85);
 }
 
-.Pg21VerboAuxiliar {
+.pg21VerboAuxiliar {
     width: calc(10vw * 0.85)
 }
 
-.Pg21Adverbio {
+.pg21Adverbio {
     width: calc(12vw * 0.85)
 }
 
-.Pg21Verbo {
+.pg21Verbo {
     width: calc(12vw * 0.85)
 }
 
-.Pg21ObjetivoComplemento {
+.pg21ObjetivoComplemento {
     width: calc(18vw * 0.85)
 }
 
-.Pg21Traducao {
+.pg21Traducao {
     width: (18vw * 0.85);
 }
 
 @media (max-width: 1024px) {
-    .Pg21StyledTable {
+    .pg21StyledTable {
         margin-bottom: 15%;
     }
 
-    .Pg21StyledTable th,
-    .Pg21StyledTable td {
+    .pg21StyledTable th,
+    .pg21StyledTable td {
         padding: .5rem;
     }
 
-    .Pg21InputCell {
+    .pg21InputCell {
         height: calc(6vw * 0.85);
     }
 }

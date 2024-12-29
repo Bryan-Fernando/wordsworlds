@@ -54,29 +54,29 @@ const Pagina5 = () => {
 
     return (
         <div>
-            <div className={styles.Pg5Container}>
-                <header className={styles.Pg5Header}>
+            <div className={styles.pg5Container}>
+                <header className={styles.pg5Header}>
                     <h1>Grammar</h1>
-                    <h2 className={styles.Pg5HeaderH2}>Simple Present (Presente Simples)</h2>
+                    <h2 className={styles.pg5HeaderH2}>Simple Present (Presente Simples)</h2>
                     <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
                 </header>
-                <main className={styles.Pg5Main}>
+                <main className={styles.pg5Main}>
                     <div>
                         <div
-                            className={styles.Pg5TableHeader}
+                            className={styles.pg5TableHeader}
                             onClick={() => playAudio(afirmativaAudio)}
                             style={{ cursor: 'pointer' }}
                         >
                             AFFIRMATIVE
                         </div>
-                        <table className={styles.Pg5StyledTable}>
+                        <table className={styles.pg5StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg5Sujeito} />
-                                <col className={styles.Pg5VerboAuxiliar} />
-                                <col className={styles.Pg5Adverbio} />
-                                <col className={styles.Pg5Verbo} />
-                                <col className={styles.Pg5ObjetivoComplemento} />
-                                <col className={styles.Pg5Traducao} />
+                                <col className={styles.pg5Sujeito} />
+                                <col className={styles.pg5VerboAuxiliar} />
+                                <col className={styles.pg5Adverbio} />
+                                <col className={styles.pg5Verbo} />
+                                <col className={styles.pg5ObjetivoComplemento} />
+                                <col className={styles.pg5Traducao} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -123,46 +123,46 @@ const Pagina5 = () => {
                                     onClick={() => handleRowClick(0)}
                                     style={{ cursor: 'pointer' }}
                                 >
-                                    <td className={styles.Pg5Sujeito} style={{ textAlign: 'center' }}>I</td>
-                                    <td className={styles.Pg5VerboAuxiliar} style={{ textAlign: 'center' }}>am</td>
-                                    <td className={styles.Pg5Adverbio}></td>
-                                    <td className={styles.Pg5Verbo}></td>
-                                    <td className={styles.Pg5ObjetivoComplemento}></td>
-                                    <td className={styles.Pg5Traducao}></td>
+                                    <td className={styles.pg5Sujeito} style={{ textAlign: 'center' }}>I</td>
+                                    <td className={styles.pg5VerboAuxiliar} style={{ textAlign: 'center' }}>am</td>
+                                    <td className={styles.pg5Adverbio}></td>
+                                    <td className={styles.pg5Verbo}></td>
+                                    <td className={styles.pg5ObjetivoComplemento}></td>
+                                    <td className={styles.pg5Traducao}></td>
                                 </tr>
                                 <tr
                                     onClick={() => handleRowClick(1)}
                                     style={{ cursor: 'pointer' }}
                                 >
-                                    <td className={styles.Pg5Sujeito} style={{ textAlign: 'center' }}>I</td>
-                                    <td className={styles.Pg5VerboAuxiliar} style={{ textAlign: 'center' }}>am</td>
-                                    <td className={styles.Pg5Adverbio}></td>
-                                    <td className={styles.Pg5Verbo}></td>
-                                    <td className={styles.Pg5ObjetivoComplemento}>at work</td>
-                                    <td className={styles.Pg5Traducao}></td>
+                                    <td className={styles.pg5Sujeito} style={{ textAlign: 'center' }}>I</td>
+                                    <td className={styles.pg5VerboAuxiliar} style={{ textAlign: 'center' }}>am</td>
+                                    <td className={styles.pg5Adverbio}></td>
+                                    <td className={styles.pg5Verbo}></td>
+                                    <td className={styles.pg5ObjetivoComplemento}>at work</td>
+                                    <td className={styles.pg5Traducao}></td>
                                 </tr>
                                 <tr
                                     onClick={() => handleRowClick(2)}
                                     style={{ cursor: 'pointer' }}
                                 >
-                                    <td className={styles.Pg5Sujeito} style={{ textAlign: 'center' }}>I</td>
-                                    <td className={styles.Pg5VerboAuxiliar} style={{ textAlign: 'center' }}>am</td>
-                                    <td className={styles.Pg5Adverbio}></td>
-                                    <td className={styles.Pg5Verbo}></td>
-                                    <td className={styles.Pg5ObjetivoComplemento}>years old</td>
-                                    <td className={styles.Pg5Traducao}></td>
+                                    <td className={styles.pg5Sujeito} style={{ textAlign: 'center' }}>I</td>
+                                    <td className={styles.pg5VerboAuxiliar} style={{ textAlign: 'center' }}>am</td>
+                                    <td className={styles.pg5Adverbio}></td>
+                                    <td className={styles.pg5Verbo}></td>
+                                    <td className={styles.pg5ObjetivoComplemento}>years old</td>
+                                    <td className={styles.pg5Traducao}></td>
                                 </tr>
                             </tbody>
                         </table>
 
-                        <table className={styles.Pg5StyledTable}>
+                        <table className={styles.pg5StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg5Sujeito} />
-                                <col className={styles.Pg5VerboAuxiliar} />
-                                <col className={styles.Pg5Adverbio} />
-                                <col className={styles.Pg5Verbo} />
-                                <col className={styles.Pg5ObjetivoComplemento} />
-                                <col className={styles.Pg5Traducao} />
+                                <col className={styles.pg5Sujeito} />
+                                <col className={styles.pg5VerboAuxiliar} />
+                                <col className={styles.pg5Adverbio} />
+                                <col className={styles.pg5Verbo} />
+                                <col className={styles.pg5ObjetivoComplemento} />
+                                <col className={styles.pg5Traducao} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -211,7 +211,7 @@ const Pagina5 = () => {
                                             <td key={colIndex}>
                                                 <textarea
                                                     id={`input-${rowIndex}-${colIndex}`}
-                                                    className={styles.Pg5InputCell}
+                                                    className={styles.pg5InputCell}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) => handleInputChange(rowIndex, colIndex, e)}

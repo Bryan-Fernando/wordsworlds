@@ -96,7 +96,7 @@ function Pagina37() {
 
     return (
         <div className={styles.pg37Container}>
-            <header className={styles.Pg37Header}>
+            <header className={styles.pg37Header}>
                 <h1 className={styles.pg37Title}>Answers</h1>
                 <h2 className={styles.pg37Instruction}>
                     Para reduzir a velocidade da reprodução para 0.75x, clique no{' '}
@@ -110,7 +110,7 @@ function Pagina37() {
                 </h2>
             </header>
 
-            <main className={styles.Pg37Main}>
+            <main className={styles.pg37Main}>
                 <div className={styles.pg37ListaRespostas}>
                     {respostasCorretas.map((respostaCorreta, index) => (
                         <div key={index} className={styles.pg37RespostaItem}>

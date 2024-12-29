@@ -40,29 +40,29 @@ const Pagina35 = () => {
 
     return (
         <div>
-            <div className={styles.Pg35Container}>
-                <header className={styles.Pg35Header}>
+            <div className={styles.pg35Container}>
+                <header className={styles.pg35Header}>
                     <h1>Grammar</h1>
-                    <h2 className={styles.Pg35HeaderH2}>Simple Present (Presente Simples)</h2>
+                    <h2 className={styles.pg35HeaderH2}>Simple Present (Presente Simples)</h2>
                     <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
                 </header>
-                <main className={styles.Pg35Main}>
+                <main className={styles.pg35Main}>
                     <div>
                         <div
-                            className={styles.Pg35TableHeader}
+                            className={styles.pg35TableHeader}
                             onClick={() => playAudio(negativaAudio)}
                             style={{ cursor: 'pointer' }}
                         >
                             NEGATIVE
                         </div>
-                        <table className={styles.Pg35StyledTable}>
+                        <table className={styles.pg35StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg35Sujeito} />
-                                <col className={styles.Pg35VerboAuxiliar} />
-                                <col className={styles.Pg35Adverbio} />
-                                <col className={styles.Pg35Verbo} />
-                                <col className={styles.Pg35ObjetivoComplemento} />
-                                <col className={styles.Pg35Traducao} />
+                                <col className={styles.pg35Sujeito} />
+                                <col className={styles.pg35VerboAuxiliar} />
+                                <col className={styles.pg35Adverbio} />
+                                <col className={styles.pg35Verbo} />
+                                <col className={styles.pg35ObjetivoComplemento} />
+                                <col className={styles.pg35Traducao} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -86,64 +86,64 @@ const Pagina35 = () => {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td className={styles.Pg35Sujeito} onClick={() => playAudio(pg35Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles.pg35Sujeito} onClick={() => playAudio(pg35Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         We
                                     </td>
-                                    <td className={styles.Pg35VerboAuxiliar} onClick={() => playAudio(pg35Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles.pg35VerboAuxiliar} onClick={() => playAudio(pg35Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         aren't
                                     </td>
-                                    <td className={styles.Pg35Adverbio}></td>
-                                    <td className={styles.Pg35Verbo}></td>
-                                    <td className={styles.Pg35ObjetivoComplemento} onClick={() => playAudio(pg35Audio1)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles.pg35Adverbio}></td>
+                                    <td className={styles.pg35Verbo}></td>
+                                    <td className={styles.pg35ObjetivoComplemento} onClick={() => playAudio(pg35Audio1)} style={{ cursor: 'pointer' }}>
                                         in Maringá
                                     </td>
-                                    <td className={styles.Pg35Traducao} onClick={() => playAudio(traducaoAudio1)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles.pg35Traducao} onClick={() => playAudio(traducaoAudio1)} style={{ cursor: 'pointer' }}>
                                         Nós não estamos em Maringá
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className={styles.Pg35Sujeito} onClick={() => playAudio(pg35Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles.pg35Sujeito} onClick={() => playAudio(pg35Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         You
                                     </td>
-                                    <td className={styles.Pg35VerboAuxiliar} onClick={() => playAudio(pg35Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles.pg35VerboAuxiliar} onClick={() => playAudio(pg35Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         aren't
                                     </td>
-                                    <td className={styles.Pg35Adverbio}></td>
-                                    <td className={styles.Pg35Verbo}></td>
-                                    <td className={styles.Pg35ObjetivoComplemento} onClick={() => playAudio(pg35Audio2)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles.pg35Adverbio}></td>
+                                    <td className={styles.pg35Verbo}></td>
+                                    <td className={styles.pg35ObjetivoComplemento} onClick={() => playAudio(pg35Audio2)} style={{ cursor: 'pointer' }}>
                                         on duty
                                     </td>
-                                    <td className={styles.Pg35Traducao} onClick={() => playAudio(traducaoAudio2)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles.pg35Traducao} onClick={() => playAudio(traducaoAudio2)} style={{ cursor: 'pointer' }}>
                                         Você não está de plantão
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className={styles.Pg35Sujeito} onClick={() => playAudio(pg35Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles.pg35Sujeito} onClick={() => playAudio(pg35Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         They
                                     </td>
-                                    <td className={styles.Pg35VerboAuxiliar} onClick={() => playAudio(pg35Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles.pg35VerboAuxiliar} onClick={() => playAudio(pg35Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         aren't
                                     </td>
-                                    <td className={styles.Pg35Adverbio}></td>
-                                    <td className={styles.Pg35Verbo}></td>
-                                    <td className={styles.Pg35ObjetivoComplemento} onClick={() => playAudio(pg35Audio3)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles.pg35Adverbio}></td>
+                                    <td className={styles.pg35Verbo}></td>
+                                    <td className={styles.pg35ObjetivoComplemento} onClick={() => playAudio(pg35Audio3)} style={{ cursor: 'pointer' }}>
                                         busy
                                     </td>
-                                    <td className={styles.Pg35Traducao} onClick={() => playAudio(traducaoAudio3)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles.pg35Traducao} onClick={() => playAudio(traducaoAudio3)} style={{ cursor: 'pointer' }}>
                                         Eles não estão ocupados
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
 
-                        <table className={styles.Pg35StyledTable}>
+                        <table className={styles.pg35StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg35Sujeito} />
-                                <col className={styles.Pg35VerboAuxiliar} />
-                                <col className={styles.Pg35Adverbio} />
-                                <col className={styles.Pg35Verbo} />
-                                <col className={styles.Pg35ObjetivoComplemento} />
-                                <col className={styles.Pg35Traducao} />
+                                <col className={styles.pg35Sujeito} />
+                                <col className={styles.pg35VerboAuxiliar} />
+                                <col className={styles.pg35Adverbio} />
+                                <col className={styles.pg35Verbo} />
+                                <col className={styles.pg35ObjetivoComplemento} />
+                                <col className={styles.pg35Traducao} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -165,7 +165,7 @@ const Pagina35 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.Pg35InputCell}
+                                                    className={styles.pg35InputCell}
                                                     value={value}
                                                     onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
                                                     rows="1"

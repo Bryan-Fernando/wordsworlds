@@ -65,7 +65,7 @@ const Pagina41 = () => {
 
     return (
         <div className={styles.pg41Container}>
-            <h1 className={styles.Pg41Title}>Learning Language Exercises</h1>
+            <h1 className={styles.pg41Title}>Learning Language Exercises</h1>
             <h2 className={styles.pg41ExerciseTitle}>Fill in the blanks in the Present Simple with the verbs in parentheses.</h2>
             <div className={styles.pg41QuestionsContainer}>
                 {[

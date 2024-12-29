@@ -40,29 +40,29 @@ const Pagina31 = () => {
 
     return (
         <div>
-            <div className={styles.Pg31Container}>
-                <header className={styles.Pg31Header}>
+            <div className={styles.pg31Container}>
+                <header className={styles.pg31Header}>
                     <h1>Grammar</h1>
-                    <h2 className={styles.Pg31HeaderH2}>Simple Present (Presente Simples)</h2>
+                    <h2 className={styles.pg31HeaderH2}>Simple Present (Presente Simples)</h2>
                     <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
                 </header>
-                <main className={styles.Pg31Main}>
+                <main className={styles.pg31Main}>
                     <div>
                         <div
-                            className={styles.Pg31TableHeader}
+                            className={styles.pg31TableHeader}
                             onClick={() => playAudio(negativaAudio)}
                             style={{ cursor: 'pointer' }}
                         >
                             NEGATIVE
                         </div>
-                        <table className={styles.Pg31StyledTable}>
+                        <table className={styles.pg31StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg31Sujeito} />
-                                <col className={styles.Pg31VerboAuxiliar} />
-                                <col className={styles.Pg31Adverbio} />
-                                <col className={styles.Pg31Verbo} />
-                                <col className={styles.Pg31ObjetivoComplemento} />
-                                <col className={styles.Pg31Traducao} />
+                                <col className={styles.pg31Sujeito} />
+                                <col className={styles.pg31VerboAuxiliar} />
+                                <col className={styles.pg31Adverbio} />
+                                <col className={styles.pg31Verbo} />
+                                <col className={styles.pg31ObjetivoComplemento} />
+                                <col className={styles.pg31Traducao} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -105,14 +105,14 @@ const Pagina31 = () => {
                                 </tr>
                             </tbody>
                         </table>
-                        <table className={styles.Pg31StyledTable}>
+                        <table className={styles.pg31StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg31Sujeito} />
-                                <col className={styles.Pg31VerboAuxiliar} />
-                                <col className={styles.Pg31Adverbio} />
-                                <col className={styles.Pg31Verbo} />
-                                <col className={styles.Pg31ObjetivoComplemento} />
-                                <col className={styles.Pg31Traducao} />
+                                <col className={styles.pg31Sujeito} />
+                                <col className={styles.pg31VerboAuxiliar} />
+                                <col className={styles.pg31Adverbio} />
+                                <col className={styles.pg31Verbo} />
+                                <col className={styles.pg31ObjetivoComplemento} />
+                                <col className={styles.pg31Traducao} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -134,7 +134,7 @@ const Pagina31 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.Pg31InputCell}
+                                                    className={styles.pg31InputCell}
                                                     value={value}
                                                     onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
                                                     rows="1"

@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './pagina1.module.css';
-import Pagina0Video from '../assets/pagina0Video.mp4'; 
+import videoCapa from '../assets/wwcnp.mp4';
 
 const Pagina1 = () => {
-  return (
-    <div className={styles.container}>
-      <video className={styles.fullScreenVideo} autoPlay muted loop>
-        <source src={Pagina0Video} type="video/mp4" />
-        Seu navegador não suporta vídeos em HTML5.
-      </video>
-    </div>
-  );
+    return (
+        <div className={styles.pageContainer}>
+            <video
+                className={styles.backgroundVideo}
+                src={videoCapa}
+                autoPlay
+                loop
+                muted
+            />
+        </div>
+    );
 };
 
 export default Pagina1;

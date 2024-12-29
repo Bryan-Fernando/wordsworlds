@@ -14,7 +14,7 @@ import pg6Audio1 from '../assets/audios/pg6_audio1.mp3';
 import pg6Audio2 from '../assets/audios/pg6_audio2.mp3';
 import pg6Audio3 from '../assets/audios/pg6_audio3.mp3';
 import pg6Audio4 from '../assets/audios/pg6_audio4.mp3';
-import Pg6IconNotes from '../assets/Icons/Icon-Notes.png';
+import pg6IconNotes from '../assets/Icons/Icon-Notes.png';
 
 const Pagina6 = () => {
     const [inputValues, setInputValues] = useState(
@@ -43,29 +43,29 @@ const Pagina6 = () => {
 
     return (
         <div>
-            <div className={styles.Pg6Container}>
-                <header className={styles.Pg6Header}>
+            <div className={styles.pg6Container}>
+                <header className={styles.pg6Header}>
                     <h1>Grammar</h1>
-                    <h2 className={styles.Pg6HeaderH2}>Simple Present (Presente Simples)</h2>
+                    <h2 className={styles.pg6HeaderH2}>Simple Present (Presente Simples)</h2>
                     <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
                 </header>
-                <main className={styles.Pg6Main}>
+                <main className={styles.pg6Main}>
                     <div>
                         <div
-                            className={styles.Pg6TableHeader}
+                            className={styles.pg6TableHeader}
                             onClick={() => playAudio(negativaAudio)}
                             style={{ cursor: 'pointer' }}
                         >
                             NEGATIVE
                         </div>
-                        <table className={styles.Pg6StyledTable}>
+                        <table className={styles.pg6StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg6Sujeito} />
-                                <col className={styles.Pg6VerboAuxiliar} />
-                                <col className={styles.Pg6Adverbio} />
-                                <col className={styles.Pg6Verbo} />
-                                <col className={styles.Pg6ObjetivoComplemento} />
-                                <col className={styles.Pg6Traducao} />
+                                <col className={styles.pg6Sujeito} />
+                                <col className={styles.pg6VerboAuxiliar} />
+                                <col className={styles.pg6Adverbio} />
+                                <col className={styles.pg6Verbo} />
+                                <col className={styles.pg6ObjetivoComplemento} />
+                                <col className={styles.pg6Traducao} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -87,30 +87,30 @@ const Pagina6 = () => {
                             <tbody>
                                 <tr>
                                     <td
-                                        className={styles.Pg6Sujeito}
+                                        className={styles.pg6Sujeito}
                                         onClick={() => playAudio(pg6Audio1)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         I
                                     </td>
                                     <td
-                                        className={styles.Pg6VerboAuxiliar}
+                                        className={styles.pg6VerboAuxiliar}
                                         onClick={() => playAudio(pg6Audio1)}
                                         style={{ cursor: 'pointer', textAlign: 'center'}}
                                     >
                                         am
                                     </td>
                                     <td
-                                        className={styles.Pg6Adverbio}
+                                        className={styles.pg6Adverbio}
                                         onClick={() => playAudio(pg6Audio1)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         not
                                     </td>
-                                    <td className={styles.Pg6Verbo}></td>
-                                    <td className={styles.Pg6ObjetivoComplemento}></td>
+                                    <td className={styles.pg6Verbo}></td>
+                                    <td className={styles.pg6ObjetivoComplemento}></td>
                                     <td
-                                        className={styles.Pg6Traducao}
+                                        className={styles.pg6Traducao}
                                         onClick={() => playAudio(traducaoAudio1)}
                                         style={{ cursor: 'pointer' }}
                                     >
@@ -119,36 +119,36 @@ const Pagina6 = () => {
                                 </tr>
                                 <tr>
                                     <td
-                                        className={styles.Pg6Sujeito}
+                                        className={styles.pg6Sujeito}
                                         onClick={() => playAudio(pg6Audio2)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         I
                                     </td>
                                     <td
-                                        className={styles.Pg6VerboAuxiliar}
+                                        className={styles.pg6VerboAuxiliar}
                                         onClick={() => playAudio(pg6Audio2)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         am
                                     </td>
                                     <td
-                                        className={styles.Pg6Adverbio}
+                                        className={styles.pg6Adverbio}
                                         onClick={() => playAudio(pg6Audio2)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         not
                                     </td>
-                                    <td className={styles.Pg6Verbo}></td>
+                                    <td className={styles.pg6Verbo}></td>
                                     <td
-                                        className={styles.Pg6ObjetivoComplemento}
+                                        className={styles.pg6ObjetivoComplemento}
                                         onClick={() => playAudio(pg6Audio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         at work
                                     </td>
                                     <td
-                                        className={styles.Pg6Traducao}
+                                        className={styles.pg6Traducao}
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
@@ -157,36 +157,36 @@ const Pagina6 = () => {
                                 </tr>
                                 <tr>
                                     <td
-                                        className={styles.Pg6Sujeito}
+                                        className={styles.pg6Sujeito}
                                         onClick={() => playAudio(pg6Audio3)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         I
                                     </td>
                                     <td
-                                        className={styles.Pg6VerboAuxiliar}
+                                        className={styles.pg6VerboAuxiliar}
                                         onClick={() => playAudio(pg6Audio3)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         am
                                     </td>
                                     <td
-                                        className={styles.Pg6Adverbio}
+                                        className={styles.pg6Adverbio}
                                         onClick={() => playAudio(pg6Audio3)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         not
                                     </td>
-                                    <td className={styles.Pg6Verbo}></td>
+                                    <td className={styles.pg6Verbo}></td>
                                     <td
-                                        className={styles.Pg6ObjetivoComplemento}
+                                        className={styles.pg6ObjetivoComplemento}
                                         onClick={() => playAudio(pg6Audio3)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         years old
                                     </td>
                                     <td
-                                        className={styles.Pg6Traducao}
+                                        className={styles.pg6Traducao}
                                         onClick={() => playAudio(traducaoAudio3)}
                                         style={{ cursor: 'pointer' }}
                                     >
@@ -195,18 +195,18 @@ const Pagina6 = () => {
                                 </tr>
                                 <tr>
                                     <td
-                                        className={styles.Pg6Sujeito}
+                                        className={styles.pg6Sujeito}
                                         onClick={() => playAudio(pg6Audio4)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         I
                                     </td>
-                                    <td onClick={() => playAudio(pg6Audio4)} style={{ cursor: 'pointer', textAlign: 'center' }} className={styles.Pg6VerboAuxiliar}>ain't</td>
-                                    <td className={styles.Pg6Adverbio}></td>
-                                    <td className={styles.Pg6Verbo}></td>
-                                    <td className={styles.Pg6ObjetivoComplemento}></td>
+                                    <td onClick={() => playAudio(pg6Audio4)} style={{ cursor: 'pointer', textAlign: 'center' }} className={styles.pg6VerboAuxiliar}>ain't</td>
+                                    <td className={styles.pg6Adverbio}></td>
+                                    <td className={styles.pg6Verbo}></td>
+                                    <td className={styles.pg6ObjetivoComplemento}></td>
                                     <td
-                                        className={styles.Pg6Traducao}
+                                        className={styles.pg6Traducao}
                                         onClick={() => playAudio(traducaoAudio4)}
                                         style={{ cursor: 'pointer' }}
                                     ></td>
@@ -214,14 +214,14 @@ const Pagina6 = () => {
                             </tbody>
                         </table>
 
-                        <table className={styles.Pg6StyledTable}>
+                        <table className={styles.pg6StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg6Sujeito} />
-                                <col className={styles.Pg6VerboAuxiliar} />
-                                <col className={styles.Pg6Adverbio} />
-                                <col className={styles.Pg6Verbo} />
-                                <col className={styles.Pg6ObjetivoComplemento} />
-                                <col className={styles.Pg6Traducao} />
+                                <col className={styles.pg6Sujeito} />
+                                <col className={styles.pg6VerboAuxiliar} />
+                                <col className={styles.pg6Adverbio} />
+                                <col className={styles.pg6Verbo} />
+                                <col className={styles.pg6ObjetivoComplemento} />
+                                <col className={styles.pg6Traducao} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -247,7 +247,7 @@ const Pagina6 = () => {
                                             <td key={colIndex}>
                                                 <textarea
                                                     id={`input-${rowIndex}-${colIndex}`}
-                                                    className={styles.Pg6InputCell}
+                                                    className={styles.pg6InputCell}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
@@ -265,12 +265,12 @@ const Pagina6 = () => {
                         </table>
                     </div>
                 </main>
-                <aside className={styles.Pg6Aside}>
-                    <div className={styles.Pg6AsideNotes1}>
-                        <img className={styles.Pg6AsideImgNotes} src={Pg6IconNotes} alt="" />
+                <aside className={styles.pg6Aside}>
+                    <div className={styles.pg6AsideNotes1}>
+                        <img className={styles.pg6AsideImgNotes} src={pg6IconNotes} alt="" />
                         <p>NOTE: Forma simples / Coloquial</p>
                     </div>
-                    <div className={styles.Pg6AsideNotes2}>
+                    <div className={styles.pg6AsideNotes2}>
                         <p>I ain’t = non - standard or dialected English . (I am not) <br />
                             I aren’t = non - standard or dialected English. (I am not)
                         </p>

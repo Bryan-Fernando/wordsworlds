@@ -21,7 +21,7 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
   };
 
   useEffect(() => {
-    setPageInput(currentIndex + 1); 
+    setPageInput(currentIndex + 1);
   }, [currentIndex]);
 
   const handlePageChangeKeyPress = (e) => {
@@ -85,7 +85,7 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
           </div>
 
 
-          <div className="navButtons">
+          <div className={`navButtons  ${contentClass}navButtons`}>
             <div className="pageSelector">
               <label htmlFor="pageInput">Página</label>
               <input

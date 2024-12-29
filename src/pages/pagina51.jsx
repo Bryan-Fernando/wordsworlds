@@ -2,76 +2,127 @@ import React, { useState } from 'react';
 import styles from './pagina51.module.css';
 
 const Pagina51 = () => {
-    const [inputValues, setInputValues] = useState(
-        Array(6).fill(Array(6).fill(''))
+    const [inputValuesTable1, setInputValuesTable1] = useState(
+        Array(3).fill(Array(6).fill(''))
+    );
+    const [inputValuesTable2, setInputValuesTable2] = useState(
+        Array(3).fill(Array(6).fill(''))
     );
 
-    const handleInputChange = (rowIndex, colIndex, e) => {
+    const handleInputChange = (rowIndex, colIndex, e, tableSetter) => {
         const newValue = e.target.value;
-        const updatedValues = inputValues.map((row, i) =>
-            row.map((value, j) => (i === rowIndex && j === colIndex ? newValue : value))
+        tableSetter((prevValues) =>
+            prevValues.map((row, i) =>
+                row.map((value, j) => (i === rowIndex && j === colIndex ? newValue : value))
+            )
         );
-        setInputValues(updatedValues);
     };
 
     return (
         <div>
-            <div className={styles.Pg51Container}>
-                <header className={styles.Pg51Header}>
-                    <h1 className={styles.Pg51HeaderH1}>Grammar - Demonstrative Pronouns</h1>
-                    <div className={styles.Pg51HeaderH2H3}>
-                        <h2 className={styles.Pg51HeaderH2}>This = Este / Esta / Esse / Essa </h2>
-                    </div>
+            <div className={styles.pg51Container}>
+                <header className={styles.pg51Header}>
+                    <h1>Grammar</h1>
+                    <h2 className={styles.pg51HeaderH2}>Simple Present (Presente Simples)</h2>
+                    <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
                 </header>
-                <main className={styles.Pg51Main}>
-                    <div className={styles.Pg51Container1}>
-                        <div>
-                            <div className={styles.Pg51Div1Container1}></div>
-                            <p className={styles.Pg51ParagrafoDiv}>Mother <br />
-                                This is my mother, Susan. She is a teacher</p>
-                        </div>
-                        <div>
-                            <div className={styles.Pg51Div2Container1}></div>
-                            <p className={styles.Pg51ParagrafoDiv}>Sister <br />
-                                This is my sister, Emily. She is a student.</p>
-                        </div>
-                        <div>
-                            <div className={styles.Pg51Div3Container1}></div>
-                            <p className={styles.Pg51ParagrafoDiv}>Grandmother <br />
-                                This is my grandmother, Mary. She loves
-                                gardening.</p>
-                        </div>
-                        <div>
-                            <div className={styles.Pg51Div4Container1}></div>
-                            <p className={styles.Pg51ParagrafoDiv}>Aunt <br />
-                                This is my aunt, Linda. She is a talented
-                                artist.</p>
-                        </div>
-                    </div>
-                    <div className={styles.Pg51Container2}>
-                        <div>
-                            <div className={styles.Pg51Div1Container2}></div>
-                            <p className={styles.Pg51ParagrafoDiv}>Father <br />
-                                This is my father, John. He is an engineer.
-                            </p>
-                        </div>
-                        <div>
-                            <div className={styles.Pg51Div2Container2}></div>
-                            <p className={styles.Pg51ParagrafoDiv}>Brother <br />
-                                This is my brother, Michael. He is a doctor.
-                            </p>
-                        </div>
-                        <div>
-                            <div className={styles.Pg51Div3Container2}></div>
-                            <p className={styles.Pg51ParagrafoDiv}>Grandfather <br />
-                                This is my grandfather, Robert. He enjoys
-                                fishing. </p>
-                        </div>
-                        <div>
-                            <div className={styles.Pg51Div4Container2}></div>
-                            <p className={styles.Pg51ParagrafoDiv}>Uncle <br />
-                                This is my uncle, Peter. He loves to travel</p>
-                        </div>
+                <main className={styles.pg51Main}>
+                    <div>
+                        <div className={styles.pg51TableHeader}>INTERROGATIVE</div>
+                        {/* Tabela de Cima */}
+                        <table className={styles.pg51StyledTable}>
+                            <colgroup>
+                                <col style={{ width: '15%' }} />
+                                <col style={{ width: '15%' }} />
+                                <col style={{ width: '10%' }} />
+                                <col style={{ width: '10%' }} />
+                                <col style={{ width: '25%' }} />
+                                <col style={{ width: '25%' }} />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Palavras <br /> Interrogativas</th>
+                                    <th>Verbo <br /> Auxiliar</th>
+                                    <th>Sujeito</th>
+                                    <th><span style={{ color: 'red' }}>'Not'</span><br /> Advérbio</th>
+                                    <th>Verbo(s)</th>
+                                    <th>Objeto complemento</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {inputValuesTable1.map((row, rowIndex) => (
+                                    <tr key={rowIndex}>
+                                        {row.map((value, colIndex) => (
+                                            <td key={colIndex}>
+                                                <textarea
+                                                    id={`table1-input-${rowIndex}-${colIndex}`}
+                                                    className={styles.pg51InputCell}
+                                                    value={value}
+                                                    rows="1"
+                                                    onChange={(e) =>
+                                                        handleInputChange(rowIndex, colIndex, e, setInputValuesTable1)
+                                                    }
+                                                    style={{
+                                                        resize: 'none',
+                                                        overflowWrap: 'break-word',
+                                                        wordWrap: 'break-word',
+                                                    }}
+                                                />
+                                            </td>
+                                        ))}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+
+                        {/* Tabela de Baixo */}
+                        <table className={`${styles.pg51StyledTable} ${styles.pg51TableAligned}`}>
+                            <colgroup>
+                                <col style={{ width: '17.5%' }} className={styles.pg51ExtraColumn} />
+                                <col style={{ width: '18.5%' }} />
+                                <col style={{ width: '12%' }} />
+                                <col style={{ width: '11%' }} />
+                                <col style={{ width: '11%' }} />
+                                <col style={{ width: '25%' }} />
+                                <col style={{ width: '25%' }} />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th className={styles.pg51ExtraColumn}></th>
+                                    <th>Introdução</th>
+                                    <th>Sujeito</th>
+                                    <th>Verbo Auxiliar</th>
+                                    <th><span style={{ color: 'red' }}>'Not'</span><br /> Advérbio</th>
+                                    <th>Verbo(s)</th>
+                                    <th>Objeto Complemento</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {inputValuesTable2.map((row, rowIndex) => (
+                                    <tr key={rowIndex}>
+                                        <td className={styles.pg51ExtraColumn}></td>
+                                        {row.map((value, colIndex) => (
+                                            <td key={colIndex}>
+                                                <textarea
+                                                    id={`table2-input-${rowIndex}-${colIndex}`}
+                                                    className={styles.pg51InputCell}
+                                                    value={value}
+                                                    rows="1"
+                                                    onChange={(e) =>
+                                                        handleInputChange(rowIndex, colIndex, e, setInputValuesTable2)
+                                                    }
+                                                    style={{
+                                                        resize: 'none',
+                                                        overflowWrap: 'break-word',
+                                                        wordWrap: 'break-word',
+                                                    }}
+                                                />
+                                            </td>
+                                        ))}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
                 </main>
             </div>

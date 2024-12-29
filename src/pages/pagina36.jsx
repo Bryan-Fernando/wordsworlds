@@ -92,24 +92,24 @@ const Pagina36 = () => {
     };
 
     return (
-        <div className={styles.Pg36Container}>
+        <div className={styles.pg36Container}>
 
-            <header className={styles.Pg36Header}>
-                <h1 className={styles.Pg36pageTitle}>Learning Language Exercises</h1>
-                <h2 className={styles.Pg36questionText}>Put the words in the correct order.</h2>
+            <header className={styles.pg36Header}>
+                <h1 className={styles.pg36pageTitle}>Learning Language Exercises</h1>
+                <h2 className={styles.pg36questionText}>Put the words in the correct order.</h2>
             </header>
 
 
-            <main className={styles.Pg36MainContainer}>
-                <div className={styles.Pg36frases}>
+            <main className={styles.pg36MainContainer}>
+                <div className={styles.pg36frases}>
                     {respostasCorretas.map((_, fraseIndex) => (
-                        <div key={fraseIndex} className={styles.Pg36fraseContainer}>
-                            <div className={styles.Pg36frase}>
+                        <div key={fraseIndex} className={styles.pg36fraseContainer}>
+                            <div className={styles.pg36frase}>
                                 {frasesEmbaralhadas[fraseIndex] &&
                                     frasesEmbaralhadas[fraseIndex].map((word, wordIndex) => (
                                         <div
                                             key={wordIndex}
-                                            className={`${styles.Pg36word} ${palavrasClicadas[`${fraseIndex}-${word.toLowerCase()}`] ? styles.Pg36disabled : ''
+                                            className={`${styles.pg36word} ${palavrasClicadas[`${fraseIndex}-${word.toLowerCase()}`] ? styles.pg36disabled : ''
                                                 }`}
                                             onClick={() => handleWordClick(fraseIndex, word)}
                                         >
@@ -118,12 +118,12 @@ const Pagina36 = () => {
                                     ))}
                             </div>
 
-                            <div className={styles.Pg36inputFrase}>
+                            <div className={styles.pg36inputFrase}>
                                 {respostas[fraseIndex] &&
                                     respostas[fraseIndex].map((palavra, index) => (
                                         <div
                                             key={index}
-                                            className={styles.Pg36chip}
+                                            className={styles.pg36chip}
                                             onClick={() => handleChipClick(fraseIndex, palavra)}
                                         >
                                             {index === 0
@@ -137,16 +137,16 @@ const Pagina36 = () => {
                         </div>
                     ))}
                 </div>
-                <button className={styles.Pg36checkButton} onClick={verificarRespostas}>
+                <button className={styles.pg36checkButton} onClick={verificarRespostas}>
                     Check
                 </button>
             </main>
 
             {/* Aside Content */}
-            <aside className={styles.Pg36AsideContainer}>
-                <div className={styles.Pg36tabelaAfirmativaContainer}>
-                    <div className={styles.Pg36tableHeaderAfirmativa}>AFIRMATIVA</div>
-                    <table className={styles.Pg36styledTableAfirmativa}>
+            <aside className={styles.pg36AsideContainer}>
+                <div className={styles.pg36tabelaAfirmativaContainer}>
+                    <div className={styles.pg36tableHeaderAfirmativa}>AFIRMATIVA</div>
+                    <table className={styles.pg36styledTableAfirmativa}>
                         <thead>
                             <tr>
                                 <th>Sujeito</th>
@@ -158,9 +158,9 @@ const Pagina36 = () => {
                         </thead>
                     </table>
                 </div>
-                <div className={styles.Pg36tabelaNegativaContainer}>
-                    <div className={styles.Pg36tableHeaderNegativa}>NEGATIVA</div>
-                    <table className={styles.Pg36styledTableNegativa}>
+                <div className={styles.pg36tabelaNegativaContainer}>
+                    <div className={styles.pg36tableHeaderNegativa}>NEGATIVA</div>
+                    <table className={styles.pg36styledTableNegativa}>
                         <thead>
                             <tr>
                                 <th>Sujeito</th>
@@ -175,9 +175,9 @@ const Pagina36 = () => {
                     </table>
                 </div>
 
-                <div className={styles.Pg36ImagensContainer}>
-                    <img src={passaro} alt="Pássaro" className={styles.Pg36Imagem} />
-                    <img src={lapis} alt="Lápis" className={styles.Pg36Imagem} />
+                <div className={styles.pg36ImagensContainer}>
+                    <img src={passaro} alt="Pássaro" className={styles.pg36Imagem} />
+                    <img src={lapis} alt="Lápis" className={styles.pg36Imagem} />
                 </div>
             </aside>
         </div>

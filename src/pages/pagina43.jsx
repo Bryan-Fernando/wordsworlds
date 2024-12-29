@@ -1,79 +1,420 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from './pagina43.module.css';
-import Pg43IconNotes from '../assets/Icons/Icon-Notes.png';
+import pg43IconNotes from '../assets/Icons/Icon-Notes.png';
 import Pagina43_Primeira_imagem from '../assets/Images/Pagina43_Primeira_imagem.jpg';
 import Pagina43_Segunda_imagem from '../assets/Images/Pagina43_Segunda_imagem.jpg';
 import Pagina43_Terceira_imagem from '../assets/Images/Pagina43_Terceira_imagem.jpg';
 import Pagina43_Quarta_imagem from '../assets/Images/Pagina43_Quarta_imagem.jpg';
 import Pagina43_Quinta_imagem from '../assets/Images/Pagina43_Quinta_imagem.jpg';
+import picon from '../assets/icons/picon.png';
+import eicon from '../assets/icons/eicon.png';
+import audio1e from '../assets/audios/pg43_audio1e.mp3';
+import audio1p from '../assets/audios/pg43_audio1p.mp3';
+import audio2e from '../assets/audios/pg43_audio2e.mp3';
+import audio2p from '../assets/audios/pg43_audio2p.mp3';
+import audio3e from '../assets/audios/pg43_audio3e.mp3';
+import audio3p from '../assets/audios/pg43_audio3p.mp3';
+import audio4e from '../assets/audios/pg43_audio4e.mp3';
+import audio4p from '../assets/audios/pg43_audio4p.mp3';
+import audio5e from '../assets/audios/pg43_audio5e.mp3';
+import audio5p from '../assets/audios/pg43_audio5p.mp3';
+import audio6e from '../assets/audios/pg43_audio6e.mp3';
+import audio6p from '../assets/audios/pg43_audio6p.mp3';
+import audio7e from '../assets/audios/pg43_audio7e.mp3';
+import audio7p from '../assets/audios/pg43_audio7p.mp3';
+import audio8e from '../assets/audios/pg43_audio8e.mp3';
+import audio8p from '../assets/audios/pg43_audio8p.mp3';
+import audio9e from '../assets/audios/pg43_audio9e.mp3';
+import audio9p from '../assets/audios/pg43_audio9p.mp3';
+import audio10e from '../assets/audios/pg43_audio10e.mp3';
+import audio10p from '../assets/audios/pg43_audio10p.mp3';
+import audio11e from '../assets/audios/pg43_audio11e.mp3';
+import audio11p from '../assets/audios/pg43_audio11p.mp3';
+import audio12e from '../assets/audios/pg43_audio12e.mp3';
+import audio12p from '../assets/audios/pg43_audio12p.mp3';
+import audio13e from '../assets/audios/pg43_audio13e.mp3';
+import audio13p from '../assets/audios/pg43_audio13p.mp3';
+import audio14e from '../assets/audios/pg43_audio14e.mp3';
+import audio14p from '../assets/audios/pg43_audio14p.mp3';
+import audio15e from '../assets/audios/pg43_audio15e.mp3';
+import audio15p from '../assets/audios/pg43_audio15p.mp3';
+import audio16e from '../assets/audios/pg43_audio16e.mp3';
+import audio16p from '../assets/audios/pg43_audio16p.mp3';
+import audio17e from '../assets/audios/pg43_audio17e.mp3';
+import audio17p from '../assets/audios/pg43_audio17p.mp3';
+import audio18e from '../assets/audios/pg43_audio18e.mp3';
+import audio18p from '../assets/audios/pg43_audio18p.mp3';
+import audio19e from '../assets/audios/pg43_audio19e.mp3';
+import audio19p from '../assets/audios/pg43_audio19p.mp3';
+import audio20e from '../assets/audios/pg43_audio20e.mp3';
+import audio20p from '../assets/audios/pg43_audio20p.mp3';
 
 
 const Pagina43 = () => {
-    const [inputValues, setInputValues] = useState(
-        Array(6).fill(Array(6).fill(''))
-    );
-
-    const handleInputChange = (rowIndex, colIndex, e) => {
-        const newValue = e.target.value;
-        const updatedValues = inputValues.map((row, i) =>
-            row.map((value, j) => (i === rowIndex && j === colIndex ? newValue : value))
-        );
-        setInputValues(updatedValues);
-    };
+    const audioMap = {
+            'pg43_audio1e': audio1e,
+            'pg43_audio1p': audio1p,
+            'pg43_audio2e': audio2e,
+            'pg43_audio2p': audio2p,
+            'pg43_audio3e': audio3e,
+            'pg43_audio3p': audio3p,
+            'pg43_audio4e': audio4e,
+            'pg43_audio4p': audio4p,
+            'pg43_audio5e': audio5e,
+            'pg43_audio5p': audio5p,
+            'pg43_audio6e': audio6e,
+            'pg43_audio6p': audio6p,
+            'pg43_audio7e': audio7e,
+            'pg43_audio7p': audio7p,
+            'pg43_audio8e': audio8e,
+            'pg43_audio8p': audio8p,
+            'pg43_audio9e': audio9e,
+            'pg43_audio9p': audio9p,
+            'pg43_audio10e': audio10e,
+            'pg43_audio10p': audio10p,
+            'pg43_audio11e': audio11e,
+            'pg43_audio11p': audio11p,
+            'pg43_audio12e': audio12e,
+            'pg43_audio12p': audio12p,
+            'pg43_audio13e': audio13e,
+            'pg43_audio13p': audio13p,
+            'pg43_audio14e': audio14e,
+            'pg43_audio14p': audio14p,
+            'pg43_audio15e': audio15e,
+            'pg43_audio15p': audio15p,
+            'pg43_audio16e': audio16e,
+            'pg43_audio16p': audio16p,
+            'pg43_audio17e': audio17e,
+            'pg43_audio17p': audio17p,
+            'pg43_audio18e': audio18e,
+            'pg43_audio18p': audio18p,
+            'pg43_audio19e': audio19e,
+            'pg43_audio19p': audio19p,
+            'pg43_audio20e': audio20e,
+            'pg43_audio20p': audio20p,
+        };
+        
+        const currentAudio = useRef(null); 
+    
+        const playAudio = (audioId) => {
+            
+            if (currentAudio.current) {
+                currentAudio.current.pause();
+                currentAudio.current.currentTime = 0; 
+            }
+    
+            const audio = new Audio(audioMap[audioId]);
+            currentAudio.current = audio;
+            audio.play();
+        };
 
     return (
         <div>
-            <div className={styles.Pg43Container}>
-                <header className={styles.Pg43Header}>
-                    <h1 className={styles.Pg43HeaderH1}>Introductions</h1>
+            <div className={styles.pg43Container}>
+                <header className={styles.pg43Header}>
+                    <h1 className={styles.pg43HeaderH1}>Introductions</h1>
                 </header>
-                <main className={styles.Pg43Main}>
-                    <div className={styles.Pg43ContainerMain}>
-                        <div className={styles.Pg43ContainerDiv}>
-                            <img className={styles.Pg43MainImagems} src={Pagina43_Primeira_imagem} alt="" />
-                            <p className={styles.Pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
-                            <p>I'm Sister Juliana Garcia.<br />I'm 32 years old. <br />I'm Brazilian. <br />
-                               I'm from Machadinho D’Oeste.
+                <main className={styles.pg43Main}>
+                    <div className={styles.pg43ContainerMain}>
+                        <div className={styles.pg43ContainerDiv}>
+                            <img className={styles.pg43MainImagems} src={Pagina43_Primeira_imagem} alt="" />
+                            <p className={styles.pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
+                            <p>I'm Sister Juliana Garcia.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio1e')}
+                                /> <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio1p')}
+                                />
+                                <br />I'm 32 years old.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio2e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio2p')}
+                                />
+                                <br />I'm Brazilian.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio3e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio3p')}
+                                />
+                                <br />
+                                I'm from Machadinho D’Oeste.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio4e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio4p')}
+                                />
                             </p>
                         </div>
-                        <div className={styles.Pg43ContainerDiv}>
-                            <img className={styles.Pg43MainImagems} src={Pagina43_Segunda_imagem} alt="" />
-                            <p className={styles.Pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
-                            <p>This is Jones Oliveira.<br />He's 31 years old.<br />He is Brazilian.<br />
-                               He's from Ariquemes.
+                        <div className={styles.pg43ContainerDiv}>
+                            <img className={styles.pg43MainImagems} src={Pagina43_Segunda_imagem} alt="" />
+                            <p className={styles.pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
+                            <p>This is Jones Oliveira.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio5e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio5p')}
+                                />
+                                <br />He's 31 years old.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio6e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio6p')}
+                                />
+                                <br />He is Brazilian.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio7e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio7p')}
+                                />
+                                <br />
+                                He's from Ariquemes.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio8e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio8p')}
+                                />
                             </p>
                         </div>
-                        <div className={styles.Pg43ContainerDiv}>
-                            <img className={styles.Pg43MainImagems} src={Pagina43_Terceira_imagem} alt="" />
-                            <p className={styles.Pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
-                            <p>This is Laura Brandhuber.<br />She's 30 years old.<br /> She is Brazilian.<br />
-                               She's from Belo Horizonte.
+                        <div className={styles.pg43ContainerDiv}>
+                            <img className={styles.pg43MainImagems} src={Pagina43_Terceira_imagem} alt="" />
+                            <p className={styles.pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
+                            <p>This is Laura Brandhuber.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio9e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio9p')}
+                                />
+                                <br />She's 30 years old.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio10e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio10p')}
+                                />
+                                <br /> She is Brazilian.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio11e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio11p')}
+                                />
+                                <br />
+                                She's from Belo Horizonte.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio12e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio12p')}
+                                />
                             </p>
                         </div>
-                        <div className={styles.Pg43ContainerDiv}>
-                            <img className={styles.Pg43MainImagems} src={Pagina43_Quarta_imagem} alt="" />
-                            <p className={styles.Pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
-                            <p>I’m Rogério Madeira.<br /> I’m 35 years old.<br /> I’m Brazilian.<br />
-                               I’m from Ariquemes.
+                        <div className={styles.pg43ContainerDiv}>
+                            <img className={styles.pg43MainImagems} src={Pagina43_Quarta_imagem} alt="" />
+                            <p className={styles.pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
+                            <p>I’m Rogério Madeira.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio13e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio13p')}
+                                />
+                                <br /> I’m 35 years old.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio14e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio14p')}
+                                />
+                                <br /> I’m Brazilian.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio15e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio15p')}
+                                />
+                                <br />
+                                I’m from Ariquemes.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio16e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio16p')}
+                                />
                             </p>
                         </div>
-                        <div className={styles.Pg43ContainerDiv}>
-                            <img className={styles.Pg43MainImagems} src={Pagina43_Quinta_imagem} alt="" />
-                            <p className={styles.Pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
-                            <p>This is Gustavo Farias.<br /> He's 38 years old.<br /> He's Brazilian.<br />
-                               He's from Mato Grosso.
+                        <div className={styles.pg43ContainerDiv}>
+                            <img className={styles.pg43MainImagems} src={Pagina43_Quinta_imagem} alt="" />
+                            <p className={styles.pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
+                            <p>This is Gustavo Farias.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio17e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio17p')}
+                                />
+                                <br /> He's 38 years old.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio18e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio18p')}
+                                />
+                                <br /> He's Brazilian.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio19e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio19p')}
+                                />
+                                <br />
+                                He's from Mato Grosso.
+                                <img
+                                    src={eicon}
+                                    alt="English audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio20e')}
+                                />
+                                <img
+                                    src={picon}
+                                    alt="Portuguese audio"
+                                    className={styles.iconButton}
+                                    onClick={() => playAudio('pg43_audio20p')}
+                                />
                             </p>
                         </div>
                     </div>
                 </main>
-                <aside className={styles.Pg43Aside}>
-                    <div className={styles.Pg43Asidecontainer}>
-                        <div className={styles.Pg43AsideNotes1}>
-                            <img className={styles.Pg43AsideImgNotes} src={Pg43IconNotes} alt="" />
+                <aside className={styles.pg43Aside}>
+                    <div className={styles.pg43Asidecontainer}>
+                        <div className={styles.pg43AsideNotes1}>
+                            <img className={styles.pg43AsideImgNotes} src={pg43IconNotes} alt="" />
                             <p>Word Bank</p>
                         </div>
-                        <div className={styles.Pg43AsideNotes2}>
-                            <p className={styles.Pg43AsideNotes2Negrito}>
+                        <div className={styles.pg43AsideNotes2}>
+                            <p className={styles.pg43AsideNotes2Negrito}>
                                 Who...? <br />
                                 What...? <br />
                                 Where...? <br />
@@ -87,14 +428,14 @@ const Pagina43 = () => {
                                 Quando...? <br />
                                 Que horas...? <br />
                             </p>
-                            <div className={styles.Pg43VerticalLine}></div>
-                            <p className={styles.Pg43AsideNotes2Negrito}>
+                            <div className={styles.pg43VerticalLine}></div>
+                            <p className={styles.pg43AsideNotes2Negrito}>
                                 How? <br />
                                 How Old? <br />
                             </p>
                             <p>
                                 Como? <br />
-                                Quantos anos? <br /> 
+                                Quantos anos? <br />
                             </p>
                         </div>
                     </div>

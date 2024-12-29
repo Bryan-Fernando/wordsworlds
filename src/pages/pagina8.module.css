@@ -1,30 +1,27 @@
-.Pg8Container {
-    display: grid;
-    grid-template-areas:
-        'header header'
-        'main main'
-    ;
+.pg8Container {
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
 }
 
-.Pg8Header {
+.pg8Header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.Pg8HeaderH2 {
+.pg8HeaderH2 {
     color: black;
 }
 
-.Pg8Main {
+.pg8Main {
     width: 100%;
     text-align: center;
 }
 
 /* Este é um comentário */
 
-.Pg8TableHeader {
+.pg8TableHeader {
     background-color: #A61C28;
     color: white;
     text-align: center !important;
@@ -35,22 +32,22 @@
     font-size: 2rem;
 }
 
-.Pg8StyledTable {
+.pg8StyledTable {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 5%;
     table-layout: fixed;
 }
 
-.Pg8StyledTable thead tr {
+.pg8StyledTable thead tr {
     background-color: #888A8C;
     color: white;
     font-weight: bold;
 }
 
 
-.Pg8StyledTable th,
-.Pg8StyledTable td {
+.pg8StyledTable th,
+.pg8StyledTable td {
     border: .1rem solid #A61C28;
     padding: 1rem;
     text-align: left;
@@ -58,17 +55,17 @@
     font-weight: bold;
 }
 
-.Pg8StyledTable tbody tr {
+.pg8StyledTable tbody tr {
     background-color: white;
     max-width: 100%;
     height: calc(7vw * 0.85);
 }
 
-.Pg8StyledTable tbody tr:nth-child(even) {
+.pg8StyledTable tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.Pg8InputCell {
+.pg8InputCell {
     width: 100%;
     height: calc(7vh * 0.85);
     border: none;
@@ -80,51 +77,51 @@
     background-color: white;
 }
 
-.Pg8InputCell:focus {
+.pg8InputCell:focus {
     outline: none;
     border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
-.Pg8InputCell::-webkit-scrollbar {
+.pg8InputCell::-webkit-scrollbar {
     display: none;
 }
 
-.Pg8Sujeito {
+.pg8Sujeito {
     width: calc(10vw * 0.85);
 }
 
-.Pg8VerboAuxiliar {
+.pg8VerboAuxiliar {
     width: calc(10vw * 0.85)
 }
 
-.Pg8Adverbio {
+.pg8Adverbio {
     width: calc(12vw * 0.85)
 }
 
-.Pg8Verbo {
+.pg8Verbo {
     width: calc(12vw * 0.85)
 }
 
-.Pg8ObjetivoComplemento {
+.pg8ObjetivoComplemento {
     width: calc(18vw * 0.85)
 }
 
-.Pg8Traducao {
+.pg8Traducao {
     width: (18vw * 0.85);
 }
 
 @media (max-width: 1024px) {
-    .Pg8StyledTable {
+    .pg8StyledTable {
         margin-bottom: 15%;
     }
 
-    .Pg8StyledTable th,
-    .Pg8StyledTable td {
+    .pg8StyledTable th,
+    .pg8StyledTable td {
         padding: .5rem;
     }
 
-    .Pg8InputCell {
+    .pg8InputCell {
         height: calc(6vw * 0.85);
     }
 }

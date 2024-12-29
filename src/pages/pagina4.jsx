@@ -33,12 +33,12 @@ const Pagina4 = () => {
 
     return (
         <div>
-            <div className={styles.Pg4Container}>
-                <header className={styles.Pg4Header}>
+            <div className={styles.pg4Container}>
+                <header className={styles.pg4Header}>
                     <h1>Grammar To Be (Be)</h1>
-                    <h2 className={styles.Pg4HeaderH2}>Subject Pronouns</h2>
+                    <h2 className={styles.pg4HeaderH2}>Subject Pronouns</h2>
                 </header>
-                <main className={styles.Pg4Main}>
+                <main className={styles.pg4Main}>
                     <table className={styles.p4Table}>
                         <thead>
                             <tr>
@@ -64,18 +64,18 @@ const Pagina4 = () => {
                                 <td className={styles.p4Table}>Eles/Elas</td>
                             </tr>
                             <tr>
-                                <td className={`${styles.p4Table} ${styles.Pg4Highlight}`}>I am</td>
-                                <td colSpan="3" className={`${styles.p4Table} ${styles.Pg4Highlight}`}>He is/ She is/ It is</td>
-                                <td colSpan="4" className={`${styles.p4Table} ${styles.Pg4Highlight}`}>We are/ You are/ They are</td>
+                                <td className={`${styles.p4Table} ${styles.pg4Highlight}`}>I am</td>
+                                <td colSpan="3" className={`${styles.p4Table} ${styles.pg4Highlight}`}>He is/ She is/ It is</td>
+                                <td colSpan="4" className={`${styles.p4Table} ${styles.pg4Highlight}`}>We are/ You are/ They are</td>
                             </tr>
                         </tbody>
                     </table>
                 </main>
-                <hr className={styles.Pg4MainHr} />
-                <aside className={styles.Pg4Aside}>
-                    <div className={styles.Pg4AsideAffirmative}>
+                <hr className={styles.pg4MainHr} />
+                <aside className={styles.pg4Aside}>
+                    <div className={styles.pg4AsideAffirmative}>
                         <div>
-                            <h3 className={styles.Pg4AsideDivH3}>AFFIRMATIVE</h3>
+                            <h3 className={styles.pg4AsideDivH3}>AFFIRMATIVE</h3>
                             <p onClick={() => playAudio(imastu)} className={styles.clickable}>I am = I’m a student</p>
                             <hr />
                             <p onClick={() => playAudio(heisateacher)} className={styles.clickable}>He is = He’s a teacher</p>
@@ -87,9 +87,9 @@ const Pagina4 = () => {
                             <p onClick={() => playAudio(theyarefromport)} className={styles.clickable}>They are = They’re from Portugal</p>
                         </div>
                     </div>
-                    <div className={styles.Pg4AsideNegative}>
+                    <div className={styles.pg4AsideNegative}>
                         <div>
-                            <h3 className={styles.Pg4AsideDivH3}>NEGATIVE</h3>
+                            <h3 className={styles.pg4AsideDivH3}>NEGATIVE</h3>
                             <p onClick={() => playAudio(imnotspanish)} className={styles.clickable}>I’m not Spanish</p>
                             <hr />
                             <p onClick={() => playAudio(heisnotalaw)} className={styles.clickable}>He’s not a lawyer</p>

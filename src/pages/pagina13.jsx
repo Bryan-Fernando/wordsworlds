@@ -13,7 +13,7 @@ import pg13Audio3 from '../assets/audios/pg13_audio3.mp3';
 import traducaoAudio1 from '../assets/audios/pg13_trad1.mp3';
 import traducaoAudio2 from '../assets/audios/pg13_trad2.mp3';
 import traducaoAudio3 from '../assets/audios/pg13_trad3.mp3';
-import Pg13IconNotes from '../assets/Icons/Icon-Notes.png';
+import pg13IconNotes from '../assets/Icons/Icon-Notes.png';
 
 const Pagina13 = () => {
     const [inputValues, setInputValues] = useState(
@@ -42,29 +42,29 @@ const Pagina13 = () => {
 
     return (
         <div>
-            <div className={styles.Pg13Container}>
-                <header className={styles.Pg13Header}>
+            <div className={styles.pg13Container}>
+                <header className={styles.pg13Header}>
                     <h1>Grammar</h1>
-                    <h2 className={styles.Pg13HeaderH2}>Simple Present (Presente Simples)</h2>
+                    <h2 className={styles.pg13HeaderH2}>Simple Present (Presente Simples)</h2>
                     <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
                 </header>
-                <main className={styles.Pg13Main}>
+                <main className={styles.pg13Main}>
                     <div>
                         <div
-                            className={styles.Pg13TableHeader}
+                            className={styles.pg13TableHeader}
                             onClick={() => playAudio(interrogativaNegativaAudio)}
                             style={{ cursor: 'pointer' }}
                         >
                             NEGATIVE INTERROGATIVE
                         </div>
-                        <table className={styles.Pg13StyledTable}>
+                        <table className={styles.pg13StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg13Sujeito} />
-                                <col className={styles.Pg13VerboAuxiliar} />
-                                <col className={styles.Pg13Adverbio} />
-                                <col className={styles.Pg13Verbo} />
-                                <col className={styles.Pg13ObjetivoComplemento} />
-                                <col className={styles.Pg13Traducao} />
+                                <col className={styles.pg13Sujeito} />
+                                <col className={styles.pg13VerboAuxiliar} />
+                                <col className={styles.pg13Adverbio} />
+                                <col className={styles.pg13Verbo} />
+                                <col className={styles.pg13ObjetivoComplemento} />
+                                <col className={styles.pg13Traducao} />
                             </colgroup> 
                             <thead>
                                 <tr>
@@ -83,36 +83,36 @@ const Pagina13 = () => {
                             <tbody>
                                 <tr>
                                     <td
-                                        className={styles.Pg13VerboAuxiliar}
+                                        className={styles.pg13VerboAuxiliar}
                                         onClick={() => playAudio(pg13Audio1)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         Are
                                     </td>
                                     <td
-                                        className={styles.Pg13Sujeito}
+                                        className={styles.pg13Sujeito}
                                         onClick={() => playAudio(pg13Audio1)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         you
                                     </td>
                                     <td
-                                        className={styles.Pg13Adverbio}
+                                        className={styles.pg13Adverbio}
                                         onClick={() => playAudio(pg13Audio1)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         not
                                     </td>
-                                    <td className={styles.Pg13Verbo}></td>
+                                    <td className={styles.pg13Verbo}></td>
                                     <td
-                                        className={styles.Pg13ObjetivoComplemento}
+                                        className={styles.pg13ObjetivoComplemento}
                                         onClick={() => playAudio(pg13Audio1)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         the new director?
                                     </td>
                                     <td
-                                        className={styles.Pg13Traducao}
+                                        className={styles.pg13Traducao}
                                         onClick={() => playAudio(traducaoAudio1)}
                                         style={{ cursor: 'pointer' }}
                                     >
@@ -121,30 +121,30 @@ const Pagina13 = () => {
                                 </tr>
                                 <tr>
                                     <td
-                                        className={styles.Pg13VerboAuxiliar}
+                                        className={styles.pg13VerboAuxiliar}
                                         onClick={() => playAudio(pg13Audio2)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         Aren't
                                     </td>
                                     <td
-                                        className={styles.Pg13Sujeito}
+                                        className={styles.pg13Sujeito}
                                         onClick={() => playAudio(pg13Audio2)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         you
                                     </td>
-                                    <td className={styles.Pg13Adverbio}></td>
-                                    <td className={styles.Pg13Verbo}></td>
+                                    <td className={styles.pg13Adverbio}></td>
+                                    <td className={styles.pg13Verbo}></td>
                                     <td
-                                        className={styles.Pg13ObjetivoComplemento}
+                                        className={styles.pg13ObjetivoComplemento}
                                         onClick={() => playAudio(pg13Audio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         in class 2-B?
                                     </td>
                                     <td
-                                        className={styles.Pg13Traducao}
+                                        className={styles.pg13Traducao}
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
@@ -153,30 +153,30 @@ const Pagina13 = () => {
                                 </tr>
                                 <tr>
                                     <td
-                                        className={styles.Pg13VerboAuxiliar}
+                                        className={styles.pg13VerboAuxiliar}
                                         onClick={() => playAudio(pg13Audio3)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         Ain't
                                     </td>
                                     <td
-                                        className={styles.Pg13Sujeito}
+                                        className={styles.pg13Sujeito}
                                         onClick={() => playAudio(pg13Audio3)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         you
                                     </td>
-                                    <td className={styles.Pg13Adverbio}></td>
-                                    <td className={styles.Pg13Verbo}></td>
+                                    <td className={styles.pg13Adverbio}></td>
+                                    <td className={styles.pg13Verbo}></td>
                                     <td
-                                        className={styles.Pg13ObjetivoComplemento}
+                                        className={styles.pg13ObjetivoComplemento}
                                         onClick={() => playAudio(pg13Audio3)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         only 12 years old?
                                     </td>
                                     <td
-                                        className={styles.Pg13Traducao}
+                                        className={styles.pg13Traducao}
                                         onClick={() => playAudio(traducaoAudio3)}
                                         style={{ cursor: 'pointer' }}
                                     >
@@ -185,14 +185,14 @@ const Pagina13 = () => {
                                 </tr>
                             </tbody>
                         </table>
-                        <table className={styles.Pg13StyledTable}>
+                        <table className={styles.pg13StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg13Sujeito} />
-                                <col className={styles.Pg13VerboAuxiliar} />
-                                <col className={styles.Pg13Adverbio} />
-                                <col className={styles.Pg13Verbo} />
-                                <col className={styles.Pg13ObjetivoComplemento} />
-                                <col className={styles.Pg13Traducao} />
+                                <col className={styles.pg13Sujeito} />
+                                <col className={styles.pg13VerboAuxiliar} />
+                                <col className={styles.pg13Adverbio} />
+                                <col className={styles.pg13Verbo} />
+                                <col className={styles.pg13ObjetivoComplemento} />
+                                <col className={styles.pg13Traducao} />
                             </colgroup> 
                             <thead>
                                 <tr>
@@ -214,7 +214,7 @@ const Pagina13 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.Pg13InputCell}
+                                                    className={styles.pg13InputCell}
                                                     value={value}
                                                     onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
                                                     rows="1"
@@ -232,12 +232,12 @@ const Pagina13 = () => {
                         </table>
                     </div>
                 </main>
-                <aside className={styles.Pg13Aside}>
-                        <div className={styles.Pg13AsideNotes1}>
-                        <img className={styles.Pg13AsideImgNotes} src={Pg13IconNotes} alt="" />
+                <aside className={styles.pg13Aside}>
+                        <div className={styles.pg13AsideNotes1}>
+                        <img className={styles.pg13AsideImgNotes} src={pg13IconNotes} alt="" />
                         <p>NOTE: Usam a mesma terminação verbal “Are“, “Aren’t“:</p>
                         </div>
-                        <div className={styles.Pg13AsideNotes2}>
+                        <div className={styles.pg13AsideNotes2}>
                         <p>
                             You <br />
                             You all <br />

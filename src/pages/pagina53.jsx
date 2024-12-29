@@ -1,62 +1,55 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './pagina53.module.css';
+import pagina53_imagem1 from '../assets/Images/pagina53_imagem1.png';
+import pagina53_imagem2 from '../assets/Images/pagina53_imagem2.png';
+import pagina53_imagem3 from '../assets/Images/pagina53_imagem3.png';
+import pagina53_imagem4 from '../assets/Images/pagina53_imagem4.png';
 
 const Pagina53 = () => {
-    const [inputValues, setInputValues] = useState(
-        Array(6).fill(Array(6).fill(''))
-    );
-
-    const handleInputChange = (rowIndex, colIndex, e) => {
-        const newValue = e.target.value;
-        const updatedValues = inputValues.map((row, i) =>
-            row.map((value, j) => (i === rowIndex && j === colIndex ? newValue : value))
-        );
-        setInputValues(updatedValues);
-    };
-
     return (
         <div>
-            <div className={styles.Pg53Container}>
-                <header className={styles.Pg53Header}>
-                    <h1 className={styles.Pg53HeaderH1}>Grammar - Demonstrative Pronouns</h1>
-                    <div className={styles.Pg53HeaderH2H3}>
-                        <h2 className={styles.Pg53HeaderH2}>That = Aquele / Aquela </h2>
+            <div className={styles.pg53Container}>
+                <header className={styles.pg53Header}>
+                    <h1 className={styles.pg53HeaderH1}>Grammar - Demonstrative Pronouns</h1>
+                    <div className={styles.pg53HeaderH2H3}>
+                        <h2 className={styles.pg53HeaderH2}>These = Estes / Estas / Esses / Essas</h2>
                     </div>
                 </header>
-                <main className={styles.Pg53Main}>
-                    <div className={styles.Pg53Container1}>
+                <main className={styles.pg53Main}>
+                    <div className={styles.pg53Container1}>
                         <div>
-                            <div className={styles.Pg53Div1Container1}></div>
-                            <p className={styles.Pg53ParagrafoDiv}>That is your office</p>
-                        </div>
-                        <div>
-                            <div className={styles.Pg53Div2Container1}></div>
-                            <p className={styles.Pg53ParagrafoDiv}>That is my brother John in the green shirt <br />
-                                and brown pants.
+                            <div className={styles.pg53Div1Container1}>
+                                <img src={pagina53_imagem1} alt="Imagem 1" className={styles.pg53Img} />
+                            </div>
+                            <p className={styles.pg53ParagrafoDiv}>
+                                <span style={{ fontWeight: 'bold', fontSize: '1.8rem' }}>These are my co-workers</span>.
                             </p>
                         </div>
                         <div>
-                            <div className={styles.Pg53Div3Container1}></div>
-                            <p className={styles.Pg53ParagrafoDiv}>That is my sister Joan and my cousin Maria. </p>
+                            <div className={styles.pg53Div2Container1}>
+                                <img src={pagina53_imagem3} alt="Imagem 2" className={styles.pg53Img} />
+                            </div>
+                            <p className={styles.pg53ParagrafoDiv}>
+                                <span style={{ fontWeight: 'bold', fontSize: '1.8rem' }}>These are my books</span>.
+                            </p>
                         </div>
                     </div>
-                    <div className={styles.Pg53Container2}>
+                    <div className={styles.pg53Container2}>
                         <div>
-                            <div className={styles.Pg53Div1Container2}></div>
-                            <p className={styles.Pg53ParagrafoDiv}>That is Mr.Batista, the new director.
-
+                            <div className={styles.pg53Div1Container2}>
+                                <img src={pagina53_imagem2} alt="Imagem 3" className={styles.pg53Img} />
+                            </div>
+                            <p className={styles.pg53ParagrafoDiv}>
+                                <span style={{ fontWeight: 'bold', fontSize: '1.8rem' }}>These are my grades</span>.
                             </p>
                         </div>
                         <div>
-                            <div className={styles.Pg53Div2Container2}></div>
-                            <p className={styles.Pg53ParagrafoDiv}>That is my cousin Gary.
-
+                            <div className={styles.pg53Div2Container2}>
+                                <img src={pagina53_imagem4} alt="Imagem 4" className={styles.pg53Img} />
+                            </div>
+                            <p className={styles.pg53ParagrafoDiv}>
+                                <span style={{ fontWeight: 'bold', fontSize: '1.8rem' }}>These are my new sneakers</span>.
                             </p>
-                        </div>
-                        <div>
-                            <div className={styles.Pg53Div3Container2}></div>
-                            <p className={styles.Pg53ParagrafoDiv}>That is my sister Julia in the <br />
-                                yellow blouse and blue skirt.</p>
                         </div>
                     </div>
                 </main>

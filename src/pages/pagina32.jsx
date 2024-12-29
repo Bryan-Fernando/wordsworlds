@@ -40,29 +40,29 @@ const Pagina32 = () => {
 
     return (
         <div>
-            <div className={styles.Pg32Container}>
-                <header className={styles.Pg32Header}>
+            <div className={styles.pg32Container}>
+                <header className={styles.pg32Header}>
                     <h1>Grammar</h1>
-                    <h2 className={styles.Pg32HeaderH2}>Simple Present (Presente Simples)</h2>
+                    <h2 className={styles.pg32HeaderH2}>Simple Present (Presente Simples)</h2>
                     <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
                 </header>
-                <main className={styles.Pg32Main}>
+                <main className={styles.pg32Main}>
                     <div>
                         <div
-                            className={styles.Pg32TableHeader}
+                            className={styles.pg32TableHeader}
                             onClick={() => playAudio(afirmativaAudio)}
                             style={{ cursor: 'pointer' }}
                         >
                             AFFIRMATIVE INTERROGATIVE
                         </div>
-                        <table className={styles.Pg32StyledTable}>
+                        <table className={styles.pg32StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg32Sujeito} />
-                                <col className={styles.Pg32VerboAuxiliar} />
-                                <col className={styles.Pg32Adverbio} />
-                                <col className={styles.Pg32Verbo} />
-                                <col className={styles.Pg32ObjetivoComplemento} />
-                                <col className={styles.Pg32Traducao} />
+                                <col className={styles.pg32Sujeito} />
+                                <col className={styles.pg32VerboAuxiliar} />
+                                <col className={styles.pg32Adverbio} />
+                                <col className={styles.pg32Verbo} />
+                                <col className={styles.pg32ObjetivoComplemento} />
+                                <col className={styles.pg32Traducao} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -86,64 +86,64 @@ const Pagina32 = () => {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td className={styles.Pg32Sujeito} onClick={() => playAudio(pg32Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles.pg32Sujeito} onClick={() => playAudio(pg32Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         Are
                                     </td>
-                                    <td className={styles.Pg32VerboAuxiliar} onClick={() => playAudio(pg32Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles.pg32VerboAuxiliar} onClick={() => playAudio(pg32Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         they
                                     </td>
-                                    <td className={styles.Pg32Adverbio}></td>
-                                    <td className={styles.Pg32Verbo}></td>
-                                    <td className={styles.Pg32ObjetivoComplemento} onClick={() => playAudio(pg32Audio1)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles.pg32Adverbio}></td>
+                                    <td className={styles.pg32Verbo}></td>
+                                    <td className={styles.pg32ObjetivoComplemento} onClick={() => playAudio(pg32Audio1)} style={{ cursor: 'pointer' }}>
                                         from Brazil?
                                     </td>
-                                    <td className={styles.Pg32Traducao} onClick={() => playAudio(traducaoAudio1)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles.pg32Traducao} onClick={() => playAudio(traducaoAudio1)} style={{ cursor: 'pointer' }}>
                                         Eles são do Brasil?
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className={styles.Pg32Sujeito} onClick={() => playAudio(pg32Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles.pg32Sujeito} onClick={() => playAudio(pg32Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         Are
                                     </td>
-                                    <td className={styles.Pg32VerboAuxiliar} onClick={() => playAudio(pg32Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles.pg32VerboAuxiliar} onClick={() => playAudio(pg32Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         they
                                     </td>
-                                    <td className={styles.Pg32Adverbio}></td>
-                                    <td className={styles.Pg32Verbo}></td>
-                                    <td className={styles.Pg32ObjetivoComplemento} onClick={() => playAudio(pg32Audio2)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles.pg32Adverbio}></td>
+                                    <td className={styles.pg32Verbo}></td>
+                                    <td className={styles.pg32ObjetivoComplemento} onClick={() => playAudio(pg32Audio2)} style={{ cursor: 'pointer' }}>
                                         at the cinema?
                                     </td>
-                                    <td className={styles.Pg32Traducao} onClick={() => playAudio(traducaoAudio2)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles.pg32Traducao} onClick={() => playAudio(traducaoAudio2)} style={{ cursor: 'pointer' }}>
                                         Eles estão no cinema?
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className={styles.Pg32Sujeito} onClick={() => playAudio(pg32Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles.pg32Sujeito} onClick={() => playAudio(pg32Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         Are
                                     </td>
-                                    <td className={styles.Pg32VerboAuxiliar} onClick={() => playAudio(pg32Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles.pg32VerboAuxiliar} onClick={() => playAudio(pg32Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         they
                                     </td>
-                                    <td className={styles.Pg32Adverbio}></td>
-                                    <td className={styles.Pg32Verbo}></td>
-                                    <td className={styles.Pg32ObjetivoComplemento} onClick={() => playAudio(pg32Audio3)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles.pg32Adverbio}></td>
+                                    <td className={styles.pg32Verbo}></td>
+                                    <td className={styles.pg32ObjetivoComplemento} onClick={() => playAudio(pg32Audio3)} style={{ cursor: 'pointer' }}>
                                         15 and 16 years old?
                                     </td>
-                                    <td className={styles.Pg32Traducao} onClick={() => playAudio(traducaoAudio3)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles.pg32Traducao} onClick={() => playAudio(traducaoAudio3)} style={{ cursor: 'pointer' }}>
                                         Eles têm 15 e 16 anos?
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
 
-                        <table className={styles.Pg32StyledTable}>
+                        <table className={styles.pg32StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg32Sujeito} />
-                                <col className={styles.Pg32VerboAuxiliar} />
-                                <col className={styles.Pg32Adverbio} />
-                                <col className={styles.Pg32Verbo} />
-                                <col className={styles.Pg32ObjetivoComplemento} />
-                                <col className={styles.Pg32Traducao} />
+                                <col className={styles.pg32Sujeito} />
+                                <col className={styles.pg32VerboAuxiliar} />
+                                <col className={styles.pg32Adverbio} />
+                                <col className={styles.pg32Verbo} />
+                                <col className={styles.pg32ObjetivoComplemento} />
+                                <col className={styles.pg32Traducao} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -165,7 +165,7 @@ const Pagina32 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.Pg32InputCell}
+                                                    className={styles.pg32InputCell}
                                                     value={value}
                                                     onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
                                                     rows="1"

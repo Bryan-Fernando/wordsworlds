@@ -1,14 +1,11 @@
 .pg37Container {
-    display: grid;
-    grid-template-areas:
-        'header header'
-        'main main'
-    ;
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
     padding: 20px;
 }
 
-.Pg37Header {
+.pg37Header {
     width: 100%;
     text-align: left;
 }
@@ -27,7 +24,7 @@
     align-items: center;
 }
 
-.Pg37Main {
+.pg37Main {
     width: 100%;
     text-align: center;
     flex-direction: row;
@@ -115,7 +112,7 @@
 
 @media (max-width: 1440px) {
 
-    .Pg37Main {
+    .pg37Main {
         flex-direction: column;
     }
 

@@ -1,30 +1,27 @@
-.Pg15Container {
-    display: grid;
-    grid-template-areas:
-        'header header'
-        'main main'
-    ;
+.pg15Container {
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
 }
 
-.Pg15Header {
+.pg15Header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.Pg15HeaderH2 {
+.pg15HeaderH2 {
     color: black;
 }
 
-.Pg15Main {
+.pg15Main {
     width: 100%;
     text-align: center;
 }
 
 /* Este é um comentário */
 
-.Pg15TableHeader {
+.pg15TableHeader {
     background-color: #A61C28;
     color: white;
     text-align: center !important;
@@ -35,22 +32,22 @@
     font-size: 2rem;
 }
 
-.Pg15StyledTable {
+.pg15StyledTable {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 2rem;
     table-layout: fixed;
 }
 
-.Pg15StyledTable thead tr {
+.pg15StyledTable thead tr {
     background-color: #888A8C;
     color: white;
     font-weight: bold;
 }
 
 
-.Pg15StyledTable th,
-.Pg15StyledTable td {
+.pg15StyledTable th,
+.pg15StyledTable td {
     border: .1rem solid #A61C28;
     padding: 1rem;
     text-align: left;
@@ -58,15 +55,15 @@
     font-weight: bold;
 }
 
-.Pg15StyledTable tbody tr {
+.pg15StyledTable tbody tr {
     background-color: white;
 }
 
-.Pg15StyledTable tbody tr:nth-child(even) {
+.pg15StyledTable tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.Pg15InputCell {
+.pg15InputCell {
     width: 100%;
     height: 7vh;
     border: none;
@@ -78,52 +75,52 @@
     background-color: white;
 }
 
-.Pg15InputCell:focus {
+.pg15InputCell:focus {
     outline: none;
     border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
-.Pg15InputCell::-webkit-scrollbar {
+.pg15InputCell::-webkit-scrollbar {
     display: none;
 }
 
-.Pg15Sujeito {
+.pg15Sujeito {
     width: calc(10vw * 0.85);
 }
 
-.Pg15VerboAuxiliar {
+.pg15VerboAuxiliar {
     width: calc(10vw * 0.85)
 }
 
-.Pg15Adverbio {
+.pg15Adverbio {
     width: calc(12vw * 0.85)
 }
 
-.Pg15Verbo {
+.pg15Verbo {
     width: calc(12vw * 0.85)
 }
 
-.Pg15ObjetivoComplemento {
+.pg15ObjetivoComplemento {
     width: calc(18vw * 0.85)
 }
 
-.Pg15Traducao {
+.pg15Traducao {
     width: (18vw * 0.85);
 }
 
 @media (max-width: 1024px) {
-    .Pg15StyledTable {
+    .pg15StyledTable {
         margin-bottom: 15%;
     }
 
-    .Pg15StyledTable th,
-    .Pg15StyledTable td {
+    .pg15StyledTable th,
+    .pg15StyledTable td {
         padding: .5rem;
 
     }
 
-    .Pg15InputCell {
+    .pg15InputCell {
         height: calc(6vw * 0.85);
     }
 }

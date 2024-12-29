@@ -1,74 +1,147 @@
 import React, { useState } from 'react';
-import styles from './pagina52.module.css';
+import styles from './pagina51.module.css';
 
-const Pagina52 = () => {
-    const [inputValues, setInputValues] = useState(
-        Array(6).fill(Array(6).fill(''))
+const Pagina51 = () => {
+    const [inputValuesTable1, setInputValuesTable1] = useState(
+        Array(3).fill(Array(6).fill(''))
+    );
+    const [inputValuesTable2, setInputValuesTable2] = useState(
+        Array(3).fill(Array(6).fill(''))
+    );
+    const [inputValuesTable3, setInputValuesTable3] = useState(
+        Array(3).fill(Array(6).fill(''))
     );
 
-    const handleInputChange = (rowIndex, colIndex, e) => {
+    const handleInputChange = (rowIndex, colIndex, e, tableSetter) => {
         const newValue = e.target.value;
-        const updatedValues = inputValues.map((row, i) =>
-            row.map((value, j) => (i === rowIndex && j === colIndex ? newValue : value))
+        tableSetter((prevValues) =>
+            prevValues.map((row, i) =>
+                row.map((value, j) => (i === rowIndex && j === colIndex ? newValue : value))
+            )
         );
-        setInputValues(updatedValues);
     };
 
     return (
         <div>
-            <div className={styles.Pg52Container}>
-                <header className={styles.Pg52Header}>
-                    <h1 className={styles.Pg52HeaderH1}>Grammar - Demonstrative Pronouns</h1>
-                    <div className={styles.Pg52HeaderH2H3}>
-                        <h2 className={styles.Pg52HeaderH2}>This = Este / Esta / Esse / Essa </h2>
-                    </div>
+            <div className={styles.pg51Container}>
+                <header className={styles.pg51Header}>
+                    <h1>Grammar</h1>
+                    <h2 className={styles.pg51HeaderH2}>Simple Present (Presente Simples)</h2>
+                    <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
                 </header>
-                <main className={styles.Pg52Main}>
-                    <div className={styles.Pg52Container1}>
-                        <div>
-                            <div className={styles.Pg52Div1Container1}></div>
-                            <p className={styles.Pg52ParagrafoDiv}>Best Friend <br />
-                                This is my best friend, Alex.</p>
-                        </div>
-                        <div>
-                            <div className={styles.Pg52Div2Container1}></div>
-                            <p className={styles.Pg52ParagrafoDiv}>Work Friend <br />
-                                This is my work friend, James. He is very
-                                helpful and kind.</p>
-                        </div>
-                        <div>
-                            <div className={styles.Pg52Div3Container1}></div>
-                            <p className={styles.Pg52ParagrafoDiv}>Gym Friend <br />
-                                This is my gym friend, David. He
-                                motivates me to stay fit.</p>
-                        </div>
-                        <div>
-                            <div className={styles.Pg52Div4Container1}></div>
-                            <p className={styles.Pg52ParagrafoDiv}>Online Friend <br />
-                                This is my online friend, Sam.</p>
-                        </div>
-                    </div>
-                    <div className={styles.Pg52Container2}>
-                        <div>
-                            <div className={styles.Pg52Div1Container2}></div>
-                            <p className={styles.Pg52ParagrafoDiv}>School Friend <br />
-                                This is my school friend, Emma. She is
-                                very good at math.
-                            </p>
-                        </div>
-                        <div>
-                            <div className={styles.Pg52Div2Container2}></div>
-                            <p className={styles.Pg52ParagrafoDiv}>Neighbor Friend <br />
-                                This is my neighbor friend, Sarah. We
-                                often go jogging together.
+                <main className={styles.pg51Main}>
+                    <div>
+                        <div className={styles.pg51TableHeader}>INTERROGATIVE</div>
+                        <table className={styles.pg51StyledTable}>
+                            <thead>
+                                <tr>
+                                    <th>Palavras interrogativas</th>
+                                    <th>Verbo <br /> Auxiliar</th>
+                                    <th>Sujeito<br /> </th>
+                                    <th><span style={{ color: 'red' }}> 'Not'</span> <br /> Advérbio</th>
+                                    <th>Verbo(s)</th>
+                                    <th>Objeto <br /> Complemento</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {inputValuesTable1.map((row, rowIndex) => (
+                                    <tr key={rowIndex}>
+                                        {row.map((value, colIndex) => (
+                                            <td key={colIndex}>
+                                                <textarea
+                                                    className={styles.pg51InputCell}
+                                                    value={value}
+                                                    rows="1"
+                                                    onChange={(e) =>
+                                                        handleInputChange(rowIndex, colIndex, e, setInputValuesTable1)
+                                                    }
+                                                    style={{
+                                                        resize: 'none',
+                                                        overflowWrap: 'break-word',
+                                                        wordWrap: 'break-word',
+                                                    }}
+                                                />
+                                            </td>
+                                        ))}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
 
-                            </p>
-                        </div>
-                        <div>
-                            <div className={styles.Pg52Div3Container2}></div>
-                            <p className={styles.Pg52ParagrafoDiv}>College Friend <br />
-                                This is my college friend, Rachel.</p>
-                        </div>
+                        <div className={styles.pg51TableHeader}>AFFIRMATIVE</div>
+                        <table className={styles.pg51StyledTable}>
+                            <thead>
+                                <tr>
+                                    <th>Introdução</th>
+                                    <th>Sujeito</th>
+                                    <th>Verbo <br /> Auxiliar</th>
+                                    <th>Advérbio</th>
+                                    <th>Verbo(s)</th>
+                                    <th>Objeto <br /> Complemento</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {inputValuesTable2.map((row, rowIndex) => (
+                                    <tr key={rowIndex}>
+                                        {row.map((value, colIndex) => (
+                                            <td key={colIndex}>
+                                                <textarea
+                                                    className={styles.pg51InputCell}
+                                                    value={value}
+                                                    rows="1"
+                                                    onChange={(e) =>
+                                                        handleInputChange(rowIndex, colIndex, e, setInputValuesTable2)
+                                                    }
+                                                    style={{
+                                                        resize: 'none',
+                                                        overflowWrap: 'break-word',
+                                                        wordWrap: 'break-word',
+                                                    }}
+                                                />
+                                            </td>
+                                        ))}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+
+                        <div className={styles.pg51TableHeader}>NEGATIVE</div>
+                        <table className={styles.pg51StyledTable}>
+                            <thead>
+                                <tr>
+                                <th>Introdução</th>
+                                    <th>Sujeito</th>
+                                    <th>Verbo <br /> Auxiliar</th>
+                                    <th> <span style={{ color: 'red' }}> 'Not'</span> <br />Advérbio</th>
+                                    <th>Verbo(s)</th>
+                                    <th>Objeto <br /> Complemento</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {inputValuesTable3.map((row, rowIndex) => (
+                                    <tr key={rowIndex}>
+                                        {row.map((value, colIndex) => (
+                                            <td key={colIndex}>
+                                                <textarea
+                                                    className={styles.pg51InputCell}
+                                                    value={value}
+                                                    rows="1"
+                                                    onChange={(e) =>
+                                                        handleInputChange(rowIndex, colIndex, e, setInputValuesTable3)
+                                                    }
+                                                    style={{
+                                                        resize: 'none',
+                                                        overflowWrap: 'break-word',
+                                                        wordWrap: 'break-word',
+                                                    }}
+                                                />
+                                            </td>
+                                        ))}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
                 </main>
             </div>
@@ -76,4 +149,4 @@ const Pagina52 = () => {
     );
 };
 
-export default Pagina52;
+export default Pagina51;

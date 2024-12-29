@@ -1,94 +1,100 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina48.module.css';
-import Pg48IconNotes from '../assets/Icons/Icon-Notes.png';
-import Pagina48_Primeira_imagem from '../assets/Images/Pagina46_Primeira_imagem.jpg';
-
-
+import Pagina49_Primeira_imagem from '../assets/Images/Pagina49_Primeira_imagem.jpg';
+import Pagina49_Segunda_imagem from '../assets/Images/Pagina49_Segunda_imagem.jpg';
+import audio1e from '../assets/audios/pg48_audio1e.mp3';
+import audio2e from '../assets/audios/pg48_audio2e.mp3';
+import audio3e from '../assets/audios/pg48_audio3e.mp3';
+import audio1p from '../assets/audios/pg48_audio1p.mp3';
+import audio2p from '../assets/audios/pg48_audio2p.mp3';
+import audio3p from '../assets/audios/pg48_audio3p.mp3';
 
 const Pagina48 = () => {
-    const [inputValues, setInputValues] = useState(
-        Array(6).fill(Array(6).fill(''))
-    );
+    const audioMap = {
+        'pg48_audio1e': audio1e,
+        'pg48_audio2e': audio2e,
+        'pg48_audio3e': audio3e,
+        'pg48_audio1p': audio1p,
+        'pg48_audio2p': audio2p,
+        'pg48_audio3p': audio3p,
+    };
 
-    const handleInputChange = (rowIndex, colIndex, e) => {
-        const newValue = e.target.value;
-        const updatedValues = inputValues.map((row, i) =>
-            row.map((value, j) => (i === rowIndex && j === colIndex ? newValue : value))
-        );
-        setInputValues(updatedValues);
+    const currentAudio = useRef(null);
+
+    const playAudio = (audioId) => {
+        if (currentAudio.current) {
+            currentAudio.current.pause();
+            currentAudio.current.currentTime = 0;
+        }
+
+        const audio = new Audio(audioMap[audioId]);
+        currentAudio.current = audio;
+        audio.play();
     };
 
     return (
         <div>
-            <div className={styles.Pg48Container}>
-                <header className={styles.Pg48Header}>
-                    <h1 className={styles.Pg48HeaderH1}>Grammar</h1>
-                    <div className={styles.Pg48HeaderH2H3}>
-                        <h2 className={styles.Pg48HeaderH2}>Possessive Adjectives</h2>
-                        <h3 className={styles.Pg48HeaderH3}>Pronomes possessivos</h3>
+            <div className={styles.pg48Container}>
+                <header className={styles.pg48Header}>
+                    <h1 className={styles.pg48HeaderH1}>Grammar</h1>
+                    <div className={styles.pg48HeaderH2H3}>
+                        <h2 className={styles.pg48HeaderH2}>Possessive Adjectives</h2>
+                        <h3 className={styles.pg48HeaderH3}>Pronomes possessivos</h3>
                     </div>
                 </header>
-                <main className={styles.Pg48Main}>
-                    <div>
-                        <table className={styles.Pg48table}>
-                            <thead>
-                                <tr>
-                                    <th>My</th>
-                                    <td>meu(s), minha(s)</td>
-                                </tr>
-                                <tr>
-                                    <th>His</th>
-                                    <td>dele (seu/s/sua/s)</td>
-                                </tr>
-                                <tr>
-                                    <th>Her</th>
-                                    <td>dela (seu/s/sua/s)</td>
-                                </tr>
-                                <tr>
-                                    <th>Its</th>
-                                    <td>seu(s), sua(s) - coisas/animais/plantas</td>
-                                </tr>
-                                <tr>
-                                    <th>Our</th>
-                                    <td>nosso(s), nossa(s)</td>
-                                </tr>
-                                <tr>
-                                    <th>Your</th>
-                                    <td>seu(s), sua(s), teu(s), tua(s)</td>
-                                </tr>
-                                <tr>
-                                    <th>Your</th>
-                                    <td>seus, suas, teus, tuas (de vocês)</td>
-                                </tr>
-                                <tr>
-                                    <th>Their</th>
-                                    <td>deles, delas, seus, suas</td>
-                                </tr>
-                            </thead>
-                        </table>
+                <main className={styles.pg48Main}>
+                    {/* Primeiro bloco de exemplo */}
+                    <div className={styles.pg48Exemplo}>
+                        <p className={styles.pg48TituloExemplo}><strong>Exemplo:</strong></p>
+                        <div className={styles.pg48ContainerAsidetexto}>
+                            <div className={styles.pg48AsideTexto1} onClick={() => playAudio('pg48_audio1e')} style={{ cursor: 'pointer' }}>
+                                <p>John: I love this city. <strong>Its</strong> architecture is stunning.</p>
+                            </div>
+                        </div>
+                        <div className={styles.pg48ExemploImg}>
+                            <img
+                                className={styles.pg48AsideImg1}
+                                src={Pagina49_Primeira_imagem}
+                                alt="Primeira imagem de exemplo"
+                            />
+                        </div>
+                        <div className={styles.pg48Traducao}>
+                            <p className={styles.pg48TituloTraducao}><strong>Tradução:</strong></p>
+                            <p className={styles.pg48TraducaoTexto1} onClick={() => playAudio('pg48_audio1p')} style={{ cursor: 'pointer' }}>
+                                Eu amo essa cidade. <strong>Sua</strong> arquitetura é impressionante.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Segundo bloco de exemplo */}
+                    <div className={styles.pg48Exemplo}>
+                        <p className={styles.pg48TituloExemplo}><strong>Exemplo:</strong></p>
+                        <div className={styles.pg48ContainerAsidetexto}>
+                            <div className={styles.pg48AsideTexto2} onClick={() => playAudio('pg48_audio2e')} style={{ cursor: 'pointer' }}>
+                                <p>Paulo: Are these <strong>our</strong> books?</p>
+                            </div>
+                            <div className={styles.pg48AsideTexto3} onClick={() => playAudio('pg48_audio3e')} style={{ cursor: 'pointer' }}>
+                                <p>Maria: No, they aren’t. <strong>Our</strong> books are on the teacher’s desk.</p>
+                            </div>
+                        </div>
+                        <div className={styles.pg48ExemploImg}>
+                            <img
+                                className={styles.pg48AsideImg2}
+                                src={Pagina49_Segunda_imagem}
+                                alt="Segunda imagem de exemplo"
+                            />
+                        </div>
+                        <div className={styles.pg48Traducao}>
+                            <p className={styles.pg48TituloTraducao}><strong>Tradução:</strong></p>
+                            <p className={styles.pg48TraducaoTexto2} onClick={() => playAudio('pg48_audio2p')} style={{ cursor: 'pointer' }}>
+                                Estes são <strong>nossos</strong> livros?
+                            </p>
+                            <p className={styles.pg48TraducaoTexto3} onClick={() => playAudio('pg48_audio3p')} style={{ cursor: 'pointer' }}>
+                                Não, não são. <strong>Nossos</strong> livros estão na mesa do professor.
+                            </p>
+                        </div>
                     </div>
                 </main>
-                <aside className={styles.Pg48Aside}>
-                    <div className={styles.Pg48Exemplo}>
-                        <p>Exemplo:</p>
-                        <div className={styles.Pg48ContainerAsidetexto}>
-                            <div className={styles.Pg48AsideTexto1}>
-                                <p>Emily: Yes, I’m proud of our progress.<br /> Our hard work is paying off.</p>
-                            </div>
-                            <div className={styles.Pg48AsideTexto2}>
-                                <p>Alex: This project is going really well. <br /> Our team has put in  a lot of</p>
-                            </div>
-                        </div>
-                        <div className={styles.Pg48ExemploImg}>
-                            <img className={styles.Pg48AsideImg1} src={Pagina48_Primeira_imagem} alt="" />
-                        </div>
-                    </div>
-                    <div className={styles.Pg48Traducao}>
-                        <p>Tradução:</p>
-                        <div className={styles.Pg48AsideTraducao1}><p>Alex: Este projeto está indo muito bem. Nossa equipe tem se esforçado muito.</p></div>
-                        <div className={styles.Pg48AsideTraducao2}><p>Emily: Sim, estou orgulhoso do nosso progresso. Nosso trabalho duro está valendo a pena.</p></div>
-                    </div>
-                </aside>
             </div>
         </div>
     );

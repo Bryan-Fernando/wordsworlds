@@ -1,11 +1,6 @@
-.Pg4Container {
-    display: grid;
-    grid-template-areas:
-        'header header'
-        'main main'
-        'hr hr'
-        'aside aside'
-    ;
+.pg4Container {
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
 }
 
@@ -48,7 +43,7 @@ hr {
     font-size: 2.5rem;
 }
 
-.Pg4MainHr {
+.pg4MainHr {
     border: .3rem solid #b30000;
     width: 100%;
     margin: 2rem 0;
@@ -57,29 +52,29 @@ hr {
     margin: 2rem 0;
 }
 
-.Pg4Highlight {
+.pg4Highlight {
     font-weight: bold;
     color: #b30000;
 }
 
-.Pg4Header {
+.pg4Header {
     height: 100%;
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.Pg4HeaderH2 {
+.pg4HeaderH2 {
     color: black;
 }
 
-.Pg4Main {
+.pg4Main {
     height: 100%;
     width: 100%;
     text-align: center;
 }
 
-.Pg4Aside {
+.pg4Aside {
     margin: 0;
     height: 100%;
     width: 100%;
@@ -88,19 +83,19 @@ hr {
     list-style-position: inside;
 }
 
-.Pg4AsideAffirmative {
+.pg4AsideAffirmative {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.Pg4AsideNegative {
+.pg4AsideNegative {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.Pg4AsideDivH3 {
+.pg4AsideDivH3 {
     font-size: 3rem;
     color: #A61C28;
 }

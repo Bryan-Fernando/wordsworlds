@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './pagina56.module.css';
-import Pg56IconNotes from '../assets/Icons/Icon-Notes.png';
+import pg56IconNotes from '../assets/Icons/Icon-Notes.png';
 
 const Pagina56 = () => {
     const [inputValues, setInputValues] = useState(
@@ -17,61 +17,78 @@ const Pagina56 = () => {
 
     return (
         <div>
-            <div className={styles.Pg51Container}>
-                <header className={styles.Pg56Header}>
-                    <h1 className={styles.Pg56HeaderH1}>Names and Titles (Mr. Mrs. Miss. Ms. Ma’am)</h1>
-                </header>
-                <main className={styles.Pg56Main}>
-                    <div className={styles.ContainerDiv1}>
+            <div className={styles.pg56Container}>
+                <main className={styles.pg56Main}>
+                    <div className={styles.pg56ContainerMain1}>
+                        <div><img className={styles.pg56AsideImgNotes} src={pg56IconNotes} alt="" /></div>
                         <div>
-                            <div className={styles.Container1Div1}></div>
-                            <p>Ma’am Jeaneta Mc. Cartney</p>
-                        </div>
-                        <div>
-                            <div className={styles.Container1Div2}></div>
-                            <p>Mrs Carina Sanches
+                            <p>First name:
+                                Gustavo (primeiro nome)</p>
+                            <p>Middle name:
+                                Amaral (nome do meio)</p>
+                            <p>
+                                Last name/Family name:
+                                Dias (último nome/sobrenome)
                             </p>
+                            <p>Full name:
+                                Gustavo Amaral Dias (nome completo)</p>
                         </div>
-                        <div>
-                            <div className={styles.Container1Div3}></div>
-                            <p>Ms Olivia Gomes</p>
-                        </div>
+                        <div></div>
                     </div>
-                    <div className={styles.ContainerDiv2}>
+                    <div className={styles.pg56ContainerMain2}>
+                        <div><img className={styles.pg56AsideImgNotes} src={pg56IconNotes} alt="" /></div>
                         <div>
-                            <div className={styles.Container2Div1}></div>
-                            <p>Miss Leticia Pagliari</p>
-                        </div>
+                            <p>First name:
+                                Lucimar (primeiro nome)</p>
+                            <p>Middle name:
+                                Pereira (nome do meio)</p>
+                            <p>Last name/Family name:
+                                da Silva (último nome/sobrenome)</p>
+                            <p>Full name:
+                                Lucimar Pereira de Sousa (nome completo)</p></div>
+                        <div></div>
+                    </div>
+                    <div className={styles.pg56ContainerMain3}>
+                        <div><img className={styles.pg56AsideImgNotes} src={pg56IconNotes} alt="" /></div>
                         <div>
-                            <div className={styles.Container2Div2}></div>
-                            <p>Mr Ronaldo Willian
+                            <p>First name:
+                                Ines (primeiro nome)</p>
+                            <p>Middle name:
+                                Pagliari (nome do meio)</p>
+                            <p>Last name/Family name:
+                                Jardim (último nome/sobrenome)</p>
+                            <p>Full name:
+                                Ines Pagliari Jardim (nome completo)
                             </p>
                         </div>
+                        <div></div>
                     </div>
                 </main>
-                <aside className={styles.Pg56Aside}>
-                    <div className={styles.Pg56Asidecontainer}>
-                        <div className={styles.Pg56AsideNotes1}>
-                            <img className={styles.Pg56AsideImgNotes} src={Pg56IconNotes} alt="" />
+                <aside className={styles.pg56Aside}>
+                    <div className={styles.pg56Asidecontainer}>
+                        <div className={styles.pg56AsideNotes1}>
+                            <img className={styles.pg56AsideImgNotes} src={pg56IconNotes} alt="" />
                             <p>Word Bank</p>
                         </div>
-                        <div className={styles.Pg56AsideNotes2}>
-                            <p className={styles.Pg56AsideNotes2Vermelho}>
-                                Mr
+                        <div className={styles.pg56AsideNotes2}>
+                            <p className={styles.pg56AsideNotes2Vermelho}>
+                                First name
                                 <br />
-                                Mrs
-                                <br />
-                                Miss <br />
-                                Ms <br />
-                                Ma’am <br />
+                                Middle name
                             </p>
                             <p>
-                                Sr (senhor) <br />
-                                Sra (senhora)
+                                Primeiro nome <br />
+                                Nome do meio
+                            </p>
+                            <p className={styles.pg56AsideNotes2Vermelho}>
+                                Last name/Family name
                                 <br />
-                                Srta (solteira) <br />
-                                Ms (mulher adulta sem especificar seu estado civil) <br />
-                                Madame (forma cortês de se dirigir a uma mulher) <br />
+                                Full name
+                            </p>
+                            <p>
+                                Último nome/Sobrenome
+                                <br />
+                                Nome completo
                             </p>
                         </div>
                     </div>

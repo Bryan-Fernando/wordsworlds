@@ -41,29 +41,29 @@ const Pagina17 = () => {
 
     return (
         <div>
-            <div className={styles.Pg17Container}>
-                <header className={styles.Pg17Header}>
+            <div className={styles.pg17Container}>
+                <header className={styles.pg17Header}>
                     <h1>Grammar</h1>
-                    <h2 className={styles.Pg17HeaderH2}>Simple Present (Presente Simples)</h2>
+                    <h2 className={styles.pg17HeaderH2}>Simple Present (Presente Simples)</h2>
                     <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
                 </header>
-                <main className={styles.Pg17Main}>
+                <main className={styles.pg17Main}>
                     <div>
                         <div
-                            className={styles.Pg17TableHeader}
+                            className={styles.pg17TableHeader}
                             onClick={() => playAudio(interrogativaNegativaAudio)}
                             style={{ cursor: 'pointer' }}
                         >
                             NEGATIVE INTERROGATIVE
                         </div>
-                        <table className={styles.Pg17StyledTable}>
+                        <table className={styles.pg17StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg17Sujeito} />
-                                <col className={styles.Pg17VerboAuxiliar} />
-                                <col className={styles.Pg17Adverbio} />
-                                <col className={styles.Pg17Verbo} />
-                                <col className={styles.Pg17ObjetivoComplemento} />
-                                <col className={styles.Pg17Traducao} />
+                                <col className={styles.pg17Sujeito} />
+                                <col className={styles.pg17VerboAuxiliar} />
+                                <col className={styles.pg17Adverbio} />
+                                <col className={styles.pg17Verbo} />
+                                <col className={styles.pg17ObjetivoComplemento} />
+                                <col className={styles.pg17Traducao} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -82,36 +82,36 @@ const Pagina17 = () => {
                             <tbody>
                                 <tr>
                                     <td
-                                        className={styles.Pg17VerboAuxiliar}
+                                        className={styles.pg17VerboAuxiliar}
                                         onClick={() => playAudio(pg17Audio1)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         Is
                                     </td>
                                     <td
-                                        className={styles.Pg17Sujeito}
+                                        className={styles.pg17Sujeito}
                                         onClick={() => playAudio(pg17Audio1)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         he
                                     </td>
                                     <td
-                                        className={styles.Pg17Adverbio}
+                                        className={styles.pg17Adverbio}
                                         onClick={() => playAudio(pg17Audio1)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         not
                                     </td>
-                                    <td className={styles.Pg17Verbo}></td>
+                                    <td className={styles.pg17Verbo}></td>
                                     <td
-                                        className={styles.Pg17ObjetivoComplemento}
+                                        className={styles.pg17ObjetivoComplemento}
                                         onClick={() => playAudio(pg17Audio1)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         Mr. Smith?
                                     </td>
                                     <td
-                                        className={styles.Pg17Traducao}
+                                        className={styles.pg17Traducao}
                                         onClick={() => playAudio(traducaoAudio1)}
                                         style={{ cursor: 'pointer' }}
                                     >
@@ -120,30 +120,30 @@ const Pagina17 = () => {
                                 </tr>
                                 <tr>
                                     <td
-                                        className={styles.Pg17VerboAuxiliar}
+                                        className={styles.pg17VerboAuxiliar}
                                         onClick={() => playAudio(pg17Audio2)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         Ain't
                                     </td>
                                     <td
-                                        className={styles.Pg17Sujeito}
+                                        className={styles.pg17Sujeito}
                                         onClick={() => playAudio(pg17Audio2)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         he
                                     </td>
-                                    <td className={styles.Pg17Adverbio}></td>
-                                    <td className={styles.Pg17Verbo}></td>
+                                    <td className={styles.pg17Adverbio}></td>
+                                    <td className={styles.pg17Verbo}></td>
                                     <td
-                                        className={styles.Pg17ObjetivoComplemento}
+                                        className={styles.pg17ObjetivoComplemento}
                                         onClick={() => playAudio(pg17Audio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         at the bank?
                                     </td>
                                     <td
-                                        className={styles.Pg17Traducao}
+                                        className={styles.pg17Traducao}
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
@@ -152,30 +152,30 @@ const Pagina17 = () => {
                                 </tr>
                                 <tr>
                                     <td
-                                        className={styles.Pg17VerboAuxiliar}
+                                        className={styles.pg17VerboAuxiliar}
                                         onClick={() => playAudio(pg17Audio3)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         Isn't
                                     </td>
                                     <td
-                                        className={styles.Pg17Sujeito}
+                                        className={styles.pg17Sujeito}
                                         onClick={() => playAudio(pg17Audio3)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         he
                                     </td>
-                                    <td className={styles.Pg17Adverbio}></td>
-                                    <td className={styles.Pg17Verbo}></td>
+                                    <td className={styles.pg17Adverbio}></td>
+                                    <td className={styles.pg17Verbo}></td>
                                     <td
-                                        className={styles.Pg17ObjetivoComplemento}
+                                        className={styles.pg17ObjetivoComplemento}
                                         onClick={() => playAudio(pg17Audio3)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         29 years old?
                                     </td>
                                     <td
-                                        className={styles.Pg17Traducao}
+                                        className={styles.pg17Traducao}
                                         onClick={() => playAudio(traducaoAudio3)}
                                         style={{ cursor: 'pointer' }}
                                     >
@@ -184,14 +184,14 @@ const Pagina17 = () => {
                                 </tr>
                             </tbody>
                         </table>
-                        <table className={styles.Pg17StyledTable}>
+                        <table className={styles.pg17StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg17Sujeito} />
-                                <col className={styles.Pg17VerboAuxiliar} />
-                                <col className={styles.Pg17Adverbio} />
-                                <col className={styles.Pg17Verbo} />
-                                <col className={styles.Pg17ObjetivoComplemento} />
-                                <col className={styles.Pg17Traducao} />
+                                <col className={styles.pg17Sujeito} />
+                                <col className={styles.pg17VerboAuxiliar} />
+                                <col className={styles.pg17Adverbio} />
+                                <col className={styles.pg17Verbo} />
+                                <col className={styles.pg17ObjetivoComplemento} />
+                                <col className={styles.pg17Traducao} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -213,7 +213,7 @@ const Pagina17 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.Pg17InputCell}
+                                                    className={styles.pg17InputCell}
                                                     value={value}
                                                     onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
                                                     rows="1"

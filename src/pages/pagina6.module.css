@@ -1,29 +1,25 @@
-.Pg6Container {
-    display: grid;
-    grid-template-areas:
-        'header header'
-        'main main'
-        'aside aside'
-    ;
+.pg6Container {
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
 }
 
-.Pg6Header {
+.pg6Header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.Pg6HeaderH2 {
+.pg6HeaderH2 {
     color: black;
 }
 
-.Pg6Main {
+.pg6Main {
     width: 100%;
     text-align: center;
 }
 
-.Pg6Aside {
+.pg6Aside {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -31,7 +27,7 @@
 
 /* Este é um comentário */
 
-.Pg6TableHeader {
+.pg6TableHeader {
     background-color: #A61C28;
     color: white;
     text-align: center !important;
@@ -42,22 +38,22 @@
     font-size: 2rem;
 }
 
-.Pg6StyledTable {
+.pg6StyledTable {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 5%;
     table-layout: fixed;
 }
 
-.Pg6StyledTable thead tr {
+.pg6StyledTable thead tr {
     background-color: #888A8C;
     color: white;
     font-weight: bold;
 }
 
 
-.Pg6StyledTable th,
-.Pg6StyledTable td {
+.pg6StyledTable th,
+.pg6StyledTable td {
     border: .1rem solid #A61C28;
     padding: 1rem;
     text-align: left;
@@ -65,17 +61,17 @@
     font-weight: bold;
 }
 
-.Pg6StyledTable tbody tr {
+.pg6StyledTable tbody tr {
     background-color: white;
     max-width: 100%;
     height: calc(7vw * 0.85);
 }
 
-.Pg6StyledTable tbody tr:nth-child(even) {
+.pg6StyledTable tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.Pg6InputCell {
+.pg6InputCell {
     width: 100%;
     height: calc(7vh * 0.85);
     border: none;
@@ -87,41 +83,41 @@
     background-color: white;
 }
 
-.Pg6InputCell:focus {
+.pg6InputCell:focus {
     outline: none;
     border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
-.Pg6InputCell::-webkit-scrollbar {
+.pg6InputCell::-webkit-scrollbar {
     display: none;
 }
 
-.Pg6Sujeito {
+.pg6Sujeito {
     width: calc(10vw * 0.85);
 }
 
-.Pg6VerboAuxiliar {
+.pg6VerboAuxiliar {
     width: calc(10vw * 0.85)
 }
 
-.Pg6Adverbio {
+.pg6Adverbio {
     width: calc(12vw * 0.85)
 }
 
-.Pg6Verbo {
+.pg6Verbo {
     width: calc(12vw * 0.85)
 }
 
-.Pg6ObjetivoComplemento {
+.pg6ObjetivoComplemento {
     width: calc(18vw * 0.85)
 }
 
-.Pg6Traducao {
+.pg6Traducao {
     width: (18vw * 0.85);
 }
 
-.Pg6AsideNotes1 {
+.pg6AsideNotes1 {
     width: 50%;
     height: 4.5rem;
     border: .4rem solid #A61C28;
@@ -136,17 +132,17 @@
     align-items: center;
 }
 
-.Pg6AsideNotes1 p {
+.pg6AsideNotes1 p {
     font-size: 1.5rem;
 }
 
-.Pg6AsideImgNotes {
+.pg6AsideImgNotes {
     height: calc(10px + 0.8vw);
     width: 2rem;
     padding-right: .5rem;
 }
 
-.Pg6AsideNotes2 {
+.pg6AsideNotes2 {
     width: 50%;
     height: 100%;
     border: .4rem solid #A61C28;
@@ -160,7 +156,7 @@
     align-items: center;
 }
 
-.Pg6AsideNotes2 p {
+.pg6AsideNotes2 p {
     font-size: 1.5rem;
     padding: 1rem;
 }
@@ -168,27 +164,27 @@
 
 @media (max-width: 1024px) {
 
-    .Pg6StyledTable {
+    .pg6StyledTable {
         margin-bottom: 15%;
     }
 
-    .Pg6StyledTable th,
-    .Pg6StyledTable td {
+    .pg6StyledTable th,
+    .pg6StyledTable td {
         padding: .5rem;
     }
 
-    .Pg6InputCell {
+    .pg6InputCell {
         height: calc(6vw * 0.85);
         padding: 0;
     }
 
-    .Pg6AsideNotes1,
-    .Pg6AsideNotes2 {
+    .pg6AsideNotes1,
+    .pg6AsideNotes2 {
         width: 100%;
     }
 
-    .Pg6AsideNotes1 p,
-    .Pg6AsideNotes2 p {
+    .pg6AsideNotes1 p,
+    .pg6AsideNotes2 p {
         padding: 1rem;
         font-size: 2.75rem;
     }

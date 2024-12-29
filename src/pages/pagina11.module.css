@@ -1,29 +1,25 @@
-.Pg11Container {
-    display: grid;
-    grid-template-areas:
-        'header header'
-        'main main'
-        'aside aside'
-    ;
+.pg11Container {
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
 }
 
-.Pg11Header {
+.pg11Header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.Pg11HeaderH2 {
+.pg11HeaderH2 {
     color: black;
 }
 
-.Pg11Main {
+.pg11Main {
     width: 100%;
     text-align: center;
 }
 
-.Pg11Aside {
+.pg11Aside {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -31,7 +27,7 @@
 
 /* Este é um comentário */
 
-.Pg11TableHeader {
+.pg11TableHeader {
     background-color: #A61C28;
     color: white;
     text-align: center !important;
@@ -42,22 +38,22 @@
     font-size: 2rem;
 }
 
-.Pg11StyledTable {
+.pg11StyledTable {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 5%;
     table-layout: fixed;
 }
 
-.Pg11StyledTable thead tr {
+.pg11StyledTable thead tr {
     background-color: #888A8C;
     color: white;
     font-weight: bold;
 }
 
 
-.Pg11StyledTable th,
-.Pg11StyledTable td {
+.pg11StyledTable th,
+.pg11StyledTable td {
     border: .1rem solid #A61C28;
     padding: 1rem;
     text-align: left;
@@ -65,17 +61,17 @@
     font-weight: bold;
 }
 
-.Pg11StyledTable tbody tr {
+.pg11StyledTable tbody tr {
     background-color: white;
     max-width: 100%;
     height: calc(7vw * 0.85);
 }
 
-.Pg11StyledTable tbody tr:nth-child(even) {
+.pg11StyledTable tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.Pg11InputCell {
+.pg11InputCell {
     width: 100%;
     height: calc(7vh * 0.85);
     border: none;
@@ -87,41 +83,41 @@
     background-color: white;
 }
 
-.Pg11InputCell:focus {
+.pg11InputCell:focus {
     outline: none;
     border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
-.Pg11InputCell::-webkit-scrollbar {
+.pg11InputCell::-webkit-scrollbar {
     display: none;
 }
 
-.Pg11Sujeito {
+.pg11Sujeito {
     width: calc(10vw * 0.85);
 }
 
-.Pg11VerboAuxiliar {
+.pg11VerboAuxiliar {
     width: calc(10vw * 0.85)
 }
 
-.Pg11Adverbio {
+.pg11Adverbio {
     width: calc(12vw * 0.85)
 }
 
-.Pg11Verbo {
+.pg11Verbo {
     width: calc(12vw * 0.85)
 }
 
-.Pg11ObjetivoComplemento {
+.pg11ObjetivoComplemento {
     width: calc(18vw * 0.85)
 }
 
-.Pg11Traducao {
+.pg11Traducao {
     width: (18vw * 0.85);
 }
 
-.Pg11AsideNotes1 {
+.pg11AsideNotes1 {
     width: 50%;
     height: 4.5rem;
     border: .4rem solid #A61C28;
@@ -136,17 +132,17 @@
     align-items: center;
 }
 
-.Pg11AsideNotes1 p {
+.pg11AsideNotes1 p {
     font-size: 1.5rem;
 }
 
-.Pg11AsideImgNotes {
+.pg11AsideImgNotes {
     height: calc(10px + 0.8vw);
     width: 2rem;
     padding-right: .5rem;
 }
 
-.Pg11AsideNotes2 {
+.pg11AsideNotes2 {
     width: 50%;
     height: 100%;
     border: .4rem solid #A61C28;
@@ -160,34 +156,34 @@
     align-items: center;
 }
 
-.Pg11AsideNotes2 p {
+.pg11AsideNotes2 p {
     font-size: 1.5rem;
     padding: 1rem;
 }
 
 
 @media (max-width: 1024px) {
-    .Pg11StyledTable {
+    .pg11StyledTable {
         margin-bottom: 15%;
     }
 
-    .Pg11StyledTable th,
-    .Pg11StyledTable td {
+    .pg11StyledTable th,
+    .pg11StyledTable td {
         padding: .5rem;
 
     }
 
-    .Pg11InputCell {
+    .pg11InputCell {
         height: calc(6vw * 0.85);
     }
 
-    .Pg11AsideNotes1,
-    .Pg11AsideNotes2 {
+    .pg11AsideNotes1,
+    .pg11AsideNotes2 {
         width: 100%;
     }
 
-    .Pg11AsideNotes1 p,
-    .Pg11AsideNotes2 p {
+    .pg11AsideNotes1 p,
+    .pg11AsideNotes2 p {
         padding: 1rem;
         font-size: 2.75rem;
     }

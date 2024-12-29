@@ -40,29 +40,29 @@ const Pagina30 = () => {
 
     return (
         <div>
-            <div className={styles.Pg30Container}>
-                <header className={styles.Pg30Header}>
+            <div className={styles.pg30Container}>
+                <header className={styles.pg30Header}>
                     <h1>Grammar</h1>
-                    <h2 className={styles.Pg30HeaderH2}>Simple Present (Presente Simples)</h2>
+                    <h2 className={styles.pg30HeaderH2}>Simple Present (Presente Simples)</h2>
                     <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
                 </header>
-                <main className={styles.Pg30Main}>
+                <main className={styles.pg30Main}>
                     <div>
                         <div
-                            className={styles.Pg30TableHeader}
+                            className={styles.pg30TableHeader}
                             onClick={() => playAudio(afirmativaAudio)}
                             style={{ cursor: 'pointer' }}
                         >
                             AFFIRMATIVE
                         </div>
-                        <table className={styles.Pg30StyledTable}>
+                        <table className={styles.pg30StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg30Sujeito} />
-                                <col className={styles.Pg30VerboAuxiliar} />
-                                <col className={styles.Pg30Adverbio} />
-                                <col className={styles.Pg30Verbo} />
-                                <col className={styles.Pg30ObjetivoComplemento} />
-                                <col className={styles.Pg30Traducao} />
+                                <col className={styles.pg30Sujeito} />
+                                <col className={styles.pg30VerboAuxiliar} />
+                                <col className={styles.pg30Adverbio} />
+                                <col className={styles.pg30Verbo} />
+                                <col className={styles.pg30ObjetivoComplemento} />
+                                <col className={styles.pg30Traducao} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -83,30 +83,30 @@ const Pagina30 = () => {
                             <tbody>
                                 <tr>
                                     <td
-                                        className={styles.Pg30Sujeito}
+                                        className={styles.pg30Sujeito}
                                         onClick={() => playAudio(pg30Audio1)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         They
                                     </td>
                                     <td
-                                        className={styles.Pg30VerboAuxiliar}
+                                        className={styles.pg30VerboAuxiliar}
                                         onClick={() => playAudio(pg30Audio1)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         are
                                     </td>
-                                    <td className={styles.Pg30Adverbio}></td>
-                                    <td className={styles.Pg30Verbo}></td>
+                                    <td className={styles.pg30Adverbio}></td>
+                                    <td className={styles.pg30Verbo}></td>
                                     <td
-                                        className={styles.Pg30ObjetivoComplemento}
+                                        className={styles.pg30ObjetivoComplemento}
                                         onClick={() => playAudio(pg30Audio1)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         from Brazil
                                     </td>
                                     <td
-                                        className={styles.Pg30Traducao}
+                                        className={styles.pg30Traducao}
                                         onClick={() => playAudio(traducaoAudio1)}
                                         style={{ cursor: 'pointer' }}
                                     >
@@ -115,30 +115,30 @@ const Pagina30 = () => {
                                 </tr>
                                 <tr>
                                     <td
-                                        className={styles.Pg30Sujeito}
+                                        className={styles.pg30Sujeito}
                                         onClick={() => playAudio(pg30Audio2)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         They
                                     </td>
                                     <td
-                                        className={styles.Pg30VerboAuxiliar}
+                                        className={styles.pg30VerboAuxiliar}
                                         onClick={() => playAudio(pg30Audio2)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         are
                                     </td>
-                                    <td className={styles.Pg30Adverbio}></td>
-                                    <td className={styles.Pg30Verbo}></td>
+                                    <td className={styles.pg30Adverbio}></td>
+                                    <td className={styles.pg30Verbo}></td>
                                     <td
-                                        className={styles.Pg30ObjetivoComplemento}
+                                        className={styles.pg30ObjetivoComplemento}
                                         onClick={() => playAudio(pg30Audio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         at the cinema
                                     </td>
                                     <td
-                                        className={styles.Pg30Traducao}
+                                        className={styles.pg30Traducao}
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
@@ -147,30 +147,30 @@ const Pagina30 = () => {
                                 </tr>
                                 <tr>
                                     <td
-                                        className={styles.Pg30Sujeito}
+                                        className={styles.pg30Sujeito}
                                         onClick={() => playAudio(pg30Audio3)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         They
                                     </td>
                                     <td
-                                        className={styles.Pg30VerboAuxiliar}
+                                        className={styles.pg30VerboAuxiliar}
                                         onClick={() => playAudio(pg30Audio3)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         are
                                     </td>
-                                    <td className={styles.Pg30Adverbio}></td>
-                                    <td className={styles.Pg30Verbo}></td>
+                                    <td className={styles.pg30Adverbio}></td>
+                                    <td className={styles.pg30Verbo}></td>
                                     <td
-                                        className={styles.Pg30ObjetivoComplemento}
+                                        className={styles.pg30ObjetivoComplemento}
                                         onClick={() => playAudio(pg30Audio3)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         15 and 16 years old
                                     </td>
                                     <td
-                                        className={styles.Pg30Traducao}
+                                        className={styles.pg30Traducao}
                                         onClick={() => playAudio(traducaoAudio3)}
                                         style={{ cursor: 'pointer' }}
                                     >
@@ -180,14 +180,14 @@ const Pagina30 = () => {
                             </tbody>
                         </table>
 
-                        <table className={styles.Pg30StyledTable}>
+                        <table className={styles.pg30StyledTable}>
                             <colgroup>
-                                <col className={styles.Pg30Sujeito} />
-                                <col className={styles.Pg30VerboAuxiliar} />
-                                <col className={styles.Pg30Adverbio} />
-                                <col className={styles.Pg30Verbo} />
-                                <col className={styles.Pg30ObjetivoComplemento} />
-                                <col className={styles.Pg30Traducao} />
+                                <col className={styles.pg30Sujeito} />
+                                <col className={styles.pg30VerboAuxiliar} />
+                                <col className={styles.pg30Adverbio} />
+                                <col className={styles.pg30Verbo} />
+                                <col className={styles.pg30ObjetivoComplemento} />
+                                <col className={styles.pg30Traducao} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -209,7 +209,7 @@ const Pagina30 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.Pg30InputCell}
+                                                    className={styles.pg30InputCell}
                                                     value={value}
                                                     onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
                                                     rows="1"
