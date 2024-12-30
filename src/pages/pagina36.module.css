@@ -1,16 +1,23 @@
 .pg36Container {
     display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    flex-direction: column; 
+    gap: 2rem; 
 }
 
 .pg36Header {
     width: 100%;
 }
+
 .pg36MainContainer {
+    flex: 3; 
     display: flex;
     flex-direction: column;
-    align-items: left; 
+}
+
+.pg36MainAsideContainer {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 2rem;
 }
 
 .pg36pageTitle,
@@ -70,11 +77,10 @@
     min-width: 1rem;
     cursor: pointer;
     margin-left: 0.5rem;
-    
 }
 
 .pg36AsideContainer {
-    grid-area: aside;
+    flex: 1; 
     display: block;
 }
 
@@ -95,12 +101,15 @@
     background-color: #821a22;
 }
 
-
 .pg36tabelaAfirmativaContainer,
 .pg36tabelaNegativaContainer {
     display: block;
     width: 37rem;
     margin-left: auto;
+}
+
+.pg36tabelaNegativaContainer {
+    margin-top: 5.8rem;
 }
 
 .pg36tableHeaderAfirmativa,
@@ -124,7 +133,6 @@
     margin-bottom: 0.5rem;
 }
 
-
 .pg36styledTableAfirmativa th,
 .pg36styledTableNegativa th {
     background-color: #888A8C;
@@ -139,64 +147,24 @@
 .pg36ImagensContainer {
     display: flex;
     flex-direction: column;
-    align-items: right;
     gap: 10px;
     width: 37rem;
-    margin-top: 1rem;
+    margin-top: 4.2rem;
     margin-left: auto;
-    
 }
 
 .pg36Imagem {
     border-radius: 5%;
 }
 
-
-
 @media (max-width: 768px) {
     .pg36Container {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "header"
-            "aside"
-            "main";
+        flex-direction: column;
     }
 
-    .pg36ImagensContainer {
-        flex-direction: row;
+    .pg36MainContainer,
+    .pg36AsideContainer {
+        flex: none;
         width: 100%;
-    }
-
-    .pg36Imagem {
-        width: 49%;
-    }
-
-    .pg36pageTitle {
-        font-size: 5rem;
-    }
-
-    .pg36questionText {
-        font-size: 3rem;
-    }
-
-    .pg36tabelaAfirmativaContainer,
-    .pg36tabelaNegativaContainer {
-        width: 100%;
-    }
-
-    .pg36tableHeaderAfirmativa,
-    .pg36tableHeaderNegativa {
-        font-size: 2.5rem;
-    }
-
-    .pg36styledTableAfirmativa th,
-    .pg36styledTableNegativa th,
-    .pg36word,
-    .pg36chip {
-        font-size: 2rem;
-    }
-
-    .pg36checkButton {
-        font-size: 2.5rem;
     }
 }

@@ -42,27 +42,24 @@ const Pagina36 = () => {
         setRespostas((prev) => {
             const palavrasAtuais = prev[fraseIndex] || [];
 
-           
             const novaPalavra =
                 palavrasAtuais.length === 0
-                    ? word.charAt(0).toUpperCase() + word.slice(1).toLowerCase() 
-                    : word.charAt(0).toLowerCase() + word.slice(1); 
+                    ? word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+                    : word.charAt(0).toLowerCase() + word.slice(1);
 
             if (palavrasAtuais.includes(word)) return prev;
 
             return {
                 ...prev,
-                [fraseIndex]: [...palavrasAtuais, novaPalavra], 
+                [fraseIndex]: [...palavrasAtuais, novaPalavra],
             };
         });
 
-        
         setPalavrasClicadas((prev) => ({
             ...prev,
-            [`${fraseIndex}-${word.toLowerCase()}`]: true, 
+            [`${fraseIndex}-${word.toLowerCase()}`]: true,
         }));
     };
-
 
     const handleChipClick = (fraseIndex, word) => {
         setRespostas((prev) => {
@@ -73,14 +70,12 @@ const Pagina36 = () => {
             };
         });
 
-        
         setPalavrasClicadas((prev) => {
             const updated = { ...prev };
-            delete updated[`${fraseIndex}-${word.toLowerCase()}`]; 
+            delete updated[`${fraseIndex}-${word.toLowerCase()}`];
             return updated;
         });
     };
-
 
     const verificarRespostas = () => {
         const resultado = respostasCorretas.map((resposta, index) => {
@@ -93,96 +88,91 @@ const Pagina36 = () => {
 
     return (
         <div className={styles.pg36Container}>
-
             <header className={styles.pg36Header}>
                 <h1 className={styles.pg36pageTitle}>Learning Language Exercises</h1>
                 <h2 className={styles.pg36questionText}>Put the words in the correct order.</h2>
             </header>
 
+            <div className={styles.pg36MainAsideContainer}>
+                <main className={styles.pg36MainContainer}>
+                    <div className={styles.pg36frases}>
+                        {respostasCorretas.map((_, fraseIndex) => (
+                            <div key={fraseIndex} className={styles.pg36fraseContainer}>
+                                <div className={styles.pg36frase}>
+                                    {frasesEmbaralhadas[fraseIndex] &&
+                                        frasesEmbaralhadas[fraseIndex].map((word, wordIndex) => (
+                                            <div
+                                                key={wordIndex}
+                                                className={`${styles.pg36word} ${palavrasClicadas[`${fraseIndex}-${word.toLowerCase()}`] ? styles.pg36disabled : ''}`}
+                                                onClick={() => handleWordClick(fraseIndex, word)}
+                                            >
+                                                {word}
+                                            </div>
+                                        ))}
+                                </div>
 
-            <main className={styles.pg36MainContainer}>
-                <div className={styles.pg36frases}>
-                    {respostasCorretas.map((_, fraseIndex) => (
-                        <div key={fraseIndex} className={styles.pg36fraseContainer}>
-                            <div className={styles.pg36frase}>
-                                {frasesEmbaralhadas[fraseIndex] &&
-                                    frasesEmbaralhadas[fraseIndex].map((word, wordIndex) => (
-                                        <div
-                                            key={wordIndex}
-                                            className={`${styles.pg36word} ${palavrasClicadas[`${fraseIndex}-${word.toLowerCase()}`] ? styles.pg36disabled : ''
-                                                }`}
-                                            onClick={() => handleWordClick(fraseIndex, word)}
-                                        >
-                                            {word}
-                                        </div>
-                                    ))}
+                                <div className={styles.pg36inputFrase}>
+                                    {respostas[fraseIndex] &&
+                                        respostas[fraseIndex].map((palavra, index) => (
+                                            <div
+                                                key={index}
+                                                className={styles.pg36chip}
+                                                onClick={() => handleChipClick(fraseIndex, palavra)}
+                                            >
+                                                {index === 0
+                                                    ? palavra.charAt(0).toUpperCase() + palavra.slice(1)
+                                                    : palavra}
+                                            </div>
+                                        ))}
+                                </div>
                             </div>
+                        ))}
+                    </div>
+                    <button className={styles.pg36checkButton} onClick={verificarRespostas}>
+                        Check
+                    </button>
+                </main>
 
-                            <div className={styles.pg36inputFrase}>
-                                {respostas[fraseIndex] &&
-                                    respostas[fraseIndex].map((palavra, index) => (
-                                        <div
-                                            key={index}
-                                            className={styles.pg36chip}
-                                            onClick={() => handleChipClick(fraseIndex, palavra)}
-                                        >
-                                            {index === 0
-                                                ? palavra.charAt(0).toUpperCase() + palavra.slice(1) // Capitaliza apenas a primeira
-                                                : palavra}
-                                        </div>
-                                    ))}
-                            </div>
+                <aside className={styles.pg36AsideContainer}>
+                    <div className={styles.pg36tabelaAfirmativaContainer}>
+                        <div className={styles.pg36tableHeaderAfirmativa}>AFIRMATIVA</div>
+                        <table className={styles.pg36styledTableAfirmativa}>
+                            <thead>
+                                <tr>
+                                    <th>Sujeito</th>
+                                    <th>Verbo Auxiliar</th>
+                                    <th>Adverb</th>
+                                    <th>Verbo(s)</th>
+                                    <th>Objeto Complemento</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div className={styles.pg36tabelaNegativaContainer}>
+                        <div className={styles.pg36tableHeaderNegativa}>NEGATIVA</div>
+                        <table className={styles.pg36styledTableNegativa}>
+                            <thead>
+                                <tr>
+                                    <th>Sujeito</th>
+                                    <th>Verbo Auxiliar</th>
+                                    <th>
+                                        <span style={{ color: 'red' }}>Not</span> <br /> Adverb
+                                    </th>
+                                    <th>Verbo(s)</th>
+                                    <th>Objeto Complemento</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
 
-
-                        </div>
-                    ))}
-                </div>
-                <button className={styles.pg36checkButton} onClick={verificarRespostas}>
-                    Check
-                </button>
-            </main>
-
-            {/* Aside Content */}
-            <aside className={styles.pg36AsideContainer}>
-                <div className={styles.pg36tabelaAfirmativaContainer}>
-                    <div className={styles.pg36tableHeaderAfirmativa}>AFIRMATIVA</div>
-                    <table className={styles.pg36styledTableAfirmativa}>
-                        <thead>
-                            <tr>
-                                <th>Sujeito</th>
-                                <th>Verbo Auxiliar</th>
-                                <th>Adverb</th>
-                                <th>Verbo(s)</th>
-                                <th>Objeto Complemento</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-                <div className={styles.pg36tabelaNegativaContainer}>
-                    <div className={styles.pg36tableHeaderNegativa}>NEGATIVA</div>
-                    <table className={styles.pg36styledTableNegativa}>
-                        <thead>
-                            <tr>
-                                <th>Sujeito</th>
-                                <th>Verbo Auxiliar</th>
-                                <th>
-                                    <span style={{ color: 'red' }}>Not</span> <br /> Adverb
-                                </th>
-                                <th>Verbo(s)</th>
-                                <th>Objeto Complemento</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-
-                <div className={styles.pg36ImagensContainer}>
-                    <img src={passaro} alt="Pássaro" className={styles.pg36Imagem} />
-                    <img src={lapis} alt="Lápis" className={styles.pg36Imagem} />
-                </div>
-            </aside>
+                    <div className={styles.pg36ImagensContainer}>
+                        <img src={passaro} alt="Pássaro" className={styles.pg36Imagem} />
+                        <img src={lapis} alt="Lápis" className={styles.pg36Imagem} />
+                    </div>
+                </aside>
+            </div>
         </div>
     );
-
 };
 
 export default Pagina36;

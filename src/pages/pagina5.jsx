@@ -149,7 +149,7 @@ const Pagina5 = () => {
                                     <td className={styles.pg5VerboAuxiliar} style={{ textAlign: 'center' }}>am</td>
                                     <td className={styles.pg5Adverbio}></td>
                                     <td className={styles.pg5Verbo}></td>
-                                    <td className={styles.pg5ObjetivoComplemento}>years old</td>
+                                    <td className={styles.pg5ObjetivoComplemento}>__ years old</td>
                                     <td className={styles.pg5Traducao}></td>
                                 </tr>
                             </tbody>

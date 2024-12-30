@@ -142,7 +142,7 @@ const Pagina11 = () => {
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        Vocês todos estão na classe B.
+                                        Vocês todos estão na sala de aula B.
                                     </td>
                                 </tr>
                                 <tr>

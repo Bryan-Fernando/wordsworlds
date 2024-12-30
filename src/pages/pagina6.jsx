@@ -183,7 +183,7 @@ const Pagina6 = () => {
                                         onClick={() => playAudio(pg6Audio3)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        years old
+                                        __ years old
                                     </td>
                                     <td
                                         className={styles.pg6Traducao}

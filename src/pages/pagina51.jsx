@@ -77,14 +77,14 @@ const Pagina51 = () => {
 
                         {/* Tabela de Baixo */}
                         <table className={`${styles.pg51StyledTable} ${styles.pg51TableAligned}`}>
-                            <colgroup>
-                                <col style={{ width: '17.5%' }} className={styles.pg51ExtraColumn} />
-                                <col style={{ width: '18.5%' }} />
-                                <col style={{ width: '12%' }} />
+                        <colgroup>
+                                <col style={{ width: '20.2%' }} className={styles.pg51ExtraColumn} />
+                                <col style={{ width: '20.2%' }} />
+                                <col style={{ width: '13.5%' }} />
                                 <col style={{ width: '11%' }} />
                                 <col style={{ width: '11%' }} />
                                 <col style={{ width: '25%' }} />
-                                <col style={{ width: '25%' }} />
+                                <col style={{ width: '33.7%' }} />
                             </colgroup>
                             <thead>
                                 <tr>
