@@ -1,0 +1,225 @@
+.page68__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.page68__header {
+    width: 100%;
+    height: 15rem;
+    text-align: left;
+    color: #A61C28;
+}
+
+.page68__header p {
+    color: gray;
+    font-weight: bold;
+}
+
+.page68__title {
+    font-size: 4rem;
+}
+
+.page68__subtitle {
+    font-size: 2.5rem;
+}
+
+.page68__instructions {
+    font-size: 1.8rem;
+}
+
+.page68__main {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    position: relative;
+}
+
+.page68__left-side {
+    width: 50%;
+}
+
+.page68__image-container {
+    text-align: center;
+}
+
+.page68__image {
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.3); 
+    transform: rotate(5deg);
+}
+
+.page68__right-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.page68__questions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.page68__question {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+}
+
+.page68__input-box {
+    width: 40rem;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    color: black;
+}
+
+.page68__input-box::placeholder {
+    color: #A61C28; 
+}
+
+.page68__label-carol {
+    color: gray;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.page68__label-john {
+    color: #A61C28;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.page68__checkmark-image {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.page68__check-button {
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    margin-top: 2rem;
+    width: 20%;
+}
+
+.page68__check-button:hover {
+    background-color: #8a1720;
+}
+
+.page68__answers-container {
+    border: 0.5rem solid #A61C28;
+    width: 80%;
+    height: auto;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    margin-left: 5rem;
+}
+
+.page68__answers-container p {
+    font-size: 1.4rem;
+    color: black;
+    line-height: 1.6;
+}
+
+.page68__answers-container span {
+    color: #A61C28;
+}
+
+.page68__container-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.page68__aside {
+    width: 100%;
+    max-width: 900px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+.page68__aside::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.8rem;
+    background-color: #A61C28;
+}
+
+.page68__aside-section {
+    padding: 2rem;
+    background-color: #f2f2f2;
+    margin-bottom: 2rem;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.page68__aside-title {
+    color: #A61C28;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.page68__aside-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.page68__aside-list li {
+    font-size: 2.5rem;
+    color: #4e4e4e;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Estilos gerais do Header */
+.page68__header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Ícones de áudio */
+.page68__audio-icon {
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efeito Hover nos Ícones */
+.page68__audio-icon:hover {
+    transform: scale(1.1);
+}

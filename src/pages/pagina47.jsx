@@ -1,7 +1,12 @@
 import React, { useRef } from 'react';
 import styles from './pagina47.module.css';
-import pg45IconNotes from '../assets/Icons/Icon-Notes.png';
-import Pagina47_Primeira_imagem from '../assets/Images/Pagina47_Primeira_imagem.jpg';
+
+import global_grammar from '../assets/audios/global_grammar.mp3';
+import global_posseAe from '../assets/audios/global_posseAe.mp3';
+import global_posseAp from '../assets/audios/global_posseAp.mp3';
+
+
+import pagina47_imagem1 from '../assets/Images/pagina47_imagem1.webp';
 import myAudio from '../assets/audios/myAudio.mp3';
 import hisAudio from '../assets/audios/hisAudio.mp3';
 import herAudio from '../assets/audios/herAudio.mp3';
@@ -72,14 +77,31 @@ const Pagina47 = () => {
         audio.play();
     };
 
+    const globalAudioMap = {
+        'global_grammar': global_grammar,
+        'global_posseAe': global_posseAe,
+        'global_posseAp': global_posseAp
+    };
+
+    const playGlobalAudio = (audioKey) => {
+        const audio = new Audio(globalAudioMap[audioKey]);
+        audio.play();
+    };
+
     return (
         <div>
             <div className={styles.pg47Container}>
                 <header className={styles.pg47Header}>
-                    <h1 className={styles.pg47HeaderH1}>Grammar</h1>
+                    <h1 className={styles.pg47HeaderH1} onClick={() => playGlobalAudio('global_grammar')}>
+                        Grammar
+                    </h1>
                     <div className={styles.pg47HeaderH2H3}>
-                        <h2 className={styles.pg47HeaderH2}>Possessive Adjectives</h2>
-                        <h3 className={styles.pg47HeaderH3}>Pronomes possessivos</h3>
+                        <h2 className={styles.pg47HeaderH2} onClick={() => playGlobalAudio('global_posseAe')}>
+                            Possessive Adjectives
+                        </h2>
+                        <h3 className={styles.pg47HeaderH3} onClick={() => playGlobalAudio('global_posseAp')}>
+                            Pronomes possessivos
+                        </h3>
                     </div>
                 </header>
                 <main className={styles.pg47Main}>
@@ -140,7 +162,7 @@ const Pagina47 = () => {
                     <div className={styles.pg47Exemplo}>
                         <p className={styles.pg47Titulo}>Exemplo:</p>
                         <div className={styles.pg47ContainerAsidetexto}>
-                        <div className={`${styles.pg47AsideTexto2}`} onClick={() => playAudio('pg47_audio13e')}>
+                            <div className={`${styles.pg47AsideTexto2}`} onClick={() => playAudio('pg47_audio13e')}>
                                 <p>Hi, Daniel!</p>
                             </div>
                             <div className={`${styles.pg47AsideTexto1}`} onClick={() => playAudio('pg47_audio11e')}>
@@ -149,10 +171,10 @@ const Pagina47 = () => {
                             <div className={`${styles.pg47AsideTexto3}`} onClick={() => playAudio('pg47_audio12e')}>
                                 <p>Welcome guys!</p>
                             </div>
-                            
+
                         </div>
                         <div className={styles.pg47ExemploImg}>
-                            <img className={styles.pg47AsideImg1} src={Pagina47_Primeira_imagem} alt="" />
+                            <img className={styles.pg47AsideImg1} src={pagina47_imagem1} alt="" />
                         </div>
                         <div className={styles.pg47ExemploTexto}>
                             <div className={styles.pg47AsideTexto4} onClick={() => playAudio('pg47_audio14e')}>

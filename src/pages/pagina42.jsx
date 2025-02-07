@@ -1,15 +1,18 @@
 import React, { useState, useRef } from 'react';
-
 import styles from './pagina42.module.css';
-import Pagina42_primeira_imagem from '../assets/Images/Pagina42_primeira_imagem.jpg';
+
+import global_introE from '../assets/audios/global_introE.mp3';
+import global_introP from '../assets/audios/global_introP.mp3';
+
 import pg42IconNotes from '../assets/Icons/Icon-Notes.png';
-import Pagina42_main_imagem1 from '../assets/Images/Pagina42_main_imagem1.jpg';
-import Pagina42_main_imagem2 from '../assets/Images/Pagina42_main_imagem2.jpg';
-import Pagina42_main_imagem3 from '../assets/Images/Pagina42_main_imagem3.jpg';
-import Pagina42_main_imagem4 from '../assets/Images/Pagina42_main_imagem4.jpg';
-import Pagina42_main_imagem5 from '../assets/Images/Pagina42_main_imagem5.jpg';
 import picon from '../assets/icons/picon.png';
 import eicon from '../assets/icons/eicon.png';
+import pagina42_imagem1 from '../assets/Images/pagina42_imagem1.webp';
+import pagina42_imagem2 from '../assets/Images/pagina42_imagem2.webp';
+import pagina42_imagem3 from '../assets/Images/pagina42_imagem3.webp';
+import pagina42_imagem4 from '../assets/Images/pagina42_imagem4.webp';
+import pagina42_imagem5 from '../assets/Images/pagina42_imagem5.webp';
+import pagina42_imagem6 from '../assets/Images/pagina42_imagem6.webp';
 import audio1e from '../assets/audios/pg42_audio1e.mp3';
 import audio1p from '../assets/audios/pg42_audio1p.mp3';
 import audio2e from '../assets/audios/pg42_audio2e.mp3';
@@ -96,14 +99,19 @@ const Pagina42 = () => {
         'pg42_audio20e': audio20e,
         'pg42_audio20p': audio20p,
     };
-    
-    const currentAudio = useRef(null); 
+
+    const currentAudio = useRef(null);
+
+    const playHeaderAudio = (audioFile) => {
+        const audio = new Audio(audioFile);
+        audio.play();
+    };
 
     const playAudio = (audioId) => {
-        
+
         if (currentAudio.current) {
             currentAudio.current.pause();
-            currentAudio.current.currentTime = 0; 
+            currentAudio.current.currentTime = 0;
         }
 
         const audio = new Audio(audioMap[audioId]);
@@ -111,19 +119,36 @@ const Pagina42 = () => {
         audio.play();
     };
 
-    
+
     return (
         <div>
             <div className={styles.pg42Container}>
                 <header className={styles.pg42Header}>
-                    <h1 className={styles.pg42HeaderH1}>Introductions</h1>
+                    <h1 className={styles.pg42HeaderH1} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                        Introductions
+                        <span>
+                            <img
+                                src={eicon}
+                                alt="English Audio"
+                                style={{ width: '1.8rem', height: '1.8rem', cursor: 'pointer' }}
+                                onClick={() => playHeaderAudio(global_introE)}
+                            />
+                            <img
+                                src={picon}
+                                alt="Portuguese Audio"
+                                style={{ width: '1.8rem', height: '1.8rem', marginLeft: '0.3rem', cursor: 'pointer' }}
+                                onClick={() => playHeaderAudio(global_introP)}
+                            />
+                        </span>
+                    </h1>
+
                 </header>
                 <main className={styles.pg42Main}>
                     <div className={styles.pg42ContainerPessoas}>
                         {/* Pessoa 1 */}
                         <div className={styles.pg42PessoasDiv}>
                             <div className={styles.pg42Pessoa1}>
-                                <img className={styles.pg42_main_imagem1} src={Pagina42_main_imagem1} alt="" />
+                                <img className={styles.pg42_main_imagem1} src={pagina42_imagem1} alt="" />
                                 <p>
                                     Name: I’m Eric Porto.
                                     <img
@@ -247,7 +272,7 @@ const Pagina42 = () => {
                                     />
                                     <br />
                                 </p>
-                                <img className={styles.pg42_main_imagem2} src={Pagina42_main_imagem2} alt="" />
+                                <img className={styles.pg42_main_imagem2} src={pagina42_imagem2} alt="" />
                             </div>
                             <hr className={styles.pg4Hr} />
                         </div>
@@ -255,7 +280,7 @@ const Pagina42 = () => {
                         {/* Pessoa 3 */}
                         <div className={styles.pg42PessoasDiv}>
                             <div className={styles.pg42Pessoa3}>
-                                <img className={styles.pg42_main_imagem3} src={Pagina42_main_imagem3} alt="" />
+                                <img className={styles.pg42_main_imagem3} src={pagina42_imagem3} alt="" />
                                 <p>
                                     Name: This is Deborah Sena.
                                     <img
@@ -379,7 +404,7 @@ const Pagina42 = () => {
                                     />
                                     <br />
                                 </p>
-                                <img className={styles.pg42_main_imagem4} src={Pagina42_main_imagem4} alt="" />
+                                <img className={styles.pg42_main_imagem4} src={pagina42_imagem4} alt="" />
                             </div>
                             <hr className={styles.pg4Hr} />
                         </div>
@@ -387,7 +412,7 @@ const Pagina42 = () => {
                         {/* Pessoa 5 */}
                         <div className={styles.pg42PessoasDiv}>
                             <div className={styles.pg42Pessoa5}>
-                                <img className={styles.pg42_main_imagem5} src={Pagina42_main_imagem5} alt="" />
+                                <img className={styles.pg42_main_imagem5} src={pagina42_imagem5} alt="" />
                                 <p>
                                     Name: This is Cheryl Daves.
                                     <img
@@ -450,7 +475,7 @@ const Pagina42 = () => {
                             <hr className={styles.pg4Hr} />
                         </div>
                     </div>
-                    <img className={styles.pg42Imagem1} src={Pagina42_primeira_imagem} alt="" />
+                    <img className={styles.pg42Imagem1} src={pagina42_imagem6} alt="" />
                 </main>
                 <aside className={styles.pg42Aside}>
                     <div className={styles.pg42Asidecontainer}>
@@ -478,7 +503,7 @@ const Pagina42 = () => {
                 </aside>
             </div>
 
-            </div> 
+        </div>
     );
 };
 

@@ -1,0 +1,303 @@
+.pg101Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.pg101Header {
+    width: 100%;
+}
+
+.pg101H1 {
+    text-align: left;
+    font-size: 6rem;
+    color: #8a1720;
+}
+
+.pg101H2 {
+    text-align: left;
+    font-size: 2.5rem;
+    color: #8a1720;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.pg101Main {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+}
+
+.pg101Aside {
+    width: 100%;
+    display: flex;
+}
+
+/* Este é um comentário */
+
+.pg101ContainerQuestoes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pg101Questions1,
+.pg101Questions2 {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.pg101Question {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: black;
+    text-align: left;
+}
+
+.pg101Question span {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: black;
+}
+
+.pg101ATituloQuestion {
+    color: #8a1720;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.pg101InputBox {
+    width: 100%;
+    padding: 8px 35px 8px 8px;
+    font-size: 1.8rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+.pg101InputContainer {
+    gap: 1rem;
+    width: 23%;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.pg101CheckmarkImage {
+    width: 2.5rem;
+    height: 2.5rem;
+    pointer-events: none;
+}
+
+.pg101CheckButton {
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    margin: 2rem;
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    width: fit-content;
+}
+
+.pg101CheckButton:hover {
+    background-color: #8a1720;
+}
+
+
+.pg101IconsContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 5px;
+}
+
+.pg101AdditionalIcon {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.pg101AdditionalIcon.pg101Pulsing {
+    animation: pulse 1s infinite;
+}
+
+.pg101AdditionalIcon:hover {
+    transform: scale(1.2);
+}
+
+.pg101imagem {
+    width: 47rem;
+    height: 37rem;
+
+}
+
+.pg101tabelaAfirmativaContainer,
+.pg101tabelaNegativaContainer {
+    width: 100%;
+    height: 10rem;
+}
+
+.pg101tableHeaderAfirmativa,
+.pg101tableHeaderNegativa {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.pg101styledTableAfirmativa,
+.pg101styledTableNegativa {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+
+.pg101styledTableAfirmativa th,
+.pg101styledTableNegativa th {
+    background-color: #888A8C;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid #A61C28;
+}
+
+.pg101celulatable {
+    height: 7rem;
+}
+
+.pg101Asidecontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pg101AsideNotes1 {
+    width: 80%;
+    height: fit-content;
+    border: 4px solid #A61C28;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: white;
+    text-align: left;
+    padding-left: 10px;
+    background-color: #A61C28;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.pg101AsideImgNotes {
+    height: calc(10px + 0.8vw);
+    width: 20px;
+    padding-right: 5px;
+}
+
+.pg101AsideNotes2 {
+    width: 80%;
+    border: 4px solid #A61C28;
+    border-top: 1px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: white;
+    text-align: left;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.pg101AsideNotes2 p {
+    padding: 1vw;
+    font-size: 1.65rem;
+}
+
+.pg101ContainerImagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70rem;
+}
+
+.pg101HeaderIcon {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pg101HeaderIcon:hover {
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 1024px) {
+    .pg101AsideNotes2 p {
+        font-size: 2rem;
+    }
+
+    .pg101styledTableAfirmativa th,
+    .pg101styledTableNegativa th {
+        font-size: 1.8rem;
+    }
+
+    .pg101ContainerQuestoes {
+        flex-direction: column;
+    }
+
+    .pg101Question {
+        gap: 5px;
+    }
+
+    .pg101IconsContainer {
+        margin-left: 0;
+    }
+
+    .pg101ContainerImagem {
+        align-items: start;
+        justify-content: left;
+        height: fit-content;
+    }
+
+    .pg101InputContainer {
+        width: 15%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

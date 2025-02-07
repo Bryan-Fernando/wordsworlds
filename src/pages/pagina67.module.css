@@ -1,0 +1,163 @@
+.page67__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.page67__header {
+    width: 100%;
+    height: 15rem;
+    text-align: left;
+    color: #A61C28;
+    margin-bottom: -5rem;
+}
+
+.page67__title {
+    font-size: 4rem;
+}
+
+.page67__main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page67__main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.page67__text-container1,
+.page67__text-container2,
+.page67__text-container3,
+.page67__text-container4 {
+    width: 55%;
+    padding: 1.5rem;
+    text-align: left;
+    color: gray;
+    position: relative;
+}
+
+.page67__text-container1::after,
+.page67__text-container2::after,
+.page67__text-container3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+    width: 90%;
+    height: 0.4rem;
+    background-color: #A61C28;
+}
+
+.page67__image-container1,
+.page67__image-container2,
+.page67__image-container3,
+.page67__image-container4 {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.page67__image-container1 {
+    transform: rotate(-5deg);
+    position: relative;
+    left: 0;
+}
+
+.page67__image-container2 {
+    transform: rotate(5deg);
+    position: relative;
+    left: -15%;
+    top: -2rem;
+}
+
+.page67__image-container3 {
+    transform: rotate(-8deg);
+    position: relative;
+    left: -5%;
+    top: -4rem;
+}
+
+.page67__image-container4 {
+    transform: rotate(8deg);
+    position: relative;
+    right: 15%;
+    top: -6rem;
+}
+
+.page67__img-small {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.page67__aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page67__aside-notes1 {
+    width: 100%;
+    height: 4.5rem;
+    border: 0.4rem solid #A61C28;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    background-color: #A61C28;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.page67__aside-img-notes {
+    height: 3rem;
+    width: 3rem;
+    padding-right: 0.5rem;
+}
+
+.page67__aside-notes2 {
+    width: 100%;
+    height: 70%;
+    border: 0.4rem solid #A61C28;
+    border-top: 0.1rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    text-align: left;
+    padding-left: 0.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.page67__aside-notes2 p {
+    padding: 1vw;
+}
+
+.page67__aside-notes2--highlight {
+    font-weight: bold;
+    color: #A61C28;
+}
+
+/* Ícones de Áudio no Cabeçalho */
+.page67__audio-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efeito Hover no Ícone */
+.page67__audio-icon:hover {
+    transform: scale(1.1);
+}

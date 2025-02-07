@@ -1,0 +1,271 @@
+.pg70Container {
+    display: flex;
+    flex-direction: column; 
+    gap: 2rem; 
+}
+
+.pg70Header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+    margin-bottom: 2rem;
+}
+
+.pg70RedText{
+    color: #A61C28;
+}
+
+.pg70Header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.pg70Header p {
+    font-size: 1.8rem;
+    color: #4E4E4E;
+    margin-bottom: 0.5rem;
+}
+
+.pg70Header p {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
+.pg70MainContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pg70MainAsideContainer {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 2rem;
+    width: 100%;
+}
+
+.pg70pageTitle,
+.pg70questionText {
+    text-align: left;
+    padding-left: 0;
+    margin: 0; 
+    color: #A61C28;
+    font-weight: bold;
+}
+
+.pg70fraseContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.pg70frase {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.pg70word {
+    font-size: 1.5rem;
+    background-color: #d3d3d3;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pg70word.pg70disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.pg70inputFrase {
+    display: flex;
+    padding: 0.25rem; 
+    border: 0.1rem solid rgb(0, 0, 0); 
+    border-radius: 0.25rem;
+    min-height: 4rem; 
+    width: 70%; 
+    background-color: whitesmoke;
+    overflow-x: auto;
+    margin-top: 2%;
+    position: relative;
+}
+
+.pg70inputFrase .checkIcon,
+.pg70inputFrase .wrongIcon {
+    margin-left: 1rem;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.pg70inputFrase .eIcon{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pg70inputFrase .pIcon{
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pg70inputFrase .volumeReduzido{
+    position: absolute;
+    right: 19%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.eIcon,
+.pIcon,
+.volumeReduzido {
+    cursor: pointer;
+    margin-left: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.pg70chip {
+    font-size: 1.5rem;
+    display: inline-flex; 
+    background-color: #d3d3d3;
+    padding: 0.5rem 0.75rem; 
+    border-radius: 0.5rem;
+    font-weight: bold; 
+    color: black; 
+    margin-right: 0.5rem;
+    min-width: 1rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.pg70AsideContainer {
+    flex: 1; 
+    display: block;
+}
+
+.pg70checkButton {
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    font-weight: bold;
+    font-size: 2rem;
+    width: 25%;
+}
+
+.pg70checkButton:hover {
+    background-color: #821a22;
+}
+
+
+.pg70tabelaAfirmativaContainer {
+    width: 90rem;
+    height: 10rem;
+    width: 100%;
+}
+
+.pg70tableHeaderAfirmativa {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.pg70styledTableAfirmativa {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+.pg70Thead {
+    border: 0.3rem solid #A61C28;
+}
+
+.highlight {
+    color: #A61C28;
+}
+
+.pg70styledTableAfirmativa th {
+    background-color: #888A8C;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: 0.0625rem solid #A61C28;
+}
+
+.pg70ImagensContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 37rem;
+    margin-top: 4.2rem;
+    margin-left: auto;
+}
+
+.pg70Imagem1 {
+    border-radius: 5%;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+    width: 60%;
+    height: 30rem;
+    object-fit: cover; 
+}
+
+.pg70Imagem2{
+    border-radius: 5%;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+}
+
+.pg70Imagem1 {
+    transform: rotate(-10deg);
+}
+
+.pg70Imagem2 {
+    transform: rotate(5deg) translateX(-10rem); 
+}
+
+/* Animação do Título Principal */
+.pg70HeaderH1 {
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Ícones de Áudio no Cabeçalho */
+.pg70AudioIcon {
+    width: 2.5rem; /* Tamanho fixo para os ícones */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efeito Hover nos Ícones */
+.pg70AudioIcon:hover {
+    transform: scale(1.1);
+}

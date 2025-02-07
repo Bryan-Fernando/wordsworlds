@@ -1,0 +1,354 @@
+.pg96Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.pg96Question {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .pg96QuestionWordsContainer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-right: 25rem;
+  }
+  
+  
+  .pg96QuestionWord {
+    background-color: #d3d3d3; /* Cinza claro */
+    color: black;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+    font-size: 1.8rem;
+  }
+  
+  .pg96inputboxquestion3 {
+    margin-top: 1rem;
+  }
+  
+  
+
+.pg96Header {
+    width: 100%;
+}
+
+.pg96H1 {
+    text-align: left;
+    font-size: 6rem;
+    color: #8a1720;
+}
+
+.pg96H2 {
+    text-align: left;
+    font-size: 2.5rem;
+    color: #8a1720;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.pg96Main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 7rem;
+}
+
+.pg95Question {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: black;
+    text-align: left;
+}
+
+.pg96Questions{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.pg95Question p {
+    margin-bottom: 1.5rem;
+    
+}
+
+.pg95Question span {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+}
+
+.pg95InputBox {
+    width: 100%;
+    padding: 0.8rem 3.5rem 0.8rem 0.8rem;
+    font-size: 1.8rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 0.5rem;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+.pg96CheckButton {
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    margin: 2rem;
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    width: fit-content;
+}
+
+.pg96CheckButton:hover {
+    background-color: #8a1720;
+}
+
+.pg96imagem {
+    margin-top: 6rem;
+    width: 35%;
+    height: 25%;
+}
+
+.pg69tabelaInterrogativaContainer {
+    width: 90rem;
+    height: 10rem;
+    width: 100%;
+}
+
+.pg69tableHeaderInterrogativa {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.pg69styledTableInterrogativa {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+.pg69Thead {
+    border: 0.3rem solid #A61C28;
+}
+
+.highlight {
+    color: #A61C28;
+}
+
+.pg69styledTableInterrogativa th {
+    background-color: #888A8C;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: 0.0625rem solid #A61C28;
+}
+
+.pg96ContainerImagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35rem;
+}
+
+.pg96Container3 {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.pg96Questions3 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.pg96Question {
+    display: flex;
+    align-items: center;
+    
+    font-size: 1.8rem;
+}
+
+.pg96Question em {
+    font-size: 1.8rem;
+}
+
+.pg95InputBoxSmall {
+    width: 20%;
+    padding: 8px;
+    font-size: 1.8rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 0.5rem;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+.pg96inputboxquestion3{
+    width: 70%;
+    padding: 8px;
+    font-size: 1.6rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 0.5rem;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+}
+
+.pg96ContainerImagem {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pg96imagem {
+    width: 100%;
+    height: auto;
+}
+
+.pg96Questions3 p {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+}
+
+.pg96Questions3 .pg96Question {
+    text-align: left;
+}
+
+.icon {
+    width: 2rem; 
+    height: 2rem;
+    position: relative;
+    top: 0.4rem;
+    left: 1rem;
+}
+
+.pg96Icon {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    left: 42rem;
+    bottom: 2.8rem;
+}
+
+.pg96HeaderIcon {
+    width: 2rem;
+    height: 2rem; 
+    margin-left: 1rem;
+    position: relative;
+    top: 0.4rem;
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.pg96Q3Icon{
+    width: 2rem;
+    height: 2rem; 
+    position: relative;
+    top: 0.4rem;
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.pg96HeaderIcon:hover {
+    transform: scale(1.2); 
+}
+
+.pg95AudioIcon {
+    width: 2.2rem; 
+    height: 2.2rem;  
+    margin-left: 1rem;  
+    cursor: pointer; 
+    position: relative;
+    top: 0.5rem;
+    transition: transform 0.3s ease-in-out;  
+}
+
+.pg95AudioIcon:hover {
+    transform: scale(1.2);  
+}
+
+
+
+@media (max-width: 1024px) {
+    .pg96AsideNotes2 p {
+        font-size: 2rem;
+    }
+
+    .pg96styledTableAfirmativa th,
+    .pg96styledTableNegativa th {
+        font-size: 1.8rem;
+    }
+
+    .pg96ContainerQuestoes {
+        flex-direction: column;
+    }
+
+    .pg96Question {
+        gap: 5px;
+    }
+
+    .pg96IconsContainer {
+        margin-left: 0;
+    }
+
+    .pg96ContainerImagem {
+        align-items: start;
+        justify-content: left;
+        height: fit-content;
+    }
+
+    .pg96InputContainer {
+        width: 15%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scal
+    }
+}

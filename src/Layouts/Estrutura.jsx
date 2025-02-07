@@ -67,7 +67,7 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
     }
   };
 
-  const contentClass = location.pathname === '/pagina42' ? 'pagina42' : '';
+  const contentClass = location.pathname === '/pagina42' ? 'pagina42' : location.pathname === '/' ? 'pagina1' : '';
 
   return (
     <div>

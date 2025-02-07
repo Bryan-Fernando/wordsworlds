@@ -1,16 +1,35 @@
-import React from 'react';
-import Estrutura from './Layouts/Estrutura';
-import './pagina120.css';
+import React, { useState } from 'react';
+import styles from './pagina120.module.css';
+import pg57IconNotes from '../assets/Icons/Icon-Notes.png';
 
 const Pagina120 = () => {
-    return (
-    <Estrutura>
-        <div>
-            <h1>Página 120</h1>
-            <p>Conteúdo da página 120.</p>
-        </div>
-    </Estrutura>
-  );
-};
+    const [inputValues, setInputValues] = useState(
+        Array(6).fill(Array(6).fill(''))
+    );
 
+    const handleInputChange = (rowIndex, colIndex, e) => {
+        const newValue = e.target.value;
+        const updatedValues = inputValues.map((row, i) =>
+            row.map((value, j) => (i === rowIndex && j === colIndex ? newValue : value))
+        );
+        setInputValues(updatedValues);
+    };
+
+    return (
+        <div>
+            <div className={styles.pg91Container}>
+                <header className={styles.pg91Header}>
+                    <h1 className={styles.pg91HeaderH1}>Grammar</h1>
+                    <div>
+                        <h2 className={styles.pg91HeaderH2}>Telling the time</h2>
+                        <p>Dizendo as horas</p>
+                    </div>
+                </header>
+                <main className={styles.pg91Main}>
+                    <div></div>
+                </main>
+            </div>
+        </div>
+    );
+};
 export default Pagina120;

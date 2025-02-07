@@ -1,0 +1,127 @@
+.page64__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+/* Tarja vermelha no topo */
+.page64__header {
+  background-color: #A61C28;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: italic;
+  position: relative;
+}
+
+/* Imagem única - Preenche toda a página */
+.page64__background-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.page64__background-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Configuração das imagens com moldura */
+.page64__main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+  padding: 30px;
+}
+
+/* Wrapper que contém a imagem e a moldura */
+.page64__image-wrapper {
+  position: absolute;
+  width: fit-content;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Configuração da moldura */
+.page64__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ajuste das imagens */
+.page64__image {
+  width: 20rem;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+/* Ajuste individual da posição das imagens */
+.page64__image--my-family { bottom: 850%; left: 52%; z-index: 1; transform: rotate(-2deg); }
+.page64__image--married { bottom: 890%; left: 65%; transform: rotate(-2deg); }
+.page64__image--children { bottom: 450%; left: 10%; z-index: 1; transform: rotate(-2deg); }
+.page64__image--sister { top: -800%; left: 28%; transform: rotate(-2deg); }
+.page64__image--vacation1 { top: -480%; left: 60%; transform: rotate(-2deg); }
+.page64__image--vacation2 { top: -500%; left: 75%; transform: rotate(2deg); }
+
+/* Caixa de texto branca separada */
+.page64__text-box {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 55rem;
+  height: auto;
+  font-size: 1rem;
+  color: #7f7f7f;
+  text-align: left;
+  transform: translateX(-50%) rotate(2deg);
+}
+
+/* Ajuste da posição de cada caixa de texto separadamente */
+.page64__text--my-family { top: -125%; left: 95%; }
+.page64__text--married { top: 0%; left: -208%; }
+.page64__text--children { top: 20%; left: 320%; }
+.page64__text--sister { top: 125%; left: 50%; }
+
+/* Ícones de Áudio no Cabeçalho */
+.page64__audio-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Efeito Hover no Ícone */
+.page64__audio-icon:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .page64__header {
+    font-size: 2rem;
+  }
+  .page64__image-wrapper {
+    width: 90%;
+  }
+  .page64__text-box {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+}

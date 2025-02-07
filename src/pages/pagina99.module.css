@@ -1,0 +1,234 @@
+.pg99Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.pg99Header {
+    width: 100%;
+    text-align: left;
+}
+
+.pg99H1 {
+    text-align: left;
+    font-size: 6rem;
+    color: #8a1720;
+}
+
+.pg99H2 {
+    text-align: left;
+    font-size: 2.5rem;
+    color: #8a1720;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.pg99Main {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+}
+
+/* Este é um comentário */
+
+.pg99ContainerQuestoes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pg99ContainerImagem {
+    width: 100%;
+    height: auto;
+}
+
+.pg99imagem {
+    width: 100%;
+}
+
+.pg99PrimeirasQuestoes {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.pg99Questions1,
+.pg99Questions2 {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.pg99Question {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: black;
+    text-align: left;
+}
+
+.pg99Question span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.pg99ATituloQuestion {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.pg99InputBox {
+    width: 100%;
+    padding: 8px 35px 8px 8px;
+    font-size: 1.8rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+.pg99LargeInputBox {
+    width: 130rem;
+    padding: 8px 35px 8px 8px;
+    font-size: 1.8rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+.pg99InputContainer {
+    gap: 1rem;
+    width: 30%;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.pg99CheckmarkImage {
+    width: 2.5rem;
+    height: 2.5rem;
+    pointer-events: none;
+}
+
+.pg99CheckButton {
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    margin: 2rem;
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    width: fit-content;
+}
+
+.pg99CheckButton:hover {
+    background-color: #8a1720;
+}
+
+.pg99IconsContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 5px;
+}
+
+.pg99AdditionalIcon {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.pg99HeaderIcon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pg99HeaderIcon:hover {
+    transform: scale(1.1);
+}
+
+
+.pg99AdditionalIcon.pg98Pulsing {
+    animation: pulse 1s infinite;
+}
+
+.pg99AdditionalIcon:hover {
+    transform: scale(1.2);
+}
+
+
+.pg99tabelaNegativaContainer {
+    width: 70%;
+}
+
+.pg99tableHeaderNegativa {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.pg99styledTableNegativa {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+.pg99styledTableNegativa th {
+    background-color: #888A8C;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid #A61C28;
+}
+
+.pg99celulatable {
+    height: 7rem;
+}
+
+.pg99spaminput {
+    width: 15%;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

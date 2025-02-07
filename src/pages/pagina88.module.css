@@ -1,0 +1,74 @@
+.page88__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.page88__header {
+    width: 100%;
+    height: 15rem;
+    text-align: left;
+}
+
+.page88__title {
+    font-size: 4rem;
+    color: #A61C28;
+}
+
+.page88__subtitle {
+    font-size: 2.5rem;
+    color: #A61C28;
+}
+
+.page88__main {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5rem;
+}
+
+/* Este é um comentário */
+
+.page88__images-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.page88__images-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+}
+
+.page88__image {
+    width: 22rem;
+    height: 22rem;
+    border-radius: 1.5rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Adiciona o efeito de sombra */
+}
+
+.page88__text--red {
+    color: #A61C28;
+}
+
+.page88__text--black {
+    font-size: 1.8rem;
+}
+
+.page88__article-block {
+    width: fit-content;
+    padding: 5rem;
+    height: 14rem;
+    background-color: #EFEFF1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page88__article-text {
+    white-space: pre;
+    text-align: left;
+}

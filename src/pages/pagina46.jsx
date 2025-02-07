@@ -1,6 +1,11 @@
 import React, { useRef } from 'react';
 import styles from './pagina46.module.css';
-import Pagina46_Primeira_imagem from '../assets/Images/Pagina46_Primeira_imagem.jpg';
+
+import global_grammar from '../assets/audios/global_grammar.mp3';
+import global_posseAe from '../assets/audios/global_posseAe.mp3';
+import global_posseAp from '../assets/audios/global_posseAp.mp3';
+
+import pagina46_imagem1 from '../assets/Images/pagina46_imagem1.webp';
 import myAudio from '../assets/audios/myAudio.mp3';
 import hisAudio from '../assets/audios/hisAudio.mp3';
 import herAudio from '../assets/audios/herAudio.mp3';
@@ -28,7 +33,19 @@ const Pagina46 = () => {
         'pg46_audio2p': audio2p,
     };
 
+
     const currentAudio = useRef(null);
+
+    const globalAudioMap = {
+        'global_grammar': global_grammar,
+        'global_posseAe': global_posseAe,
+        'global_posseAp': global_posseAp
+    };
+
+    const playGlobalAudio = (audioKey) => {
+        const audio = new Audio(globalAudioMap[audioKey]);
+        audio.play();
+    };
 
     const playAudio = (audioId) => {
         if (currentAudio.current) {
@@ -45,10 +62,16 @@ const Pagina46 = () => {
         <div>
             <div className={styles.pg46Container}>
                 <header className={styles.pg46Header}>
-                    <h1 className={styles.pg46HeaderH1}>Grammar</h1>
+                    <h1 className={styles.pg46HeaderH1} onClick={() => playGlobalAudio('global_grammar')}>
+                        Grammar
+                    </h1>
                     <div className={styles.pg46HeaderH2H3}>
-                        <h2 className={styles.pg46HeaderH2}>Possessive Adjectives</h2>
-                        <h3 className={styles.pg46HeaderH3}>Pronomes possessivos</h3>
+                        <h2 className={styles.pg46HeaderH2} onClick={() => playGlobalAudio('global_posseAe')}>
+                            Possessive Adjectives
+                        </h2>
+                        <h3 className={styles.pg46HeaderH3} onClick={() => playGlobalAudio('global_posseAp')}>
+                            Pronomes possessivos
+                        </h3>
                     </div>
                 </header>
                 <main className={styles.pg46Main}>
@@ -103,7 +126,7 @@ const Pagina46 = () => {
                             </div>
                         </div>
                         <div className={styles.pg46ExemploImg}>
-                            <img className={styles.pg46AsideImg1} src={Pagina46_Primeira_imagem} alt="" />
+                            <img className={styles.pg46AsideImg1} src={pagina46_imagem1} alt="" />
                         </div>
                     </div>
                     <div className={styles.pg46Traducao}>

@@ -1,0 +1,232 @@
+.pg100Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.pg100Header {
+    width: 100%;
+}
+
+.pg100H1 {
+    text-align: left;
+    font-size: 6rem;
+    color: #8a1720;
+}
+
+.pg100H2 {
+    text-align: left;
+    font-size: 2.5rem;
+    color: #8a1720;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.pg100Main {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+}
+
+/* Este é um comentário */
+
+.pg100ContainerQuestoes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pg100ContainerQuestoes p {
+    color: #8a1720;
+}
+
+.pg100PrimeirasQuestoes {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.pg100Questions1,
+.pg100Questions2 {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.pg100Question {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 15px;
+    color: black;
+    text-align: left;
+}
+
+.pg100Question span {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: black;
+}
+
+.pg100ATituloQuestion {
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+.pg100InputBox {
+    width: 100%;
+    padding: 8px 35px 8px 8px;
+    font-size: 1.6rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+.pg100InputContainer {
+    width: 25%;
+    gap: 1rem;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.pg100CheckmarkImage {
+    width: 2.5rem;
+    height: 2.5rem;
+    pointer-events: none;
+}
+
+.pg100CheckButton {
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    margin: 2rem;
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    width: fit-content;
+}
+
+.pg100CheckButton:hover {
+    background-color: #8a1720;
+}
+
+.pg100IconsContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 5px;
+}
+
+.pg100AdditionalIcon {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.pg100Questions1:nth-child(2),
+.pg100Questions1:nth-child(4) {
+    margin-top: 5.5rem;
+    border-radius: 0.8rem;
+}
+
+
+.pg100AdditionalIcon.pg100Pulsing {
+    animation: pulse 1s infinite;
+}
+
+.pg100AdditionalIcon:hover {
+    transform: scale(1.2);
+}
+
+.pg100tabelaNegativaContainer {
+    width: 70%;
+}
+
+.pg100tableHeaderNegativa {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.pg100styledTableNegativa {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+.pg100styledTableNegativa th {
+    background-color: #888A8C;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid #A61C28;
+}
+
+.pg100celulatable {
+    height: 7rem;
+}
+
+.pg100ContainerImagem {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pg100imagem {
+    width: 100%;
+}
+
+.pg100spaminput {
+    width: 15%;
+}
+
+.pg100HeaderIcon {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pg100HeaderIcon:hover {
+    transform: scale(1.1);
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

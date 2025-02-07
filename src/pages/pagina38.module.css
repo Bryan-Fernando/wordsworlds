@@ -6,7 +6,7 @@
     align-items: stretch;
 }
 
-/* Cabeçalho com Grid */
+
 .pg38Header {
     display: grid;
     grid-template-columns: 1fr 1fr;

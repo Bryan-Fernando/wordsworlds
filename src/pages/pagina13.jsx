@@ -1,5 +1,10 @@
 import React, { useState, useRef } from 'react';
 import styles from './pagina13.module.css';
+
+import global_verboToBe from '../assets/audios/global_verboToBe.mp3';
+import global_grammar from '../assets/audios/global_grammar.mp3';
+import global_simplePresent from '../assets/audios/global_simplePresent.mp3';
+
 import interrogativaNegativaAudio from '../assets/audios/interrogativaN.mp3';
 import verboAuxiliarAudio from '../assets/audios/verboauxiliar.mp3';
 import sujeitoAudio from '../assets/audios/sujeito.mp3';
@@ -44,9 +49,19 @@ const Pagina13 = () => {
         <div>
             <div className={styles.pg13Container}>
                 <header className={styles.pg13Header}>
-                    <h1>Grammar</h1>
-                    <h2 className={styles.pg13HeaderH2}>Simple Present (Presente Simples)</h2>
-                    <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
+                    <h1 className={styles.pg13AudioText}
+                        onClick={() => playAudio(global_grammar)}>
+                        Grammar
+                    </h1>
+                    <h2 className={styles.pg13AudioText}
+                        onClick={() => playAudio(global_simplePresent)}
+                        style={{ color: 'black' }}>
+                        Simple Present (Presente Simples)
+                    </h2>
+                    <h3 className={styles.pg13AudioText}
+                        onClick={() => playAudio(global_verboToBe)}>
+                        Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)
+                    </h3>
                 </header>
                 <main className={styles.pg13Main}>
                     <div>
@@ -65,7 +80,7 @@ const Pagina13 = () => {
                                 <col className={styles.pg13Verbo} />
                                 <col className={styles.pg13ObjetivoComplemento} />
                                 <col className={styles.pg13Traducao} />
-                            </colgroup> 
+                            </colgroup>
                             <thead>
                                 <tr>
                                     <th onClick={() => playAudio(verboAuxiliarAudio)} style={{ cursor: 'pointer' }}>
@@ -193,7 +208,7 @@ const Pagina13 = () => {
                                 <col className={styles.pg13Verbo} />
                                 <col className={styles.pg13ObjetivoComplemento} />
                                 <col className={styles.pg13Traducao} />
-                            </colgroup> 
+                            </colgroup>
                             <thead>
                                 <tr>
                                     <th onClick={() => playAudio(verboAuxiliarAudio)} style={{ cursor: 'pointer' }}>
@@ -233,11 +248,11 @@ const Pagina13 = () => {
                     </div>
                 </main>
                 <aside className={styles.pg13Aside}>
-                        <div className={styles.pg13AsideNotes1}>
+                    <div className={styles.pg13AsideNotes1}>
                         <img className={styles.pg13AsideImgNotes} src={pg13IconNotes} alt="" />
                         <p>NOTE: Usam a mesma terminação verbal “Are“, “Aren’t“:</p>
-                        </div>
-                        <div className={styles.pg13AsideNotes2}>
+                    </div>
+                    <div className={styles.pg13AsideNotes2}>
                         <p>
                             You <br />
                             You all <br />
@@ -248,7 +263,7 @@ const Pagina13 = () => {
                             Vocês todos <br />
                             Você e Mary
                         </p>
-                        </div>
+                    </div>
                 </aside>
             </div>
         </div>

@@ -1,0 +1,201 @@
+.page57__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.page57__header {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    color: #A61C28;
+    margin-bottom: 2rem;
+}
+
+.page57__title {
+    font-size: 4rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.page57__main {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.page57__title--phone {
+    font-size: 3.5rem;
+    text-align: left;
+}
+
+.page57__title--alphabet {
+    color: #A61C28;
+    font-size: 4rem;
+    text-align: left;
+}
+
+.page57__title--spelling {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.page57__numbers {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.page57__numbers p {
+    max-width: 6rem;
+}
+
+.page57__number-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #083A73;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 1.5rem;
+}
+
+.page57__number-box p {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.page57__letter-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #083A73;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 1.5rem;
+}
+
+.page57__letter-box p {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.page57__contacts {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.page57__contacts-content {
+    background-color: white;
+    flex: 1;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.page57__gray-box {
+    background-color: #E6E7E8;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    text-align: left;
+    border: 0.3rem solid black;
+    width: 60%;
+}
+
+.page57__gray-box p {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.page57__gray-box ul {
+    padding-left: 2rem;
+    margin: 0;
+    list-style: none;
+}
+
+.page57__gray-box li {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.page57__gray-box li::before {
+    content: "•";
+    color: #A61C28;
+    font-size: 2.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.page57__alphabet {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+}
+
+.page57__letters {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+}
+
+.page57__spelling {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    text-align: left;
+    align-items: flex-start;
+    
+}
+
+.page57__spelling-content {
+    background-color: white;
+    flex: 1;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.page57__image {
+    flex: 0.1;
+    max-width: 45%;
+    border-radius: 1rem;
+}
+
+.page57__email {
+    color: #A61C28;
+    font-weight: bold;
+}
+
+.page57__spelling-word {
+    color: #A61C28;
+    font-weight: bold;
+}
+
+.page57__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page57__icon:hover {
+    transform: scale(1.1);
+}

@@ -1,54 +1,126 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina53.module.css';
-import pagina53_imagem1 from '../assets/Images/pagina53_imagem1.png';
-import pagina53_imagem2 from '../assets/Images/pagina53_imagem2.png';
-import pagina53_imagem3 from '../assets/Images/pagina53_imagem3.png';
-import pagina53_imagem4 from '../assets/Images/pagina53_imagem4.png';
+import pagina53Imagem1 from '../assets/Images/pagina53_imagem1.webp';
+import pagina53Imagem2 from '../assets/Images/pagina53_imagem2.webp';
+import pagina53Imagem3 from '../assets/Images/pagina53_imagem3.webp';
+import pagina53Imagem4 from '../assets/Images/pagina53_imagem4.webp';
+import eIcon from '../assets/icons/eIcon.png';
+import pIcon from '../assets/icons/pIcon.png';
+
+// Importação dos áudios do cabeçalho da Página 50
+import pg50Audio1e from '../assets/audios/pg50_audio1e.mp3';
+import pg50Audio1p from '../assets/audios/pg50_audio1p.mp3';
+import pg53Audio2H from '../assets/audios/pg53_audio2H.mp3';
+
+// Áudios específicos da Página 53
+import pg53Audio1 from '../assets/audios/pg53_audio1.mp3';
+import pg53Audio2 from '../assets/audios/pg53_audio2.mp3';
+import pg53Audio3 from '../assets/audios/pg53_audio3.mp3';
+import pg53Audio4 from '../assets/audios/pg53_audio4.mp3';
 
 const Pagina53 = () => {
+    const audioMap = {
+        "pg50-audio1e": pg50Audio1e,
+        "pg50-audio1p": pg50Audio1p,
+        "pg53-audio2h": pg53Audio2H,
+        "pg53-audio1": pg53Audio1,
+        "pg53-audio2": pg53Audio2,
+        "pg53-audio3": pg53Audio3,
+        "pg53-audio4": pg53Audio4,
+    };
+
+    const currentAudio = useRef(null);
+
+    const playAudio = (audioId) => {
+        if (!audioMap[audioId]) {
+            console.error(`Erro: Áudio não encontrado para ID '${audioId}'`);
+            return;
+        }
+
+        if (currentAudio.current) {
+            currentAudio.current.pause();
+            currentAudio.current.currentTime = 0;
+        }
+
+        const audio = new Audio(audioMap[audioId]);
+        currentAudio.current = audio;
+        audio.play();
+    };
+
     return (
         <div>
-            <div className={styles.pg53Container}>
-                <header className={styles.pg53Header}>
-                    <h1 className={styles.pg53HeaderH1}>Grammar - Demonstrative Pronouns</h1>
-                    <div className={styles.pg53HeaderH2H3}>
-                        <h2 className={styles.pg53HeaderH2}>These = Estes / Estas / Esses / Essas</h2>
+            <div className={styles['page53']}>
+                <header className={styles['page53__header']}>
+                    <h1 className={styles['page53__title']}>
+                        Grammar - Demonstrative Pronouns
+                        <img
+                            src={eIcon}
+                            alt="English Audio"
+                            className={styles['page53__icon']}
+                            onClick={() => playAudio('pg50-audio1e')}
+                        />
+                        <img
+                            src={pIcon}
+                            alt="Portuguese Audio"
+                            className={styles['page53__icon']}
+                            onClick={() => playAudio('pg50-audio1p')}
+                        />
+                    </h1>
+                    <div className={styles['page53__subtitle-container']}>
+                        <h2
+                            className={styles['page53__subtitle']}
+                            onClick={() => playAudio('pg53-audio2h')}
+                        >
+                            These = Estes / Estas / Esses / Essas
+                        </h2>
                     </div>
                 </header>
-                <main className={styles.pg53Main}>
-                    <div className={styles.pg53Container1}>
+                <main className={styles['page53__content']}>
+                    <div className={styles['page53__section-left']}>
                         <div>
-                            <div className={styles.pg53Div1Container1}>
-                                <img src={pagina53_imagem1} alt="Imagem 1" className={styles.pg53Img} />
+                            <div className={styles['page53__image-container--large']}>
+                                <img src={pagina53Imagem1} alt="Imagem 1" className={styles['page53__image']} />
                             </div>
-                            <p className={styles.pg53ParagrafoDiv}>
-                                <span style={{ fontWeight: 'bold', fontSize: '1.8rem' }}>These are my co-workers</span>.
+                            <p
+                                className={styles['page53__text']}
+                                onClick={() => playAudio('pg53-audio1')}
+                            >
+                                These are my co-workers.
                             </p>
                         </div>
                         <div>
-                            <div className={styles.pg53Div2Container1}>
-                                <img src={pagina53_imagem3} alt="Imagem 2" className={styles.pg53Img} />
+                            <div className={styles['page53__image-container--tall']}>
+                                <img src={pagina53Imagem3} alt="Imagem 2" className={styles['page53__image']} />
                             </div>
-                            <p className={styles.pg53ParagrafoDiv}>
-                                <span style={{ fontWeight: 'bold', fontSize: '1.8rem' }}>These are my books</span>.
+                            <p
+                                className={styles['page53__text']}
+                                onClick={() => playAudio('pg53-audio2')}
+                            >
+                                These are my books.
                             </p>
                         </div>
                     </div>
-                    <div className={styles.pg53Container2}>
+                    <div className={styles['page53__section-right']}>
                         <div>
-                            <div className={styles.pg53Div1Container2}>
-                                <img src={pagina53_imagem2} alt="Imagem 3" className={styles.pg53Img} />
+                            <div className={styles['page53__image-container--large-alt']}>
+                                <img src={pagina53Imagem2} alt="Imagem 3" className={styles['page53__image']} />
                             </div>
-                            <p className={styles.pg53ParagrafoDiv}>
-                                <span style={{ fontWeight: 'bold', fontSize: '1.8rem' }}>These are my grades</span>.
+                            <p
+                                className={styles['page53__text']}
+                                onClick={() => playAudio('pg53-audio3')}
+                            >
+                                These are my grades.
                             </p>
                         </div>
                         <div>
-                            <div className={styles.pg53Div2Container2}>
-                                <img src={pagina53_imagem4} alt="Imagem 4" className={styles.pg53Img} />
+                            <div className={styles['page53__image-container--tall-alt']}>
+                                <img src={pagina53Imagem4} alt="Imagem 4" className={styles['page53__image']} />
                             </div>
-                            <p className={styles.pg53ParagrafoDiv}>
-                                <span style={{ fontWeight: 'bold', fontSize: '1.8rem' }}>These are my new sneakers</span>.
+                            <p
+                                className={styles['page53__text']}
+                                onClick={() => playAudio('pg53-audio4')}
+                            >
+                                These are my new sneakers.
                             </p>
                         </div>
                     </div>

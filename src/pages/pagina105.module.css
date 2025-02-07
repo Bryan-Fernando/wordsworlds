@@ -1,0 +1,154 @@
+.pg105Container {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+}
+
+.pg105Header {
+    width: 100%;
+}
+
+.pg105H1 {
+    text-align: left;
+    font-size: 6rem;
+    color: #8a1720;
+}
+
+.pg105Main {
+    display: flex;
+    flex-direction: column;
+}
+
+.pg105ContainerQuestoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.pg105Questions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 50%;
+    gap: 1.5rem;
+    margin-bottom: 18rem;
+}
+
+.pg105TextRed {
+    color: #A61C28; 
+    font-size: 2rem;
+    text-align: left;
+}
+
+.pg105TextBlack {
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.pg105Question {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    font-size: 1.8rem;
+}
+
+.pg105ContainerImagem {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.pg105imagem {
+    width: 60%;
+    height: auto;
+}
+
+.pg105AsideNotes1 {
+    height: 4.5rem;
+    border: 0.4rem solid #A61C28;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    background-color: #A61C28;
+    color: white;
+    text-align: left;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.pg105AsideImgNotes {
+    height: calc(1rem + 0.8vw);
+    padding-right: 0.5rem;
+}
+
+.pg105AsideNotes2 {
+    border: 0.4rem solid #A61C28;
+    border-top: 0.1rem;
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+    background-color: white;
+    text-align: left;
+    padding: 2% 5%;
+    display: flex;
+}
+
+.pg105AsideNotes2Preto{
+    margin-bottom: 2rem;
+}
+
+.pg105AsideNotes3 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.pg105AsideNotes2Vermelho {
+    font-weight: bold;
+    color: #A61C28;
+}
+
+.pg105Asidecontainer {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 40rem;
+
+}
+
+.pg105HeaderIcon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-left: 0.8rem;
+    position: relative;
+    top: 0.2em;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pg105HeaderIcon:hover {
+    transform: scale(1.2);
+}
+
+
+@media (max-width: 1024px) {
+    .pg105ContainerQuestoes {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .pg105Questions {
+        width: 100%;
+    }
+
+    .pg105ContainerImagem {
+        width: 100%;
+    }
+
+    .pg105imagem {
+        max-width: 90%;
+    }
+}

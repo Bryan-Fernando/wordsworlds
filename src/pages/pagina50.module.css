@@ -1,0 +1,99 @@
+.pg50Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.pg50Header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.pg50HeaderContainer {
+    display: flex;
+    gap: 2rem;
+}
+
+.listenRepeat {
+    color: black;
+    font-size: 3rem;
+}
+
+.pg50HeaderH2H3{
+    color: black;
+}
+
+.pg50HeaderH1{
+    font-size: 3rem;
+}
+
+.pg50HeaderH2{
+    font-size: 2.5rem;
+    padding-bottom: 0%;
+}
+
+.pg50Main {
+    width: 100%;
+    height: 145rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pg50Main p {
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+/* Este é um comentário */
+.pg50ParagrafoDiv{
+    text-align: left;
+}
+
+.pg50Div1Container1,
+.pg50Div2Container1,
+.pg50Div3Container1,
+.pg50Div4Container1,
+.pg50Div1Container2,
+.pg50Div2Container2,
+.pg50Div3Container2,
+.pg50Div4Container2 {
+    width: 40rem;
+    height: 25rem;
+    border: 0.8rem solid #A61C28; 
+    border-radius: 2%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pg50Img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.headphIcon{
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 3rem;
+}
+
+.pg50Icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pg50Icon:hover {
+    transform: scale(1.1);
+}
+
+.pg50HeaderH2 {
+    cursor: pointer;
+}
+

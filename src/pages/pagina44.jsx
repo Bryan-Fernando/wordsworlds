@@ -1,19 +1,19 @@
 import React, { useRef } from 'react';
 import styles from './pagina44.module.css';
-import Pagina44_Primeira_imagem from '../assets/Images/Pagina44_Primeira_imagem.jpg';
-import Pagina44_Brasil from '../assets/Images/Pagina44_Brasil.png';
-import Pagina44_Canada from '../assets/Images/Pagina44_Canada.png';
-import Pagina44_China from '../assets/Images/Pagina44_China.png';
-import Pagina44_Egito from '../assets/Images/Pagina44_Egito.png';
-import Pagina44_Franca from '../assets/Images/Pagina44_Franca.png';
-import Pagina44_Alemanha from '../assets/Images/Pagina44_Alemanha.png';
-import Pagina44_GraBretanha from '../assets/Images/Pagina44_GraBretanha.png';
-import Pagina44_Italia from '../assets/Images/Pagina44_Italia.png';
-import Pagina44_Japao from '../assets/Images/Pagina44_Japao.png';
-import Pagina44_Mexico from '../assets/Images/Pagina44_Mexico.png';
-import Pagina44_Portugal from '../assets/Images/Pagina44_Portugal.png';
-import Pagina44_Espanha from '../assets/Images/Pagina44_Espanha.png';
-import Pagina44_Usa from '../assets/Images/Pagina44_Usa.png';
+import pagina44_imagem1 from '../assets/images/pagina44_imagem1.webp';
+import pagina44_imagem2 from '../assets/Images/pagina44_imagem2.webp';
+import pagina44_imagem3 from '../assets/Images/pagina44_imagem3.webp';
+import pagina44_imagem4 from '../assets/Images/pagina44_imagem4.webp';
+import pagina44_imagem5 from '../assets/Images/pagina44_imagem5.webp';
+import pagina44_imagem6 from '../assets/Images/pagina44_imagem6.webp';
+import pagina44_imagem7 from '../assets/Images/pagina44_imagem7.webp';
+import pagina44_imagem8 from '../assets/Images/pagina44_imagem8.webp';
+import pagina44_imagem9 from '../assets/Images/pagina44_imagem9.webp';
+import pagina44_imagem10 from '../assets/Images/pagina44_imagem10.webp';
+import pagina44_imagem11 from '../assets/Images/pagina44_imagem11.webp';
+import pagina44_imagem12 from '../assets/Images/pagina44_imagem12.webp';
+import pagina44_imagem13 from '../assets/Images/pagina44_imagem13.webp';
+import pagina44_imagem14 from '../assets/Images/pagina44_imagem14.webp';
 import audio1e from '../assets/audios/pg44_audio1e.mp3';
 import audio2e from '../assets/audios/pg44_audio2e.mp3';
 import audio3e from '../assets/audios/pg44_audio3e.mp3';
@@ -148,7 +148,7 @@ const Pagina44 = () => {
         <div>
             <div className={styles.pg44Container}>
                 <main className={styles.pg44Main}>
-                    <img className={styles.pg44MainImagems} src={Pagina44_Primeira_imagem} alt="" />
+                    <img className={styles.pg44MainImagems} src={pagina44_imagem1} alt="" />
                 </main>
                 <aside className={styles.pg44Aside}>
                     <div className={styles.tableContainer}>
@@ -159,91 +159,91 @@ const Pagina44 = () => {
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio2e')}>
-                                    <img src={Pagina44_Brasil} alt="Brazil Flag" className={styles.flag} />
+                                    <img src={pagina44_imagem2} alt="Brazil Flag" className={styles.flag} />
                                     Brazil
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio16e')}>Brazilian</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio3e')}>
-                                    <img src={Pagina44_Canada} alt="Canada Flag" className={styles.flag} />
+                                    <img src={pagina44_imagem3} alt="Canada Flag" className={styles.flag} />
                                     Canada
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio17e')}>Canadian</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio4e')}>
-                                    <img src={Pagina44_China} alt="China Flag" className={styles.flag} />
+                                    <img src={pagina44_imagem4} alt="China Flag" className={styles.flag} />
                                     China
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio18e')}>Chinese</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio5e')}>
-                                    <img src={Pagina44_Egito} alt="Egypt Flag" className={styles.flag} />
+                                    <img src={pagina44_imagem5} alt="Egypt Flag" className={styles.flag} />
                                     Egypt
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio19e')}>Egyptian</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio6e')}>
-                                    <img src={Pagina44_Franca} alt="France Flag" className={styles.flag} />
+                                    <img src={pagina44_imagem6} alt="France Flag" className={styles.flag} />
                                     France
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio20e')}>French</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio7e')}>
-                                    <img src={Pagina44_Alemanha} alt="Germany Flag" className={styles.flag} />
+                                    <img src={pagina44_imagem7} alt="Germany Flag" className={styles.flag} />
                                     Germany
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio21e')}>German</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio8e')}>
-                                    <img src={Pagina44_GraBretanha} alt="Great Britain Flag" className={styles.flag} />
+                                    <img src={pagina44_imagem8} alt="Great Britain Flag" className={styles.flag} />
                                     Great Britain
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio22e')}>British</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio9e')}>
-                                    <img src={Pagina44_Italia} alt="Italy Flag" className={styles.flag} />
+                                    <img src={pagina44_imagem9} alt="Italy Flag" className={styles.flag} />
                                     Italy
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio23e')}>Italian</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio10e')}>
-                                    <img src={Pagina44_Japao} alt="Japan Flag" className={styles.flag} />
+                                    <img src={pagina44_imagem10} alt="Japan Flag" className={styles.flag} />
                                     Japan
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio24e')}>Japanese</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio11e')}>
-                                    <img src={Pagina44_Mexico} alt="Mexico Flag" className={styles.flag} />
+                                    <img src={pagina44_imagem11} alt="Mexico Flag" className={styles.flag} />
                                     Mexico
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio25e')}>Mexican</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio12e')}>
-                                    <img src={Pagina44_Portugal} alt="Portugal Flag" className={styles.flag} />
+                                    <img src={pagina44_imagem12} alt="Portugal Flag" className={styles.flag} />
                                     Portugal
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio26e')}>Portuguese</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio13e')}>
-                                    <img src={Pagina44_Espanha} alt="Spain Flag" className={styles.flag} />
+                                    <img src={pagina44_imagem13} alt="Spain Flag" className={styles.flag} />
                                     Spain
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio27e')}>Spanish</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio14e')}>
-                                    <img src={Pagina44_Usa} alt="USA Flag" className={styles.flag} />
+                                    <img src={pagina44_imagem14} alt="USA Flag" className={styles.flag} />
                                     USA
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio28e')}>American</div>
@@ -257,91 +257,91 @@ const Pagina44 = () => {
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio2p')}>
-                                    <img src={Pagina44_Brasil} alt="Bandeira do Brasil" className={styles.flag} />
+                                    <img src={pagina44_imagem2} alt="Bandeira do Brasil" className={styles.flag} />
                                     Brasil
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio16p')}>Brasileiro</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio3p')}>
-                                    <img src={Pagina44_Canada} alt="Bandeira do Canadá" className={styles.flag} />
+                                    <img src={pagina44_imagem3} alt="Bandeira do Canadá" className={styles.flag} />
                                     Canadá
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio17p')}>Canadense</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio4p')}>
-                                    <img src={Pagina44_China} alt="Bandeira da China" className={styles.flag} />
+                                    <img src={pagina44_imagem4} alt="Bandeira da China" className={styles.flag} />
                                     China
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio18p')}>Chinês</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio5p')}>
-                                    <img src={Pagina44_Egito} alt="Bandeira do Egito" className={styles.flag} />
+                                    <img src={pagina44_imagem5} alt="Bandeira do Egito" className={styles.flag} />
                                     Egito
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio19p')}>Egípcio</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio6p')}>
-                                    <img src={Pagina44_Franca} alt="Bandeira da França" className={styles.flag} />
+                                    <img src={pagina44_imagem6} alt="Bandeira da França" className={styles.flag} />
                                     França
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio20p')}>Francês</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio7p')}>
-                                    <img src={Pagina44_Alemanha} alt="Bandeira da Alemanha" className={styles.flag} />
+                                    <img src={pagina44_imagem7} alt="Bandeira da Alemanha" className={styles.flag} />
                                     Alemanha
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio21p')}>Alemão</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio8p')}>
-                                    <img src={Pagina44_GraBretanha} alt="Bandeira da Grã-Bretanha" className={styles.flag} />
+                                    <img src={pagina44_imagem8} alt="Bandeira da Grã-Bretanha" className={styles.flag} />
                                     Grã-Bretanha
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio22p')}>Britânico</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio9p')}>
-                                    <img src={Pagina44_Italia} alt="Bandeira da Itália" className={styles.flag} />
+                                    <img src={pagina44_imagem9} alt="Bandeira da Itália" className={styles.flag} />
                                     Itália
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio23p')}>Italiano</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio10p')}>
-                                    <img src={Pagina44_Japao} alt="Bandeira do Japão" className={styles.flag} />
+                                    <img src={pagina44_imagem10} alt="Bandeira do Japão" className={styles.flag} />
                                     Japão
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio24p')}>Japonês</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio11p')}>
-                                    <img src={Pagina44_Mexico} alt="Bandeira do México" className={styles.flag} />
+                                    <img src={pagina44_imagem11} alt="Bandeira do México" className={styles.flag} />
                                     México
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio25p')}>Mexicano</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio12p')}>
-                                    <img src={Pagina44_Portugal} alt="Bandeira de Portugal" className={styles.flag} />
+                                    <img src={pagina44_imagem12} alt="Bandeira de Portugal" className={styles.flag} />
                                     Portugal
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio26p')}>Português</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio13p')}>
-                                    <img src={Pagina44_Espanha} alt="Bandeira da Espanha" className={styles.flag} />
+                                    <img src={pagina44_imagem13} alt="Bandeira da Espanha" className={styles.flag} />
                                     Espanha
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio27p')}>Espanhol</div>
                             </div>
                             <div className={styles.row}>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio14p')}>
-                                    <img src={Pagina44_Usa} alt="Bandeira dos EUA" className={styles.flag} />
+                                    <img src={pagina44_imagem14} alt="Bandeira dos EUA" className={styles.flag} />
                                     EUA
                                 </div>
                                 <div className={styles.cell} onClick={() => playAudio('pg44_audio28p')}>Americano</div>

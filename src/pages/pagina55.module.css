@@ -1,0 +1,146 @@
+.page55 {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.page55__header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+    grid-area: header; /* Define área do header */
+}
+
+.page55__title {
+    font-size: 4rem;
+}
+
+.page55__content {
+    width: 100%;
+    height: 105rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    grid-area: main; /* Define área do main */
+}
+
+.page55__aside {
+    width: 100%;
+    display: flex;
+    grid-area: aside; /* Define área do aside */
+}
+
+/* Este é um comentário */
+
+.page55__section-left {
+    width: 100%;
+    height: 45rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page55__section-right {
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page55__image-container--large {
+    width: 30rem;
+    height: 40rem;
+}
+
+.page55__image-container--large-alt {
+    width: 30rem;
+    height: 40rem;
+}
+
+.page55__image-container--tall {
+    width: 30rem;
+    height: 40rem;
+}
+
+.page55__aside-notes1 {
+    width: 80%;
+    height: 4.5rem;
+    border: 0.4rem solid #A61C28;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    background-color: #A61C28;
+    color: white;
+    text-align: left;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.page55__aside-notes1 p {
+    font-size: calc(0.6rem + .8vw);
+}
+
+.page55__aside-img-notes {
+    height: calc(1rem + 0.8vw);
+    width: 2rem;
+    padding-right: 0.5rem;
+}
+
+.page55__aside-notes2 {
+    width: 80%;
+    height: 70%;
+    border: 0.4rem solid #A61C28;
+    border-top: 0.1rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    background-color: white;
+    text-align: left;
+    padding-left: 0.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.page55__aside-notes2 p {
+    padding: 1vw;
+}
+
+.page55__aside-text-red {
+    font-weight: bold;
+    color: #A61C28;
+}
+
+.page55__aside-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.page55__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page55__title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.page55__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page55__icon:hover {
+    transform: scale(1.1);
+}
+
+.page55__text {
+    cursor: pointer;
+}

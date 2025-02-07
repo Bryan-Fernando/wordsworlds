@@ -1,128 +1,176 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina51.module.css';
+import pagina51_imagem1 from '../assets/Images/pagina51_imagem1.webp';
+import pagina51_imagem2 from '../assets/Images/pagina51_imagem2.webp';
+import pagina51_imagem3 from '../assets/Images/pagina51_imagem3.webp';
+import pagina51_imagem4 from '../assets/Images/pagina51_imagem4.webp';
+import pagina51_imagem5 from '../assets/Images/pagina51_imagem5.webp';
+import pagina51_imagem6 from '../assets/Images/pagina51_imagem6.webp';
+import pagina51_imagem7 from '../assets/Images/pagina51_imagem7.webp';
+import iconeE from '../assets/icons/eIcon.png';
+import iconeP from '../assets/icons/pIcon.png';
+import pg50_audio1e from '../assets/audios/pg50_audio1e.mp3';
+import pg50_audio1p from '../assets/audios/pg50_audio1p.mp3';
+import pg50_audio2H from '../assets/audios/pg50_audio2H.mp3';
+import pg51_audio1 from '../assets/audios/pg51_audio1.mp3';
+import pg51_audio2 from '../assets/audios/pg51_audio2.mp3';
+import pg51_audio3 from '../assets/audios/pg51_audio3.mp3';
+import pg51_audio4 from '../assets/audios/pg51_audio4.mp3';
+import pg51_audio5 from '../assets/audios/pg51_audio5.mp3';
+import pg51_audio6 from '../assets/audios/pg51_audio6.mp3';
+import pg51_audio7 from '../assets/audios/pg51_audio7.mp3';
 
 const Pagina51 = () => {
-    const [inputValuesTable1, setInputValuesTable1] = useState(
-        Array(3).fill(Array(6).fill(''))
-    );
-    const [inputValuesTable2, setInputValuesTable2] = useState(
-        Array(3).fill(Array(6).fill(''))
-    );
+    const audioMap = {
+        pg50_audio1e,
+        pg50_audio1p,
+        pg50_audio2H,
+        pg51_audio1,
+        pg51_audio2,
+        pg51_audio3,
+        pg51_audio4,
+        pg51_audio5,
+        pg51_audio6,
+        pg51_audio7,
+    };
 
-    const handleInputChange = (rowIndex, colIndex, e, tableSetter) => {
-        const newValue = e.target.value;
-        tableSetter((prevValues) =>
-            prevValues.map((row, i) =>
-                row.map((value, j) => (i === rowIndex && j === colIndex ? newValue : value))
-            )
-        );
+    const currentAudio = useRef(null);
+
+    const playAudio = (audioId) => {
+        if (currentAudio.current) {
+            currentAudio.current.pause();
+            currentAudio.current.currentTime = 0;
+        }
+
+        const audio = new Audio(audioMap[audioId]);
+        currentAudio.current = audio;
+        audio.play();
     };
 
     return (
         <div>
             <div className={styles.pg51Container}>
                 <header className={styles.pg51Header}>
-                    <h1>Grammar</h1>
-                    <h2 className={styles.pg51HeaderH2}>Simple Present (Presente Simples)</h2>
-                    <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
+                    <h1 className={styles.pg51HeaderH1}>
+                        Grammar - Demonstrative Pronouns
+                        <img
+                            src={iconeE}
+                            alt="English Audio"
+                            className={styles.pg51Icon}
+                            onClick={() => playAudio('pg50_audio1e')}
+                        />
+                        <img
+                            src={iconeP}
+                            alt="Portuguese Audio"
+                            className={styles.pg51Icon}
+                            onClick={() => playAudio('pg50_audio1p')}
+                        />
+                    </h1>
+                    <div className={styles.pg51HeaderH2H3}>
+                        <h2
+                            className={styles.pg51HeaderH2}
+                            onClick={() => playAudio('pg50_audio2H')}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            This = Este / Esta / Esse / Essa
+                        </h2>
+                    </div>
                 </header>
                 <main className={styles.pg51Main}>
-                    <div>
-                        <div className={styles.pg51TableHeader}>INTERROGATIVE</div>
-                        {/* Tabela de Cima */}
-                        <table className={styles.pg51StyledTable}>
-                            <colgroup>
-                                <col style={{ width: '15%' }} />
-                                <col style={{ width: '15%' }} />
-                                <col style={{ width: '10%' }} />
-                                <col style={{ width: '10%' }} />
-                                <col style={{ width: '25%' }} />
-                                <col style={{ width: '25%' }} />
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>Palavras <br /> Interrogativas</th>
-                                    <th>Verbo <br /> Auxiliar</th>
-                                    <th>Sujeito</th>
-                                    <th><span style={{ color: 'red' }}>'Not'</span><br /> Advérbio</th>
-                                    <th>Verbo(s)</th>
-                                    <th>Objeto complemento</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {inputValuesTable1.map((row, rowIndex) => (
-                                    <tr key={rowIndex}>
-                                        {row.map((value, colIndex) => (
-                                            <td key={colIndex}>
-                                                <textarea
-                                                    id={`table1-input-${rowIndex}-${colIndex}`}
-                                                    className={styles.pg51InputCell}
-                                                    value={value}
-                                                    rows="1"
-                                                    onChange={(e) =>
-                                                        handleInputChange(rowIndex, colIndex, e, setInputValuesTable1)
-                                                    }
-                                                    style={{
-                                                        resize: 'none',
-                                                        overflowWrap: 'break-word',
-                                                        wordWrap: 'break-word',
-                                                    }}
-                                                />
-                                            </td>
-                                        ))}
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-
-                        {/* Tabela de Baixo */}
-                        <table className={`${styles.pg51StyledTable} ${styles.pg51TableAligned}`}>
-                        <colgroup>
-                                <col style={{ width: '20.2%' }} className={styles.pg51ExtraColumn} />
-                                <col style={{ width: '20.2%' }} />
-                                <col style={{ width: '13.5%' }} />
-                                <col style={{ width: '11%' }} />
-                                <col style={{ width: '11%' }} />
-                                <col style={{ width: '25%' }} />
-                                <col style={{ width: '33.7%' }} />
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th className={styles.pg51ExtraColumn}></th>
-                                    <th>Introdução</th>
-                                    <th>Sujeito</th>
-                                    <th>Verbo Auxiliar</th>
-                                    <th><span style={{ color: 'red' }}>'Not'</span><br /> Advérbio</th>
-                                    <th>Verbo(s)</th>
-                                    <th>Objeto Complemento</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {inputValuesTable2.map((row, rowIndex) => (
-                                    <tr key={rowIndex}>
-                                        <td className={styles.pg51ExtraColumn}></td>
-                                        {row.map((value, colIndex) => (
-                                            <td key={colIndex}>
-                                                <textarea
-                                                    id={`table2-input-${rowIndex}-${colIndex}`}
-                                                    className={styles.pg51InputCell}
-                                                    value={value}
-                                                    rows="1"
-                                                    onChange={(e) =>
-                                                        handleInputChange(rowIndex, colIndex, e, setInputValuesTable2)
-                                                    }
-                                                    style={{
-                                                        resize: 'none',
-                                                        overflowWrap: 'break-word',
-                                                        wordWrap: 'break-word',
-                                                    }}
-                                                />
-                                            </td>
-                                        ))}
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                    <div className={styles.pg51Container1}>
+                        <div>
+                            <div className={styles.pg51Div1Container1}>
+                                <img src={pagina51_imagem1} alt="Imagem 1" className={styles.pg51Img} />
+                            </div>
+                            <p
+                                className={styles.pg51ParagrafoDiv}
+                                onClick={() => playAudio('pg51_audio1')}
+                                style={{ cursor: 'pointer' }}
+                            >
+                                <strong>Best Friend</strong><br />
+                                This is my best friend, Alex.
+                            </p>
+                        </div>
+                        <div>
+                            <div className={styles.pg51Div2Container1}>
+                                <img src={pagina51_imagem3} alt="Imagem 3" className={styles.pg51Img} />
+                            </div>
+                            <p
+                                className={styles.pg51ParagrafoDiv}
+                                onClick={() => playAudio('pg51_audio2')}
+                                style={{ cursor: 'pointer' }}
+                            >
+                                <strong>Work Friend</strong><br />
+                                This is my work friend, James. He is very helpful and kind.
+                            </p>
+                        </div>
+                        <div>
+                            <div className={styles.pg51Div3Container1}>
+                                <img src={pagina51_imagem5} alt="Imagem 5" className={styles.pg51Img} />
+                            </div>
+                            <p
+                                className={styles.pg51ParagrafoDiv}
+                                onClick={() => playAudio('pg51_audio3')}
+                                style={{ cursor: 'pointer' }}
+                            >
+                                <strong>Gym Friend</strong><br />
+                                This is my gym friend, David. He motivates me to stay fit.
+                            </p>
+                        </div>
+                        <div>
+                            <div className={styles.pg51Div4Container1}>
+                                <img src={pagina51_imagem7} alt="Imagem 4" className={styles.pg51Img} />
+                            </div>
+                            <p
+                                className={styles.pg51ParagrafoDiv}
+                                onClick={() => playAudio('pg51_audio4')}
+                                style={{ cursor: 'pointer' }}
+                            >
+                                <strong>Online Friend</strong><br />
+                                This is my online friend, Sam.
+                            </p>
+                        </div>
+                    </div>
+                    <div className={styles.pg51Container2}>
+                        <div>
+                            <div className={styles.pg51Div1Container2}>
+                                <img src={pagina51_imagem2} alt="Imagem 5" className={styles.pg51Img} />
+                            </div>
+                            <p
+                                className={styles.pg51ParagrafoDiv}
+                                onClick={() => playAudio('pg51_audio5')}
+                                style={{ cursor: 'pointer' }}
+                            >
+                                <strong>School Friend</strong><br />
+                                This is my school friend, Emma. She is very good at math.
+                            </p>
+                        </div>
+                        <div>
+                            <div className={styles.pg51Div2Container2}>
+                                <img src={pagina51_imagem4} alt="Imagem 6" className={styles.pg51Img} />
+                            </div>
+                            <p
+                                className={styles.pg51ParagrafoDiv}
+                                onClick={() => playAudio('pg51_audio6')}
+                                style={{ cursor: 'pointer' }}
+                            >
+                                <strong>Neighbor Friend</strong><br />
+                                This is my neighbor friend, Sarah. We often go jogging together.
+                            </p>
+                        </div>
+                        <div>
+                            <div className={styles.pg51Div3Container2}>
+                                <img src={pagina51_imagem6} alt="Imagem 7" className={styles.pg51Img} />
+                            </div>
+                            <p
+                                className={styles.pg51ParagrafoDiv}
+                                onClick={() => playAudio('pg51_audio7')}
+                                style={{ cursor: 'pointer' }}
+                            >
+                                <strong>College Friend</strong><br />
+                                This is my college friend, Rachel.
+                            </p>
+                        </div>
                     </div>
                 </main>
             </div>

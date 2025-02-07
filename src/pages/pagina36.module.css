@@ -157,14 +157,13 @@
     border-radius: 5%;
 }
 
-@media (max-width: 768px) {
-    .pg36Container {
-        flex-direction: column;
-    }
-
-    .pg36MainContainer,
-    .pg36AsideContainer {
-        flex: none;
-        width: 100%;
-    }
-}
+.pg36Icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .pg36Icon:hover {
+    transform: scale(1.2);
+  }

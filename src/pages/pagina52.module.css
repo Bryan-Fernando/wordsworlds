@@ -1,0 +1,136 @@
+.pg52Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.pg52Header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.pg52HeaderH2H3 {
+    color: black;
+}
+
+.pg52HeaderH2 {
+    font-size: 3rem;
+    padding-bottom: 0%;
+}
+
+.pg52HeaderH1 {
+    font-size: 4rem;
+}
+
+.pg52Main {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+
+/* Este é um comentário */
+
+
+.pg52Container1 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.pg52Container2 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.pg52Div1Container1 {
+    max-width: 100%;
+    width: 40rem;
+    height: 25rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+}
+
+.pg52Div2Container1 {
+    max-width: 100%;
+    width: 40rem;
+    height: 25rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+}
+
+.pg52Div3Container1 {
+    max-width: 100%;
+    width: 40rem;
+    height: 40rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+}
+
+
+.pg52Div1Container2 {
+    max-width: 100%;
+    width: 40rem;
+    height: 25rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+}
+
+.pg52Div2Container2 {
+    max-width: 100%;
+    width: 40rem;
+    height: 25rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+}
+
+
+.pg52Div3Container2 {
+    max-width: 100%;
+    margin-top: 3rem;
+    width: 25rem;
+    height: 40rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+}
+
+.pg52ParagrafoDiv {
+    text-align: left;
+}
+
+.pg52Img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pg52HeaderH1 {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pg52HeaderH2 {
+    cursor: pointer;
+}
+
+.pg52Icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pg52Icon:hover {
+    transform: scale(1.1);
+}
+
+.pg52ParagrafoDiv {
+    cursor: pointer;
+}

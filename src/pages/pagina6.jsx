@@ -1,5 +1,10 @@
 import React, { useState, useRef } from 'react';
 import styles from './pagina6.module.css';
+
+import globalVerboToBe from '../assets/audios/global_verboToBe.mp3';
+import globalGrammar from '../assets/audios/global_grammar.mp3';
+import globalSimplePresent from '../assets/audios/global_simplePresent.mp3';
+
 import negativaAudio from '../assets/audios/negativa.mp3';
 import sujeitoAudio from '../assets/audios/sujeito.mp3';
 import verboAuxiliarAudio from '../assets/audios/verboauxiliar.mp3';
@@ -10,10 +15,12 @@ import traducaoAudio from '../assets/audios/traducao.mp3';
 import traducaoAudio1 from '../assets/audios/pg6_trad1.mp3';
 import traducaoAudio2 from '../assets/audios/pg6_trad2.mp3';
 import traducaoAudio3 from '../assets/audios/pg6_trad3.mp3';
+import traducaoAudio4 from '../assets/audios/pg6_trad4.mp3';
 import pg6Audio1 from '../assets/audios/pg6_audio1.mp3';
 import pg6Audio2 from '../assets/audios/pg6_audio2.mp3';
 import pg6Audio3 from '../assets/audios/pg6_audio3.mp3';
 import pg6Audio4 from '../assets/audios/pg6_audio4.mp3';
+
 import pg6IconNotes from '../assets/Icons/Icon-Notes.png';
 
 const Pagina6 = () => {
@@ -42,30 +49,47 @@ const Pagina6 = () => {
     };
 
     return (
-        <div>
-            <div className={styles.pg6Container}>
-                <header className={styles.pg6Header}>
-                    <h1>Grammar</h1>
-                    <h2 className={styles.pg6HeaderH2}>Simple Present (Presente Simples)</h2>
-                    <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
+        <div className={styles.page}>
+            <div className={styles.page__container}>
+                <header className={styles.page__header}>
+                    <h1
+                        className={styles.page__header__title}
+                        onClick={() => playAudio(globalGrammar)}
+                    >
+                        Grammar
+                    </h1>
+                    <h2
+                        className={styles.page__header__subtitle}
+                        onClick={() => playAudio(globalSimplePresent)}
+                        style={{ color: 'black' }}
+                    >
+                        Simple Present (Presente Simples)
+                    </h2>
+                    <h3
+                        className={styles.page__header__description}
+                        onClick={() => playAudio(globalVerboToBe)}
+                    >
+                        Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)
+                    </h3>
                 </header>
-                <main className={styles.pg6Main}>
+
+                <main className={styles.page__main}>
                     <div>
                         <div
-                            className={styles.pg6TableHeader}
+                            className={styles.page__table__header}
                             onClick={() => playAudio(negativaAudio)}
                             style={{ cursor: 'pointer' }}
                         >
                             NEGATIVE
                         </div>
-                        <table className={styles.pg6StyledTable}>
+                        <table className={styles.page__table}>
                             <colgroup>
-                                <col className={styles.pg6Sujeito} />
-                                <col className={styles.pg6VerboAuxiliar} />
-                                <col className={styles.pg6Adverbio} />
-                                <col className={styles.pg6Verbo} />
-                                <col className={styles.pg6ObjetivoComplemento} />
-                                <col className={styles.pg6Traducao} />
+                                <col className={styles.page__table__subject} />
+                                <col className={styles.page__table__auxiliary} />
+                                <col className={styles.page__table__adverb} />
+                                <col className={styles.page__table__verb} />
+                                <col className={styles.page__table__complement} />
+                                <col className={styles.page__table__translation} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -87,30 +111,30 @@ const Pagina6 = () => {
                             <tbody>
                                 <tr>
                                     <td
-                                        className={styles.pg6Sujeito}
+                                        className={styles.page__table__subject}
                                         onClick={() => playAudio(pg6Audio1)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         I
                                     </td>
                                     <td
-                                        className={styles.pg6VerboAuxiliar}
+                                        className={styles.page__table__auxiliary}
                                         onClick={() => playAudio(pg6Audio1)}
-                                        style={{ cursor: 'pointer', textAlign: 'center'}}
+                                        style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         am
                                     </td>
                                     <td
-                                        className={styles.pg6Adverbio}
+                                        className={styles.page__table__adverb}
                                         onClick={() => playAudio(pg6Audio1)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         not
                                     </td>
-                                    <td className={styles.pg6Verbo}></td>
-                                    <td className={styles.pg6ObjetivoComplemento}></td>
+                                    <td className={styles.page__table__verb}></td>
+                                    <td className={styles.page__table__complement}></td>
                                     <td
-                                        className={styles.pg6Traducao}
+                                        className={styles.page__table__translation}
                                         onClick={() => playAudio(traducaoAudio1)}
                                         style={{ cursor: 'pointer' }}
                                     >
@@ -119,36 +143,36 @@ const Pagina6 = () => {
                                 </tr>
                                 <tr>
                                     <td
-                                        className={styles.pg6Sujeito}
+                                        className={styles.page__table__subject}
                                         onClick={() => playAudio(pg6Audio2)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         I
                                     </td>
                                     <td
-                                        className={styles.pg6VerboAuxiliar}
+                                        className={styles.page__table__auxiliary}
                                         onClick={() => playAudio(pg6Audio2)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         am
                                     </td>
                                     <td
-                                        className={styles.pg6Adverbio}
+                                        className={styles.page__table__adverb}
                                         onClick={() => playAudio(pg6Audio2)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         not
                                     </td>
-                                    <td className={styles.pg6Verbo}></td>
+                                    <td className={styles.page__table__verb}></td>
                                     <td
-                                        className={styles.pg6ObjetivoComplemento}
+                                        className={styles.page__table__complement}
                                         onClick={() => playAudio(pg6Audio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         at work
                                     </td>
                                     <td
-                                        className={styles.pg6Traducao}
+                                        className={styles.page__table__translation}
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
@@ -157,36 +181,36 @@ const Pagina6 = () => {
                                 </tr>
                                 <tr>
                                     <td
-                                        className={styles.pg6Sujeito}
+                                        className={styles.page__table__subject}
                                         onClick={() => playAudio(pg6Audio3)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         I
                                     </td>
                                     <td
-                                        className={styles.pg6VerboAuxiliar}
+                                        className={styles.page__table__auxiliary}
                                         onClick={() => playAudio(pg6Audio3)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         am
                                     </td>
                                     <td
-                                        className={styles.pg6Adverbio}
+                                        className={styles.page__table__adverb}
                                         onClick={() => playAudio(pg6Audio3)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         not
                                     </td>
-                                    <td className={styles.pg6Verbo}></td>
+                                    <td className={styles.page__table__verb}></td>
                                     <td
-                                        className={styles.pg6ObjetivoComplemento}
+                                        className={styles.page__table__complement}
                                         onClick={() => playAudio(pg6Audio3)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         __ years old
                                     </td>
                                     <td
-                                        className={styles.pg6Traducao}
+                                        className={styles.page__table__translation}
                                         onClick={() => playAudio(traducaoAudio3)}
                                         style={{ cursor: 'pointer' }}
                                     >
@@ -195,33 +219,33 @@ const Pagina6 = () => {
                                 </tr>
                                 <tr>
                                     <td
-                                        className={styles.pg6Sujeito}
+                                        className={styles.page__table__subject}
                                         onClick={() => playAudio(pg6Audio4)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         I
                                     </td>
-                                    <td onClick={() => playAudio(pg6Audio4)} style={{ cursor: 'pointer', textAlign: 'center' }} className={styles.pg6VerboAuxiliar}>ain't</td>
-                                    <td className={styles.pg6Adverbio}></td>
-                                    <td className={styles.pg6Verbo}></td>
-                                    <td className={styles.pg6ObjetivoComplemento}></td>
+                                    <td onClick={() => playAudio(pg6Audio4)} style={{ cursor: 'pointer', textAlign: 'center' }} className={styles.page__table__auxiliary}>ain't</td>
+                                    <td className={styles.page__table__adverb}></td>
+                                    <td className={styles.page__table__verb}></td>
+                                    <td className={styles.page__table__complement}></td>
                                     <td
-                                        className={styles.pg6Traducao}
+                                        className={styles.page__table__translation}
                                         onClick={() => playAudio(traducaoAudio4)}
                                         style={{ cursor: 'pointer' }}
-                                    ></td>
+                                    >Eu não estou</td>
                                 </tr>
                             </tbody>
                         </table>
 
-                        <table className={styles.pg6StyledTable}>
+                        <table className={styles.page__table}>
                             <colgroup>
-                                <col className={styles.pg6Sujeito} />
-                                <col className={styles.pg6VerboAuxiliar} />
-                                <col className={styles.pg6Adverbio} />
-                                <col className={styles.pg6Verbo} />
-                                <col className={styles.pg6ObjetivoComplemento} />
-                                <col className={styles.pg6Traducao} />
+                                <col className={styles.page__table__subject} />
+                                <col className={styles.page__table__auxiliary} />
+                                <col className={styles.page__table__adverb} />
+                                <col className={styles.page__table__verb} />
+                                <col className={styles.page__table__complement} />
+                                <col className={styles.page__table__translation} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -247,7 +271,7 @@ const Pagina6 = () => {
                                             <td key={colIndex}>
                                                 <textarea
                                                     id={`input-${rowIndex}-${colIndex}`}
-                                                    className={styles.pg6InputCell}
+                                                    className={styles.page__table__input}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
@@ -265,12 +289,12 @@ const Pagina6 = () => {
                         </table>
                     </div>
                 </main>
-                <aside className={styles.pg6Aside}>
-                    <div className={styles.pg6AsideNotes1}>
-                        <img className={styles.pg6AsideImgNotes} src={pg6IconNotes} alt="" />
+                <aside className={styles.page__aside}>
+                    <div className={styles.page__aside__notes1}>
+                        <img className={styles.page__aside__img} src={pg6IconNotes} alt="" />
                         <p>NOTE: Forma simples / Coloquial</p>
                     </div>
-                    <div className={styles.pg6AsideNotes2}>
+                    <div className={styles.page__aside__notes2}>
                         <p>I ain’t = non - standard or dialected English . (I am not) <br />
                             I aren’t = non - standard or dialected English. (I am not)
                         </p>

@@ -1,0 +1,132 @@
+.pg104Container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.pg104Header {
+    width: 100%;
+}
+
+.pg104H1 {
+    text-align: left;
+    font-size: 6rem;
+    color: #8a1720;
+}
+
+.pg104Main {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.pg104ContainerQuestoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.pg104Questions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 50%;
+}
+
+
+.pg104TextRed {
+    color: #A61C28; 
+    font-weight: bold;
+    display: inline-block;
+    font-size: 2rem;
+}
+
+
+.pg104TextBlack {
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 2rem;
+}
+
+.pg104Question {
+    display: flex;
+    flex-direction: column; 
+    align-items: left;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+.pg104InputBox {
+    width: 18rem;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    margin: 0.5rem; 
+}
+
+.pg104ContainerImagem {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.pg104imagem {
+    width: 100%;
+    height: auto;
+}
+
+.pg104HeaderIcon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.pg104HeaderIcon:hover {
+    transform: scale(1.1);
+}
+
+.pg104AdditionalIcon{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: relative;
+    top: 0.4rem;
+    margin-left: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .pg104ContainerQuestoes {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .pg104Questions {
+        width: 100%;
+    }
+
+    .pg104InputBox {
+        width: 100%;
+    }
+
+    .pg104ContainerImagem {
+        width: 100%;
+    }
+
+    .pg104imagem {
+        max-width: 90%;
+    }
+}

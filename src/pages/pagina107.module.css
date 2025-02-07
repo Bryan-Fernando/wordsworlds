@@ -1,0 +1,222 @@
+.pg107Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.pg107Header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.pg107HeaderH2 {
+    color: black;
+}
+
+.pg107Main {
+    width: 100%;
+    text-align: center;
+}
+
+.pg107Aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Este é um comentário */
+
+.pg107TableHeader {
+    background-color: #A61C28;
+    color: white;
+    text-align: center !important;
+    padding: 1rem;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: .5rem;
+    font-size: 2rem;
+}
+
+.pg107StyledTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5%;
+    table-layout: fixed;
+}
+
+.pg107StyledTable thead tr {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+}
+
+
+.pg107StyledTable th,
+.pg107StyledTable td {
+    border: .1rem solid #A61C28;
+    padding: 1rem;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+}
+
+.pg107StyledTable tbody tr {
+    background-color: white;
+    max-width: 100%;
+    height: calc(7vw * 0.85);
+}
+
+.pg107StyledTable tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.pg107InputCell {
+    width: 100%;
+    height: calc(8vh * 0.85);
+    border: none;
+    padding: .8rem;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    font-size: 1.8rem;
+}
+
+.pg107InputCell:focus {
+    outline: none;
+    border: .1rem solid #F2F2F2;
+    background-color: white;
+}
+
+.pg107InputCell::-webkit-scrollbar {
+    display: none;
+}
+
+.pg107Sujeito {
+    width: calc(10vw * 0.85);
+}
+
+.pg107VerboAuxiliar {
+    width: calc(10vw * 0.85)
+}
+
+.pg107Adverbio {
+    width: calc(12vw * 0.85)
+}
+
+.pg107Verbo {
+    width: calc(12vw * 0.85)
+}
+
+.pg107ObjetivoComplemento {
+    width: calc(18vw * 0.85)
+}
+
+.pg107Traducao {
+    width: (18vw * 0.85);
+}
+
+.pg107AsideNotes1A {
+    width: 25%;
+    height: fit-content;
+    border: .4rem solid #A61C28;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    background-color: white;
+    text-align: left;
+    padding-left: 1rem;
+    background-color: #A61C28;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+
+.pg107AsideNotes1B {
+    width: 50%;
+    height: 4.5rem;
+    border: .4rem solid #A61C28;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    background-color: white;
+    text-align: left;
+    padding-left: 1rem;
+    background-color: #A61C28;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.pg107AsideNotes1A p,
+.pg107AsideNotes1B p {
+    font-size: 1.5rem;
+}
+
+.pg107AsideImgNotes {
+    height: calc(10px + 0.8vw);
+    width: 2rem;
+    padding-right: .5rem;
+}
+
+.pg107AsideNotes2A {
+    width: 25%;
+    height: fit-content;
+    border: .4rem solid #A61C28;
+    border-top: .1rem;
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+    background-color: white;
+    text-align: left;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.pg107AsideNotes2B {
+    width: 50%;
+    height: 100%;
+    border: .4rem solid #A61C28;
+    border-top: .1rem;
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+    background-color: white;
+    text-align: left;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.pg107AsideNotes2A p,
+.pg107AsideNotes2B p {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+@media (max-width: 1024px) {
+
+    .pg107StyledTable {
+        margin-bottom: 15%;
+    }
+
+    .pg107StyledTable th,
+    .pg107StyledTable td {
+        padding: .5rem;
+
+    }
+
+    .pg107InputCell {
+        height: calc(6vw * 0.85);
+    }
+
+    .pg107AsideNotes1,
+    .pg107AsideNotes2 {
+        width: 100%;
+    }
+
+    .pg107AsideNotes2A p,
+    .pg107AsideNotes2B p {
+        font-size: 2rem;
+    }
+}

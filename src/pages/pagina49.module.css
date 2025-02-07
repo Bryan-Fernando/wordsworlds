@@ -1,0 +1,129 @@
+.pg49Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.pg49Header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.pg49HeaderH2H3{
+    color: black;
+}
+
+.pg49HeaderH2{
+    font-size: 3rem;
+    padding-bottom: 0%;
+}
+
+.pg49HeaderH3{
+    font-size: 2.5rem;
+}
+
+.pg49HeaderH1{
+    font-size: 4rem;
+}
+
+.pg49Main {
+    width: 100%;
+    height: 115rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.pg49MainDiv1 {
+    width: 100%;
+    background-color: #EEF1F2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 2rem;
+    text-align: left;
+    gap: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.pg49MainDiv1 p {
+    margin: 0;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    text-align: left;
+    align-content: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+.pg49MainDiv1 p:not(:last-child) {
+    border-right: 0.5rem solid #A61C28;
+    padding-right: 20rem; 
+    border-radius: 0.1rem;
+}
+
+.pg49MainDiv2, .pg49MainDiv3 {
+    width: 48%;
+    height: 60rem;
+    background-color: #EEF1F2;
+    margin-left: 0.5rem;
+    box-shadow: 0 -0.2rem 0.8rem rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 2rem;
+}
+
+.pg49Listas li {
+    margin-bottom: 1rem; 
+}
+
+.pg49Listas li span{
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.pg49Exemplo{
+    text-align: left;
+    color: #A61C28;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-left: 0.4rem;
+}
+
+.ContainerDivs{
+    display: flex;
+    justify-content: space-between
+}
+
+.pg49Listas{
+    list-style: none;
+    text-align: left;
+}
+
+.pg49Item {
+    margin-left: 2rem;
+}
+
+.pg49TextRed {
+    font-size: 2rem;
+    color: #A61C28;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.pg49HeaderH1 {
+    cursor: pointer;
+}
+
+.pg49HeaderH2 {
+    cursor: pointer;
+}
+
+.pg49HeaderH3 {
+    cursor: pointer;
+}

@@ -1,20 +1,29 @@
 import React, { useState } from 'react';
 import styles from './pagina39.module.css';
-import Pagina39_imagem1 from '../assets/images/Pagina39_imagem1.png';
-import Pagina39_imagem2 from '../assets/images/Pagina39_imagem2.png';
-import Pagina39_imagem3 from '../assets/images/Pagina39_imagem3.png';
-import Pagina39_imagem4 from '../assets/images/Pagina39_imagem4.png';
-import Pagina39_imagem5 from '../assets/images/Pagina39_imagem5.png';
-import vSquare from '../assets/images/vSquare.png';
-import xSquare from '../assets/images/xSquare.png';
-import eIcon from '../assets/images/eIcon.png';
-import pIcon from '../assets/images/pIcon.png';
-import volumeReduzidoIcon from '../assets/images/volumeReduzido.png';
-import Pagina39_audioA from '../assets/audios/Pagina39_audioA.mp3';
-import Pagina39_audioB from '../assets/audios/Pagina39_audioB.mp3';
-import Pagina39_audioC from '../assets/audios/Pagina39_audioC.mp3';
-import Pagina39_audioD from '../assets/audios/Pagina39_audioD.mp3';
-import Pagina39_audioE from '../assets/audios/Pagina39_audioE.mp3';
+
+import pg39_audio1e from '../assets/audios/pg39_audio1e.mp3';
+import pg39_audio1p from '../assets/audios/pg39_audio1p.mp3';
+import pg39_audio2e from '../assets/audios/pg39_audio2e.mp3';
+import pg39_audio2p from '../assets/audios/pg39_audio2p.mp3';
+import pg39_audio3e from '../assets/audios/pg39_audio3e.mp3';
+import pg39_audio3p from '../assets/audios/pg39_audio3p.mp3';
+
+
+import pagina39_imagem1 from '../assets/images/pagina39_imagem1.webp';
+import pagina39_imagem2 from '../assets/images/pagina39_imagem2.webp';
+import pagina39_imagem3 from '../assets/images/pagina39_imagem3.webp';
+import pagina39_imagem4 from '../assets/images/pagina39_imagem4.webp';
+import pagina39_imagem5 from '../assets/images/pagina39_imagem5.webp';
+import vSquare from '../assets/icons/vSquare.png';
+import xSquare from '../assets/icons/xSquare.png';
+import eIcon from '../assets/icons/eIcon.png';
+import pIcon from '../assets/icons/pIcon.png';
+import volumeReduzidoIcon from '../assets/icons/volumeReduzido.png';
+import Pagina39_audioA from '../assets/audios/pagina39_audioA.mp3';
+import Pagina39_audioB from '../assets/audios/pagina39_audioB.mp3';
+import Pagina39_audioC from '../assets/audios/pagina39_audioC.mp3';
+import Pagina39_audioD from '../assets/audios/pagina39_audioD.mp3';
+import Pagina39_audioE from '../assets/audios/pagina39_audioE.mp3';
 import Pagina39_audio1 from '../assets/audios/Pagina39_audio1.mp3';
 import Pagina39_audio2 from '../assets/audios/Pagina39_audio2.mp3';
 import Pagina39_audio3 from '../assets/audios/Pagina39_audio3.mp3';
@@ -27,6 +36,7 @@ const Pagina39 = () => {
     const [pulsingAudioEnglishIndex, setPulsingAudioEnglishIndex] = useState(null);
     const [pulsingAudioPortugueseIndex, setPulsingAudioPortugueseIndex] = useState(null);
     const [isSpeedReduced, setIsSpeedReduced] = useState([false, false, false, false, false]);
+    const [audioPlaying, setAudioPlaying] = useState(null);
 
     const correctSentences = [
         "The dog is sleeping on the floor",
@@ -59,6 +69,21 @@ const Pagina39 = () => {
         Pagina39_audio4,
         Pagina39_audio5
     ];
+
+    const tocarAudio = (audioFile) => {
+        if (audioPlaying) {
+            audioPlaying.pause();
+            audioPlaying.currentTime = 0;
+        }
+
+        const newAudio = new Audio(audioFile);
+        setAudioPlaying(newAudio);
+        newAudio.play();
+
+        newAudio.onended = () => {
+            setAudioPlaying(null);
+        };
+    };
 
     const handleAudioClick = (index, isPortuguese = false, event) => {
         event.stopPropagation();
@@ -116,17 +141,56 @@ const Pagina39 = () => {
     return (
         <div className={styles.pg39Container}>
             <header className={styles.pg39Header}>
-                <h1 style={{ textAlign: 'left', color: '#A61C28' }}>Exercise:</h1>
-                <h2 className={styles.pg39ExerciseTitle}>
+                <h1 className={styles.pg39AudioText} style={{ color: '#A61C28'}}>
+                    Exercise:
+                    <img
+                        src={eIcon}
+                        alt="English Audio"
+                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        onClick={() => tocarAudio(pg39_audio1e)}
+                    />
+                    <img
+                        src={pIcon}
+                        alt="Portuguese Audio"
+                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        onClick={() => tocarAudio(pg39_audio1p)}
+                    />
+                </h1>
+                <h2 className={styles.pg39AudioText} style={{ marginLeft: '-1.5rem' }}>
                     2. Matching Exercises (Match the sentence with the correct image/description)
+                    <img
+                        src={eIcon}
+                        alt="English Audio"
+                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        onClick={() => tocarAudio(pg39_audio2e)}
+                    />
+                    <img
+                        src={pIcon}
+                        alt="Portuguese Audio"
+                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        onClick={() => tocarAudio(pg39_audio2p)}
+                    />
                 </h2>
-                <p className={styles.pg39ExerciseQuestion}>
+                <p className={styles.pg39AudioText}>
                     Match the sentence (A-E) with the correct picture or description (1-5):
+                    <img
+                        src={eIcon}
+                        alt="English Audio"
+                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        onClick={() => tocarAudio(pg39_audio3e)}
+                    />
+                    <img
+                        src={pIcon}
+                        alt="Portuguese Audio"
+                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        onClick={() => tocarAudio(pg39_audio3p)}
+                    />
                 </p>
             </header>
+
             <main className={styles.pg39Main}>
                 <div className={styles.pg39ImagesContainer}>
-                    {[Pagina39_imagem1, Pagina39_imagem2, Pagina39_imagem3, Pagina39_imagem4, Pagina39_imagem5].map((image, index) => (
+                    {[pagina39_imagem1, pagina39_imagem2, pagina39_imagem3, pagina39_imagem4, pagina39_imagem5].map((image, index) => (
                         <div key={index} className={styles.pg39ImageBox}>
                             <img src={image} alt={`Image ${index + 1}`} />
                             <div className={styles.pg39InputBoxContainer}>

@@ -1,0 +1,246 @@
+.page87__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.page87__header {
+    width: 100%;
+}
+
+.page87__title {
+    text-align: left;
+    font-size: 6rem;
+    color: #8a1720;
+}
+
+.page87__subtitle {
+    text-align: left;
+    font-size: 2.5rem;
+    color: #8a1720;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.page87__main {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+}
+
+.page87__aside {
+    width: 100%;
+    display: flex;
+}
+
+/* Este é um comentário */
+
+.page87__questions-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.page87__questions-list {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.page87__question-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 15px;
+    color: black;
+    text-align: left;
+}
+
+.page87__question-item span {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+}
+
+.page87__question-item strong {
+    font-size: 1.5rem;
+}
+
+.page87__input {
+    width: 100%;
+    padding: 8px 35px 8px 8px;
+    font-size: 1.5rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+.page87__input-container {
+    width: 15%;
+    gap: 1rem;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.page87__icon-check {
+    width: 2.5rem;
+    height: 2.5rem;
+    pointer-events: none;
+}
+
+.page87__button--check {
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    margin: 2rem;
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    width: fit-content;
+}
+
+.page87__button--check:hover {
+    background-color: #8a1720;
+}
+
+.page87__icons-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 5px;
+}
+
+.page87__icon {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.page87__icon--pulsing {
+    animation: pulse 1s infinite;
+}
+
+.page87__icon:hover {
+    transform: scale(1.2);
+}
+
+.page87__image {
+    width: 25rem;
+    height: 15rem;
+}
+
+.page87__image-wrapper--rotate1 {
+    width: 100%;
+    display: flex;
+    transform: rotate(-6deg);
+}
+
+.page87__image-wrapper--rotate2 {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    transform: rotate(6deg);
+}
+
+.page87__images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40rem;
+    height: 35rem;
+    gap: 1rem;
+}
+
+.page87__table-container {
+    width: 67%;
+}
+
+.page87__table-header--affirmative {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.page87__table--affirmative {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+.page87__table--affirmative th,
+.page87__table--negative th {
+    background-color: #888A8C;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid #A61C28;
+}
+
+.page87__table-row {
+    height: 7rem;
+}
+
+.page87__header-icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1024px) {
+    .page87__question-item span {
+        font-size: 2rem;
+    }
+
+    .page87__images-container {
+        height: fit-content;
+    }
+
+    .page87__image {
+        width: 30rem;
+        height: 19rem;
+    }
+
+    .page87__questions-container {
+        flex-direction: column;
+    }
+
+    .page87__table--affirmative th {
+        font-size: 2rem;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,100 @@
+.pg113Container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.pg113Header {
+    width: 100%;
+    height: 15rem;
+    text-align: left;
+}
+
+.pg113HeaderH1 {
+    font-size: 4rem;
+    color: #A61C28;
+}
+
+.pg113HeaderH2 {
+    font-size: 2.5rem;
+}
+
+.pg113Main {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 5rem;
+}
+
+/* Este é um comentário */
+
+.pg113ContainerImagens1{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    gap: 6rem;
+}
+
+.pg113ImagemLarga{
+    width: 25.5rem;
+    height: 17rem;
+}
+
+.pg113ImagemNormal{
+    width: 17rem;
+    height: 17rem;
+}
+
+.pg113FlexImagens{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pg113ContainerImagens2{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    gap: 6rem;
+    justify-content: space-around;
+}
+
+.pg113ImagemGrande{
+    width: 28rem;
+    height: 30rem;
+}
+
+.Flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 1rem; 
+}
+
+.FlexB{
+    display: flex;
+    gap: 1rem; 
+    align-items: center;
+}
+
+.pg113ParagrafoVermelho{
+    color: #A61C28;
+}
+
+.pg113DivTextos{
+    width: 9rem;
+    height: 7rem;
+    background-color: #E6E7E8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .pg112Main {
+        width: 100%;
+    }
+}

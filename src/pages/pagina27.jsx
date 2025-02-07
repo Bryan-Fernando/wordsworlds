@@ -1,5 +1,10 @@
 import React, { useState, useRef } from 'react';
 import styles from './pagina27.module.css';
+
+import global_verboToBe from '../assets/audios/global_verboToBe.mp3';
+import global_grammar from '../assets/audios/global_grammar.mp3';
+import global_simplePresent from '../assets/audios/global_simplePresent.mp3';
+
 import negativaAudio from '../assets/audios/negativa.mp3';
 import sujeitoAudio from '../assets/audios/sujeito.mp3';
 import verboAuxiliarAudio from '../assets/audios/verboauxiliar.mp3';
@@ -43,9 +48,19 @@ const Pagina27 = () => {
         <div>
             <div className={styles.pg27Container}>
                 <header className={styles.pg27Header}>
-                    <h1>Grammar</h1>
-                    <h2 className={styles.pg27HeaderH2}>Simple Present (Presente Simples)</h2>
-                    <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
+                    <h1 className={styles.pg27AudioText}
+                        onClick={() => playAudio(global_grammar)}>
+                        Grammar
+                    </h1>
+                    <h2 className={styles.pg27AudioText}
+                        onClick={() => playAudio(global_simplePresent)}
+                        style={{ color: 'black' }}>
+                        Simple Present (Presente Simples)
+                    </h2>
+                    <h3 className={styles.pg27AudioText}
+                        onClick={() => playAudio(global_verboToBe)}>
+                        Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)
+                    </h3>
                 </header>
                 <main className={styles.pg27Main}>
                     <div>

@@ -114,11 +114,6 @@
     transform: rotate(-2deg);
 }
 
-.pg41ImageBasketball:hover,
-.pg41ImageChoir:hover {
-    transform: scale(1.05);
-}
-
 .pg41IconsContainer {
     display: flex;
     align-items: center;
@@ -140,6 +135,18 @@
 .pg41AdditionalIcon:hover {
     transform: scale(1.2);
 }
+
+.pg41Title, .pg41ExerciseTitle {
+    display: inline-flex;
+    align-items: center;
+}
+
+.pg41Title img, .pg41ExerciseTitle img {
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+}
+
 
 @keyframes pulse {
     0% {

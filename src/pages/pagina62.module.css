@@ -1,0 +1,147 @@
+.page62__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page62__header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.page62__subtitle-container {
+    position: relative;
+    display: inline-block;
+    padding-left: 1.5rem;
+}
+
+.page62__subtitle-text {
+    font-size: 2.5rem;
+}
+
+.page62__subtitle-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1rem;
+    height: 95%;
+    background-color: black;
+}
+
+.page62__title {
+    font-size: 4rem;
+}
+
+.page62__subtitle {
+    font-size: 2.5rem;
+}
+
+.page62__subtext {
+    font-size: 1.6rem;
+    color: black;
+}
+
+.page62__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.page62__titles {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 1rem;
+}
+
+.page62__title-left,
+.page62__title-right {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #A61C28;
+    display: flex;
+}
+
+.page62__title-center {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #A61C28;
+}
+
+.page62__clock-container {
+    position: relative;
+    width: 100%;
+    max-width: 80rem;
+}
+
+.page62__image {
+    width: 100%;
+    height: auto;
+}
+
+.page62__text {
+    position: absolute;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: black;
+    white-space: nowrap;
+}
+
+.page62__highlight {
+    color: #A61C28;
+    font-weight: bold;
+}
+
+.page62__aside {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.page62__extra-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.page62__extra-block {
+    background-color: #F8F9F9;
+    border: 0.4rem solid #A61C28;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 40%;
+    text-align: left;
+    box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.page62__extra-block--center {
+    background-color: #F8F9F9;
+    border: 0.4rem solid #A61C28; 
+    border-radius: 1rem;
+    width: 20%;
+    text-align: left;
+    height: 4rem;
+    box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.page62__extra-block p,
+.page62__extra-block--center p {
+    font-size: 1.6rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.page62__clock-container p {
+    cursor: pointer;
+}

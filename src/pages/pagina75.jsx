@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import styles from './pagina60.module.css';
-import pg57IconNotes from '../assets/Icons/Icon-Notes.png';
 
-const Pagina60 = () => {
+const Pagina75 = () => {
     const [inputValues, setInputValues] = useState(
         Array(6).fill(Array(6).fill(''))
     );
@@ -32,4 +31,4 @@ const Pagina60 = () => {
         </div>
     );
 };
-export default Pagina60;
+export default Pagina75;

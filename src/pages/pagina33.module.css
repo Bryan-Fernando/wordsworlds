@@ -65,7 +65,7 @@
 
 .pg33InputCell {
     width: 100%;
-    height: calc(7vh * 0.85);
+    height: calc(8vh * 0.85);
     border: none;
     padding: .8rem;
     box-sizing: border-box;
@@ -73,6 +73,7 @@
     font-weight: bold;
     color: black;
     background-color: white;
+    font-size: 1.8rem;
 }
 
 .pg33InputCell:focus {
@@ -107,6 +108,10 @@
 
 .pg33Traducao {
     width: (18vw * 0.85);
+}
+
+.pg33AudioText {
+    cursor: pointer;
 }
 
 @media (max-width: 1024px) {

@@ -67,7 +67,7 @@
 
 .pg20InputCell {
     width: 100%;
-    height: calc(7vh * 0.85);
+    height: calc(8vh * 0.85);
     border: none;
     padding: .8rem;
     box-sizing: border-box;
@@ -75,6 +75,7 @@
     font-weight: bold;
     color: black;
     background-color: white;
+    font-size: 1.8rem;
 }
 
 .pg20InputCell:focus {
@@ -85,6 +86,10 @@
 
 .pg20InputCell::-webkit-scrollbar {
     display: none;
+}
+
+.pg20AudioText {
+    cursor: pointer;
 }
 
 .pg20Sujeito {

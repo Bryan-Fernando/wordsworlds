@@ -1,0 +1,78 @@
+.pg51Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.pg51Header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.pg51HeaderH2H3 {
+    color: black;
+}
+
+.pg51HeaderH2 {
+    font-size: 3rem;
+    padding-bottom: 0%;
+}
+
+.pg51HeaderH1 {
+    font-size: 4rem;
+}
+
+.pg51Main {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.pg51ParagrafoDiv {
+    max-width: 40rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+/* Este é um comentário */
+.pg51Div1Container1,
+.pg51Div2Container1,
+.pg51Div3Container1,
+.pg51Div4Container1,
+.pg51Div1Container2,
+.pg51Div2Container2,
+.pg51Div3Container2,
+.pg51Div4Container2 {
+    width: 40rem;
+    height: 25rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pg51Img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ícones de áudio */
+.pg51Icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Animação ao passar o mouse nos ícones */
+.pg51Icon:hover {
+    transform: scale(1.2);
+}
+
+.pg51HeaderH2 {
+    cursor: pointer;
+}

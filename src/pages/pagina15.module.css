@@ -73,6 +73,7 @@
     font-weight: bold;
     color: black;
     background-color: white;
+    font-size: 1.8rem;
 }
 
 .pg15InputCell:focus {
@@ -83,6 +84,10 @@
 
 .pg15InputCell::-webkit-scrollbar {
     display: none;
+}
+
+.pg15AudioText {
+    cursor: pointer;
 }
 
 .pg15Sujeito {

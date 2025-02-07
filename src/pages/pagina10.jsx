@@ -1,5 +1,10 @@
 import React, { useState, useRef } from 'react';
 import styles from './pagina10.module.css';
+
+import global_verboToBe from '../assets/audios/global_verboToBe.mp3';
+import global_grammar from '../assets/audios/global_grammar.mp3';
+import global_simplePresent from '../assets/audios/global_simplePresent.mp3';
+
 import negativaAudio from '../assets/audios/negativa.mp3';
 import sujeitoAudio from '../assets/audios/sujeito.mp3';
 import verboAuxiliarAudio from '../assets/audios/verboauxiliar.mp3';
@@ -41,14 +46,25 @@ const Pagina10 = () => {
     };
 
     return (
-            <div>
-                <div className={styles.pg10Container}>
-                    <header className={styles.pg10Header}>
-                        <h1>Grammar</h1>
-                        <h2 className={styles.pg10HeaderH2}>Simple Present (Presente Simples)</h2>
-                        <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
-                    </header>
-                    <main className={styles.pg10Main}>
+        <div>
+            <div className={styles.pg10Container}>
+                <header className={styles.pg10Header}>
+                    <h1 className={styles.pg10AudioText}
+                        onClick={() => playAudio(global_grammar)}>
+                        Grammar
+                    </h1>
+                    <h2 className={styles.pg10AudioText}
+                        onClick={() => playAudio(global_simplePresent)}
+                        style={{ color: 'black' }}>
+                        Simple Present (Presente Simples)
+                    </h2>
+                    <h3 className={styles.pg10AudioText}
+                        onClick={() => playAudio(global_verboToBe)}>
+                        Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)
+                    </h3>
+                </header>
+
+                <main className={styles.pg10Main}>
                     <div>
                         <div
                             className={styles.pg10TableHeader}
@@ -65,7 +81,7 @@ const Pagina10 = () => {
                                 <col className={styles.pg10Verbo} />
                                 <col className={styles.pg10ObjetivoComplemento} />
                                 <col className={styles.pg10Traducao} />
-                            </colgroup> 
+                            </colgroup>
                             <thead>
                                 <tr>
                                     <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: 'pointer' }}>Subject</th>
@@ -193,7 +209,7 @@ const Pagina10 = () => {
                                 <col className={styles.pg10Verbo} />
                                 <col className={styles.pg10ObjetivoComplemento} />
                                 <col className={styles.pg10Traducao} />
-                            </colgroup> 
+                            </colgroup>
                             <thead>
                                 <tr>
                                     <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: 'pointer' }}>Subject</th>
@@ -241,7 +257,7 @@ const Pagina10 = () => {
                     <div className={styles.pg10AsideNotes2}>
                         <p>You are not = forma completa <br />
                             You aren’t = forma contraída <br />
-                            You ain’t = forma informal 
+                            You ain’t = forma informal
                         </p>
                     </div>
                 </aside>

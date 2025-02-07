@@ -1,0 +1,95 @@
+.pg52Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    align-items: center;
+}
+
+.pg52Header {
+    width: 100%;
+    text-align: center;
+    color: #A61C28;
+}
+
+.pg52HeaderH1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.pg52Main {
+    width: 100%;
+    text-align: center;
+}
+
+.pg52TableHeader {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.pg52StyledTable {
+    width: 90%;
+    border-collapse: collapse;
+    margin-bottom: 3rem;
+    table-layout: fixed;
+}
+
+.pg52StyledTable th {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.pg52StyledTable td {
+    border: 1px solid #A61C28;
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 1rem;
+    color: black;
+    word-wrap: break-word;
+}
+
+.pg52InputCell {
+    width: 100%;
+    height: calc(7vh * 0.85);
+    border: none;
+    padding: 0.8rem;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+    resize: none;
+    overflow-wrap: break-word;
+}
+
+.pg52InputCell:focus {
+    outline: none;
+    border: 0.1rem solid #F2F2F2;
+    background-color: white;
+}
+
+@media (max-width: 1024px) {
+    .pg52StyledTable {
+        width: 100%;
+    }
+
+    .pg52StyledTable th,
+    .pg52StyledTable td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .pg52InputCell {
+        height: calc(6vw * 0.85);
+    }
+}

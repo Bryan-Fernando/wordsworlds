@@ -1,0 +1,205 @@
+.pg103Container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.pg103Header {
+    width: 100%;
+}
+
+.pg103H1 {
+    text-align: left;
+    font-size: 6rem;
+    color: #8a1720;
+}
+
+.pg103H2 {
+    text-align: left;
+    font-size: 2.5rem;
+    color: #8a1720;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.pg103Main {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+}
+
+.pg103Aside {
+    width: 100%;
+    display: flex;
+}
+
+/* Este é um comentário */
+
+.pg103ContainerQuestoes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pg103Questions1,
+.pg103Questions2 {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.pg103Question {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: black;
+    text-align: left;
+}
+
+.pg103Question span {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: black;
+}
+
+.pg103Header p{
+    font-size: 2rem;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 5rem;
+}
+
+.pg103TituloQuestion {
+    text-align: left;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.pg103SelectBox {
+    width: 25rem;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+.pg103CheckmarkImage {
+    width: 2.5rem;
+    height: 2.5rem;
+    pointer-events: none;
+}
+
+.pg103CheckButton {
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    width: fit-content;
+}
+
+.pg103CheckButton:hover {
+    background-color: #8a1720;
+}
+
+
+.pg103IconsContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.pg103AdditionalIcon {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.pg103AdditionalIcon.pg103Pulsing {
+    animation: pulse 1s infinite;
+}
+
+.pg103AdditionalIcon:hover {
+    transform: scale(1.2);
+}
+
+.pg103imagem {
+    width: 37rem;
+    height: 27rem;
+}
+
+.pg103tabelaAfirmativaContainer,
+.pg103tabelaNegativaContainer {
+    width: 70%;
+    height: 10rem;
+}
+
+.pg103tableHeaderAfirmativa,
+.pg103tableHeaderNegativa {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.pg103styledTableAfirmativa,
+.pg103styledTableNegativa {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+
+.pg103styledTableAfirmativa th,
+.pg103styledTableNegativa th {
+    background-color: #888A8C;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid #A61C28;
+}
+
+.pg103celulatable {
+    height: 7rem;
+}
+
+.pg103ContainerImagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28rem;
+}
+
+.pg103HeaderIcon {
+    width: 2rem; /* Tamanho do ícone */
+    height: 2rem;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pg103HeaderIcon:hover {
+    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+}

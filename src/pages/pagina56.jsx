@@ -1,100 +1,119 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './pagina56.module.css';
-import pg56IconNotes from '../assets/Icons/Icon-Notes.png';
+import pagina56Imagem1 from '../assets/images/pagina56_imagem1.webp';
+import pagina56Imagem2 from '../assets/images/pagina56_imagem2.webp';
+import pagina56Imagem3 from '../assets/images/pagina56_imagem3.webp';
 
 const Pagina56 = () => {
-    const [inputValues, setInputValues] = useState(
-        Array(6).fill(Array(6).fill(''))
-    );
-
-    const handleInputChange = (rowIndex, colIndex, e) => {
-        const newValue = e.target.value;
-        const updatedValues = inputValues.map((row, i) =>
-            row.map((value, j) => (i === rowIndex && j === colIndex ? newValue : value))
-        );
-        setInputValues(updatedValues);
-    };
-
     return (
-        <div>
-            <div className={styles.pg56Container}>
-                <main className={styles.pg56Main}>
-                    <div className={styles.pg56ContainerMain1}>
-                        <div><img className={styles.pg56AsideImgNotes} src={pg56IconNotes} alt="" /></div>
-                        <div>
-                            <p>First name:
-                                Gustavo (primeiro nome)</p>
-                            <p>Middle name:
-                                Amaral (nome do meio)</p>
-                            <p>
-                                Last name/Family name:
-                                Dias (último nome/sobrenome)
-                            </p>
-                            <p>Full name:
-                                Gustavo Amaral Dias (nome completo)</p>
-                        </div>
-                        <div></div>
+        <div className={styles['page56']}>
+            <main className={styles['page56__content']}>
+                {/* Container Principal 1 */}
+                <div className={styles['page56__section--first']}>
+                    <img className={styles['page56__image']} src={pagina56Imagem1} alt="Gustavo" />
+                    <div className={styles['page56__text-container']}>
+                        <p>
+                            <span className={styles['page56__text--red']}>First name:</span>
+                            <span className={styles['page56__text--black']}> Gustavo (primeiro nome)</span>
+                        </p>
+                        <p>
+                            <span className={styles['page56__text--red']}>Middle name:</span>
+                            <span className={styles['page56__text--black']}> Amaral (nome do meio)</span>
+                        </p>
+                        <p>
+                            <span className={styles['page56__text--red']}>Last name/Family name:</span>
+                            <span className={styles['page56__text--black']}> Dias (último nome/sobrenome)</span>
+                        </p>
+                        <p>
+                            <span className={styles['page56__text--red']}>Full name:</span>
+                            <span className={styles['page56__text--black']}> Gustavo Amaral Dias (nome completo)</span>
+                        </p>
                     </div>
-                    <div className={styles.pg56ContainerMain2}>
-                        <div><img className={styles.pg56AsideImgNotes} src={pg56IconNotes} alt="" /></div>
-                        <div>
-                            <p>First name:
-                                Lucimar (primeiro nome)</p>
-                            <p>Middle name:
-                                Pereira (nome do meio)</p>
-                            <p>Last name/Family name:
-                                da Silva (último nome/sobrenome)</p>
-                            <p>Full name:
-                                Lucimar Pereira de Sousa (nome completo)</p></div>
-                        <div></div>
+                    <div className={styles['page56__line--red']}></div>
+                    <div className={styles['page56__line--gray']}></div>
+                </div>
+
+                {/* Container Principal 2 */}
+                <div className={styles['page56__section--second']}>
+                    <img className={styles['page56__image']} src={pagina56Imagem2} alt="Lucimar" />
+                    <div className={styles['page56__text-container']}>
+                        <p>
+                            <span className={styles['page56__text--red']}>First name:</span>
+                            <span className={styles['page56__text--black']}> Lucimar (primeiro nome)</span>
+                        </p>
+                        <p>
+                            <span className={styles['page56__text--red']}>Middle name:</span>
+                            <span className={styles['page56__text--black']}> Pereira (nome do meio)</span>
+                        </p>
+                        <p>
+                            <span className={styles['page56__text--red']}>Last name/Family name:</span>
+                            <span className={styles['page56__text--black']}> da Silva (último nome/sobrenome)</span>
+                        </p>
+                        <p>
+                            <span className={styles['page56__text--red']}>Full name:</span>
+                            <span className={styles['page56__text--black']}> Lucimar Pereira de Sousa (nome completo)</span>
+                        </p>
                     </div>
-                    <div className={styles.pg56ContainerMain3}>
-                        <div><img className={styles.pg56AsideImgNotes} src={pg56IconNotes} alt="" /></div>
-                        <div>
-                            <p>First name:
-                                Ines (primeiro nome)</p>
-                            <p>Middle name:
-                                Pagliari (nome do meio)</p>
-                            <p>Last name/Family name:
-                                Jardim (último nome/sobrenome)</p>
-                            <p>Full name:
-                                Ines Pagliari Jardim (nome completo)
-                            </p>
-                        </div>
-                        <div></div>
+                    <div className={styles['page56__line--red']}></div>
+                </div>
+
+                {/* Container Principal 3 */}
+                <div className={styles['page56__section--third']}>
+                    <img className={styles['page56__image']} src={pagina56Imagem3} alt="Ines" />
+                    <div className={styles['page56__text-container']}>
+                        <p>
+                            <span className={styles['page56__text--red']}>First name:</span>
+                            <span className={styles['page56__text--black']}> Ines (primeiro nome)</span>
+                        </p>
+                        <p>
+                            <span className={styles['page56__text--red']}>Middle name:</span>
+                            <span className={styles['page56__text--black']}> Pagliari (nome do meio)</span>
+                        </p>
+                        <p>
+                            <span className={styles['page56__text--red']}>Last name/Family name:</span>
+                            <span className={styles['page56__text--black']}> Jardim (último nome/sobrenome)</span>
+                        </p>
+                        <p>
+                            <span className={styles['page56__text--red']}>Full name:</span>
+                            <span className={styles['page56__text--black']}> Ines Pagliari Jardim (nome completo)</span>
+                        </p>
                     </div>
-                </main>
-                <aside className={styles.pg56Aside}>
-                    <div className={styles.pg56Asidecontainer}>
-                        <div className={styles.pg56AsideNotes1}>
-                            <img className={styles.pg56AsideImgNotes} src={pg56IconNotes} alt="" />
-                            <p>Word Bank</p>
+                    <div className={styles['page56__line--red']}></div>
+                    <div className={styles['page56__line--gray']}></div>
+                </div>
+            </main>
+
+            <aside className={styles['page56__aside']}>
+                <div className={styles['page56__aside-container']}>
+                    <div className={styles['page56__aside-notes1']}>
+                        <p><strong>Word Bank</strong></p>
+                    </div>
+                    <div className={styles['page56__aside-notes2']}>
+                        <div className={styles['page56__word-row']}>
+                            <div className={styles['page56__word-column']}>
+                                <span className={styles['page56__text--red']}>First name</span>
+                                <span className={styles['page56__text--black']}> Primeiro nome</span>
+                            </div>
+                            <div className={styles['page56__word-column']}>
+                                <span className={styles['page56__text--red']}>Middle name</span>
+                                <span className={styles['page56__text--black']}> Nome do meio</span>
+                            </div>
                         </div>
-                        <div className={styles.pg56AsideNotes2}>
-                            <p className={styles.pg56AsideNotes2Vermelho}>
-                                First name
-                                <br />
-                                Middle name
-                            </p>
-                            <p>
-                                Primeiro nome <br />
-                                Nome do meio
-                            </p>
-                            <p className={styles.pg56AsideNotes2Vermelho}>
-                                Last name/Family name
-                                <br />
-                                Full name
-                            </p>
-                            <p>
-                                Último nome/Sobrenome
-                                <br />
-                                Nome completo
-                            </p>
+                        <div className={styles['page56__word-row']}>
+                            <div className={styles['page56__word-column']}>
+                                <span className={styles['page56__text--red']}>Last name/Family name</span>
+                                <span className={styles['page56__text--black']}> Último nome/Sobrenome</span>
+                            </div>
+                            <div className={styles['page56__word-column']}>
+                                <span className={styles['page56__text--red']}>Full name</span>
+                                <span className={styles['page56__text--black']}> Nome completo</span>
+                            </div>
                         </div>
                     </div>
-                </aside>
-            </div>
+                </div>
+            </aside>
         </div>
     );
 };
+
 export default Pagina56;

@@ -1,0 +1,119 @@
+.pg43Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.pg43Header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.pg43HeaderH1 {
+    font-size: 4rem;
+}
+
+.pg43Main {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+.pg43Aside {
+    width: 100%;
+    display: flex;
+}
+
+.pg43ContainerMain{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.pg43MainImagems{
+    height: 10rem;
+    width: 10rem;
+}
+
+.pg43ContainerDiv{
+    display: flex;
+    justify-content: flex-start;
+    gap: 2.5rem;
+    text-align: left;
+}
+.pg43VerticalLine {
+    border-left: 0.5 solid #A61C28; 
+    height: 100%; 
+    margin: 0 1rem; 
+}
+
+.pg43MainParagrafoBold{
+    font-weight: bold;
+}
+
+
+.pg43AsideNotes1 {
+    width: 85%;
+    height: 4.5rem;
+    border: 0.4rem solid #A61C28;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    background-color: white;
+    text-align: left;
+    padding-left: 1rem;
+    background-color: #A61C28;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.pg43AsideImgNotes {
+    height: calc(1rem + 0.8vw);
+    width: 2rem;
+    padding-right: 0.5rem;
+}
+
+.pg43AsideNotes2 {
+    width: 85%;
+    height: 75%;
+    border: 0.4rem solid #A61C28;
+    border-top: 0.1rem;
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+    background-color: white;
+    text-align: left;
+    padding-left: 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.pg43AsideNotes2Negrito{
+    font-weight: bold;
+}
+
+.pg43Asidecontainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.iconButton {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    position: relative;
+    top: 0.5rem
+}
+
+.pg43HeaderH1 img {
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+}

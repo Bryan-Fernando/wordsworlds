@@ -1,0 +1,161 @@
+.pg48Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.pg48Header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.pg48HeaderH2H3 {
+    color: black;
+}
+
+.pg48HeaderH2 {
+    font-size: 3rem;
+}
+
+.pg48HeaderH3 {
+    font-size: 2.5rem;
+}
+
+.pg48HeaderH1 {
+    font-size: 4rem;
+}
+
+.pg48Main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.pg48Exemplo {
+    background-color: #F2F2F2; /* Fundo cinza claro */
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    text-align: left; /* Garante alinhamento à esquerda */
+}
+
+.pg48TituloExemplo {
+    color: #A61C28; /* Vermelho para "Exemplo" */
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.pg48TituloTraducao {
+    color: #A61C28; /* Vermelho para "Tradução" */
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.pg48ContainerAsidetexto {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Balões de fala */
+.pg48AsideTexto1{
+    background-color: #FFF7A6;
+    height: auto;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    position: relative;
+    left: 15%;
+}
+
+.pg48AsideTexto2{
+    background-color:  #C1D9F1;
+    height: auto;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    position: relative;
+    left: 45%;
+}
+
+
+.pg48AsideTexto3 {
+    background-color: #FDCC98; 
+    height: auto;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    position: relative;
+    right: 40%;
+}
+
+.pg48ExemploImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.pg48AsideImg1,
+.pg48AsideImg2 {
+    width: 35rem;
+    height: 27rem;
+    border-radius: 50%;
+}
+
+.pg48TraducaoTexto1 {
+    background-color: #FFF7A6;
+    height: auto;
+    width: fit-content;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    padding: 1rem;
+}
+
+.pg48TraducaoTexto2 {
+    background-color: #C1D9F1;
+    height: auto;
+    width: fit-content;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    padding: 1rem;
+}
+
+.pg48TraducaoTexto3 {
+    background-color: #FDCC98;
+    height: auto;
+    width: fit-content;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin-top: 2%;
+}
+
+.pg48HeaderH1,
+.pg48HeaderH2,
+.pg48HeaderH3 {
+    cursor: pointer;
+}

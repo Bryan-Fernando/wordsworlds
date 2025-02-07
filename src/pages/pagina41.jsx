@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import styles from './pagina41.module.css';
-import Pagina41_imagemCoral from '../assets/images/Pagina41_Coral.webp';
-import Pagina41_imagemBasquete from '../assets/images/Pagina41_Basquete.webp';
-import vSquare from '../assets/images/vSquare.png';
-import xSquare from '../assets/images/xSquare.png';
-import eIcon from '../assets/images/eIcon.png';
-import volumeReduzidoIcon from '../assets/images/volumeReduzido.png';
+import pagina41_imagem1 from '../assets/images/pagina41_imagem1.webp';
+import pagina41_imagem2 from '../assets/images/pagina41_imagem2.webp';
+import vSquare from '../assets/icons/vSquare.png';
+import xSquare from '../assets/icons/xSquare.png';
+import eIcon from '../assets/icons/eIcon.png';
+import pIcon from '../assets/icons/pIcon.png';
+
+import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
+import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
+import pg41_audio1e from '../assets/audios/pg41_audio1e.mp3';
+import pg41_audio1p from '../assets/audios/pg41_audio1p.mp3';
+
+
+import volumeReduzidoIcon from '../assets/icons/volumeReduzido.png';
 import Pagina41_audioA from '../assets/audios/Pagina41_audioA.mp3';
 import Pagina41_audioB from '../assets/audios/Pagina41_audioB.mp3';
 import Pagina41_audioC from '../assets/audios/Pagina41_audioC.mp3';
@@ -51,6 +59,12 @@ const Pagina41 = () => {
         setInputValues(newValues);
     };
 
+    const playHeaderAudio = (audioFile) => {
+        const audio = new Audio(audioFile);
+        audio.play();
+    };
+
+
     const playAudio = (index) => {
         const audio = new Audio(audioFiles[index]);
         audio.playbackRate = isSpeedReduced[index] ? 0.60 : 1;
@@ -65,8 +79,42 @@ const Pagina41 = () => {
 
     return (
         <div className={styles.pg41Container}>
-            <h1 className={styles.pg41Title}>Learning Language Exercises</h1>
-            <h2 className={styles.pg41ExerciseTitle}>Fill in the blanks in the Present Simple with the verbs in parentheses.</h2>
+            <h1 className={styles.pg41Title} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                Learning Language Exercises
+                <span>
+                    <img
+                        src={eIcon}
+                        alt="English Audio"
+                        style={{ width: '1.8rem', height: '1.8rem', cursor: 'pointer' }}
+                        onClick={() => playHeaderAudio(global_learningLEe)}
+                    />
+                    <img
+                        src={pIcon}
+                        alt="Portuguese Audio"
+                        style={{ width: '1.8rem', height: '1.8rem', marginLeft: '0.3rem', cursor: 'pointer' }}
+                        onClick={() => playHeaderAudio(global_learningLEp)}
+                    />
+                </span>
+            </h1>
+
+            <h2 className={styles.pg41ExerciseTitle} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                Fill in the blanks in the Present Simple with the verbs in parentheses.
+                <span>
+                    <img
+                        src={eIcon}
+                        alt="English Audio"
+                        style={{ width: '1.8rem', height: '1.8rem', cursor: 'pointer' }}
+                        onClick={() => playHeaderAudio(pg41_audio1e)}
+                    />
+                    <img
+                        src={pIcon}
+                        alt="Portuguese Audio"
+                        style={{ width: '1.8rem', height: '1.8rem', marginLeft: '0.3rem', cursor: 'pointer' }}
+                        onClick={() => playHeaderAudio(pg41_audio1p)}
+                    />
+                </span>
+            </h2>
+
             <div className={styles.pg41QuestionsContainer}>
                 {[
                     "My favorite color ____ blue. (be)",
@@ -124,8 +172,8 @@ const Pagina41 = () => {
             </div>
             <button className={styles.pg41CheckButton} onClick={handleCheckClick}><em>Check</em></button>
             <div className={styles.pg41ImagesContainer}>
-                <img src={Pagina41_imagemBasquete} alt="Basketball" className={styles.pg41ImageBasketball} />
-                <img src={Pagina41_imagemCoral} alt="Choir" className={styles.pg41ImageChoir} />
+                <img src={pagina41_imagem1} alt="Basketball" className={styles.pg41ImageBasketball} />
+                <img src={pagina41_imagem2} alt="Choir" className={styles.pg41ImageChoir} />
             </div>
         </div>
     );

@@ -1,0 +1,329 @@
+.pg71Container {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: transparent;
+}
+
+.pg71Header {
+    width: 100%;
+    height: 15rem;
+    text-align: left;
+    color: #A61C28;
+}
+
+.pg71AnotherHeader {
+    width: 75%;
+    height: auto;
+    text-align: left;
+    color: #A61C28;
+}
+
+.pg71HeaderH1 {
+    font-size: 4rem;
+}
+
+.pg71HeaderH2 {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.pg71Section {
+    padding: 1rem;
+    background-color: #F8F9F9;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    border-radius: 1.5rem;
+}
+
+.pg71PersonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+}
+
+.pg71PersonInfo {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+.pg71Image {
+    width: 15rem;
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 1rem;
+    border-bottom: 0.4rem solid #d1d1d1;
+    border-left: 0.4rem solid #d1d1d1;
+    border-top: 0.4rem solid #d1d1d1;
+}
+
+.pg71PersonTextEnglish,
+.pg71PersonTextPortuguese {
+    font-size: 1.7rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 0.4rem solid #d1d1d1;
+    border-right: 0.4rem solid #d1d1d1;
+    border-left: 0.4rem solid #d1d1d1;
+    border-top: 0.4rem solid #d1d1d1;
+    position: relative;
+    right: 2rem;
+}
+
+.pg71PersonTextEnglish {
+    color: #A61C28;
+}
+
+.pg71PersonTextPortuguese {
+    color: #4E4E4E;
+    background-color: #f1efef;
+}
+
+
+.pg71PersonInfo > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+}
+
+.pg71Main {
+    width: fit-content;
+    height: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.pg71QuestionItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.pg71InputBox {
+    width: 40%;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.7rem;
+    background-color: lightgray;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 1rem; 
+}
+
+.pg71QuestionText {
+    font-size: 2rem;
+    color: #4E4E4E;
+    margin-bottom: 1rem;
+}
+
+.pg71Question {
+    font-size: 1.8rem;
+    color: #4E4E4E;
+    margin-bottom: 0.8rem;
+}
+
+.pg71CheckButton {
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    font-weight: bold;
+    font-size: 2rem;
+    width: 25%;
+    margin-top: 2rem;
+}
+
+.pg71CheckButton:hover {
+    background-color: #821a22;
+}
+
+.pg71QuestionText {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+.pg71Input {
+    position: relative;
+    width: 40%;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.7rem;
+    background-color: #f0f0f0; 
+    border: 0.1rem solid #d1d1d1;
+    border-radius: 0.5rem;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    margin-right: 35%;
+}
+
+
+.pg71QuestionItem {
+    display: flex;
+    justify-content:space-between ;
+    align-items: left;
+    margin-bottom: 1rem;
+}
+
+.pg71InputContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pg71CheckButton {
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    font-weight: bold;
+    font-size: 2rem;
+    width: 10%;
+}
+
+.pg71CheckButton:hover {
+    background-color: #821a22;
+}
+
+.pg71WordBank {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.pg71WordBankContainer {
+    width: 70%;
+    border: 0.4rem solid #A61C28;
+    border-radius: 2rem;
+}
+
+.pg71WordBankHeader {
+    width: 100%;
+    height: 4.5rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: #A61C28;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.pg71WordBankContent {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.pg71WordRow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1rem;
+}
+
+.pg71WordColumn p {
+    margin: 0.5rem 0;
+    font-size: 1.7rem;
+    text-align: left;
+}
+
+.pg71WordColumn strong {
+    display: block;
+    font-weight: bold;
+    color: #A61C28;
+}
+
+.pg71WordColumn span {
+    display: block;
+    color: #4E4E4E;
+    margin-top: 0.2rem;
+    font-size: 1.6rem;
+}
+
+.pg71CheckContainer {
+    position: absolute;
+    left: 60%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+}
+
+.pg71CheckmarkImage {
+    width: 2rem;
+    height: 2rem;
+}
+
+.pg71EIcon, .pg71PIcon, .pg71VolumeReduzidoIcon {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.pg71EIcon {
+    right: 9rem;
+}
+
+.pg71PIcon {
+    right: 6rem;
+}
+
+.pg71VolumeReduzidoIcon {
+    right: 3rem;
+    top: 2%;
+}
+
+.pg71AudioIcon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pg71AudioIcon:hover {
+    transform: scale(1.1);
+}
+
+.pg71VolumeIcon {
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pg71VolumeIcon:hover {
+    transform: scale(1.1);
+}
+
+.pg71ClickableText{
+    cursor: pointer;
+}

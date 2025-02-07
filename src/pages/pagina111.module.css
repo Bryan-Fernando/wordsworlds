@@ -1,0 +1,79 @@
+.pg111Container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.pg111Header {
+    width: 100%;
+    height: 15rem;
+    text-align: left;
+}
+
+.pg111HeaderH1 {
+    font-size: 4rem;
+    color: #A61C28;
+}
+
+.pg111HeaderH2 {
+    font-size: 2.5rem;
+}
+
+.pg111Main {
+    width: 85%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 5rem;
+}
+
+/* Este é um comentário */
+
+.pg111Imagens {
+    display: flex;
+    gap: 10%;
+}
+
+.pg111imagem {
+    width: 16.9rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 1.5rem;
+}
+
+.pg111ParagrafoVermelho {
+    color: #A61C28;
+}
+
+.pg111ParagrafoPreto {
+    font-size: 1.8rem;
+    color: #62169F;
+}
+
+.pg111HeaderH1 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pg111AudioIcon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pg111AudioIcon:hover {
+    transform: scale(1.1);
+}
+
+.pg111Imagens > div > p:first-of-type {
+    cursor: pointer;
+}
+
+
+@media (max-width: 1024px) {
+    .pg111Main {
+        width: 100%;
+    }
+}

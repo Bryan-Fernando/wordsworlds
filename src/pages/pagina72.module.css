@@ -1,0 +1,323 @@
+.pg72Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.pg72Header {
+    width: 100%;
+}
+
+.pg72H1 {
+    text-align: left;
+    font-size: 6rem;
+    color: #8a1720;
+}
+
+.pg72P {
+    text-align: left;
+    font-size: 2.5rem;
+    color: #4E4E4E;
+    margin-bottom: 2rem;
+}
+
+.pg72Main {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+}
+
+.pg72Aside {
+    width: 100%;
+    display: flex;
+}
+
+/* Este é um comentário */
+
+.pg72ContainerQuestoes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pg72Questions1,
+.pg72Questions2 {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.pg72Question {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    color: black;
+    text-align: left;
+}
+
+.pg72Question span {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+}
+
+.pg84ATituloQuestion {
+    color: #8a1720;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.pg72InputBox {
+    width: 100%;
+    padding: 8px 35px 8px 8px;
+    font-size: 1.8rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+.pg72InputContainer {
+    gap: 1rem;
+    width: 23%;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.pg72CheckmarkImage {
+    width: 2.5rem;
+    height: 2.5rem;
+    pointer-events: none;
+}
+
+.pg72CheckButton {
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    width: fit-content;
+}
+
+.pg72CheckButton:hover {
+    background-color: #8a1720;
+}
+
+
+.pg72IconsContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pg72AdditionalIcon {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.pg72AdditionalIcon.pg72Pulsing {
+    animation: pulse 1s infinite;
+}
+
+.pg72AdditionalIcon:hover {
+    transform: scale(1.2);
+}
+
+.pg72imagem {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5rem;
+}
+
+.pg72tabelaAfirmativaContainer,
+.pg72tabelaNegativaContainer {
+    width: 40%;
+}
+
+.pg72tabelaAfirmativaContainer {
+    margin-top: 3.5rem;
+}
+
+
+.pg72tabelaNegativaContainer {
+    margin-top: 3rem;
+}
+
+.pg72tableHeaderAfirmativa,
+.pg72tableHeaderNegativa {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.pg72styledTableAfirmativa,
+.pg72styledTableNegativa {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+
+.pg72styledTableAfirmativa th,
+.pg72styledTableNegativa th {
+    background-color: #888A8C;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid #A61C28;
+}
+
+.pg72celulatable {
+    height: 7rem;
+}
+
+.pg72WordBank {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.pg72WordBankContainer {
+    width: 70%;
+    border: 0.4rem solid #A61C28;
+    border-radius: 2rem;
+}
+
+.pg72WordBankHeader {
+    width: 100%;
+    height: 4.5rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: #A61C28;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.pg72WordBankContent {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.pg72WordRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.pg72WordColumn p {
+    margin: 0.5rem 0;
+    font-size: 1.7rem;
+    text-align: left;
+}
+
+.pg72RedText {
+    color: #A61C28;
+}
+
+
+@media (max-width: 1024px) {
+    .pg72AsideNotes2 p {
+        font-size: 2rem;
+    }
+
+    .pg72styledTableAfirmativa th,
+    .pg72styledTableNegativa th {
+        font-size: 1.8rem;
+    }
+
+    .pg72ContainerQuestoes {
+        flex-direction: column;
+    }
+
+    .pg72Question {
+        gap: 5px;
+    }
+
+    .pg72IconsContainer {
+        margin-left: 0;
+    }
+
+    .pg72ContainerImagem {
+        align-items: start;
+        justify-content: left;
+        height: fit-content;
+    }
+
+    .pg72InputContainer {
+        width: 15%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pg72HeaderAudioIcon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    margin-left: 0.5rem;
+}
+
+.pg72HeaderAudioIcon:hover {
+    transform: scale(1.1);
+}
+
+.pg72Pulsing {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

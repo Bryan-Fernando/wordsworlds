@@ -1,0 +1,228 @@
+.pg98Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.pg98Header {
+    width: 100%;
+}
+
+.pg98H1 {
+    text-align: left;
+    font-size: 6rem;
+    color: #8a1720;
+}
+
+.pg98H2 {
+    text-align: left;
+    font-size: 2.5rem;
+    color: #8a1720;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.pg98Main {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+}
+
+/* Este é um comentário */
+
+.pg98ContainerQuestoes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pg98PrimeirasQuestoes {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.pg98Questions1,
+.pg98Questions2 {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.pg98Question {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: black;
+    text-align: left;
+}
+
+.pg98Question span {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: black;
+}
+
+.pg98ATituloQuestion {
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+.pg98NumeroQuestion {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.pg98InputBox {
+    width: 100%;
+    padding: 8px 35px 8px 8px;
+    font-size: 1.6rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+.pg98InputContainer {
+    width: 25%;
+    gap: 1rem;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.pg98CheckmarkImage {
+    width: 2.5rem;
+    height: 2.5rem;
+    pointer-events: none;
+}
+
+.pg98CheckButton {
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    margin: 2rem;
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    width: fit-content;
+}
+
+.pg98CheckButton:hover {
+    background-color: #8a1720;
+}
+
+.pg98IconsContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 5px;
+}
+
+.pg98AdditionalIcon {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.pg98AdditionalIcon.pg98Pulsing {
+    animation: pulse 1s infinite;
+}
+
+.pg98AdditionalIcon:hover {
+    transform: scale(1.2);
+}
+
+.pg98tabelaAfirmativaContainer,
+.pg98tabelaInterrogativaContainer {
+    width: 70%;
+}
+
+.pg98tableHeaderAfirmativa,
+.pg98tableHeaderInterrogativa {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.pg98styledTableAfirmativa,
+.pg98styledTableInterrogativa {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+.pg98styledTableAfirmativa th,
+.pg98styledTableInterrogativa th {
+    background-color: #888A8C;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid #A61C28;
+}
+
+.pg98celulatable {
+    height: 7rem;
+}
+
+.pg98ContainerImagem {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pg98imagem {
+    width: 100%;
+}
+
+.pg98spaminput {
+    width: 15%;
+}
+
+.pg98HeaderIcon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pg98HeaderIcon:hover {
+    transform: scale(1.1);
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

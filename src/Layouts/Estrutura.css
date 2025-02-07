@@ -61,7 +61,6 @@ aside {
     width: 85%;
     min-width: 85%;
     height: 100%;
-    min-height: 180vh;
     margin: auto;
     display: flex;
     /* Usando Flexbox */
@@ -117,7 +116,7 @@ aside {
     /* Garante alinhamento à direita */
     gap: 2rem;
     /* Espaçamento entre os botões */
-    margin-top: auto;
+    margin-top: 5%;
     /* Empurra os botões para o final do contêiner */
     align-items: center;
     /* Centraliza os botões verticalmente */
@@ -163,22 +162,30 @@ aside {
     align-items: center;
     gap: 10px;
 }
+
 .pageSelector label {
+    font-size: 2rem;
     font-weight: bold;
 }
 
 
 .pageSelector span {
-    font-size: 16px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
-.pagina42Content {
+.pagina42Content,
+.pagina1Content {
     padding-left: 0;
     padding-right: 0;
 }
 
-.pagina42navButtons {
+.pagina1Content {
+    padding-top: 0;
+}
+
+.pagina42navButtons,
+.pagina1navButtons {
     padding-right: 4%;
 }
 

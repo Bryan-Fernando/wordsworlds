@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
 import styles from './pagina40.module.css';
-import Pagina40_imagem1 from '../assets/images/Pagina40_imagem1.png';
-import Pagina40_imagem2 from '../assets/images/Pagina40_imagem2.png';
-import Pagina40_imagem3 from '../assets/images/Pagina40_imagem3.png';
-import Pagina40_imagem4 from '../assets/images/Pagina40_imagem4.png';
-import Pagina40_imagem5 from '../assets/images/Pagina40_imagem5.png';
-import vSquare from '../assets/images/vSquare.png';
-import xSquare from '../assets/images/xSquare.png';
-import eIcon from '../assets/images/eIcon.png';
-import pIcon from '../assets/images/pIcon.png';
-import volumeReduzidoIcon from '../assets/images/volumeReduzido.png';
+
+import pg39_audio1e from '../assets/audios/pg39_audio1e.mp3';
+import pg39_audio1p from '../assets/audios/pg39_audio1p.mp3';
+import pg39_audio2e from '../assets/audios/pg39_audio2e.mp3';
+import pg39_audio2p from '../assets/audios/pg39_audio2p.mp3';
+import pg39_audio3e from '../assets/audios/pg39_audio3e.mp3';
+import pg39_audio3p from '../assets/audios/pg39_audio3p.mp3';
+
+import pagina40_imagem1 from '../assets/images/pagina40_imagem1.webp';
+import pagina40_imagem2 from '../assets/images/pagina40_imagem2.webp';
+import pagina40_imagem3 from '../assets/images/pagina40_imagem3.webp';
+import pagina40_imagem4 from '../assets/images/pagina40_imagem4.webp';
+import pagina40_imagem5 from '../assets/images/pagina40_imagem5.webp';
+import vSquare from '../assets/icons/vSquare.png';
+import xSquare from '../assets/icons/xSquare.png';
+import eIcon from '../assets/icons/eIcon.png';
+import pIcon from '../assets/icons/pIcon.png';
+import volumeReduzidoIcon from '../assets/icons/volumeReduzido.png';
 import Pagina40_audioA from '../assets/audios/Pagina40_audioA.mp3';
 import Pagina40_audioB from '../assets/audios/Pagina40_audioB.mp3';
 import Pagina40_audioC from '../assets/audios/Pagina40_audioC.mp3';
@@ -27,6 +35,7 @@ const Pagina40 = () => {
     const [pulsingAudioEnglishIndex, setPulsingAudioEnglishIndex] = useState(null);
     const [pulsingAudioPortugueseIndex, setPulsingAudioPortugueseIndex] = useState(null);
     const [isSpeedReduced, setIsSpeedReduced] = useState([false, false, false, false, false]);
+    const [audioPlaying, setAudioPlaying] = useState(null);
 
     const correctSentences = [
         "I am studying for my exam",
@@ -59,6 +68,21 @@ const Pagina40 = () => {
         Pagina40_audio4,
         Pagina40_audio5
     ];
+
+    const tocarAudio = (audioFile) => {
+        if (audioPlaying) {
+            audioPlaying.pause();
+            audioPlaying.currentTime = 0;
+        }
+
+        const newAudio = new Audio(audioFile);
+        setAudioPlaying(newAudio);
+        newAudio.play();
+
+        newAudio.onended = () => {
+            setAudioPlaying(null);
+        };
+    };
 
     const handleAudioClick = (index, isPortuguese = false, event) => {
         event.stopPropagation();
@@ -116,17 +140,55 @@ const Pagina40 = () => {
     return (
         <div className={styles.pg40Container}>
             <header className={styles.pg40Header}>
-                <h1 style={{ textAlign: 'left', color: '#A61C28' }}>Exercise:</h1>
-                <h2 className={styles.pg40ExerciseTitle}>
+                <h1 className={styles.pg40AudioText} style={{ color: '#A61C28' }}>
+                    Exercise:
+                    <img
+                        src={eIcon}
+                        alt="English Audio"
+                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        onClick={() => tocarAudio(pg39_audio1e)}
+                    />
+                    <img
+                        src={pIcon}
+                        alt="Portuguese Audio"
+                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        onClick={() => tocarAudio(pg39_audio1p)}
+                    />
+                </h1>
+                <h2 className={styles.pg40AudioText} style={{ marginLeft: '-1.5rem' }}>
                     2. Matching Exercises (Match the sentence with the correct image/description)
+                    <img
+                        src={eIcon}
+                        alt="English Audio"
+                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        onClick={() => tocarAudio(pg39_audio2e)}
+                    />
+                    <img
+                        src={pIcon}
+                        alt="Portuguese Audio"
+                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        onClick={() => tocarAudio(pg39_audio2p)}
+                    />
                 </h2>
-                <p className={styles.pg40ExerciseQuestion}>
+                <p className={styles.pg40AudioText}>
                     Match the sentence (A-E) with the correct picture or description (1-5):
+                    <img
+                        src={eIcon}
+                        alt="English Audio"
+                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        onClick={() => tocarAudio(pg39_audio3e)}
+                    />
+                    <img
+                        src={pIcon}
+                        alt="Portuguese Audio"
+                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        onClick={() => tocarAudio(pg39_audio3p)}
+                    />
                 </p>
             </header>
             <main className={styles.pg40Main}>
                 <div className={styles.pg40ImagesContainer}>
-                    {[Pagina40_imagem1, Pagina40_imagem2, Pagina40_imagem3, Pagina40_imagem4, Pagina40_imagem5].map((image, index) => (
+                    {[pagina40_imagem1, pagina40_imagem2, pagina40_imagem3, pagina40_imagem4, pagina40_imagem5].map((image, index) => (
                         <div key={index} className={styles.pg40ImageBox}>
                             <img src={image} alt={`Image ${index + 1}`} />
                             <div className={styles.pg40InputBoxContainer}>

@@ -1,0 +1,115 @@
+.page54 {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.page54__header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.page54__subtitle-container {
+    color: black;
+}
+
+.page54__subtitle {
+    font-size: 3rem;
+    padding-bottom: 0%;
+}
+
+.page54__title {
+    font-size: 4rem;
+}
+
+.page54__content {
+    width: 100%;
+    height: 80rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+/* Este é um comentário */
+
+.page54__section-left {
+    width: 40%;
+    height: 130rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.page54__section-right {
+    width: 40%;
+    height: 130rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.page54__image-container--large {
+    max-width: 100%;
+    width: 40rem;
+    height: 25rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+}
+
+.page54__image-container--tall {
+    max-width: 100%;
+    width: 40rem;
+    height: 25rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+}
+
+.page54__image-container--large-alt {
+    max-width: 100%;
+    width: 40rem;
+    height: 25rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+}
+
+.page54__image-container--tall-alt {
+    max-width: 100%;
+    width: 40rem;
+    height: 25rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+}
+
+.page54__text {
+    text-align: left;
+    cursor: pointer;
+}
+
+.page54__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page54__title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.page54__subtitle {
+    cursor: pointer;
+}
+
+.page54__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page54__icon:hover {
+    transform: scale(1.1);
+}

@@ -1,5 +1,10 @@
 import React, { useState, useRef } from 'react';
 import styles from './pagina7.module.css';
+
+import global_verboToBe from '../assets/audios/global_verboToBe.mp3';
+import global_grammar from '../assets/audios/global_grammar.mp3';
+import global_simplePresent from '../assets/audios/global_simplePresent.mp3';
+
 import interrogativaAudio from '../assets/audios/interrogativaA.mp3';
 import verboAuxiliarAudio from '../assets/audios/verboauxiliar.mp3';
 import sujeitoAudio from '../assets/audios/sujeito.mp3';
@@ -43,10 +48,21 @@ const Pagina7 = () => {
         <div>
             <div className={styles.pg7Container}>
                 <header className={styles.pg7Header}>
-                    <h1>Grammar</h1>
-                    <h2 className={styles.pg7HeaderH2}>Simple Present (Presente Simples)</h2>
-                    <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
+                    <h1 className={styles.pg7AudioText}
+                        onClick={() => playAudio(global_grammar)}>
+                        Grammar
+                    </h1>
+                    <h2 className={styles.pg7AudioText}
+                        onClick={() => playAudio(global_simplePresent)}
+                        style={{ color: 'black' }}>
+                        Simple Present (Presente Simples)
+                    </h2>
+                    <h3 className={styles.pg7AudioText}
+                        onClick={() => playAudio(global_verboToBe)}>
+                        Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)
+                    </h3>
                 </header>
+
                 <main className={styles.pg7Main}>
                     <div>
                         <div
@@ -74,7 +90,7 @@ const Pagina7 = () => {
                                     <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}>Adverb</th>
                                     <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>Verb(s)</th>
                                     <th onClick={() => playAudio(objetoComplementoAudio)} style={{ cursor: 'pointer' }}>
-                                    Object  <br /> Complement
+                                        Object  <br /> Complement
                                     </th>
                                     <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: 'pointer' }}>Translation</th>
                                 </tr>
@@ -196,7 +212,7 @@ const Pagina7 = () => {
                                     <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}>Adverb</th>
                                     <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>Verb(s)</th>
                                     <th onClick={() => playAudio(objetoComplementoAudio)} style={{ cursor: 'pointer' }}>
-                                    Object  <br /> Complement
+                                        Object  <br /> Complement
                                     </th>
                                     <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: 'pointer' }}>Translation</th>
 

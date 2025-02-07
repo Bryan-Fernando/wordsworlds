@@ -1,11 +1,15 @@
 import React, { useState, useRef } from 'react';
 import styles from './pagina43.module.css';
+
+import global_introE from '../assets/audios/global_introE.mp3';
+import global_introP from '../assets/audios/global_introP.mp3';
+
 import pg43IconNotes from '../assets/Icons/Icon-Notes.png';
-import Pagina43_Primeira_imagem from '../assets/Images/Pagina43_Primeira_imagem.jpg';
-import Pagina43_Segunda_imagem from '../assets/Images/Pagina43_Segunda_imagem.jpg';
-import Pagina43_Terceira_imagem from '../assets/Images/Pagina43_Terceira_imagem.jpg';
-import Pagina43_Quarta_imagem from '../assets/Images/Pagina43_Quarta_imagem.jpg';
-import Pagina43_Quinta_imagem from '../assets/Images/Pagina43_Quinta_imagem.jpg';
+import pagina43_imagem1 from '../assets/Images/pagina43_imagem1.webp';
+import pagina43_imagem2 from '../assets/Images/pagina43_imagem2.webp';
+import pagina43_imagem3 from '../assets/Images/pagina43_imagem3.webp';
+import pagina43_imagem4 from '../assets/Images/pagina43_imagem4.webp';
+import pagina43_imagem5 from '../assets/Images/pagina43_imagem5.webp';
 import picon from '../assets/icons/picon.png';
 import eicon from '../assets/icons/eicon.png';
 import audio1e from '../assets/audios/pg43_audio1e.mp3';
@@ -52,72 +56,93 @@ import audio20p from '../assets/audios/pg43_audio20p.mp3';
 
 const Pagina43 = () => {
     const audioMap = {
-            'pg43_audio1e': audio1e,
-            'pg43_audio1p': audio1p,
-            'pg43_audio2e': audio2e,
-            'pg43_audio2p': audio2p,
-            'pg43_audio3e': audio3e,
-            'pg43_audio3p': audio3p,
-            'pg43_audio4e': audio4e,
-            'pg43_audio4p': audio4p,
-            'pg43_audio5e': audio5e,
-            'pg43_audio5p': audio5p,
-            'pg43_audio6e': audio6e,
-            'pg43_audio6p': audio6p,
-            'pg43_audio7e': audio7e,
-            'pg43_audio7p': audio7p,
-            'pg43_audio8e': audio8e,
-            'pg43_audio8p': audio8p,
-            'pg43_audio9e': audio9e,
-            'pg43_audio9p': audio9p,
-            'pg43_audio10e': audio10e,
-            'pg43_audio10p': audio10p,
-            'pg43_audio11e': audio11e,
-            'pg43_audio11p': audio11p,
-            'pg43_audio12e': audio12e,
-            'pg43_audio12p': audio12p,
-            'pg43_audio13e': audio13e,
-            'pg43_audio13p': audio13p,
-            'pg43_audio14e': audio14e,
-            'pg43_audio14p': audio14p,
-            'pg43_audio15e': audio15e,
-            'pg43_audio15p': audio15p,
-            'pg43_audio16e': audio16e,
-            'pg43_audio16p': audio16p,
-            'pg43_audio17e': audio17e,
-            'pg43_audio17p': audio17p,
-            'pg43_audio18e': audio18e,
-            'pg43_audio18p': audio18p,
-            'pg43_audio19e': audio19e,
-            'pg43_audio19p': audio19p,
-            'pg43_audio20e': audio20e,
-            'pg43_audio20p': audio20p,
-        };
-        
-        const currentAudio = useRef(null); 
-    
-        const playAudio = (audioId) => {
-            
-            if (currentAudio.current) {
-                currentAudio.current.pause();
-                currentAudio.current.currentTime = 0; 
-            }
-    
-            const audio = new Audio(audioMap[audioId]);
-            currentAudio.current = audio;
-            audio.play();
-        };
+        'pg43_audio1e': audio1e,
+        'pg43_audio1p': audio1p,
+        'pg43_audio2e': audio2e,
+        'pg43_audio2p': audio2p,
+        'pg43_audio3e': audio3e,
+        'pg43_audio3p': audio3p,
+        'pg43_audio4e': audio4e,
+        'pg43_audio4p': audio4p,
+        'pg43_audio5e': audio5e,
+        'pg43_audio5p': audio5p,
+        'pg43_audio6e': audio6e,
+        'pg43_audio6p': audio6p,
+        'pg43_audio7e': audio7e,
+        'pg43_audio7p': audio7p,
+        'pg43_audio8e': audio8e,
+        'pg43_audio8p': audio8p,
+        'pg43_audio9e': audio9e,
+        'pg43_audio9p': audio9p,
+        'pg43_audio10e': audio10e,
+        'pg43_audio10p': audio10p,
+        'pg43_audio11e': audio11e,
+        'pg43_audio11p': audio11p,
+        'pg43_audio12e': audio12e,
+        'pg43_audio12p': audio12p,
+        'pg43_audio13e': audio13e,
+        'pg43_audio13p': audio13p,
+        'pg43_audio14e': audio14e,
+        'pg43_audio14p': audio14p,
+        'pg43_audio15e': audio15e,
+        'pg43_audio15p': audio15p,
+        'pg43_audio16e': audio16e,
+        'pg43_audio16p': audio16p,
+        'pg43_audio17e': audio17e,
+        'pg43_audio17p': audio17p,
+        'pg43_audio18e': audio18e,
+        'pg43_audio18p': audio18p,
+        'pg43_audio19e': audio19e,
+        'pg43_audio19p': audio19p,
+        'pg43_audio20e': audio20e,
+        'pg43_audio20p': audio20p,
+    };
+
+    const currentAudio = useRef(null);
+
+    const playHeaderAudio = (audioFile) => {
+        const audio = new Audio(audioFile);
+        audio.play();
+    };
+
+    const playAudio = (audioId) => {
+
+        if (currentAudio.current) {
+            currentAudio.current.pause();
+            currentAudio.current.currentTime = 0;
+        }
+
+        const audio = new Audio(audioMap[audioId]);
+        currentAudio.current = audio;
+        audio.play();
+    };
 
     return (
         <div>
             <div className={styles.pg43Container}>
                 <header className={styles.pg43Header}>
-                    <h1 className={styles.pg43HeaderH1}>Introductions</h1>
+                    <h1 className={styles.pg43HeaderH1} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                        Introductions
+                        <span>
+                            <img
+                                src={eicon}
+                                alt="English Audio"
+                                style={{ width: '1.8rem', height: '1.8rem', cursor: 'pointer' }}
+                                onClick={() => playHeaderAudio(global_introE)}
+                            />
+                            <img
+                                src={picon}
+                                alt="Portuguese Audio"
+                                style={{ width: '1.8rem', height: '1.8rem', marginLeft: '0.3rem', cursor: 'pointer' }}
+                                onClick={() => playHeaderAudio(global_introP)}
+                            />
+                        </span>
+                    </h1>
                 </header>
                 <main className={styles.pg43Main}>
                     <div className={styles.pg43ContainerMain}>
                         <div className={styles.pg43ContainerDiv}>
-                            <img className={styles.pg43MainImagems} src={Pagina43_Primeira_imagem} alt="" />
+                            <img className={styles.pg43MainImagems} src={pagina43_imagem1} alt="" />
                             <p className={styles.pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
                             <p>I'm Sister Juliana Garcia.
                                 <img
@@ -174,7 +199,7 @@ const Pagina43 = () => {
                             </p>
                         </div>
                         <div className={styles.pg43ContainerDiv}>
-                            <img className={styles.pg43MainImagems} src={Pagina43_Segunda_imagem} alt="" />
+                            <img className={styles.pg43MainImagems} src={pagina43_imagem2} alt="" />
                             <p className={styles.pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
                             <p>This is Jones Oliveira.
                                 <img
@@ -232,7 +257,7 @@ const Pagina43 = () => {
                             </p>
                         </div>
                         <div className={styles.pg43ContainerDiv}>
-                            <img className={styles.pg43MainImagems} src={Pagina43_Terceira_imagem} alt="" />
+                            <img className={styles.pg43MainImagems} src={pagina43_imagem3} alt="" />
                             <p className={styles.pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
                             <p>This is Laura Brandhuber.
                                 <img
@@ -290,7 +315,7 @@ const Pagina43 = () => {
                             </p>
                         </div>
                         <div className={styles.pg43ContainerDiv}>
-                            <img className={styles.pg43MainImagems} src={Pagina43_Quarta_imagem} alt="" />
+                            <img className={styles.pg43MainImagems} src={pagina43_imagem4} alt="" />
                             <p className={styles.pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
                             <p>I’m Rogério Madeira.
                                 <img
@@ -348,7 +373,7 @@ const Pagina43 = () => {
                             </p>
                         </div>
                         <div className={styles.pg43ContainerDiv}>
-                            <img className={styles.pg43MainImagems} src={Pagina43_Quinta_imagem} alt="" />
+                            <img className={styles.pg43MainImagems} src={pagina43_imagem5} alt="" />
                             <p className={styles.pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
                             <p>This is Gustavo Farias.
                                 <img

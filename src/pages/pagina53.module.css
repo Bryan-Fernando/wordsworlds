@@ -1,0 +1,123 @@
+.page53 {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.page53__header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.page53__subtitle-container {
+    color: black;
+}
+
+.page53__subtitle {
+    font-size: 3rem;
+    padding-bottom: 0%;
+}
+
+.page53__title {
+    font-size: 4rem;
+}
+
+.page53__content {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+/* Este é um comentário */
+
+.page53__section-left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.page53__section-right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.page53__image-container--large {
+    max-width: 100%;
+    width: 40rem;
+    height: 25rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+}
+
+.page53__image-container--tall {
+    max-width: 100%;
+    width: 25rem;
+    height: 40rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+}
+
+.page53__image-container--large-alt {
+    max-width: 100%;
+    width: 40rem;
+    height: 25rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+}
+
+.page53__image-container--tall-alt {
+    max-width: 100%;
+    width: 25rem;
+    height: 40rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+}
+
+.page53__text {
+    text-align: left;
+    cursor: pointer;
+}
+
+.page53__image-container {
+    width: 40rem;
+    height: 25rem;
+    border: 0.8rem solid #A61C28;
+    border-radius: 2%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page53__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page53__title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.page53__subtitle {
+    cursor: pointer;
+}
+
+.page53__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page53__icon:hover {
+    transform: scale(1.1);
+}

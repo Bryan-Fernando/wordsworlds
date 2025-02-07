@@ -1,0 +1,129 @@
+.page59__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.page59__header {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    color: #A61C28;
+    position: relative;
+}
+
+.page59__title {
+    font-size: 4rem;
+}
+
+.page59__header-divider {
+    display: block;
+    align-items: center;
+    position: relative;
+}
+
+.page59__header-icon {
+    width: 1.2rem;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.page59__subtitle {
+    font-size: 2.5rem;
+    margin-left: 1.4rem;
+}
+
+.page59__subtext {
+    font-size: 1.5rem;
+    color: #000;
+    margin-left: 1.4rem;
+}
+
+.page59__main {
+    width: 100%;
+    height: 65rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.page59__aside {
+    width: 100%;
+    height: 50rem;
+}
+
+.page59__info {
+    padding: 1rem;
+    background-color: #F8F9F9;
+    width: 100%;
+    text-align: left;
+    border: 0.4rem solid #A61C28;
+    border-radius: 1.5rem;
+    box-shadow: 0px -6px 12px rgba(0, 0, 0, 0.2), 0px 2px 6px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.page59__time-grid {
+    display: flex;
+    align-items: center;
+    width: 80rem;
+    height: 39rem;
+    text-align: left;
+    gap: 5rem;
+    border: 0.4rem solid #A61C28;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: inset 0 0 0 0.3rem #D3D3D3;
+}
+
+.page59__time-column--left {
+    color: #A61C28;
+}
+
+.page59__gray-box {
+    width: 0.5rem;
+    height: 100%;
+    background-color: #F8F9F9;
+}
+
+.page59__divider {
+    background-color: #A61C28;
+    height: 0.25rem;
+    position: relative;
+}
+
+.page59__divider--left {
+    width: 137%;
+}
+
+.page59__divider--right {
+    width: 117%;
+}
+
+.page59__aside-container {
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page59__image {
+    width: 40rem;
+    height: auto;
+}
+
+.page59__text--left,
+.page59__text--right {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #A61C28;
+    margin: 5rem;
+}
+
+.page59__title {
+    cursor: pointer;
+}

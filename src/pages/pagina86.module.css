@@ -1,0 +1,115 @@
+.page86__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.page86__header {
+    width: 100%;
+    height: 15rem;
+    text-align: left;
+}
+
+.page86__title {
+    font-size: 4rem;
+    color: #A61C28;
+    cursor: pointer;
+}
+
+.page86__subtitle {
+    font-size: 2.5rem;
+    color: #A61C28;
+    cursor: pointer;
+}
+
+.page86__main {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 5rem;
+}
+
+/* Este é um comentário */
+
+.page86__table-images-container {
+    width: 100%;
+    height: 100rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.page86__table-container {
+    width: 90%;
+    height: 10rem;
+}
+
+.page86__table-header--affirmative {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.page86__table--affirmative {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+.page86__table--affirmative th {
+    background-color: #888A8C;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid #A61C28;
+}
+
+.page86__table-row {
+    height: 7rem;
+}
+
+.page86__images-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.page86__images-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15rem;
+}
+
+.page86__image {
+    width: 40rem;
+    height: 25rem;
+    border-radius: 1.5rem;
+}
+
+.page86__text--red {
+    cursor: pointer;
+    color: #A61C28;
+}
+
+.page86__text--black {
+    font-size: 1.8rem;
+}
+
+@media (max-width: 1024px) {
+    .page86__table--affirmative th {
+        font-size: 2rem;
+    }
+}
