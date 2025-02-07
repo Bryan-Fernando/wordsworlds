@@ -54,10 +54,10 @@ const Pagina3 = () => {
                     </h1>
                 </header>
                 <main className={styles.page__main}>
-                    <img src={pagina3Imagem1} alt="People 1" className={styles.page__image} />
-                    <img src={pagina3Imagem2} alt="People 2" className={styles.page__image} />
-                    <img src={pagina3Imagem3} alt="People 3" className={styles.page__image} />
-                    <img src={pagina3Imagem4} alt="People 4" className={styles.page__image} />
+                    <img src={pagina3_imagem1} alt="People 1" className={styles.page__image} />
+                    <img src={pagina3_imagem2} alt="People 2" className={styles.page__image} />
+                    <img src={pagina3_imagem3} alt="People 3" className={styles.page__image} />
+                    <img src={pagina3_imagem4} alt="People 4" className={styles.page__image} />
                 </main>
                 <aside className={styles.page__aside}>
                     <div className={styles.page__aside__header}>

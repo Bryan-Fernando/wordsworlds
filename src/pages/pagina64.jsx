@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Pagina64.module.css";
-import imagemUnica from "../assets/images/pagina64_imagem1.webp"; // Imagem de fundo
+import imagemUnica from "../assets/images/pagina64_imagem1.png"; // Imagem de fundo
 import segundaImagem from "../assets/images/pagina64_imagem2.webp"; // Imagem 2
 import terceiraImagem from "../assets/images/pagina64_imagem3.webp";  // Imagem 3
 import quartaImagem from "../assets/images/pagina64_imagem4.webp";  // Imagem 4
