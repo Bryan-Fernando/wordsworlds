@@ -1,15 +1,18 @@
 import React from 'react';
+
 import styles from './pagina67.module.css';
-import pg67IconNotes from '../assets/Icons/Icon-Notes.png';
-import pagina67Imagem1 from '../assets/Images/pagina67_imagem1.webp';
-import pagina67Imagem2 from '../assets/Images/pagina67_imagem2.webp';
-import pagina67Imagem3 from '../assets/Images/pagina67_imagem3.webp';
-import pagina67Imagem4 from '../assets/Images/pagina67_imagem4.webp';
+
+import pg67IconNotes from '../assets/icons/notes_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
+import pagina67Imagem1 from '../assets/images/pagina67_imagem1.webp';
+import pagina67Imagem2 from '../assets/images/pagina67_imagem2.webp';
+import pagina67Imagem3 from '../assets/images/pagina67_imagem3.webp';
+import pagina67Imagem4 from '../assets/images/pagina67_imagem4.webp';
+
 import global_readComPrp from '../assets/audios/global_readComPrp.mp3';
 import global_readComPre from '../assets/audios/global_readComPre.mp3';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-
 import pg67_audio1 from "../assets/audios/pg67_audio1.mp3";
 import pg67_audio2 from "../assets/audios/pg67_audio2.mp3";
 import pg67_audio3 from "../assets/audios/pg67_audio3.mp3";
@@ -45,13 +48,13 @@ const pagina67 = () => {
                     <h1 className={styles["page67__title"]}>
                         Reading and Comprehension Language Practice
                         <img
-                            src={eIcon}
+                            src={eng_audio_icon}
                             alt="English audio"
                             className={styles["page67__audio-icon"]}
                             onClick={() => playAudio('global_readComPre')}
                         />
                         <img
-                            src={pIcon}
+                            src={ptbr_audio_icon}
                             alt="Portuguese audio"
                             className={styles["page67__audio-icon"]}
                             onClick={() => playAudio('global_readComPrp')}

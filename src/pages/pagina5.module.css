@@ -10,11 +10,6 @@
     color: #a61c28;
 }
 
-.page__header__title,
-.page__header__subtitle,
-.page__header__description {
-    cursor: pointer;
-}
 
 .page__header__subtitle {
     color: black;
@@ -34,7 +29,6 @@
     width: 100%;
     margin-bottom: 0.5rem;
     font-size: 2rem;
-    cursor: pointer;
 }
 
 .page__table {
@@ -115,6 +109,35 @@
 .page__table__translation {
     width: calc(18vw * 0.85);
 }
+
+.page__icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    position: relative;
+    top: 0.3rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page__icon:hover {
+    transform: scale(1.2);
+}
+
+.page__icon__left {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    position: relative;
+    right: 42%;
+    top: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page__icon__left:hover {
+    transform: scale(1.2);
+}
+
 
 @media (max-width: 1024px) {
     .page__table {

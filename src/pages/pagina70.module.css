@@ -106,30 +106,30 @@
     height: 2.5rem;
 }
 
-.pg70inputFrase .eIcon{
+.pg70inputFrase .eng_audio_icon{
     position: absolute;
     right: 10%;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.pg70inputFrase .pIcon{
+.pg70inputFrase .ptbr_audio_icon{
     position: absolute;
     right: 15%;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.pg70inputFrase .volumeReduzido{
+.pg70inputFrase .slow_audio_icon{
     position: absolute;
     right: 19%;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.eIcon,
-.pIcon,
-.volumeReduzido {
+.eng_audio_icon,
+.ptbr_audio_icon,
+.slow_audio_icon {
     cursor: pointer;
     margin-left: 1rem;
     width: 2.5rem;

@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
+
 import styles from './pagina89.module.css';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
 import pagina89_imagem1 from '../assets/images/pagina89_imagem1.webp';
 import pagina89_imagem2 from '../assets/images/pagina89_imagem2.webp';
@@ -8,16 +14,10 @@ import pagina89_imagem4 from '../assets/images/pagina89_imagem4.webp';
 import pagina89_imagem5 from '../assets/images/pagina89_imagem5.webp';
 import pagina89_imagem6 from '../assets/images/pagina89_imagem6.webp';
 
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import global_article_a_ane from '../assets/audios/global_article-a-ane.mp3';
 import global_article_a_anp from '../assets/audios/global_article-a-anp.mp3';
-
 import pg89_audio1 from '../assets/audios/pg89_audio1.mp3';
 import pg89_audio2 from '../assets/audios/pg89_audio2.mp3';
 import pg89_audio3 from '../assets/audios/pg89_audio3.mp3';
@@ -26,8 +26,8 @@ import pg89_audio5 from '../assets/audios/pg89_audio5.mp3';
 import pg89_audio6 from '../assets/audios/pg89_audio6.mp3';
 
 const audioMap = {
-    global_learningLEe,
-    global_learningLEp,
+    global_learning_le_e,
+    global_learning_le_p,
     global_article_a_ane,
     global_article_a_anp,
     pg89_audio1,
@@ -71,29 +71,29 @@ const Pagina89 = () => {
                 <h1 className={styles["pg89__title"]}>
                     Learning Language Exercise
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles["pg89__header-icon"]}
-                        onClick={() => playAudio("global_learningLEe")}
+                        onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles["pg89__header-icon"]}
-                        onClick={() => playAudio("global_learningLEp")}
+                        onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
 
                 <h2 className={styles["pg89__subtitle"]}>
                     Complete with the appropriate indefinite article (a/an)
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles["pg89__header-icon"]}
                         onClick={() => playAudio("global_article_a_ane")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles["pg89__header-icon"]}
                         onClick={() => playAudio("global_article_a_anp")}
@@ -129,7 +129,7 @@ const Pagina89 = () => {
                                 <div className={styles["pg89__icons-container"]}>
                                     {results[index] !== null && (
                                         <img
-                                            src={results[index] ? vSquare : xSquare}
+                                            src={results[index] ? correct_icon : wrong_icon}
                                             alt={results[index] ? "Correct" : "Incorrect"}
                                             className={styles["pg89__icon-check"]}
                                         />
@@ -165,7 +165,7 @@ const Pagina89 = () => {
                                 <div className={styles["pg89__icons-container"]}>
                                     {results[index + 3] !== null && (
                                         <img
-                                            src={results[index + 3] ? vSquare : xSquare}
+                                            src={results[index + 3] ? correct_icon : wrong_icon}
                                             alt={results[index + 3] ? "Correct" : "Incorrect"}
                                             className={styles["pg89__icon-check"]}
                                         />

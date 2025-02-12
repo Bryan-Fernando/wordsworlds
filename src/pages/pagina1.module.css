@@ -1,3 +1,4 @@
+
 .page1__image--first {
     width: 100%;
     height: auto;
@@ -23,7 +24,8 @@
 }
 
 .page1__unit p {
-    font-size: 5rem;
+    font-size: 3rem;
+    font-weight: bold;
     color: white;
 }
 
@@ -32,16 +34,44 @@
     top: 15%;
     left: 3%;
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
     cursor: pointer;
 }
 
+.page1__title h1 {
+    font-size: 12rem;
+    text-align: left;
+    font-weight: bolder;
+    line-height: 1;
+}
+
 .page1__title p {
-    font-size: 10rem;
+    font-size: 3rem;
+    text-align: left;
 }
 
 .page1__title p:nth-child(4) {
     font-size: 3rem;
+}
+
+.page1__icon {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    top: 0.3rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page1__icon:hover, .page1__icon--header:hover {
+    transform: scale(1.2);
+}
+
+.page1__icon--header{
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    margin-left: 1rem;
+    top: 0.3rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }

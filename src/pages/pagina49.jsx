@@ -1,35 +1,30 @@
 import React from 'react';
+
 import styles from './pagina49.module.css';
 
 import global_grammar from '../assets/audios/global_grammar.mp3';
 import pg49_audio1 from '../assets/audios/pg49_audio1.mp3';
 import pg49_audio2 from '../assets/audios/pg49_audio2.mp3';
-
 import pg49_audio3 from '../assets/audios/pg49_audio3.mp3';
 import pg49_audio4 from '../assets/audios/pg49_audio4.mp3';
 import pg49_audio5 from '../assets/audios/pg49_audio5.mp3';
 import pg49_audio6 from '../assets/audios/pg49_audio6.mp3';
-
 import pg49_audio7 from '../assets/audios/pg49_audio7.mp3';
 import pg49_audio8 from '../assets/audios/pg49_audio8.mp3';
 import pg49_audio9 from '../assets/audios/pg49_audio9.mp3';
 import pg49_audio10 from '../assets/audios/pg49_audio10.mp3';
-
 import pg49_audio11 from '../assets/audios/pg49_audio11.mp3';
 import pg49_audio12 from '../assets/audios/pg49_audio12.mp3';
 import pg49_audio13 from '../assets/audios/pg49_audio13.mp3';
 import pg49_audio14 from '../assets/audios/pg49_audio14.mp3';
-
 import pg49_audio15 from '../assets/audios/pg49_audio15.mp3';
 import pg49_audio16 from '../assets/audios/pg49_audio16.mp3';
 import pg49_audio17 from '../assets/audios/pg49_audio17.mp3';
 import pg49_audio18 from '../assets/audios/pg49_audio18.mp3';
-
 import pg49_audio19 from '../assets/audios/pg49_audio19.mp3';
 import pg49_audio20 from '../assets/audios/pg49_audio20.mp3';
 import pg49_audio21 from '../assets/audios/pg49_audio21.mp3';
 import pg49_audio22 from '../assets/audios/pg49_audio22.mp3';
-
 import pg49_audio23 from '../assets/audios/pg49_audio23.mp3';
 import pg49_audio24 from '../assets/audios/pg49_audio24.mp3';
 import pg49_audio25 from '../assets/audios/pg49_audio25.mp3';

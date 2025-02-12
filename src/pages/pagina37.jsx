@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
+
 import { useLocation } from 'react-router-dom';
+
 import styles from './pagina37.module.css';
-import eIcon from '../assets/icons/eIcon.png';
-import portugueseIcon from '../assets/icons/pIcon.png';
-import volumeReduzidoIcon from '../assets/icons/volumeReduzido.png';
-import vSquare from '../assets/Icons/vSquare.png';
-import xSquare from '../assets/Icons/xSquare.png';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import portugueseng_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import slow_audio_icon from '../assets/icons/slow_audio_icon.webp';
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+
 import Pagina37_e1 from '../assets/audios/pg37_e1.mp3';
 import Pagina37_e2 from '../assets/audios/pg37_e2.mp3';
 import Pagina37_e3 from '../assets/audios/pg37_e3.mp3';
@@ -14,14 +18,14 @@ import Pagina37_e5 from '../assets/audios/pg37_e5.mp3';
 import Pagina37_e6 from '../assets/audios/pg37_e6.mp3';
 import Pagina37_e7 from '../assets/audios/pg37_e7.mp3';
 import Pagina37_e8 from '../assets/audios/pg37_e8.mp3';
-import Pagina37_p1 from '../assets/audios/Pagina37_p1.mp3';
-import Pagina37_p2 from '../assets/audios/Pagina37_p2.mp3';
-import Pagina37_p3 from '../assets/audios/Pagina37_p3.mp3';
-import Pagina37_p4 from '../assets/audios/Pagina37_p4.mp3';
-import Pagina37_p5 from '../assets/audios/Pagina37_p5.mp3';
-import Pagina37_p6 from '../assets/audios/Pagina37_p6.mp3';
-import Pagina37_p7 from '../assets/audios/Pagina37_p7.mp3';
-import Pagina37_p8 from '../assets/audios/Pagina37_p8.mp3';
+import Pagina37_p1 from '../assets/audios/pagina37_p1.mp3';
+import Pagina37_p2 from '../assets/audios/pagina37_p2.mp3';
+import Pagina37_p3 from '../assets/audios/pagina37_p3.mp3';
+import Pagina37_p4 from '../assets/audios/pagina37_p4.mp3';
+import Pagina37_p5 from '../assets/audios/pagina37_p5.mp3';
+import Pagina37_p6 from '../assets/audios/pagina37_p6.mp3';
+import Pagina37_p7 from '../assets/audios/pagina37_p7.mp3';
+import Pagina37_p8 from '../assets/audios/pagina37_p8.mp3';
 
 const audios = {
     english: [
@@ -102,8 +106,8 @@ function Pagina37() {
                     Para reduzir a velocidade da reprodução para 0.75x, clique no{' '}
                     <span className={styles.pg37SpeedContainer}>
                         <img
-                            src={volumeReduzidoIcon}
-                            className={styles.pg37VolumeIcon}
+                            src={slow_audio_icon}
+                            className={styles.pg37Volumeng_audio_icon}
                             alt="Speed icon"
                         />
                     </span>
@@ -121,7 +125,7 @@ function Pagina37() {
                                 readOnly
                             />
                             <img
-                                src={resultado[index] ? vSquare : xSquare}
+                                src={resultado[index] ? correct_icon : wrong_icon}
                                 alt={resultado[index] ? 'Correct' : 'Incorrect'}
                                 className={`${styles.pg37Status} ${resultado[index] ? styles.pg37Correta : styles.pg37Incorreta
                                     }`}
@@ -130,19 +134,19 @@ function Pagina37() {
                                 <>
                                     <img
                                         className={styles.pg37AudioIcon}
-                                        src={eIcon}
+                                        src={eng_audio_icon}
                                         alt="Play English Audio"
                                         onClick={() => playAudio(index, 'english')}
                                     />
                                     <img
                                         className={styles.pg37AudioIcon}
-                                        src={portugueseIcon}
+                                        src={portugueseng_audio_icon}
                                         alt="Play Portuguese Audio"
                                         onClick={() => playAudio(index, 'portuguese')}
                                     />
                                     <img
-                                        className={styles.pg37VolumeIcon}
-                                        src={volumeReduzidoIcon}
+                                        className={styles.pg37Volumeng_audio_icon}
+                                        src={slow_audio_icon}
                                         alt="Toggle Speed"
                                         onClick={reduzirVelocidade}
                                     />

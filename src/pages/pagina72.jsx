@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
+
 import styles from './pagina72.module.css';
-import pg72IconNotes from '../assets/Icons/Icon-Notes.png';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import slow_audio_icon from '../assets/icons/slow_audio_icon.webp';
+
 import pagina72_imagem1 from '../assets/images/pagina72_imagem1.webp';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-import volumeReduzidoIcon from '../assets/icons/volumeReduzido.png';
 
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
-import global_exerciseFillBlanke from '../assets/audios/global_exerciseFillBlanke.mp3';
-import global_exerciseFillBlankp from '../assets/audios/global_exerciseFillBlankp.mp3';
-
-
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
+import global_exercise_fill_blanke from '../assets/audios/global_exercise_fill_blanke.mp3';
+import global_exercise_fill_blankp from '../assets/audios/global_exercise_fill_blankp.mp3';
 import pg72_audio1e from '../assets/audios/pg72_audio1e.mp3';
 import pg72_audio1p from '../assets/audios/pg72_audio1p.mp3';
 import pg72_audio2 from '../assets/audios/pg72_audio2.mp3';
@@ -31,10 +31,10 @@ import pg72_audio12 from '../assets/audios/pg72_audio12.mp3';
 
 
 const audioMap = {
-    global_learningLEe,
-    global_learningLEp,
-    global_exerciseFillBlanke,
-    global_exerciseFillBlankp,
+    global_learning_le_e,
+    global_learning_le_p,
+    global_exercise_fill_blanke,
+    global_exercise_fill_blankp,
     pg72_audio1e,
     pg72_audio1p,
     pg72_audio2,
@@ -102,31 +102,31 @@ const pagina72 = () => {
                 <h1 className={styles.pg72H1}>
                     Learning Language Exercises
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles.pg72HeaderAudioIcon}
-                        onClick={() => playAudio("global_learningLEe")}
+                        onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles.pg72HeaderAudioIcon}
-                        onClick={() => playAudio("global_learningLEp")}
+                        onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
                 <p className={styles.pg72P}>
                     <strong>EXERCISE.</strong> Fill in the blanks with the correct forms of the verb 'be' in the Simple Present Tense
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles.pg72HeaderAudioIcon}
-                        onClick={() => playAudio("global_exerciseFillBlanke")}
+                        onClick={() => playAudio("global_exercise_fill_blanke")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles.pg72HeaderAudioIcon}
-                        onClick={() => playAudio("global_exerciseFillBlankp")}
+                        onClick={() => playAudio("global_exercise_fill_blankp")}
                     />
                 </p>
             </header>
@@ -138,13 +138,13 @@ const pagina72 = () => {
                         <p className={styles.pg84ATituloQuestion}>
                             Affirmative form:
                             <img
-                                src={eIcon}
+                                src={eng_audio_icon}
                                 alt="English audio"
                                 className={styles.pg72HeaderAudioIcon}
                                 onClick={() => playAudio("pg72_audio1e")}
                             />
                             <img
-                                src={pIcon}
+                                src={ptbr_audio_icon}
                                 alt="Portuguese audio"
                                 className={styles.pg72HeaderAudioIcon}
                                 onClick={() => playAudio("pg72_audio1p")}
@@ -180,19 +180,19 @@ const pagina72 = () => {
                                     <div className={styles.pg72IconsContainer}>
                                         {results[index] !== null && (
                                             <img
-                                                src={results[index] ? vSquare : xSquare}
+                                                src={results[index] ? correct_icon : wrong_icon}
                                                 alt={results[index] ? "Correct" : "Incorrect"}
                                                 className={styles.pg72CheckmarkImage}
                                             />
                                         )}
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles.pg72AdditionalIcon}
                                             onClick={() => playAudio(audioKey)}
                                         />
                                         <img
-                                            src={volumeReduzidoIcon}
+                                            src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
                                             className={`${styles.pg72AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg72Pulsing : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
@@ -227,13 +227,13 @@ const pagina72 = () => {
                         <p className={styles.pg84ATituloQuestion}>
                             Negative form:
                             <img
-                                src={eIcon}
+                                src={eng_audio_icon}
                                 alt="English audio"
                                 className={styles.pg72HeaderAudioIcon}
                                 onClick={() => playAudio("pg72_audio7e")}
                             />
                             <img
-                                src={pIcon}
+                                src={ptbr_audio_icon}
                                 alt="Portuguese audio"
                                 className={styles.pg72HeaderAudioIcon}
                                 onClick={() => playAudio("pg72_audio7p")}
@@ -273,19 +273,19 @@ const pagina72 = () => {
                                     <div className={styles.pg72IconsContainer}>
                                         {results[index + 5] !== null && (
                                             <img
-                                                src={results[index + 5] ? vSquare : xSquare}
+                                                src={results[index + 5] ? correct_icon : wrong_icon}
                                                 alt={results[index + 5] ? "Correct" : "Incorrect"}
                                                 className={styles.pg72CheckmarkImage}
                                             />
                                         )}
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles.pg72AdditionalIcon}
                                             onClick={() => playAudio(audioKey)}
                                         />
                                         <img
-                                            src={volumeReduzidoIcon}
+                                            src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
                                             className={`${styles.pg72AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg72Pulsing : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}

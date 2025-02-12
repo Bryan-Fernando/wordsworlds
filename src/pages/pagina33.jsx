@@ -1,16 +1,19 @@
 import React, { useState, useRef } from 'react';
+
 import styles from './pagina33.module.css';
 
-import global_verboToBe from '../assets/audios/global_verboToBe.mp3';
-import global_grammar from '../assets/audios/global_grammar.mp3';
-import global_simplePresent from '../assets/audios/global_simplePresent.mp3';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
-import negativaAudio from '../assets/audios/interrogativaN.mp3';
+import global_verbo_to_be from '../assets/audios/global_verbo_to_be.mp3';
+import global_grammar from '../assets/audios/global_grammar.mp3';
+import global_simple_present from '../assets/audios/global_simple_present.mp3';
+import negativaAudio from '../assets/audios/interrogativa_n.mp3';
 import sujeitoAudio from '../assets/audios/sujeito.mp3';
-import verboAuxiliarAudio from '../assets/audios/verboauxiliar.mp3';
+import verbo_auxiliarAudio from '../assets/audios/verbo_auxiliar.mp3';
 import adverbioAudio from '../assets/audios/adverbio.mp3';
 import verboAudio from '../assets/audios/verbo.mp3';
-import objetoComplementoAudio from '../assets/audios/objetocomplemento.mp3';
+import objeto_complemento_audio from '../assets/audios/objeto_complemento.mp3';
 import traducaoAudio from '../assets/audios/traducao.mp3';
 import pg33Audio1 from '../assets/audios/pg33_audio1.mp3';
 import pg33Audio2 from '../assets/audios/pg33_audio2.mp3';
@@ -47,18 +50,32 @@ const Pagina33 = () => {
         <div>
             <div className={styles.pg33Container}>
                 <header className={styles.pg33Header}>
-                    <h1 className={styles.pg33AudioText}
-                        onClick={() => playAudio(global_grammar)}>
+                    <h1 className={styles.pg33AudioText}>
                         Grammar
+                        <img
+                            src={eng_audio_icon}
+                            alt="English Audio"
+                            className={styles.pg33Icon}
+                            onClick={() => playAudio(global_grammar)}
+                        />
                     </h1>
-                    <h2 className={styles.pg33AudioText}
-                        onClick={() => playAudio(global_simplePresent)}
-                        style={{ color: 'black' }}>
+                    <h2 className={styles.pg33AudioText} style={{ color: "black" }}>
                         Simple Present (Presente Simples)
+                        <img
+                            src={eng_audio_icon}
+                            alt="English Audio"
+                            className={styles.pg33Icon}
+                            onClick={() => playAudio(global_simple_present)}
+                        />
                     </h2>
-                    <h3 className={styles.pg33AudioText}
-                        onClick={() => playAudio(global_verboToBe)}>
+                    <h3 className={styles.pg33AudioText}>
                         Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)
+                        <img
+                            src={ptbr_audio_icon}
+                            alt="Portuguese Audio"
+                            className={styles.pg33Icon}
+                            onClick={() => playAudio(global_verbo_to_be)}
+                        />
                     </h3>
                 </header>
                 <main className={styles.pg33Main}>
@@ -68,12 +85,17 @@ const Pagina33 = () => {
                             onClick={() => playAudio(negativaAudio)}
                             style={{ cursor: 'pointer' }}
                         >
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese Audio"
+                                className={styles.page__icon__left}
+                            />
                             NEGATIVE INTERROGATIVE
                         </div>
                         <table className={styles.pg33StyledTable}>
                             <colgroup>
                                 <col className={styles.pg33Sujeito} />
-                                <col className={styles.pg33VerboAuxiliar} />
+                                <col className={styles.pg33verbo_auxiliar} />
                                 <col className={styles.pg33Adverbio} />
                                 <col className={styles.pg33Verbo} />
                                 <col className={styles.pg33ObjetivoComplemento} />
@@ -81,7 +103,7 @@ const Pagina33 = () => {
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th onClick={() => playAudio(verboAuxiliarAudio)} style={{ cursor: 'pointer' }}>
+                                    <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: 'pointer' }}>
                                         Auxiliary <br /> Verb
                                     </th>
                                     <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: 'pointer' }}>
@@ -91,7 +113,7 @@ const Pagina33 = () => {
                                         'Not' <br /> Adverb
                                     </th>
                                     <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>Verb(s)</th>
-                                    <th onClick={() => playAudio(objetoComplementoAudio)} style={{ cursor: 'pointer' }}>
+                                    <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: 'pointer' }}>
                                         Object <br /> Complement
                                     </th>
                                     <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: 'pointer' }}>
@@ -104,7 +126,7 @@ const Pagina33 = () => {
                                     <td className={styles.pg33Sujeito} onClick={() => playAudio(pg33Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         Are
                                     </td>
-                                    <td className={styles.pg33VerboAuxiliar} onClick={() => playAudio(pg33Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles.pg33verbo_auxiliar} onClick={() => playAudio(pg33Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         they
                                     </td>
                                     <td className={styles.pg33Adverbio} onClick={() => playAudio(pg33Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
@@ -112,17 +134,17 @@ const Pagina33 = () => {
                                     </td>
                                     <td className={styles.pg33Verbo}></td>
                                     <td className={styles.pg33ObjetivoComplemento} onClick={() => playAudio(pg33Audio1)} style={{ cursor: 'pointer' }}>
-                                        from Brazil?
+                                        from Argentina?
                                     </td>
                                     <td className={styles.pg33Traducao} onClick={() => playAudio(traducaoAudio1)} style={{ cursor: 'pointer' }}>
-                                        Eles não são do Brasil?
+                                        Eles não são da Argentina?
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className={styles.pg33Sujeito} onClick={() => playAudio(pg33Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         Aren't
                                     </td>
-                                    <td className={styles.pg33VerboAuxiliar} onClick={() => playAudio(pg33Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles.pg33verbo_auxiliar} onClick={() => playAudio(pg33Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         they
                                     </td>
                                     <td className={styles.pg33Adverbio}></td>
@@ -138,7 +160,7 @@ const Pagina33 = () => {
                                     <td className={styles.pg33Sujeito} onClick={() => playAudio(pg33Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         Ain't
                                     </td>
-                                    <td className={styles.pg33VerboAuxiliar} onClick={() => playAudio(pg33Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles.pg33verbo_auxiliar} onClick={() => playAudio(pg33Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         they
                                     </td>
                                     <td className={styles.pg33Adverbio}></td>
@@ -156,7 +178,7 @@ const Pagina33 = () => {
                         <table className={styles.pg33StyledTable}>
                             <colgroup>
                                 <col className={styles.pg33Sujeito} />
-                                <col className={styles.pg33VerboAuxiliar} />
+                                <col className={styles.pg33verbo_auxiliar} />
                                 <col className={styles.pg33Adverbio} />
                                 <col className={styles.pg33Verbo} />
                                 <col className={styles.pg33ObjetivoComplemento} />
@@ -164,13 +186,13 @@ const Pagina33 = () => {
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th onClick={() => playAudio(verboAuxiliarAudio)} style={{ cursor: 'pointer' }}>
+                                    <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: 'pointer' }}>
                                         Auxiliary <br /> Verb
                                     </th>
                                     <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: 'pointer' }}>Subject</th>
                                     <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}>'Not' <br />Adverb</th>
                                     <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>Verb(s)</th>
-                                    <th onClick={() => playAudio(objetoComplementoAudio)} style={{ cursor: 'pointer' }}>
+                                    <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: 'pointer' }}>
                                         Object <br /> Complement
                                     </th>
                                     <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: 'pointer' }}>Translation</th>

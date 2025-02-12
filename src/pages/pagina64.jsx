@@ -1,23 +1,24 @@
 import React from "react";
-import styles from "./Pagina64.module.css";
-import imagemUnica from "../assets/images/pagina64_imagem1.png"; // Imagem de fundo
-import segundaImagem from "../assets/images/pagina64_imagem2.webp"; // Imagem 2
-import terceiraImagem from "../assets/images/pagina64_imagem3.webp";  // Imagem 3
-import quartaImagem from "../assets/images/pagina64_imagem4.webp";  // Imagem 4
-import quintaImagem from "../assets/images/pagina64_imagem5.webp";  // Imagem 5
-import sextaImagem from "../assets/images/pagina64_imagem6.webp"; // Imagem 6
-import setimaImagem from "../assets/images/pagina64_imagem7.webp"; // Imagem 7
+
+import styles from "./pagina64.module.css";
+
+import eng_audio_icon from "../assets/icons/eng_audio_icon.webp";
+import ptbr_audio_icon from "../assets/icons/ptbr_audio_icon.webp";
+
+import imagemUnica from "../assets/images/pagina64_imagem1.png"; 
+import segundaImagem from "../assets/images/pagina64_imagem2.webp"; 
+import terceiraImagem from "../assets/images/pagina64_imagem3.webp";  
+import quartaImagem from "../assets/images/pagina64_imagem4.webp";  
+import quintaImagem from "../assets/images/pagina64_imagem5.webp";  
+import sextaImagem from "../assets/images/pagina64_imagem6.webp"; 
+import setimaImagem from "../assets/images/pagina64_imagem7.webp";
+
 import pg64_audio1e from "../assets/audios/pg64_audio1e.mp3";
 import pg64_audio1p from "../assets/audios/pg64_audio1p.mp3";
-import eIcon from "../assets/icons/eIcon.png";
-import pIcon from "../assets/icons/pIcon.png";
-
 import pg64_audio2 from "../assets/audios/pg64_audio2.mp3";
 import pg64_audio3 from "../assets/audios/pg64_audio3.mp3";
 import pg64_audio4 from "../assets/audios/pg64_audio4.mp3";
 import pg64_audio5 from "../assets/audios/pg64_audio5.mp3";
-
-
 
 const Pagina64 = () => {
 
@@ -49,13 +50,13 @@ const Pagina64 = () => {
         <h1 className={styles["page64__title"]}>
           Reading and Comprehension
           <img
-            src={eIcon}
+            src={eng_audio_icon}
             alt="English audio"
             className={styles["page64__audio-icon"]}
             onClick={() => playAudio('pg64_audio1e')}
           />
           <img
-            src={pIcon}
+            src={ptbr_audio_icon}
             alt="Portuguese audio"
             className={styles["page64__audio-icon"]}
             onClick={() => playAudio('pg64_audio1p')}

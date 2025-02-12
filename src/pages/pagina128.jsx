@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+
 import styles from './pagina128.module.css';
-import pg57IconNotes from '../assets/Icons/Icon-Notes.png';
 
 const Pagina128 = () => {
     const [inputValues, setInputValues] = useState(

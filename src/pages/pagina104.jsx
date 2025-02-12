@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import styles from './pagina104.module.css';
-import pagina104_imagem1 from '../assets/images/pagina104_imagem1.webp';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
 
-// Importando áudios sequenciais
+import styles from './pagina104.module.css';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
+import pagina104_imagem1 from '../assets/images/pagina104_imagem1.webp';
+
 import pg104_audio1e from '../assets/audios/pg104_audio1e.mp3';
 import pg104_audio1p from '../assets/audios/pg104_audio1p.mp3';
 import pg104_audio2 from '../assets/audios/pg104_audio2.mp3';
@@ -44,13 +46,13 @@ const Pagina104 = () => {
             <header className={styles.pg104Header}>
                 <h1 className={styles.pg104H1}>Useful Expressions 
                     <img 
-                        src={eIcon} 
+                        src={eng_audio_icon} 
                         alt="English audio" 
                         className={styles.pg104HeaderIcon} 
                         onClick={() => playAudio("pg104_audio1e")} 
                     />
                     <img 
-                        src={pIcon} 
+                        src={ptbr_audio_icon} 
                         alt="Portuguese audio" 
                         className={styles.pg104HeaderIcon} 
                         onClick={() => playAudio("pg104_audio1p")} 
@@ -80,7 +82,7 @@ const Pagina104 = () => {
                                         />
                                         <span className={styles.pg104TextRed}><em>{question[1]}</em></span>
                                         <img 
-                                            src={eIcon} 
+                                            src={eng_audio_icon} 
                                             alt="Audio Icon" 
                                             className={styles.pg104AdditionalIcon} 
                                             onClick={() => playAudio(audioKey)}

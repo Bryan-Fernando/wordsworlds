@@ -1,15 +1,15 @@
 import React, { useRef } from 'react';
+
 import styles from './pagina57.module.css';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
 import pagina57_imagem1 from '../assets/images/pagina57_imagem1.webp';
 import pagina57_imagem2 from '../assets/images/pagina57_imagem2.webp';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
 
-// Importação dos áudios do cabeçalho
 import pg57_audio1e from '../assets/audios/pg57_audio1e.mp3';
 import pg57_audio1p from '../assets/audios/pg57_audio1p.mp3';
-
-// Importação dos áudios restantes (do 2 ao 51)
 import pg57_audio2 from '../assets/audios/pg57_audio2.mp3';
 import pg57_audio3 from '../assets/audios/pg57_audio3.mp3';
 import pg57_audio4 from '../assets/audios/pg57_audio4.mp3';
@@ -138,13 +138,13 @@ const Pagina57 = () => {
                     <h1 className={styles['page57__title']}>
                         Asking and Giving <br /> Personal - Information
                         <img
-                            src={eIcon}
+                            src={eng_audio_icon}
                             alt="English Audio"
                             className={styles['page57__icon']}
                             onClick={() => playAudio('pg57_audio1e')}
                         />
                         <img
-                            src={pIcon}
+                            src={ptbr_audio_icon}
                             alt="Portuguese Audio"
                             className={styles['page57__icon']}
                             onClick={() => playAudio('pg57_audio1p')}

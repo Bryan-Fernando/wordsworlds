@@ -1,28 +1,27 @@
 import React, { useState } from 'react';
-import styles from './pagina103.module.css';
-import pagina103_imagem1 from '../assets/images/pagina103_imagem1.webp';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
 
-// Áudios globais e instruções
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
+import styles from './pagina103.module.css';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
+import pagina103_imagem1 from '../assets/images/pagina103_imagem1.webp';
+
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import pg103_audio1e from '../assets/audios/pg103_audio1e.mp3';
 import pg103_audio1p from '../assets/audios/pg103_audio1p.mp3';
-
-// Áudios das questões
 import pg103_audio2 from '../assets/audios/pg103_audio2.mp3';
 import pg103_audio3 from '../assets/audios/pg103_audio3.mp3';
 import pg103_audio4 from '../assets/audios/pg103_audio4.mp3';
 import pg103_audio5 from '../assets/audios/pg103_audio5.mp3';
 import pg103_audio6 from '../assets/audios/pg103_audio6.mp3';
 
-// Mapeamento dos áudios para facilitar a chamada
 const audioMap = {
-    global_learningLEe,
-    global_learningLEp,
+    global_learning_le_e,
+    global_learning_le_p,
     pg103_audio1e,
     pg103_audio1p,
     pg103_audio2,
@@ -78,28 +77,28 @@ const Pagina103 = () => {
                 <h1 className={styles.pg103H1}>
                     Learning Language Exercises 
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles.pg103HeaderIcon}
-                        onClick={() => playAudio("global_learningLEe")}
+                        onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles.pg103HeaderIcon}
-                        onClick={() => playAudio("global_learningLEp")}
+                        onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
                 <p>
                     Match the questions with the correct answers.
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles.pg103HeaderIcon}
                         onClick={() => playAudio("pg103_audio1e")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles.pg103HeaderIcon}
                         onClick={() => playAudio("pg103_audio1p")}
@@ -138,7 +137,7 @@ const Pagina103 = () => {
 
                                     {results[index] !== null && (
                                         <img
-                                            src={results[index] ? vSquare : xSquare}
+                                            src={results[index] ? correct_icon : wrong_icon}
                                             alt={results[index] ? "Correct" : "Incorrect"}
                                             className={styles.pg103CheckmarkImage}
                                         />
@@ -146,7 +145,7 @@ const Pagina103 = () => {
 
                                     <div className={styles.pg103IconsContainer}>
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles.pg103AdditionalIcon}
                                             onClick={() => playAudio(audioKey)}

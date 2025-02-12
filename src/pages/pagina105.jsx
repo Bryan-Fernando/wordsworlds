@@ -1,9 +1,11 @@
 import React from 'react';
-import styles from './pagina105.module.css';
-import pagina105_imagem1 from '../assets/images/pagina105_imagem1.webp';
-import eIcon from '../assets/icons/eIcon.png';
 
-// Importando áudios
+import styles from './pagina105.module.css';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+
+import pagina105_imagem1 from '../assets/images/pagina105_imagem1.webp';
+
 import pg105_audio1 from '../assets/audios/pg105_audio1.mp3';
 import pg105_audio2 from '../assets/audios/pg105_audio2.mp3';
 import pg105_audio3 from '../assets/audios/pg105_audio3.mp3';
@@ -44,7 +46,7 @@ const Pagina105 = () => {
                                 <p className={styles.pg105TextRed}>
                                     <em>{sentence[0]}</em>
                                     <img
-                                        src={eIcon}
+                                        src={eng_audio_icon}
                                         alt="Audio Icon"
                                         className={styles.pg105HeaderIcon}
                                         onClick={() => playAudio(sentence[2])}

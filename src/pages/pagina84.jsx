@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
+
 import styles from './pagina84.module.css';
-import pg84IconNotes from '../assets/Icons/Icon-Notes.png';
+
+import pg84IconNotes from '../assets/icons/notes_icon.webp';
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import slow_audio_icon from '../assets/icons/slow_audio_icon.webp';
+
 import pagina84_imagem1 from '../assets/images/pagina84_imagem1.webp';
 import pagina84_imagem2 from '../assets/images/pagina84_imagem2.webp';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
 
-import volumeReduzidoIcon from '../assets/icons/volumeReduzido.png';
-
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import global_affirmativee from '../assets/audios/global_affirmativee.mp3';
 import global_affirmativep from '../assets/audios/global_affirmativep.mp3';
 import global_negativee from '../assets/audios/global_negativee.mp3';
 import global_negativep from '../assets/audios/global_negativep.mp3';
-
 import pg84_audio1 from '../assets/audios/pg84_audio1.mp3';
 import pg84_audio2 from '../assets/audios/pg84_audio2.mp3';
 import pg84_audio3 from '../assets/audios/pg84_audio3.mp3';
@@ -30,8 +31,8 @@ import pg84_audio10 from '../assets/audios/pg84_audio10.mp3';
 
 const audioMap = {
 
-    global_learningLEe,
-    global_learningLEp,
+    global_learning_le_e,
+    global_learning_le_p,
     global_affirmativee,
     global_affirmativep,
     global_negativee,
@@ -96,16 +97,16 @@ const Pagina84 = () => {
                 <h1 className={styles.pg84H1}>
                     Learning Language Exercises
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles.pg84HeaderIcon}
-                        onClick={() => playAudio("global_learningLEe")}
+                        onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles.pg84HeaderIcon}
-                        onClick={() => playAudio("global_learningLEp")}
+                        onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
                 <h2 className={styles.pg84H2}>Complete the sentences in the Simple Present Form of Verb Be <br /> Complete as frases no Presente Simples do verbo "To Be" (ser/estar).
@@ -131,13 +132,13 @@ const Pagina84 = () => {
                         <p className={styles.pg84ATituloQuestion}>
                             Affirmative:
                             <img
-                                src={eIcon}
+                                src={eng_audio_icon}
                                 alt="English audio"
                                 className={styles.pg84HeaderIcon}
                                 onClick={() => playAudio("global_affirmativee")}
                             />
                             <img
-                                src={pIcon}
+                                src={ptbr_audio_icon}
                                 alt="Portuguese audio"
                                 className={styles.pg84HeaderIcon}
                                 onClick={() => playAudio("global_affirmativep")}
@@ -171,21 +172,21 @@ const Pagina84 = () => {
                                     <div className={styles.pg84IconsContainer}>
                                         {results[index] !== null && (
                                             <img
-                                                src={results[index] ? vSquare : xSquare}
+                                                src={results[index] ? correct_icon : wrong_icon}
                                                 alt={results[index] ? "Correct" : "Incorrect"}
                                                 className={styles.pg84CheckmarkImage}
                                             />
                                         )}
 
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles.pg84AdditionalIcon}
                                             onClick={() => playAudio(audioKey)}
                                         />
 
                                         <img
-                                            src={volumeReduzidoIcon}
+                                            src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
                                             className={`${styles.pg84AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg84Pulsing : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
@@ -235,13 +236,13 @@ const Pagina84 = () => {
                         <p className={styles.pg84ATituloQuestion}>
                             Negative:
                             <img
-                                src={eIcon}
+                                src={eng_audio_icon}
                                 alt="English audio"
                                 className={styles.pg84HeaderIcon}
                                 onClick={() => playAudio("global_negativee")}
                             />
                             <img
-                                src={pIcon}
+                                src={ptbr_audio_icon}
                                 alt="Portuguese audio"
                                 className={styles.pg84HeaderIcon}
                                 onClick={() => playAudio("global_negativep")}
@@ -276,21 +277,21 @@ const Pagina84 = () => {
                                     <div className={styles.pg84IconsContainer}>
                                         {results[index + 5] !== null && (
                                             <img
-                                                src={results[index + 5] ? vSquare : xSquare}
+                                                src={results[index + 5] ? correct_icon : wrong_icon}
                                                 alt={results[index + 5] ? "Correct" : "Incorrect"}
                                                 className={styles.pg84CheckmarkImage}
                                             />
                                         )}
 
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles.pg84AdditionalIcon}
                                             onClick={() => playAudio(audioKey)}
                                         />
 
                                         <img
-                                            src={volumeReduzidoIcon}
+                                            src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
                                             className={`${styles.pg84AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg84Pulsing : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}

@@ -123,8 +123,8 @@
 }
 
 .pg39AudioIcon,
-.pg39PortugueseIcon,
-.pg39VolumeIcon {
+.pg39Portugueseng_audio_icon,
+.pg39Volumeng_audio_icon {
     margin: 0 0.5%;
     width: auto;
     height: 2.5rem;
@@ -132,8 +132,8 @@
 }
 
 .pg39AudioIcon.pg39Pulsing,
-.pg39PortugueseIcon.pg39Pulsing,
-.pg39VolumeIcon.pg39Pulsing {
+.pg39Portugueseng_audio_icon.pg39Pulsing,
+.pg39Volumeng_audio_icon.pg39Pulsing {
     animation: pulse 1s infinite;
     filter: brightness(1.2) saturate(1.5);
 }
@@ -158,12 +158,12 @@
     background-color: #8a1720;
 }
 
-.pg39VolumeIcon {
+.pg39Volumeng_audio_icon {
     position: relative;
     top: 0;
 }
 
-.pg39PortugueseIcon {
+.pg39Portugueseng_audio_icon {
     position: relative;
     top: 0;
 }
@@ -182,7 +182,7 @@
     }
 }
 
-.pg39VolumeIcon.pg39Active {
+.pg39Volumeng_audio_icon.pg39Active {
     animation: pulse 1s infinite;
     filter: brightness(1.5) saturate(1.5);
     color: #A61C28;
@@ -201,4 +201,12 @@
     width: 2rem;
     height: 2rem;
     cursor: pointer;
+}
+
+.page__paragraph {
+    text-align: left;
+    color: #A61C28;
+    font-weight: bold;
+    position: relative;
+    top: 2rem;
 }

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import styles from './pagina86.module.css';
+
 import pagina86_imagem1 from '../assets/images/pagina86_imagem1.webp';
 import pagina86_imagem2 from '../assets/images/pagina86_imagem2.webp';
 import pagina86_imagem3 from '../assets/images/pagina86_imagem3.webp';

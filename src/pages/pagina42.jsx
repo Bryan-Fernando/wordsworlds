@@ -1,18 +1,20 @@
 import React, { useState, useRef } from 'react';
+
 import styles from './pagina42.module.css';
 
-import global_introE from '../assets/audios/global_introE.mp3';
-import global_introP from '../assets/audios/global_introP.mp3';
+import pg42IconNotes from '../assets/icons/notes_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 
-import pg42IconNotes from '../assets/Icons/Icon-Notes.png';
-import picon from '../assets/icons/picon.png';
-import eicon from '../assets/icons/eicon.png';
-import pagina42_imagem1 from '../assets/Images/pagina42_imagem1.webp';
-import pagina42_imagem2 from '../assets/Images/pagina42_imagem2.webp';
-import pagina42_imagem3 from '../assets/Images/pagina42_imagem3.webp';
-import pagina42_imagem4 from '../assets/Images/pagina42_imagem4.webp';
-import pagina42_imagem5 from '../assets/Images/pagina42_imagem5.webp';
-import pagina42_imagem6 from '../assets/Images/pagina42_imagem6.webp';
+import pagina42_imagem1 from '../assets/images/pagina42_imagem1.webp';
+import pagina42_imagem2 from '../assets/images/pagina42_imagem2.webp';
+import pagina42_imagem3 from '../assets/images/pagina42_imagem3.webp';
+import pagina42_imagem4 from '../assets/images/pagina42_imagem4.webp';
+import pagina42_imagem5 from '../assets/images/pagina42_imagem5.webp';
+import pagina42_imagem6 from '../assets/images/pagina42_imagem6.webp';
+
+import global_intro_e from '../assets/audios/global_intro_e.mp3';
+import global_intro_p from '../assets/audios/global_intro_p.mp3';
 import audio1e from '../assets/audios/pg42_audio1e.mp3';
 import audio1p from '../assets/audios/pg42_audio1p.mp3';
 import audio2e from '../assets/audios/pg42_audio2e.mp3';
@@ -128,16 +130,16 @@ const Pagina42 = () => {
                         Introductions
                         <span>
                             <img
-                                src={eicon}
+                                src={eng_audio_icon}
                                 alt="English Audio"
                                 style={{ width: '1.8rem', height: '1.8rem', cursor: 'pointer' }}
-                                onClick={() => playHeaderAudio(global_introE)}
+                                onClick={() => playHeaderAudio(global_intro_e)}
                             />
                             <img
-                                src={picon}
+                                src={ptbr_audio_icon}
                                 alt="Portuguese Audio"
                                 style={{ width: '1.8rem', height: '1.8rem', marginLeft: '0.3rem', cursor: 'pointer' }}
-                                onClick={() => playHeaderAudio(global_introP)}
+                                onClick={() => playHeaderAudio(global_intro_p)}
                             />
                         </span>
                     </h1>
@@ -152,13 +154,13 @@ const Pagina42 = () => {
                                 <p>
                                     Name: I’m Eric Porto.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio1e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio1p')}
@@ -166,13 +168,13 @@ const Pagina42 = () => {
                                     <br />
                                     Age: I’m 32 (thirty-two) years old.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio2e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio2p')}
@@ -180,13 +182,13 @@ const Pagina42 = () => {
                                     <br />
                                     Nationality: I’m Brazilian.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio3e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio3p')}
@@ -194,13 +196,13 @@ const Pagina42 = () => {
                                     <br />
                                     City: I’m from Paraty.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio4e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio4p')}
@@ -217,13 +219,13 @@ const Pagina42 = () => {
                                 <p>
                                     Name: This is my friend Marilia Alves.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio5e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio5p')}
@@ -231,13 +233,13 @@ const Pagina42 = () => {
                                     <br />
                                     Age: She’s 31 (thirty-one) years old.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio6e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio6p')}
@@ -245,13 +247,13 @@ const Pagina42 = () => {
                                     <br />
                                     Nationality: She is Brazilian.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio7e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio7p')}
@@ -259,13 +261,13 @@ const Pagina42 = () => {
                                     <br />
                                     City: She’s from Paraty.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio8e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio8p')}
@@ -284,13 +286,13 @@ const Pagina42 = () => {
                                 <p>
                                     Name: This is Deborah Sena.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio9e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio9p')}
@@ -298,13 +300,13 @@ const Pagina42 = () => {
                                     <br />
                                     Age: She is 36 (thirty-six) years old.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio10e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio10p')}
@@ -312,13 +314,13 @@ const Pagina42 = () => {
                                     <br />
                                     Nationality: Brazilian and Portuguese.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio11e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio11p')}
@@ -326,13 +328,13 @@ const Pagina42 = () => {
                                     <br />
                                     City: She’s originally from Angra dos Reis but lives in Calgary - Canada.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio12e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio12p')}
@@ -349,13 +351,13 @@ const Pagina42 = () => {
                                 <p>
                                     Name: Mei Lazari.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio13e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio13p')}
@@ -363,13 +365,13 @@ const Pagina42 = () => {
                                     <br />
                                     Age: He’s 36 (thirty-six) years old.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio14e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio14p')}
@@ -377,13 +379,13 @@ const Pagina42 = () => {
                                     <br />
                                     Nationality: He’s Brazilian.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio15e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio15p')}
@@ -391,13 +393,13 @@ const Pagina42 = () => {
                                     <br />
                                     City: He is from Ariquemes.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio16e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio16p')}
@@ -416,13 +418,13 @@ const Pagina42 = () => {
                                 <p>
                                     Name: This is Cheryl Daves.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio17e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio17p')}
@@ -430,13 +432,13 @@ const Pagina42 = () => {
                                     <br />
                                     Age: She’s 37 (thirty-seven) years old.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio18e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio18p')}
@@ -444,13 +446,13 @@ const Pagina42 = () => {
                                     <br />
                                     Nationality: Cheryl is Canadian.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio19e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio19p')}
@@ -458,13 +460,13 @@ const Pagina42 = () => {
                                     <br />
                                     City: She’s from Calgary.
                                     <img
-                                        src={eicon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio20e')}
                                     />
                                     <img
-                                        src={picon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles.iconButton}
                                         onClick={() => playAudio('pg42_audio20p')}

@@ -1,29 +1,30 @@
 import React, { useState } from 'react';
+
 import styles from './pagina41.module.css';
+
+import slow_audio_icon from '../assets/icons/slow_audio_icon.webp';
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
 import pagina41_imagem1 from '../assets/images/pagina41_imagem1.webp';
 import pagina41_imagem2 from '../assets/images/pagina41_imagem2.webp';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
 
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import pg41_audio1e from '../assets/audios/pg41_audio1e.mp3';
 import pg41_audio1p from '../assets/audios/pg41_audio1p.mp3';
-
-
-import volumeReduzidoIcon from '../assets/icons/volumeReduzido.png';
-import Pagina41_audioA from '../assets/audios/Pagina41_audioA.mp3';
-import Pagina41_audioB from '../assets/audios/Pagina41_audioB.mp3';
-import Pagina41_audioC from '../assets/audios/Pagina41_audioC.mp3';
-import Pagina41_audioD from '../assets/audios/Pagina41_audioD.mp3';
-import Pagina41_audioE from '../assets/audios/Pagina41_audioE.mp3';
-import Pagina41_audioF from '../assets/audios/Pagina41_audioF.mp3';
-import Pagina41_audioG from '../assets/audios/Pagina41_audioG.mp3';
-import Pagina41_audioH from '../assets/audios/Pagina41_audioH.mp3';
-import Pagina41_audioI from '../assets/audios/Pagina41_audioI.mp3';
-import Pagina41_audioJ from '../assets/audios/Pagina41_audioJ.mp3';
+import Pagina41_audioA from '../assets/audios/pagina41_audioA.mp3';
+import Pagina41_audioB from '../assets/audios/pagina41_audioB.mp3';
+import Pagina41_audioC from '../assets/audios/pagina41_audioC.mp3';
+import Pagina41_audioD from '../assets/audios/pagina41_audioD.mp3';
+import Pagina41_audioE from '../assets/audios/pagina41_audioE.mp3';
+import Pagina41_audioF from '../assets/audios/pagina41_audioF.mp3';
+import Pagina41_audioG from '../assets/audios/pagina41_audioG.mp3';
+import Pagina41_audioH from '../assets/audios/pagina41_audioH.mp3';
+import Pagina41_audioI from '../assets/audios/pagina41_audioI.mp3';
+import Pagina41_audioJ from '../assets/audios/pagina41_audioJ.mp3';
 
 const audioFiles = [
     Pagina41_audioA,
@@ -83,16 +84,16 @@ const Pagina41 = () => {
                 Learning Language Exercises
                 <span>
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English Audio"
                         style={{ width: '1.8rem', height: '1.8rem', cursor: 'pointer' }}
-                        onClick={() => playHeaderAudio(global_learningLEe)}
+                        onClick={() => playHeaderAudio(global_learning_le_e)}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese Audio"
                         style={{ width: '1.8rem', height: '1.8rem', marginLeft: '0.3rem', cursor: 'pointer' }}
-                        onClick={() => playHeaderAudio(global_learningLEp)}
+                        onClick={() => playHeaderAudio(global_learning_le_p)}
                     />
                 </span>
             </h1>
@@ -101,13 +102,13 @@ const Pagina41 = () => {
                 Fill in the blanks in the Present Simple with the verbs in parentheses.
                 <span>
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English Audio"
                         style={{ width: '1.8rem', height: '1.8rem', cursor: 'pointer' }}
                         onClick={() => playHeaderAudio(pg41_audio1e)}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese Audio"
                         style={{ width: '1.8rem', height: '1.8rem', marginLeft: '0.3rem', cursor: 'pointer' }}
                         onClick={() => playHeaderAudio(pg41_audio1p)}
@@ -145,7 +146,7 @@ const Pagina41 = () => {
                                 />
                                 {results[index] !== null && (
                                     <img
-                                        src={results[index] ? vSquare : xSquare}
+                                        src={results[index] ? correct_icon : wrong_icon}
                                         alt={results[index] ? "Correct" : "Incorrect"}
                                         className={styles.pg41CheckmarkImage}
                                     />
@@ -154,13 +155,13 @@ const Pagina41 = () => {
                             <span><em>{parts[1]}</em></span>
                             <div className={styles.pg41IconsContainer}>
                                 <img
-                                    src={eIcon}
+                                    src={eng_audio_icon}
                                     alt="Audio Icon"
                                     className={styles.pg41AdditionalIcon}
                                     onClick={() => playAudio(index)}
                                 />
                                 <img
-                                    src={volumeReduzidoIcon}
+                                    src={slow_audio_icon}
                                     alt="Volume Reduced Icon"
                                     className={`${styles.pg41AdditionalIcon} ${isSpeedReduced[index] ? styles.pg41Pulsing : ''}`}
                                     onClick={() => toggleSpeedReduction(index)}

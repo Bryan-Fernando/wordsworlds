@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import styles from './Pagina97.module.css';
-import pg97IconNotes from '../assets/Icons/Icon-Notes.png';
-import Pagina97_imagem1 from '../assets/images/Pagina97_imagem1.webp';
-import Pagina97_imagem2 from '../assets/images/Pagina97_imagem2.webp';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-import volumeReduzidoIcon from '../assets/icons/volumeReduzido.png';
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
 
-// Áudios das questões
+import styles from './pagina97.module.css';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
+import Pagina97_imagem1 from '../assets/images/pagina97_imagem1.webp';
+import Pagina97_imagem2 from '../assets/images/pagina97_imagem2.webp';
+
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import pg97_audio1e from '../assets/audios/pg97_audio1e.mp3';
 import pg97_audio1p from '../assets/audios/pg97_audio1p.mp3';
 import pg97_audio2 from '../assets/audios/pg97_audio2.mp3';
@@ -29,8 +29,8 @@ import pg97_audio13 from '../assets/audios/pg97_audio13.mp3';
 
 
 const audioMap = {
-    global_learningLEe,
-    global_learningLEp,
+    global_learning_le_e,
+    global_learning_le_p,
     pg97_audio1e,
     pg97_audio1p,
     pg97_audio2,
@@ -112,16 +112,16 @@ const Pagina97 = () => {
                 <h1 className={styles.pg97H1}>
                     Learning Language Exercises
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles.pg97HeaderIcon}
-                        onClick={() => playAudio("global_learningLEe")}
+                        onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles.pg97HeaderIcon}
-                        onClick={() => playAudio("global_learningLEp")}
+                        onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
             </header>
@@ -147,13 +147,13 @@ const Pagina97 = () => {
                         <div className={styles.pg97Questions1}>
                             <p className={styles.pg97ATituloQuestion}>Complete the sentences with the correct form of the verbs in parentheses:
                             <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles.pg97HeaderIcon}
                         onClick={() => playAudio("pg97_audio1e")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles.pg97HeaderIcon}
                         onClick={() => playAudio("pg97_audio1p")}
@@ -200,13 +200,13 @@ const Pagina97 = () => {
                                         <div className={styles.pg97IconsContainer}>
                                             {results[index] !== null && (
                                                 <img
-                                                    src={results[index] ? vSquare : xSquare}
+                                                    src={results[index] ? correct_icon : wrong_icon}
                                                     alt={results[index] ? "Correct" : "Incorrect"}
                                                     className={styles.pg97CheckmarkImage}
                                                 />
                                             )}
                                             <img
-                                                src={eIcon}
+                                                src={eng_audio_icon}
                                                 alt="Audio English"
                                                 className={styles.pg97AdditionalIcon}
                                                 onClick={() => playAudio(audioKey)}
@@ -252,13 +252,13 @@ const Pagina97 = () => {
                                         <div className={styles.pg97IconsContainer}>
                                             {results[index + 5] !== null && (
                                                 <img
-                                                    src={results[index + 5] ? vSquare : xSquare}
+                                                    src={results[index + 5] ? correct_icon : wrong_icon}
                                                     alt={results[index + 5] ? "Correct" : "Incorrect"}
                                                     className={styles.pg97CheckmarkImage}
                                                 />
                                             )}
                                             <img
-                                                src={eIcon}
+                                                src={eng_audio_icon}
                                                 alt="Audio Icon"
                                                 className={styles.pg97AdditionalIcon}
                                                 onClick={() => playAudio(audioKey)}
@@ -277,7 +277,7 @@ const Pagina97 = () => {
                     <table className={styles.pg97styledTableInterrogativa}>
                         <thead>
                             <tr className={styles.pg97celulatable}>
-                                <th>VerboAuxiliar</th>
+                                <th>verbo_auxiliar</th>
                                 <th>Sujeito</th>
                                 <th>
                                     <span style={{ color: 'red' }}>Not</span> <br /> Adverb
@@ -339,13 +339,13 @@ const Pagina97 = () => {
                                     <div className={styles.pg97IconsContainer}>
                                         {results[index + 10] !== null && (
                                             <img
-                                                src={results[index + 10] ? vSquare : xSquare}
+                                                src={results[index + 10] ? correct_icon : wrong_icon}
                                                 alt={results[index + 10] ? "Correct" : "Incorrect"}
                                                 className={styles.pg97CheckmarkImage}
                                             />
                                         )}
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles.pg97AdditionalIcon}
                                             onClick={() => playAudio(audioKey)} // Lógica de áudio sem o volume reduzido

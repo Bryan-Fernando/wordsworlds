@@ -1,12 +1,13 @@
 import React, { useRef } from 'react';
+
 import styles from './pagina48.module.css';
 
-import global_grammar from '../assets/audios/global_grammar.mp3';
-import global_posseAe from '../assets/audios/global_posseAe.mp3';
-import global_posseAp from '../assets/audios/global_posseAp.mp3';
+import pagina48_imagem1 from '../assets/images/pagina48_imagem1.webp';
+import pagina48_imagem2 from '../assets/images/pagina48_imagem2.webp';
 
-import pagina48_imagem1 from '../assets/Images/pagina48_imagem1.webp';
-import pagina48_imagem2 from '../assets/Images/pagina48_imagem2.webp';
+import global_grammar from '../assets/audios/global_grammar.mp3';
+import global_posse_ae from '../assets/audios/global_posse_ae.mp3';
+import global_posse_ap from '../assets/audios/global_posse_ap.mp3';
 import audio1e from '../assets/audios/pg48_audio1e.mp3';
 import audio2e from '../assets/audios/pg48_audio2e.mp3';
 import audio3e from '../assets/audios/pg48_audio3e.mp3';
@@ -39,8 +40,8 @@ const Pagina48 = () => {
 
     const globalAudioMap = {
         'global_grammar': global_grammar,
-        'global_posseAe': global_posseAe,
-        'global_posseAp': global_posseAp
+        'global_posse_ae': global_posse_ae,
+        'global_posse_ap': global_posse_ap
     };
 
     const playGlobalAudio = (audioKey) => {
@@ -56,10 +57,10 @@ const Pagina48 = () => {
                         Grammar
                     </h1>
                     <div className={styles.pg48HeaderH2H3}>
-                        <h2 className={styles.pg48HeaderH2} onClick={() => playGlobalAudio('global_posseAe')}>
+                        <h2 className={styles.pg48HeaderH2} onClick={() => playGlobalAudio('global_posse_ae')}>
                             Possessive Adjectives
                         </h2>
-                        <h3 className={styles.pg48HeaderH3} onClick={() => playGlobalAudio('global_posseAp')}>
+                        <h3 className={styles.pg48HeaderH3} onClick={() => playGlobalAudio('global_posse_ap')}>
                             Pronomes possessivos
                         </h3>
                     </div>

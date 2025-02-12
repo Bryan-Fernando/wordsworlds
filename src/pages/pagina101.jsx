@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import styles from './Pagina101.module.css';
-import Pagina101_imagem1 from '../assets/images/Pagina101_imagem1.webp';
-import Pagina101_imagem2 from '../assets/images/Pagina101_imagem2.webp';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-import volumeReduzidoIcon from '../assets/icons/volumeReduzido.png';
 
-// Áudios dos subtítulos
+import styles from './pagina101.module.css';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import slow_audio_icon from '../assets/icons/slow_audio_icon.webp';
+
+import Pagina101_imagem1 from '../assets/images/pagina101_imagem1.webp';
+import Pagina101_imagem2 from '../assets/images/pagina101_imagem2.webp';
+
 import pg101_audio1e from '../assets/audios/pg101_audio1e.mp3';
 import pg101_audio1p from '../assets/audios/pg101_audio1p.mp3';
 import pg101_audio12e from '../assets/audios/pg101_audio12e.mp3';
 import pg101_audio12p from '../assets/audios/pg101_audio12p.mp3';
-
-// Áudios das questões afirmativas
 import pg101_audio2 from '../assets/audios/pg101_audio2.mp3';
 import pg101_audio3 from '../assets/audios/pg101_audio3.mp3';
 import pg101_audio4 from '../assets/audios/pg101_audio4.mp3';
@@ -25,8 +25,6 @@ import pg101_audio8 from '../assets/audios/pg101_audio8.mp3';
 import pg101_audio9 from '../assets/audios/pg101_audio9.mp3';
 import pg101_audio10 from '../assets/audios/pg101_audio10.mp3';
 import pg101_audio11 from '../assets/audios/pg101_audio11.mp3';
-
-// Áudios das questões negativas
 import pg101_audio13 from '../assets/audios/pg101_audio13.mp3';
 import pg101_audio14 from '../assets/audios/pg101_audio14.mp3';
 import pg101_audio15 from '../assets/audios/pg101_audio15.mp3';
@@ -135,13 +133,13 @@ const Pagina101 = () => {
                         <p className={styles.pg101ATituloQuestion}>
                             C) Fill in the blanks with the correct form of the verb be in the Simple Present Tense (Affirmative Form):
                             <img
-                                src={eIcon}
+                                src={eng_audio_icon}
                                 alt="English audio"
                                 className={styles.pg101HeaderIcon}
                                 onClick={() => playAudio("pg101_audio1e")}
                             />
                             <img
-                                src={pIcon}
+                                src={ptbr_audio_icon}
                                 alt="Portuguese audio"
                                 className={styles.pg101HeaderIcon}
                                 onClick={() => playAudio("pg101_audio1p")}
@@ -178,19 +176,19 @@ const Pagina101 = () => {
                                     <div className={styles.pg101IconsContainer}>
                                         {results[index] !== null && (
                                             <img
-                                                src={results[index] ? vSquare : xSquare}
+                                                src={results[index] ? correct_icon : wrong_icon}
                                                 alt={results[index] ? "Correct" : "Incorrect"}
                                                 className={styles.pg101CheckmarkImage}
                                             />
                                         )}
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles.pg101AdditionalIcon}
                                             onClick={() => playAudio(audioKey)}
                                         />
                                         <img
-                                            src={volumeReduzidoIcon}
+                                            src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
                                             className={`${styles.pg101AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg101Pulsing : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
@@ -228,13 +226,13 @@ const Pagina101 = () => {
                         <p className={styles.pg101ATituloQuestion}>
                             D) Negative Form:
                             <img
-                                src={eIcon}
+                                src={eng_audio_icon}
                                 alt="English audio"
                                 className={styles.pg101HeaderIcon}
                                 onClick={() => playAudio("pg101_audio12e")}
                             />
                             <img
-                                src={pIcon}
+                                src={ptbr_audio_icon}
                                 alt="Portuguese audio"
                                 className={styles.pg101HeaderIcon}
                                 onClick={() => playAudio("pg101_audio12p")}
@@ -270,19 +268,19 @@ const Pagina101 = () => {
             <div className={styles.pg101IconsContainer}>
                 {results[index] !== null && (
                     <img
-                        src={results[index] ? vSquare : xSquare}
+                        src={results[index] ? correct_icon : wrong_icon}
                         alt={results[index] ? "Correct" : "Incorrect"}
                         className={styles.pg101CheckmarkImage}
                     />
                 )}
                 <img
-                    src={eIcon}
+                    src={eng_audio_icon}
                     alt="Audio Icon"
                     className={styles.pg101AdditionalIcon}
                     onClick={() => playAudio(audioKey)}
                 />
                 <img
-                    src={volumeReduzidoIcon}
+                    src={slow_audio_icon}
                     alt="Volume Reduced Icon"
                     className={`${styles.pg101AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg101Pulsing : ''}`}
                     onClick={() => toggleSpeedReduction(audioKey)}

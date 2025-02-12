@@ -1,4 +1,3 @@
-import Pagina0 from "../pages/pagina0";
 import Pagina1 from "../pages/pagina1";
 import Pagina2 from "../pages/pagina2";
 import Pagina3 from "../pages/pagina3";
@@ -205,7 +204,7 @@ const routes = [
   { path: "/pagina71", Component: Pagina71 },
   { path: "/pagina72", Component: Pagina72 },
   { path: "/pagina73", Component: Pagina73 },
-  /*{ path: "/pagina74", Component: Pagina74 },
+  { path: "/pagina74", Component: Pagina74 },
   { path: "/pagina75", Component: Pagina75 },
   { path: "/pagina76", Component: Pagina76 },
   { path: "/pagina77", Component: Pagina77 },
@@ -213,7 +212,7 @@ const routes = [
   { path: "/pagina79", Component: Pagina79 },
   { path: "/pagina80", Component: Pagina80 },
   { path: "/pagina81", Component: Pagina81 },
-  { path: "/pagina82", Component: Pagina82 },*/
+  { path: "/pagina82", Component: Pagina82 },
   { path: "/pagina83", Component: Pagina83 },
   { path: "/pagina84", Component: Pagina84 },
   { path: "/pagina85", Component: Pagina85 },
@@ -250,7 +249,7 @@ const routes = [
   { path: "/pagina116", Component: Pagina116 },
   { path: "/pagina117", Component: Pagina117 },
   { path: "/pagina118", Component: Pagina118 },
- /* { path: "/pagina119", Component: Pagina119 },
+  { path: "/pagina119", Component: Pagina119 },
   { path: "/pagina120", Component: Pagina120 },
   { path: "/pagina121", Component: Pagina121 },
   { path: "/pagina122", Component: Pagina122 },
@@ -261,7 +260,7 @@ const routes = [
   { path: "/pagina127", Component: Pagina127 },
   { path: "/pagina128", Component: Pagina128 },
   { path: "/pagina129", Component: Pagina129 },
-  { path: "/pagina130", Component: Pagina130 }  */
+  { path: "/pagina130", Component: Pagina130 }  
 ];
 
 export default routes;

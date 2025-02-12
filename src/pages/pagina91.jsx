@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
+
 import styles from './pagina91.module.css';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-import volumeReduzidoIcon from '../assets/icons/volumeReduzido.png';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import slow_audio_icon from '../assets/icons/slow_audio_icon.webp';
+
 import pagina91_imagem1 from '../assets/images/pagina91_imagem1.webp';
 import pagina91_imagem2 from '../assets/images/pagina91_imagem2.webp';
 
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import pg91_audio1e from '../assets/audios/pg91_audio1e.mp3';
 import pg91_audio1p from '../assets/audios/pg91_audio1p.mp3';
 import pg91_audio2 from '../assets/audios/pg91_audio2.mp3';
@@ -30,8 +33,8 @@ const Pagina91 = () => {
     const correctAnswers = ['the', 'a', 'a', 'are', 'an', 'are', 'the', 'a'];
 
     const audioMap = {
-        global_learningLEe,
-        global_learningLEp,
+        global_learning_le_e,
+        global_learning_le_p,
         pg91_audio1e,
         pg91_audio1p,
         pg91_audio2,
@@ -81,16 +84,16 @@ const Pagina91 = () => {
                 <h1 className={styles["page91__title"]}>
                     Learning Language Exercises
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles["page91__header-icon"]}
-                        onClick={() => playAudio("global_learningLEe")}
+                        onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles["page91__header-icon"]}
-                        onClick={() => playAudio("global_learningLEp")}
+                        onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
                 <div className={styles["page91__image-container"]}></div>
@@ -135,13 +138,13 @@ const Pagina91 = () => {
                     article, or leave the blank empty for
                     <span className={styles["page91__highlight--plural"]}> plural nouns </span>. <br />
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles["page91__header-icon"]}
                         onClick={() => playAudio("pg91_audio1e")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles["page91__header-icon"]}
                         onClick={() => playAudio("pg91_audio1p")}
@@ -175,7 +178,7 @@ const Pagina91 = () => {
                                     />
                                     {results[index] !== null && (
                                         <img
-                                            src={results[index] ? vSquare : xSquare}
+                                            src={results[index] ? correct_icon : wrong_icon}
                                             alt={results[index] ? "Correct" : "Incorrect"}
                                             className={styles["page91__checkmark-image"]}
                                         />
@@ -184,13 +187,13 @@ const Pagina91 = () => {
                                 <span><em>{question.split('____')[1]}</em></span>
                                 <div className={styles["page91__icons-container"]}>
                                     <img
-                                        src={eIcon}
+                                        src={eng_audio_icon}
                                         alt="Audio Icon"
                                         className={styles["page91__additional-icon"]}
                                         onClick={() => playAudio(audioKey)}
                                     />
                                     <img
-                                        src={volumeReduzidoIcon}
+                                        src={slow_audio_icon}
                                         alt="Volume Reduced Icon"
                                         className={`${styles["page91__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page91__icon--pulsing"] : ''}`}
                                         onClick={() => toggleSpeedReduction(audioKey)}

@@ -49,7 +49,7 @@
 .pg20StyledTable th,
 .pg20StyledTable td {
     border: .1rem solid #A61C28;
-    padding: .1rem;
+    padding: 1rem;
     text-align: left;
     color: black;
     font-weight: bold;
@@ -88,15 +88,39 @@
     display: none;
 }
 
-.pg20AudioText {
+.pg20Icon {
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
+    margin-left: 0.5rem;
+    position: relative;
+    top: 0.3rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pg20Icon:hover {
+    transform: scale(1.2);
+}
+
+.page__icon__left {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    position: relative;
+    right: 34%;
+    top: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page__icon__left:hover {
+    transform: scale(1.2);
 }
 
 .pg20Sujeito {
     width: calc(10vw * 0.85);
 }
 
-.pg20VerboAuxiliar {
+.pg20verbo_auxiliar {
     width: calc(10vw * 0.85)
 }
 
@@ -124,7 +148,6 @@
     .pg20StyledTable th,
     .pg20StyledTable td {
         padding: .5rem;
-
     }
 
     .pg20InputCell {

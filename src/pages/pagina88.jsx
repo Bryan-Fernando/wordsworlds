@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import styles from './pagina88.module.css';
+
 import pagina88_imagem1 from '../assets/images/pagina88_imagem1.webp';
 import pagina88_imagem2 from '../assets/images/pagina88_imagem2.webp';
 import pagina88_imagem3 from '../assets/images/pagina88_imagem3.webp';

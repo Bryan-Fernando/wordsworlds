@@ -1,9 +1,12 @@
 import React from 'react';
+
 import styles from './pagina59.module.css';
+
 import pagina59_imagem1 from '../assets/images/pagina59_imagem1.webp';
+
 import global_audio_grammar from '../assets/audios/global_grammar.mp3';
-import global_audio_tellingTTe from '../assets/audios/global_tellingTTe.mp3';
-import global_audio_tellingTTp from '../assets/audios/global_tellingTTp.mp3';
+import global_audio_tellingTTe from '../assets/audios/global_telling_tt_e.mp3';
+import global_audio_tellingTTp from '../assets/audios/global_telling_tt_p.mp3';
 import pg59_audio1 from '../assets/audios/pg59_audio1.mp3';
 import pg59_audio2 from '../assets/audios/pg59_audio2.mp3';
 import pg59_audio3 from '../assets/audios/pg59_audio3.mp3';

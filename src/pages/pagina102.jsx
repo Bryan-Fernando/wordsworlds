@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import styles from './pagina102.module.css';
-import pagina102_imagem1 from '../assets/images/pagina102_imagem1.webp';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-import volumeReduzidoIcon from '../assets/icons/volumeReduzido.png';
+import React, { useState } from 'react';
 
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
+import styles from './pagina102.module.css';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import slow_audio_icon from '../assets/icons/slow_audio_icon.webp';
+
+import pagina102_imagem1 from '../assets/images/pagina102_imagem1.webp';
+
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import pg102_audio1e from '../assets/audios/pg102_audio1e.mp3';
 import pg102_audio1p from '../assets/audios/pg102_audio1p.mp3';
-
 import pg102_audio2 from '../assets/audios/pg102_audio2.mp3';
 import pg102_audio3 from '../assets/audios/pg102_audio3.mp3';
 import pg102_audio4 from '../assets/audios/pg102_audio4.mp3';
@@ -38,8 +40,8 @@ import pg102_audio24 from '../assets/audios/pg102_audio24.mp3';
 import pg102_audio25 from '../assets/audios/pg102_audio25.mp3';
 
 const audioMap = {
-    global_learningLEe,
-    global_learningLEp,
+    global_learning_le_e,
+    global_learning_le_p,
     pg102_audio1e,
     pg102_audio1p,
     pg102_audio2,
@@ -73,36 +75,38 @@ const Pagina102 = () => {
     const [results, setResults] = useState(Array(30).fill(null));
     const [isSpeedReduced, setIsSpeedReduced] = useState({});
 
-    useEffect(() => {
-        console.log("Estado inicial de inputValues:", inputValues);
-    }, [inputValues]);
-
     const correctAnswers = [
-        'am', 'is', 'are', 'are', 'is',
-        'am not', 'is not', 'are not', 'are not', 'is not',
-        'are', 'is', 'are', 'are',
-        'is', 'is', 'are not', 'are', 'is',
-        'are not', 'are', 'am', 'is', 'are'
+        'am', 'is', 'are', 'are', 'is',  // Affirmative
+        'am not', 'is not', 'are not', 'are not', 'is not',  // Negative
+        'are', 'is', 'are', 'are',  // Interrogative
+        'is', 'is', 'are not', 'are', 'is',  // Mixed
+        'are not', 'are', 'am', 'is', 'are'  // Mixed (continuação)
     ];
 
     const handleCheckClick = () => {
-        setResults(inputValues.map((value, index) =>
-            value.trim().toLowerCase() === correctAnswers[index]
-        ));
+        const newResults = inputValues.map((value, index) => {
+            if (!value.trim()) return false; // Se o campo estiver vazio, marca como incorreto
+
+            const trimmedValue = value.trim().toLowerCase();
+            const correctValue = correctAnswers[index]?.toLowerCase() || "";
+
+            return trimmedValue === correctValue;
+        });
+
+        setResults(newResults);
     };
-    
+
+
 
 
 
     const handleInputChange = (value, index) => {
         setInputValues((prevValues) => {
             const newValues = [...prevValues];
-            newValues[index] = value; // Atualiza o valor correto
-            console.log("Atualizando inputValues:", newValues); // Debug
+            newValues[index] = value;
             return newValues;
         });
     };
-
 
 
 
@@ -128,25 +132,25 @@ const Pagina102 = () => {
             <main className={styles.pg102Main}>
                 <header className={styles.pg102Header}>
                     <h1 className={styles.pg102H1}>Learning Language Exercises <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles.pg102HeaderIcon}
-                        onClick={() => playAudio("global_learningLEe")}
+                        onClick={() => playAudio("global_learning_le_e")}
                     />
                         <img
-                            src={pIcon}
+                            src={ptbr_audio_icon}
                             alt="Portuguese audio"
                             className={styles.pg102HeaderIcon}
-                            onClick={() => playAudio("global_learningLEp")}
+                            onClick={() => playAudio("global_learning_le_p")}
                         /></h1>
                     <p>Fill in the blanks with the correct form of “be“ in the Present Simple Tense. <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles.pg102HeaderIcon}
                         onClick={() => playAudio("pg102_audio1e")}
                     />
                         <img
-                            src={pIcon}
+                            src={ptbr_audio_icon}
                             alt="Portuguese audio"
                             className={styles.pg102HeaderIcon}
                             onClick={() => playAudio("pg102_audio1p")}
@@ -158,58 +162,39 @@ const Pagina102 = () => {
                     <div className={styles.pg102Questions1}>
                         <h2 className={styles.pg102H2}>Affirmative:</h2>
                         {[
-    "I ____ a student.",
-    "She ____ my sister.",
-    "We ____ friends.",
-    "They ____ at home.",
-    "It ____ a beautiful day."
-].map((sentence, index) => {
-    const realIndex = index; // Começa do índice 0
-    const audioKey = `pg102_audio${index + 2}`; // Mantendo a ordem correta dos áudios
-
-    return (
-        <div key={realIndex} className={styles.pg102Question}>
-            <span>{sentence.split('____')[0]}</span>
-            
-            <input
-                type="text"
-                value={inputValues[realIndex] || ""} 
-                onChange={(e) => handleInputChange(e.target.value, realIndex)}
-                className={styles.pg102InputBox}
-            />
-
-            <span>{sentence.split('____')[1]}</span>
-
-            {/* Ícones de verificação ✓ ou ✗ */}
-            {results[realIndex] !== null && results[realIndex] !== undefined && (
-                <img
-                    src={results[realIndex] ? vSquare : xSquare}
-                    alt={results[realIndex] ? "Correct" : "Incorrect"}
-                    className={styles.pg102CheckmarkImage}
+        "I ____ a student.",
+        "She ____ my sister.",
+        "We ____ friends.",
+        "They ____ at home.",
+        "It ____ a beautiful day."
+    ].map((sentence, index) => {
+        const audioKey = `pg102_audio${index + 2}`;
+        return (
+            <div key={index} className={styles.pg102Question}>
+                <span>{sentence.split('____')[0]}</span>
+                <input
+                    type="text"
+                    value={inputValues[index] || ""}
+                    onChange={(e) => handleInputChange(e.target.value, index)}
+                    className={styles.pg102InputBox}
                 />
-            )}
+                <span>{sentence.split('____')[1]}</span>
+                
+                {results[index] !== null && (
+                    <img
+                        src={results[index] ? correct_icon : wrong_icon}
+                        alt={results[index] ? "Correct" : "Incorrect"}
+                        className={styles.pg102CheckmarkImage}
+                    />
+                )}
 
-            {/* Ícones de áudio */}
-            <div className={styles.pg102IconsContainer}>
-                <img 
-                    src={eIcon} 
-                    alt="Audio Icon" 
-                    className={styles.pg102AdditionalIcon} 
-                    onClick={() => playAudio(audioKey)} 
-                />
-
-                <img 
-                    src={volumeReduzidoIcon} 
-                    alt="Volume Reduced Icon" 
-                    className={`${styles.pg102AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg102Pulsing : ''}`} 
-                    onClick={() => toggleSpeedReduction(audioKey)} 
-                />
+                <div className={styles.pg102IconsContainer}>
+                    <img src={eng_audio_icon} alt="Audio Icon" className={styles.pg102AdditionalIcon} onClick={() => playAudio(audioKey)} />
+                    <img src={slow_audio_icon} alt="Volume Reduced Icon" className={`${styles.pg102AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg102Pulsing : ''}`} onClick={() => toggleSpeedReduction(audioKey)} />
+                </div>
             </div>
-        </div>
-    );
-})}
-
-
+        );
+    })}
                     </div>
 
                     <div className={styles.pg102tabelaAfirmativaContainer}>
@@ -233,57 +218,41 @@ const Pagina102 = () => {
                     <div className={styles.pg102Questions2}>
                         <h2 className={styles.pg102H2}>Negative:</h2>
                         {[
-    "I ____ a teacher.",
-    "She ____ my mother.",
-    "We ____ late.",
-    "They ____ happy.",
-    "It ____ cold today."
-].map((sentence, index) => {
-    const realIndex = index + 5; // Começa no índice 5
-    const audioKey = `pg102_audio${realIndex + 2}`; // Mantendo a ordem correta dos áudios
+                            "I ____ a teacher.",
+                            "She ____ my mother.",
+                            "We ____ late.",
+                            "They ____ happy.",
+                            "It ____ cold today."
+                        ].map((sentence, index) => {
+                            const realIndex = index + 5;
+                            const audioKey = `pg102_audio${realIndex + 2}`;
 
-    return (
-        <div key={realIndex} className={styles.pg102Question}>
-            <span>{sentence.split('____')[0]}</span>
-            
-            <input
-                type="text"
-                value={inputValues[realIndex] || ""} 
-                onChange={(e) => handleInputChange(e.target.value, realIndex)}
-                className={styles.pg102InputBox}
-            />
+                            return (
+                                <div key={realIndex} className={styles.pg102Question}>
+                                    <span>{sentence.split('____')[0]}</span>
+                                    <input
+                                        type="text"
+                                        value={inputValues[realIndex] || ""}
+                                        onChange={(e) => handleInputChange(e.target.value, realIndex)}
+                                        className={styles.pg102InputBox}
+                                    />
+                                    <span>{sentence.split('____')[1]}</span>
 
-            <span>{sentence.split('____')[1]}</span>
+                                    {results[realIndex] !== null && (
+                                        <img
+                                            src={results[realIndex] ? correct_icon : wrong_icon}
+                                            alt={results[realIndex] ? "Correct" : "Incorrect"}
+                                            className={styles.pg102CheckmarkImage}
+                                        />
+                                    )}
 
-            {/* Ícones de verificação ✓ ou ✗ */}
-            {results[realIndex] !== null && results[realIndex] !== undefined && (
-                <img
-                    src={results[realIndex] ? vSquare : xSquare}
-                    alt={results[realIndex] ? "Correct" : "Incorrect"}
-                    className={styles.pg102CheckmarkImage}
-                />
-            )}
-
-            {/* Ícones de áudio */}
-            <div className={styles.pg102IconsContainer}>
-                <img 
-                    src={eIcon} 
-                    alt="Audio Icon" 
-                    className={styles.pg102AdditionalIcon} 
-                    onClick={() => playAudio(audioKey)} 
-                />
-
-                <img 
-                    src={volumeReduzidoIcon} 
-                    alt="Volume Reduced Icon" 
-                    className={`${styles.pg102AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg102Pulsing : ''}`} 
-                    onClick={() => toggleSpeedReduction(audioKey)} 
-                />
-            </div>
-        </div>
-    );
-})}
-
+                                    <div className={styles.pg102IconsContainer}>
+                                        <img src={eng_audio_icon} alt="Audio Icon" className={styles.pg102AdditionalIcon} onClick={() => playAudio(audioKey)} />
+                                        <img src={slow_audio_icon} alt="Volume Reduced Icon" className={`${styles.pg102AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg102Pulsing : ''}`} onClick={() => toggleSpeedReduction(audioKey)} />
+                                    </div>
+                                </div>
+                            );
+                        })}
 
 
                     </div>
@@ -309,56 +278,50 @@ const Pagina102 = () => {
                     <div className={styles.pg102Questions3}>
                         <h2 className={styles.pg102H2}>Interrogative:</h2>
                         {[
-    "you a doctor?",
-    "she your friend?",
-    "we late?",
-    "they at the park?"
-].map((sentence, index) => {
-    const realIndex = index + 10; // Começa no índice 10
-    const audioKey = `pg102_audio${realIndex + 2}`; // Mantendo a ordem correta dos áudios
+                            "you a doctor?",
+                            "she your friend?",
+                            "we late?",
+                            "they at the park?"
+                        ].map((sentence, index) => {
+                            const realIndex = index + 14; // Agora os índices são contínuos
+                            const audioKey = `pg102_audio${realIndex - 2}`; // Ajustando a sequência de áudios
 
-    return (
-        <div key={realIndex} className={styles.pg102Question}>
-            <input
-                type="text"
-                value={inputValues[realIndex] || ""} 
-                onChange={(e) => handleInputChange(e.target.value, realIndex)}
-                className={styles.pg102InputBox}
-            />
-            
-            <span>{sentence}</span>
+                            return (
+                                <div key={realIndex} className={styles.pg102Question}>
+                                    <input
+                                        type="text"
+                                        value={inputValues[realIndex] || ""}
+                                        onChange={(e) => handleInputChange(e.target.value, realIndex)}
+                                        className={styles.pg102InputBox}
+                                    />
+                                    <span>{sentence}</span>
 
-            {/* Ícones de verificação ✓ ou ✗ */}
-            {results[realIndex] !== null && results[realIndex] !== undefined && (
-                <img
-                    src={results[realIndex] ? vSquare : xSquare}
-                    alt={results[realIndex] ? "Correct" : "Incorrect"}
-                    className={styles.pg102CheckmarkImage}
-                />
-            )}
+                                    {/* Se `results[realIndex]` for false ou campo estiver vazio, mostra X vermelho */}
+                                    {results[realIndex] !== undefined && (
+                                        <img
+                                            src={results[realIndex] ? correct_icon : wrong_icon}
+                                            alt={results[realIndex] ? "Correct" : "Incorrect"}
+                                            className={styles.pg102CheckmarkImage}
+                                        />
+                                    )}
 
-            {/* Ícones de áudio */}
-            <div className={styles.pg102IconsContainer}>
-                <img 
-                    src={eIcon} 
-                    alt="Audio Icon" 
-                    className={styles.pg102AdditionalIcon} 
-                    onClick={() => playAudio(audioKey)} 
-                />
-
-                <img 
-                    src={volumeReduzidoIcon} 
-                    alt="Volume Reduced Icon" 
-                    className={`${styles.pg102AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg102Pulsing : ''}`} 
-                    onClick={() => toggleSpeedReduction(audioKey)} 
-                />
-            </div>
-        </div>
-    );
-})}
-
-
-
+                                    <div className={styles.pg102IconsContainer}>
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Audio Icon"
+                                            className={styles.pg102AdditionalIcon}
+                                            onClick={() => playAudio(audioKey)}
+                                        />
+                                        <img
+                                            src={slow_audio_icon}
+                                            alt="Volume Reduced Icon"
+                                            className={`${styles.pg102AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg102Pulsing : ''}`}
+                                            onClick={() => toggleSpeedReduction(audioKey)}
+                                        />
+                                    </div>
+                                </div>
+                            );
+                        })}
 
 
                     </div>
@@ -367,7 +330,7 @@ const Pagina102 = () => {
                         <table className={styles.pg102styledTableInterrogativa}>
                             <thead>
                                 <tr className={styles.pg102celulatable}>
-                                    <th>VerboAuxiliar</th>
+                                    <th>verbo_auxiliar</th>
                                     <th>Sujeito</th>
                                     <th>
                                         <span style={{ color: 'red' }}>Not</span> <br /> Adverb
@@ -385,66 +348,49 @@ const Pagina102 = () => {
                     <div className={styles.pg102Questions4}>
                         <h2 className={styles.pg102H2}>Mixed:</h2>
                         {[
-    "It ____ a cat. (affirmative)",
-    "____ he your brother? (interrogative)",
-    "They ____ here. (negative)",
-    "____ we ready? (interrogative)",
-    "She ____ a good singer. (affirmative)",
-    "You ____ my teacher. (negative)",
-    "____ they from France? (interrogative)",
-    "I ____ at home. (affirmative)",
-    "It ____ a big problem. (affirmative)",
-    "____ you my friend? (interrogative)"
-].map((sentence, index) => {
-    const realIndex = index + 14; // Começa no índice 14
-    const audioKey = `pg102_audio${realIndex + 2}`; // Mantendo a ordem correta dos áudios
+        "It ____ a cat. (affirmative)",
+        "____ he your brother? (interrogative)",
+        "They ____ here. (negative)",
+        "____ we ready? (interrogative)",
+        "She ____ a good singer. (affirmative)",
+        "You ____ my teacher. (negative)",
+        "____ they from France? (interrogative)",
+        "I ____ at home. (affirmative)",
+        "It ____ a big problem. (affirmative)",
+        "____ you my friend? (interrogative)"
+    ].map((sentence, index) => {
+        const realIndex = index + 14; // Corrigindo para bater com correctAnswers
+        const audioKey = `pg102_audio${realIndex + 2}`; // Mantendo a sequência de áudios correta
 
-    return (
-        <div key={realIndex} className={styles.pg102Question}>
-            <span>{sentence.split('____')[0]}</span>
-            
-            <input
-                type="text"
-                value={inputValues[realIndex] || ""} 
-                onChange={(e) => handleInputChange(e.target.value, realIndex)}
-                className={styles.pg102InputBox}
-            />
+        return (
+            <div key={realIndex} className={styles.pg102Question}>
+                <span>{sentence.split('____')[0]}</span>
 
-            <span>{sentence.split('____')[1]}</span>
-
-            {/* Ícones de verificação ✓ ou ✗ */}
-            {results[realIndex] !== null && results[realIndex] !== undefined && (
-                <img
-                    src={results[realIndex] ? vSquare : xSquare}
-                    alt={results[realIndex] ? "Correct" : "Incorrect"}
-                    className={styles.pg102CheckmarkImage}
-                />
-            )}
-
-            {/* Ícones de áudio */}
-            <div className={styles.pg102IconsContainer}>
-                <img 
-                    src={eIcon} 
-                    alt="Audio Icon" 
-                    className={styles.pg102AdditionalIcon} 
-                    onClick={() => playAudio(audioKey)} 
+                <input
+                    type="text"
+                    value={inputValues[realIndex] || ""}
+                    onChange={(e) => handleInputChange(e.target.value, realIndex)}
+                    className={styles.pg102InputBox}
                 />
 
-                <img 
-                    src={volumeReduzidoIcon} 
-                    alt="Volume Reduced Icon" 
-                    className={`${styles.pg102AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg102Pulsing : ''}`} 
-                    onClick={() => toggleSpeedReduction(audioKey)} 
-                />
+                <span>{sentence.split('____')[1]}</span>
+
+                {/* Ícones de feedback corretos */}
+                {results[realIndex] !== undefined && (
+                    <img
+                        src={results[realIndex] ? correct_icon : wrong_icon}
+                        alt={results[realIndex] ? "Correct" : "Incorrect"}
+                        className={styles.pg102CheckmarkImage}
+                    />
+                )}
+
+                <div className={styles.pg102IconsContainer}>
+                    <img src={eng_audio_icon} alt="Audio Icon" className={styles.pg102AdditionalIcon} onClick={() => playAudio(audioKey)} />
+                    <img src={slow_audio_icon} alt="Volume Reduced Icon" className={`${styles.pg102AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg102Pulsing : ''}`} onClick={() => toggleSpeedReduction(audioKey)} />
+                </div>
             </div>
-        </div>
-    );
-})}
-
-
-
-
-
+        );
+    })}
 
                     </div>
                     {/* Imagem */}

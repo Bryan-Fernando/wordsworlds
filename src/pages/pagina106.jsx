@@ -1,14 +1,17 @@
 import React, { useState, useRef } from 'react';
+
 import styles from './pagina106.module.css';
-import pg106IconNotes from '../assets/Icons/Icon-Notes.png';
+
+import pg106IconNotes from '../assets/icons/notes_icon.webp';
+
 import global_grammar from '../assets/audios/global_grammar.mp3';
-import global_simplePresent from '../assets/audios/global_simplePresent.mp3';
+import global_simple_present from '../assets/audios/global_simple_present.mp3';
 import afirmativaAudio from '../assets/audios/afirmativa.mp3';
 import sujeitoAudio from '../assets/audios/sujeito.mp3';
-import verboAuxiliarAudio from '../assets/audios/verboauxiliar.mp3';
+import verbo_auxiliarAudio from '../assets/audios/verbo_auxiliar.mp3';
 import adverbioAudio from '../assets/audios/adverbio.mp3';
 import verboAudio from '../assets/audios/verbo.mp3';
-import objetoComplementoAudio from '../assets/audios/objetocomplemento.mp3';
+import objeto_complemento_audio from '../assets/audios/objeto_complemento.mp3';
 import traducaoAudio from '../assets/audios/traducao.mp3';
 import pg106_audio1 from '../assets/audios/pg106_audio1.mp3';
 import pg106_audio2 from '../assets/audios/pg106_audio2.mp3';
@@ -17,7 +20,6 @@ import pg106_audio4 from '../assets/audios/pg106_audio4.mp3';
 import pg106_audio5 from '../assets/audios/pg106_audio5.mp3';
 import pg106_audio6 from '../assets/audios/pg106_audio6.mp3';
 import pg106_audio7 from '../assets/audios/pg106_audio7.mp3';
-
 import pg106_trad1 from '../assets/audios/pg106_trad1.mp3';
 import pg106_trad2 from '../assets/audios/pg106_trad2.mp3';
 import pg106_trad3 from '../assets/audios/pg106_trad3.mp3';
@@ -61,7 +63,7 @@ const Pagina106 = () => {
                                             Grammar
                                         </h1>
                                         <h2 className={styles.pg8AudioText}
-                                            onClick={() => playAudio(global_simplePresent)}
+                                            onClick={() => playAudio(global_simple_present)}
                                             style={{ color: 'black', cursor: 'pointer' }}>
                                             Simple Present (Presente Simples)
                                         </h2>
@@ -78,7 +80,7 @@ const Pagina106 = () => {
                         <table className={styles.pg106StyledTable}>
                             <colgroup>
                                 <col className={styles.pg106Sujeito} />
-                                <col className={styles.pg106VerboAuxiliar} />
+                                <col className={styles.pg106verbo_auxiliar} />
                                 <col className={styles.pg106Adverbio} />
                                 <col className={styles.pg106Verbo} />
                                 <col className={styles.pg106ObjetivoComplemento} />
@@ -87,12 +89,12 @@ const Pagina106 = () => {
                             <thead>
                                 <tr>
                                     <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: 'pointer' }}>Subject</th>
-                                    <th onClick={() => playAudio(verboAuxiliarAudio)} style={{ cursor: 'pointer' }}>
+                                    <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: 'pointer' }}>
                                         Auxiliary <br /> Verb
                                     </th>
                                     <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}>Adverb</th>
                                     <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>Verb(s)</th>
-                                    <th onClick={() => playAudio(objetoComplementoAudio)} style={{ cursor: 'pointer' }}>
+                                    <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: 'pointer' }}>
                                         Object <br /> Complement
                                     </th>
                                     <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: 'pointer' }}>Translation</th>
@@ -110,7 +112,7 @@ const Pagina106 = () => {
     ].map((row, index) => (
         <tr key={index} onClick={() => playAudio(row.audio)} style={{ cursor: 'pointer' }}>
             <td className={styles.pg106Sujeito} style={{ textAlign: 'center' }}>{row.subject}</td>
-            <td className={styles.pg106VerboAuxiliar}></td>
+            <td className={styles.pg106verbo_auxiliar}></td>
             <td className={styles.pg106Adverbio}></td>
             <td className={styles.pg106Verbo}>{row.verb}</td>
             <td className={styles.pg106ObjetivoComplemento}>{row.complement}</td>
@@ -125,7 +127,7 @@ const Pagina106 = () => {
                         <table className={styles.pg106StyledTable}>
                             <colgroup>
                                 <col className={styles.pg106Sujeito} />
-                                <col className={styles.pg106VerboAuxiliar} />
+                                <col className={styles.pg106verbo_auxiliar} />
                                 <col className={styles.pg106Adverbio} />
                                 <col className={styles.pg106Verbo} />
                                 <col className={styles.pg106ObjetivoComplemento} />
@@ -134,12 +136,12 @@ const Pagina106 = () => {
                             <thead>
                                 <tr>
                                     <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: 'pointer' }}>Subject</th>
-                                    <th onClick={() => playAudio(verboAuxiliarAudio)} style={{ cursor: 'pointer' }}>
+                                    <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: 'pointer' }}>
                                         Auxiliary <br /> Verb
                                     </th>
                                     <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}>Adverb</th>
                                     <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>Verb(s)</th>
-                                    <th onClick={() => playAudio(objetoComplementoAudio)} style={{ cursor: 'pointer' }}>
+                                    <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: 'pointer' }}>
                                         Object  <br /> Complement
                                     </th>
                                     <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: 'pointer' }}>Translation</th>

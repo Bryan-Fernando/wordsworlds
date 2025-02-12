@@ -1,17 +1,18 @@
 import React, { useRef } from 'react';
+
 import styles from './pagina46.module.css';
 
-import global_grammar from '../assets/audios/global_grammar.mp3';
-import global_posseAe from '../assets/audios/global_posseAe.mp3';
-import global_posseAp from '../assets/audios/global_posseAp.mp3';
+import pagina46_imagem1 from '../assets/images/pagina46_imagem1.webp';
 
-import pagina46_imagem1 from '../assets/Images/pagina46_imagem1.webp';
-import myAudio from '../assets/audios/myAudio.mp3';
-import hisAudio from '../assets/audios/hisAudio.mp3';
-import herAudio from '../assets/audios/herAudio.mp3';
-import itsAudio from '../assets/audios/itsAudio.mp3';
-import ourAudio from '../assets/audios/ourAudio.mp3';
-import yourAudio from '../assets/audios/yourAudio.mp3';
+import global_grammar from '../assets/audios/global_grammar.mp3';
+import global_posse_ae from '../assets/audios/global_posse_ae.mp3';
+import global_posse_ap from '../assets/audios/global_posse_ap.mp3';
+import my_audio from '../assets/audios/my_audio.mp3';
+import his_audio from '../assets/audios/his_audio.mp3';
+import her_audio from '../assets/audios/her_audio.mp3';
+import its_audio from '../assets/audios/its_audio.mp3';
+import our_audio from '../assets/audios/our_audio.mp3';
+import your_audio from '../assets/audios/your_audio.mp3';
 import theirAudio from '../assets/audios/theirAudio.mp3';
 import audio1e from '../assets/audios/pg46_audio1e.mp3';
 import audio2e from '../assets/audios/pg46_audio2e.mp3';
@@ -20,12 +21,12 @@ import audio2p from '../assets/audios/pg46_audio2p.mp3';
 
 const Pagina46 = () => {
     const audioMap = {
-        'myAudio': myAudio,
-        'hisAudio': hisAudio,
-        'herAudio': herAudio,
-        'itsAudio': itsAudio,
-        'ourAudio': ourAudio,
-        'yourAudio': yourAudio,
+        'my_audio': my_audio,
+        'his_audio': his_audio,
+        'her_audio': her_audio,
+        'its_audio': its_audio,
+        'our_audio': our_audio,
+        'your_audio': your_audio,
         'theirAudio': theirAudio,
         'pg46_audio1e': audio1e,
         'pg46_audio2e': audio2e,
@@ -38,8 +39,8 @@ const Pagina46 = () => {
 
     const globalAudioMap = {
         'global_grammar': global_grammar,
-        'global_posseAe': global_posseAe,
-        'global_posseAp': global_posseAp
+        'global_posse_ae': global_posse_ae,
+        'global_posse_ap': global_posse_ap
     };
 
     const playGlobalAudio = (audioKey) => {
@@ -66,10 +67,10 @@ const Pagina46 = () => {
                         Grammar
                     </h1>
                     <div className={styles.pg46HeaderH2H3}>
-                        <h2 className={styles.pg46HeaderH2} onClick={() => playGlobalAudio('global_posseAe')}>
+                        <h2 className={styles.pg46HeaderH2} onClick={() => playGlobalAudio('global_posse_ae')}>
                             Possessive Adjectives
                         </h2>
-                        <h3 className={styles.pg46HeaderH3} onClick={() => playGlobalAudio('global_posseAp')}>
+                        <h3 className={styles.pg46HeaderH3} onClick={() => playGlobalAudio('global_posse_ap')}>
                             Pronomes possessivos
                         </h3>
                     </div>
@@ -79,31 +80,31 @@ const Pagina46 = () => {
                         <table className={styles.pg46table}>
                             <thead>
                                 <tr>
-                                    <th onClick={() => playAudio('myAudio')}>My</th>
+                                    <th onClick={() => playAudio('my_audio')}>My</th>
                                     <td>meu(s), minha(s)</td>
                                 </tr>
                                 <tr>
-                                    <th onClick={() => playAudio('hisAudio')}>His</th>
+                                    <th onClick={() => playAudio('his_audio')}>His</th>
                                     <td>dele (seu/s/sua/s)</td>
                                 </tr>
                                 <tr>
-                                    <th onClick={() => playAudio('herAudio')}>Her</th>
+                                    <th onClick={() => playAudio('her_audio')}>Her</th>
                                     <td>dela (seu/s/sua/s)</td>
                                 </tr>
                                 <tr>
-                                    <th onClick={() => playAudio('itsAudio')}>Its</th>
+                                    <th onClick={() => playAudio('its_audio')}>Its</th>
                                     <td>seu(s), sua(s) - coisas/animais/plantas</td>
                                 </tr>
                                 <tr>
-                                    <th onClick={() => playAudio('ourAudio')}>Our</th>
+                                    <th onClick={() => playAudio('our_audio')}>Our</th>
                                     <td>nosso(s), nossa(s)</td>
                                 </tr>
                                 <tr>
-                                    <th onClick={() => playAudio('yourAudio')}>Your</th>
+                                    <th onClick={() => playAudio('your_audio')}>Your</th>
                                     <td>seu(s), sua(s), teu(s), tua(s)</td>
                                 </tr>
                                 <tr>
-                                    <th onClick={() => playAudio('yourAudio')}>Your</th>
+                                    <th onClick={() => playAudio('your_audio')}>Your</th>
                                     <td>seus, suas, teus, tuas (de vocês)</td>
                                 </tr>
                                 <tr>

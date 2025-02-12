@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import styles from './Pagina100.module.css';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-import volumeReduzidoIcon from '../assets/icons/volumeReduzido.png';
 
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
+import styles from './pagina100.module.css';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import slow_audio_icon from '../assets/icons/slow_audio_icon.webp';
+
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import pg100_audio1e from '../assets/audios/pg100_audio1e.mp3';
 import pg100_audio1p from '../assets/audios/pg100_audio1p.mp3';
-
 import pg100_audio2 from '../assets/audios/pg100_audio2.mp3';
 import pg100_audio3 from '../assets/audios/pg100_audio3.mp3';
 import pg100_audio4 from '../assets/audios/pg100_audio4.mp3';
@@ -19,7 +20,6 @@ import pg100_audio6 from '../assets/audios/pg100_audio6.mp3';
 import pg100_audio7 from '../assets/audios/pg100_audio7.mp3';
 import pg100_audio8 from '../assets/audios/pg100_audio8.mp3';
 import pg100_audio9 from '../assets/audios/pg100_audio9.mp3';
-
 import pg100_audio10e from '../assets/audios/pg100_audio10e.mp3';
 import pg100_audio10p from '../assets/audios/pg100_audio10p.mp3';
 import pg100_audio11 from '../assets/audios/pg100_audio11.mp3';
@@ -33,8 +33,8 @@ import pg100_audio18 from '../assets/audios/pg100_audio18.mp3';
 
 // Mapeamento dos áudios
 const audioMap = {
-    global_learningLEe,
-    global_learningLEp,
+    global_learning_le_e,
+    global_learning_le_p,
     pg100_audio1e,
     pg100_audio1p,
     pg100_audio2,
@@ -114,16 +114,16 @@ const Pagina100 = () => {
             <header className={styles.pg100Header}>
                 <h1 className={styles.pg100H1}>Learning Language Exercises
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles.pg100HeaderIcon}
-                        onClick={() => playAudio("global_learningLEe")}
+                        onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles.pg100HeaderIcon}
-                        onClick={() => playAudio("global_learningLEp")}
+                        onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
             </header>
@@ -150,13 +150,13 @@ const Pagina100 = () => {
                             A) Fill in the blanks with the negative form, using the contracted forms: ('m not, isn't, or aren't).
                             <span className={styles.pg100IconsContainer}>
                                 <img
-                                    src={eIcon}
+                                    src={eng_audio_icon}
                                     alt="English audio"
                                     className={styles.pg100HeaderIcon}
                                     onClick={() => playAudio("pg100_audio1e")}
                                 />
                                 <img
-                                    src={pIcon}
+                                    src={ptbr_audio_icon}
                                     alt="Portuguese audio"
                                     className={styles.pg100HeaderIcon}
                                     onClick={() => playAudio("pg100_audio1p")}
@@ -207,19 +207,19 @@ const Pagina100 = () => {
                                     <div className={styles.pg100IconsContainer}>
                                         {results[index] !== null && (
                                             <img
-                                                src={results[index] ? vSquare : xSquare}
+                                                src={results[index] ? correct_icon : wrong_icon}
                                                 alt={results[index] ? "Correct" : "Incorrect"}
                                                 className={styles.pg100CheckmarkImage}
                                             />
                                         )}
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles.pg100AdditionalIcon}
                                             onClick={() => playAudio(audioKey)}
                                         />
                                         <img
-                                            src={volumeReduzidoIcon}
+                                            src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
                                             className={`${styles.pg100AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg100Pulsing : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
@@ -253,13 +253,13 @@ const Pagina100 = () => {
                     <div className={styles.pg100Questions1}>
                         <p className={styles.pg100ATituloQuestion}>
                             B) Change into the Negative Form, using (not). <img
-                                src={eIcon}
+                                src={eng_audio_icon}
                                 alt="English audio"
                                 className={styles.pg100HeaderIcon}
                                 onClick={() => playAudio("pg100_audio10e")}
                             />
                             <img
-                                src={pIcon}
+                                src={ptbr_audio_icon}
                                 alt="Portuguese audio"
                                 className={styles.pg100HeaderIcon}
                                 onClick={() => playAudio("pg100_audio10p")}
@@ -309,19 +309,19 @@ const Pagina100 = () => {
                                     <div className={styles.pg100IconsContainer}>
                                         {results[index + 8] !== null && (
                                             <img
-                                                src={results[index + 8] ? vSquare : xSquare}
+                                                src={results[index + 8] ? correct_icon : wrong_icon}
                                                 alt={results[index + 8] ? "Correct" : "Incorrect"}
                                                 className={styles.pg100CheckmarkImage}
                                             />
                                         )}
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles.pg100AdditionalIcon}
                                             onClick={() => playAudio(audioKey)}
                                         />
                                         <img
-                                            src={volumeReduzidoIcon}
+                                            src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
                                             className={`${styles.pg100AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg100Pulsing : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}

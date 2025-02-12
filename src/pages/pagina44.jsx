@@ -1,19 +1,22 @@
 import React, { useRef } from 'react';
+
 import styles from './pagina44.module.css';
+
 import pagina44_imagem1 from '../assets/images/pagina44_imagem1.webp';
-import pagina44_imagem2 from '../assets/Images/pagina44_imagem2.webp';
-import pagina44_imagem3 from '../assets/Images/pagina44_imagem3.webp';
-import pagina44_imagem4 from '../assets/Images/pagina44_imagem4.webp';
-import pagina44_imagem5 from '../assets/Images/pagina44_imagem5.webp';
-import pagina44_imagem6 from '../assets/Images/pagina44_imagem6.webp';
-import pagina44_imagem7 from '../assets/Images/pagina44_imagem7.webp';
-import pagina44_imagem8 from '../assets/Images/pagina44_imagem8.webp';
-import pagina44_imagem9 from '../assets/Images/pagina44_imagem9.webp';
-import pagina44_imagem10 from '../assets/Images/pagina44_imagem10.webp';
-import pagina44_imagem11 from '../assets/Images/pagina44_imagem11.webp';
-import pagina44_imagem12 from '../assets/Images/pagina44_imagem12.webp';
-import pagina44_imagem13 from '../assets/Images/pagina44_imagem13.webp';
-import pagina44_imagem14 from '../assets/Images/pagina44_imagem14.webp';
+import pagina44_imagem2 from '../assets/images/pagina44_imagem2.webp';
+import pagina44_imagem3 from '../assets/images/pagina44_imagem3.webp';
+import pagina44_imagem4 from '../assets/images/pagina44_imagem4.webp';
+import pagina44_imagem5 from '../assets/images/pagina44_imagem5.webp';
+import pagina44_imagem6 from '../assets/images/pagina44_imagem6.webp';
+import pagina44_imagem7 from '../assets/images/pagina44_imagem7.webp';
+import pagina44_imagem8 from '../assets/images/pagina44_imagem8.webp';
+import pagina44_imagem9 from '../assets/images/pagina44_imagem9.webp';
+import pagina44_imagem10 from '../assets/images/pagina44_imagem10.webp';
+import pagina44_imagem11 from '../assets/images/pagina44_imagem11.webp';
+import pagina44_imagem12 from '../assets/images/pagina44_imagem12.webp';
+import pagina44_imagem13 from '../assets/images/pagina44_imagem13.webp';
+import pagina44_imagem14 from '../assets/images/pagina44_imagem14.webp';
+
 import audio1e from '../assets/audios/pg44_audio1e.mp3';
 import audio2e from '../assets/audios/pg44_audio2e.mp3';
 import audio3e from '../assets/audios/pg44_audio3e.mp3';

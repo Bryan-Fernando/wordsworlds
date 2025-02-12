@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+
 import styles from './pagina95.module.css';
 
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
 import pg95_audio1e from '../assets/audios/pg95_audio1e.mp3';
 import pg95_audio1p from '../assets/audios/pg95_audio1p.mp3';
@@ -199,13 +200,13 @@ const pagina95 = () => {
                             <span>
                                 <p>2. Make questions and give affirmative short answers.
                                 <img
-                                                        src={eIcon}
+                                                        src={eng_audio_icon}
                                                         alt="English audio"
                                                         className={styles.pg95HeaderIcon}
                                                         onClick={() => playAudio("pg95_audio1e")}
                                                     />
                                                     <img
-                                                        src={pIcon}
+                                                        src={ptbr_audio_icon}
                                                         alt="Portuguese audio"
                                                         className={styles.pg95HeaderIcon}
                                                         onClick={() => playAudio("pg95_audio1p")}
@@ -231,14 +232,14 @@ const pagina95 = () => {
                                     {/* Ícone Único para Validar Ambos os Inputs */}
                                     {results.questions1[0] !== null && results.questions1[1] !== null && (
                                         <img
-                                            src={results.questions1[0] && results.questions1[1] ? vSquare : xSquare}
+                                            src={results.questions1[0] && results.questions1[1] ? correct_icon : wrong_icon}
                                             alt={results.questions1[0] && results.questions1[1] ? "Correct" : "Incorrect"}
                                             className={styles.pg95CheckmarkImage}
                                         />
                                     )}
 
                                     <img
-                                        src={eIcon}
+                                        src={eng_audio_icon}
                                         alt="Audio Icon"
                                         className={styles.pg95AdditionalIcon}
                                         onClick={() => playAudio("pg95_audio2")}
@@ -270,14 +271,14 @@ const pagina95 = () => {
                                         {/* Ícone Único de Verificação */}
                                         {results.questions1[index * 2] !== null && results.questions1[index * 2 + 1] !== null && (
                                             <img
-                                                src={results.questions1[index * 2] && results.questions1[index * 2 + 1] ? vSquare : xSquare}
+                                                src={results.questions1[index * 2] && results.questions1[index * 2 + 1] ? correct_icon : wrong_icon}
                                                 alt={results.questions1[index * 2] && results.questions1[index * 2 + 1] ? "Correct" : "Incorrect"}
                                                 className={styles.pg95CheckmarkImage}
                                             />
                                         )}
 
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles.pg95AdditionalIcon}
                                             onClick={() => playAudio(`pg95_audio${index + 2}`)}
@@ -315,7 +316,7 @@ const pagina95 = () => {
                 />
                 {results.shortAnswers1[index * 2] !== null && (
                     <img
-                        src={results.shortAnswers1[index * 2] ? vSquare : xSquare}
+                        src={results.shortAnswers1[index * 2] ? correct_icon : wrong_icon}
                         alt={results.shortAnswers1[index * 2] ? "Correct" : "Incorrect"}
                         className={styles.pg95CheckmarkImage}
                     />
@@ -330,7 +331,7 @@ const pagina95 = () => {
                 />
                 {results.shortAnswers1[index * 2 + 1] !== null && (
                     <img
-                        src={results.shortAnswers1[index * 2 + 1] ? vSquare : xSquare}
+                        src={results.shortAnswers1[index * 2 + 1] ? correct_icon : wrong_icon}
                         alt={results.shortAnswers1[index * 2 + 1] ? "Correct" : "Incorrect"}
                         className={styles.pg95CheckmarkImage}
                     />
@@ -394,7 +395,7 @@ const pagina95 = () => {
                                         {results.questions2[index * 2] !== null &&
                                             results.questions2[index * 2 + 1] !== null && (
                                                 <img
-                                                    src={isCorrect ? vSquare : xSquare}
+                                                    src={isCorrect ? correct_icon : wrong_icon}
                                                     alt={isCorrect ? "Correct" : "Incorrect"}
                                                     className={styles.pg95CheckmarkImage}
                                                 />
@@ -402,7 +403,7 @@ const pagina95 = () => {
 
                                         {/* Ícone de áudio */}
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles.pg95AdditionalIcon}
                                             onClick={() => playAudio(audioKey)}
@@ -431,7 +432,7 @@ const pagina95 = () => {
                                             />
                                             {results.shortAnswers2[index * 2] !== null && (
                                                 <img
-                                                    src={results.shortAnswers2[index * 2] ? vSquare : xSquare}
+                                                    src={results.shortAnswers2[index * 2] ? correct_icon : wrong_icon}
                                                     alt={results.shortAnswers2[index * 2] ? "Correct" : "Incorrect"}
                                                     className={styles.pg95CheckmarkImage}
                                                 />
@@ -446,7 +447,7 @@ const pagina95 = () => {
                                             />
                                             {results.shortAnswers2[index * 2 + 1] !== null && (
                                                 <img
-                                                    src={results.shortAnswers2[index * 2 + 1] ? vSquare : xSquare}
+                                                    src={results.shortAnswers2[index * 2 + 1] ? correct_icon : wrong_icon}
                                                     alt={results.shortAnswers2[index * 2 + 1] ? "Correct" : "Incorrect"}
                                                     className={styles.pg95CheckmarkImage}
                                                 />
@@ -504,7 +505,7 @@ const pagina95 = () => {
                                         {results.questions3[index * 2] !== null &&
                                             results.questions3[index * 2 + 1] !== null && (
                                                 <img
-                                                    src={isCorrect ? vSquare : xSquare}
+                                                    src={isCorrect ? correct_icon : wrong_icon}
                                                     alt={isCorrect ? "Correct" : "Incorrect"}
                                                     className={styles.pg95CheckmarkImage}
                                                 />
@@ -512,7 +513,7 @@ const pagina95 = () => {
 
                                         {/* Ícone de áudio */}
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles.pg95AdditionalIcon}
                                             onClick={() => playAudio(audioKey)}
@@ -540,7 +541,7 @@ const pagina95 = () => {
                                             />
                                             {results.shortAnswers3[index * 2] !== null && (
                                                 <img
-                                                    src={results.shortAnswers3[index * 2] ? vSquare : xSquare}
+                                                    src={results.shortAnswers3[index * 2] ? correct_icon : wrong_icon}
                                                     alt={results.shortAnswers3[index * 2] ? "Correct" : "Incorrect"}
                                                     className={styles.pg95CheckmarkImage}
                                                 />
@@ -555,7 +556,7 @@ const pagina95 = () => {
                                             />
                                             {results.shortAnswers3[index * 2 + 1] !== null && (
                                                 <img
-                                                    src={results.shortAnswers3[index * 2 + 1] ? vSquare : xSquare}
+                                                    src={results.shortAnswers3[index * 2 + 1] ? correct_icon : wrong_icon}
                                                     alt={results.shortAnswers3[index * 2 + 1] ? "Correct" : "Incorrect"}
                                                     className={styles.pg95CheckmarkImage}
                                                 />

@@ -1,18 +1,18 @@
 import React, { useRef } from 'react';
-import styles from './pagina53.module.css';
-import pagina53Imagem1 from '../assets/Images/pagina53_imagem1.webp';
-import pagina53Imagem2 from '../assets/Images/pagina53_imagem2.webp';
-import pagina53Imagem3 from '../assets/Images/pagina53_imagem3.webp';
-import pagina53Imagem4 from '../assets/Images/pagina53_imagem4.webp';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
 
-// Importação dos áudios do cabeçalho da Página 50
+import styles from './pagina53.module.css';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
+import pagina53Imagem1 from '../assets/images/pagina53_imagem1.webp';
+import pagina53Imagem2 from '../assets/images/pagina53_imagem2.webp';
+import pagina53Imagem3 from '../assets/images/pagina53_imagem3.webp';
+import pagina53Imagem4 from '../assets/images/pagina53_imagem4.webp';
+
 import pg50Audio1e from '../assets/audios/pg50_audio1e.mp3';
 import pg50Audio1p from '../assets/audios/pg50_audio1p.mp3';
 import pg53Audio2H from '../assets/audios/pg53_audio2H.mp3';
-
-// Áudios específicos da Página 53
 import pg53Audio1 from '../assets/audios/pg53_audio1.mp3';
 import pg53Audio2 from '../assets/audios/pg53_audio2.mp3';
 import pg53Audio3 from '../assets/audios/pg53_audio3.mp3';
@@ -54,13 +54,13 @@ const Pagina53 = () => {
                     <h1 className={styles['page53__title']}>
                         Grammar - Demonstrative Pronouns
                         <img
-                            src={eIcon}
+                            src={eng_audio_icon}
                             alt="English Audio"
                             className={styles['page53__icon']}
                             onClick={() => playAudio('pg50-audio1e')}
                         />
                         <img
-                            src={pIcon}
+                            src={ptbr_audio_icon}
                             alt="Portuguese Audio"
                             className={styles['page53__icon']}
                             onClick={() => playAudio('pg50-audio1p')}

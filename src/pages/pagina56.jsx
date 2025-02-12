@@ -1,5 +1,7 @@
 import React from 'react';
+
 import styles from './pagina56.module.css';
+
 import pagina56Imagem1 from '../assets/images/pagina56_imagem1.webp';
 import pagina56Imagem2 from '../assets/images/pagina56_imagem2.webp';
 import pagina56Imagem3 from '../assets/images/pagina56_imagem3.webp';

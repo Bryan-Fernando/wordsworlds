@@ -1,14 +1,18 @@
 import React, { useRef } from 'react';
+
 import styles from './pagina51.module.css';
-import pagina51_imagem1 from '../assets/Images/pagina51_imagem1.webp';
-import pagina51_imagem2 from '../assets/Images/pagina51_imagem2.webp';
-import pagina51_imagem3 from '../assets/Images/pagina51_imagem3.webp';
-import pagina51_imagem4 from '../assets/Images/pagina51_imagem4.webp';
-import pagina51_imagem5 from '../assets/Images/pagina51_imagem5.webp';
-import pagina51_imagem6 from '../assets/Images/pagina51_imagem6.webp';
-import pagina51_imagem7 from '../assets/Images/pagina51_imagem7.webp';
-import iconeE from '../assets/icons/eIcon.png';
-import iconeP from '../assets/icons/pIcon.png';
+
+import iconeE from '../assets/icons/eng_audio_icon.webp';
+import iconeP from '../assets/icons/ptbr_audio_icon.webp';
+
+import pagina51_imagem1 from '../assets/images/pagina51_imagem1.webp';
+import pagina51_imagem2 from '../assets/images/pagina51_imagem2.webp';
+import pagina51_imagem3 from '../assets/images/pagina51_imagem3.webp';
+import pagina51_imagem4 from '../assets/images/pagina51_imagem4.webp';
+import pagina51_imagem5 from '../assets/images/pagina51_imagem5.webp';
+import pagina51_imagem6 from '../assets/images/pagina51_imagem6.webp';
+import pagina51_imagem7 from '../assets/images/pagina51_imagem7.webp';
+
 import pg50_audio1e from '../assets/audios/pg50_audio1e.mp3';
 import pg50_audio1p from '../assets/audios/pg50_audio1p.mp3';
 import pg50_audio2H from '../assets/audios/pg50_audio2H.mp3';

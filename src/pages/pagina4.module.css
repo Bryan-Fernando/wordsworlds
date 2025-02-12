@@ -105,6 +105,21 @@
     transform: scale(1.1);
 }
 
+.page__icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    position: relative;
+    top: 0.3rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page__icon:hover {
+    transform: scale(1.2);
+}
+
+
 @media (max-width: 1080px) {
     .page__table__header,
     .page__table__cell {

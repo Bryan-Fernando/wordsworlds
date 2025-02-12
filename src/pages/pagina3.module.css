@@ -32,7 +32,7 @@
 }
 
 .page__aside__header {
-    width: 50%;
+    width: 45%;
     color: #a61c28;
 }
 
@@ -54,11 +54,7 @@
     transform: scale(1.1);
 }
 
-.page__header h1,
-.page__aside__header h2,
-.page__aside__list li {
-    cursor: pointer;
-}
+
 
 @media (max-width: 1024px) {
     .page__main {

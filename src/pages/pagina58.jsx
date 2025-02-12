@@ -1,33 +1,34 @@
 import React from 'react';
+
 import styles from './pagina58.module.css';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
+import Pagina58_imagem1 from '../assets/images/pagina58_imagem1.webp';
+import Pagina58_imagem2 from '../assets/images/pagina58_imagem2.webp';
+import Pagina58_imagem3 from '../assets/images/pagina58_imagem3.webp';
+import Pagina58_imagem4 from '../assets/images/pagina58_imagem4.webp';
+import Pagina58_imagem5 from '../assets/images/pagina58_imagem5.webp';
+import Pagina58_imagem6 from '../assets/images/pagina58_imagem6.webp';
+import Pagina58_imagem7 from '../assets/images/pagina58_imagem7.webp';
+import Pagina58_imagem8 from '../assets/images/pagina58_imagem8.webp';
+import Pagina58_imagem9 from '../assets/images/pagina58_imagem9.webp';
+import Pagina58_imagem10 from '../assets/images/pagina58_imagem10.webp';
+import Pagina58_imagem11 from '../assets/images/pagina58_imagem11.webp';
+import Pagina58_imagem12 from '../assets/images/pagina58_imagem12.webp';
+import Pagina58_imagem13 from '../assets/images/pagina58_imagem13.webp';
+import Pagina58_imagem14 from '../assets/images/pagina58_imagem14.webp';
+import Pagina58_imagem15 from '../assets/images/pagina58_imagem15.webp';
+import Pagina58_imagem16 from '../assets/images/pagina58_imagem16.webp';
+import Pagina58_imagem17 from '../assets/images/pagina58_imagem17.webp';
+import Pagina58_imagem18 from '../assets/images/pagina58_imagem18.webp';
+import Pagina58_imagem19 from '../assets/images/pagina58_imagem19.webp';
+import Pagina58_imagem20 from '../assets/images/pagina58_imagem20.webp';
+import Pagina58_imagem21 from '../assets/images/pagina58_imagem21.webp';
 
 import pg58_audio1e from '../assets/audios/pg58_audio1e.mp3';
 import pg58_audio1p from '../assets/audios/pg58_audio1p.mp3';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-
-
-import Pagina58_imagem1 from '../assets/Images/pagina58_imagem1.webp';
-import Pagina58_imagem2 from '../assets/Images/pagina58_imagem2.webp';
-import Pagina58_imagem3 from '../assets/Images/pagina58_imagem3.webp';
-import Pagina58_imagem4 from '../assets/Images/pagina58_imagem4.webp';
-import Pagina58_imagem5 from '../assets/Images/pagina58_imagem5.webp';
-import Pagina58_imagem6 from '../assets/Images/pagina58_imagem6.webp';
-import Pagina58_imagem7 from '../assets/Images/pagina58_imagem7.webp';
-import Pagina58_imagem8 from '../assets/Images/pagina58_imagem8.webp';
-import Pagina58_imagem9 from '../assets/Images/pagina58_imagem9.webp';
-import Pagina58_imagem10 from '../assets/Images/pagina58_imagem10.webp';
-import Pagina58_imagem11 from '../assets/Images/pagina58_imagem11.webp';
-import Pagina58_imagem12 from '../assets/Images/pagina58_imagem12.webp';
-import Pagina58_imagem13 from '../assets/Images/pagina58_imagem13.webp';
-import Pagina58_imagem14 from '../assets/Images/pagina58_imagem14.webp';
-import Pagina58_imagem15 from '../assets/Images/pagina58_imagem15.webp';
-import Pagina58_imagem16 from '../assets/Images/pagina58_imagem16.webp';
-import Pagina58_imagem17 from '../assets/Images/pagina58_imagem17.webp';
-import Pagina58_imagem18 from '../assets/Images/pagina58_imagem18.webp';
-import Pagina58_imagem19 from '../assets/Images/pagina58_imagem19.webp';
-import Pagina58_imagem20 from '../assets/Images/pagina58_imagem20.webp';
-import Pagina58_imagem21 from '../assets/Images/pagina58_imagem21.webp';
 import pg58_audio2 from '../assets/audios/pg58_audio2.mp3';
 import pg58_audio3 from '../assets/audios/pg58_audio3.mp3';
 import pg58_audio4 from '../assets/audios/pg58_audio4.mp3';
@@ -188,13 +189,13 @@ const Pagina58 = () => {
                 <h1 className={styles['page58__title']}>
                     Listening and Pronunciation
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles['page58__audio-icon']}
                         onClick={() => playAudio('pg58_audio1e')}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles['page58__audio-icon']}
                         onClick={() => playAudio('pg58_audio1p')}

@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+
 import styles from "./pagina93.module.css";
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
 import pagina93_imagem1 from "../assets/images/pagina93_imagem1.webp";
 import pagina93_imagem2 from "../assets/images/pagina93_imagem2.webp";
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-import global_learningLEe from "../assets/audios/global_learningLEe.mp3";
-import global_learningLEp from "../assets/audios/global_learningLEp.mp3";
-import global_answerQuestionp from "../assets/audios/global_answerQuestionp.mp3"
-import global_answerQuestione from "../assets/audios/global_answerQuestione.mp3"
+
+import global_learning_le_e from "../assets/audios/global_learning_le_e.mp3";
+import global_learning_le_p from "../assets/audios/global_learning_le_p.mp3";
+import global_answer_questionp from "../assets/audios/global_answer_questionp.mp3"
+import global_answer_questione from "../assets/audios/global_answer_questione.mp3"
 import pg93_audio1e from "../assets/audios/pg93_audio1e.mp3";
 import pg93_audio1p from "../assets/audios/pg93_audio1p.mp3";
 import pg93_audio2 from "../assets/audios/pg93_audio2.mp3";
@@ -54,10 +58,10 @@ const Pagina93 = () => {
     };
 
     const audioMap = {
-        global_learningLEe,
-        global_learningLEp,
-        global_answerQuestione,
-        global_answerQuestionp,
+        global_learning_le_e,
+        global_learning_le_p,
+        global_answer_questione,
+        global_answer_questionp,
         pg93_audio1e,
         pg93_audio1p,
         pg93_audio2,
@@ -109,16 +113,16 @@ const Pagina93 = () => {
                 <h1 className={styles["page93__title"]}>
                     Learning Language Exercises
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles["page93__header-icon"]}
-                        onClick={() => playAudio("global_learningLEe")}
+                        onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles["page93__header-icon"]}
-                        onClick={() => playAudio("global_learningLEp")}
+                        onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
             </header>
@@ -150,13 +154,13 @@ const Pagina93 = () => {
                                     </span>{" "}
                                     Answer the questions with your own words.
                                     <img
-                                        src={eIcon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles["page93__header-icon"]}
                                         onClick={() => playAudio("pg93_audio1e")}
                                     />
                                     <img
-                                        src={pIcon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles["page93__header-icon"]}
                                         onClick={() => playAudio("pg93_audio1p")}
@@ -202,16 +206,16 @@ const Pagina93 = () => {
                                 <h2>
                                     1. Answer the questions with your own words.
                                     <img
-                                        src={eIcon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles["page93__header-icon"]}
-                                        onClick={() => playAudio("global_answerQuestione")}
+                                        onClick={() => playAudio("global_answer_questione")}
                                     />
                                     <img
-                                        src={pIcon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles["page93__header-icon"]}
-                                        onClick={() => playAudio("global_answerQuestionp")}
+                                        onClick={() => playAudio("global_answer_questionp")}
                                     />
                                 </h2>
 
@@ -259,16 +263,16 @@ const Pagina93 = () => {
                                 <h2>
                                     2. Answer the questions with your own words.
                                     <img
-                                        src={eIcon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles["page93__header-icon"]}
-                                        onClick={() => playAudio("global_answerQuestione")}
+                                        onClick={() => playAudio("global_answer_questione")}
                                     />
                                     <img
-                                        src={pIcon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles["page93__header-icon"]}
-                                        onClick={() => playAudio("global_answerQuestionp")}
+                                        onClick={() => playAudio("global_answer_questionp")}
                                     />
                                 </h2>
 
@@ -316,16 +320,16 @@ const Pagina93 = () => {
                                 <h2>
                                     3. Answer the questions with your own words.
                                     <img
-                                        src={eIcon}
+                                        src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles["page93__header-icon"]}
-                                        onClick={() => playAudio("global_answerQuestione")}
+                                        onClick={() => playAudio("global_answer_questione")}
                                     />
                                     <img
-                                        src={pIcon}
+                                        src={ptbr_audio_icon}
                                         alt="Portuguese audio"
                                         className={styles["page93__header-icon"]}
-                                        onClick={() => playAudio("global_answerQuestionp")}
+                                        onClick={() => playAudio("global_answer_questionp")}
                                     />
                                 </h2>
 

@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import styles from './pagina94.module.css';
-import pagina94_imagem1 from '../assets/images/pagina94_imagem1.webp';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
 
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
+import styles from './pagina94.module.css';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
+import pagina94_imagem1 from '../assets/images/pagina94_imagem1.webp';
+
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import pg94_audio1e from '../assets/audios/pg94_audio1e.mp3';
 import pg94_audio1p from '../assets/audios/pg94_audio1p.mp3';
 import pg94_audio2 from '../assets/audios/pg94_audio2.mp3';
@@ -34,8 +37,8 @@ const Pagina94 = () => {
     ];
 
     const audioMap = {
-        global_learningLEe,
-        global_learningLEp,
+        global_learning_le_e,
+        global_learning_le_p,
         pg94_audio1e,
         pg94_audio1p,
         pg94_audio2,
@@ -83,16 +86,16 @@ const Pagina94 = () => {
                 <h1 className={styles["page94__title"]}>
                     Learning Language Exercises
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles["page94__header-icon"]}
-                        onClick={() => playAudio("global_learningLEe")}
+                        onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles["page94__header-icon"]}
-                        onClick={() => playAudio("global_learningLEp")}
+                        onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
             </header>
@@ -119,13 +122,13 @@ const Pagina94 = () => {
                         <h2 className={styles["page94__questions-title"]}>
                             1. Make questions for the following answers.
                             <img
-                                src={eIcon}
+                                src={eng_audio_icon}
                                 alt="English audio"
                                 className={styles["page94__header-icon"]}
                                 onClick={() => playAudio("pg94_audio1e")}
                             />
                             <img
-                                src={pIcon}
+                                src={ptbr_audio_icon}
                                 alt="Portuguese audio"
                                 className={styles["page94__header-icon"]}
                                 onClick={() => playAudio("pg94_audio1p")}
@@ -152,14 +155,14 @@ const Pagina94 = () => {
                                             className={styles["page94__input-box"]}
                                         />
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles["page94__additional-icon"]}
                                             onClick={() => playAudio(inputAudio)}
                                         />
                                         {results[index] !== null ? (
                                             <img
-                                                src={results[index] ? vSquare : xSquare}
+                                                src={results[index] ? correct_icon : wrong_icon}
                                                 alt={results[index] ? "Correct" : "Incorrect"}
                                                 className={styles["page94__checkmark-image"]}
                                                 style={{ display: "inline-block" }}

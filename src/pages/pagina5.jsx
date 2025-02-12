@@ -1,20 +1,25 @@
 import React, { useState, useRef } from 'react';
+
 import styles from './pagina5.module.css';
 
-import globalVerboToBe from '../assets/audios/global_verboToBe.mp3';
-import globalGrammar from '../assets/audios/global_grammar.mp3';
-import globalSimplePresent from '../assets/audios/global_simplePresent.mp3';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
+import globalVerboToBe from '../assets/audios/global_verbo_to_be.mp3';
+import globalGrammar from '../assets/audios/global_grammar.mp3';
+import globalSimplePresent from '../assets/audios/global_simple_present.mp3';
 import afirmativaAudio from '../assets/audios/afirmativa.mp3';
 import sujeitoAudio from '../assets/audios/sujeito.mp3';
-import verboAuxiliarAudio from '../assets/audios/verboauxiliar.mp3';
+import verbo_auxiliarAudio from '../assets/audios/verbo_auxiliar.mp3';
 import adverbioAudio from '../assets/audios/adverbio.mp3';
 import verboAudio from '../assets/audios/verbo.mp3';
-import objetoComplementoAudio from '../assets/audios/Objetocomplemento.mp3';
+import objeto_complemento_audio from '../assets/audios/objeto_complemento.mp3';
 import traducaoAudio from '../assets/audios/traducao.mp3';
 import pg5Audio1 from '../assets/audios/pg5_audio1.mp3';
 import pg5Audio2 from '../assets/audios/pg5_audio2.mp3';
 import pg5Audio3 from '../assets/audios/pg5_audio3.mp3';
+
+
 
 const Pagina5 = () => {
     const [inputValues, setInputValues] = useState(
@@ -60,25 +65,36 @@ const Pagina5 = () => {
     return (
         <div className={styles.page}>
             <div className={styles.page__container}>
-                <header className={styles.page__header}>
-                    <h1
-                        className={styles.page__header__title}
-                        onClick={() => playAudio(globalGrammar)}
-                    >
+                <header className={styles["page__header"]}>
+                    <h1 className={styles["page__header__title"]}>
                         Grammar
+                        <img
+                            src={eng_audio_icon}
+                            alt="English Audio"
+                            className={styles["page__icon"]}
+                            onClick={() => playAudio(globalGrammar)}
+                        />
                     </h1>
                     <h2
-                        className={styles.page__header__subtitle}
-                        onClick={() => playAudio(globalSimplePresent)}
-                        style={{ color: 'black' }}
+                        className={styles["page__header__subtitle"]}
+                        style={{ color: "black" }}
                     >
                         Simple Present (Presente Simples)
+                        <img
+                            src={eng_audio_icon}
+                            alt="English Audio"
+                            className={styles["page__icon"]}
+                            onClick={() => playAudio(globalSimplePresent)}
+                        />
                     </h2>
-                    <h3
-                        className={styles.page__header__description}
-                        onClick={() => playAudio(globalVerboToBe)}
-                    >
+                    <h3 className={styles["page__header__description"]}>
                         Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)
+                        <img
+                            src={ptbr_audio_icon}
+                            alt="Portuguese Audio"
+                            className={styles["page__icon"]}
+                            onClick={() => playAudio(globalVerboToBe)}
+                        />
                     </h3>
                 </header>
 
@@ -89,6 +105,11 @@ const Pagina5 = () => {
                             onClick={() => playAudio(afirmativaAudio)}
                             style={{ cursor: 'pointer' }}
                         >
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese Audio"
+                                className={styles.page__icon__left}
+                            />
                             AFFIRMATIVE
                         </div>
                         <table className={styles.page__table}>
@@ -109,7 +130,7 @@ const Pagina5 = () => {
                                         Subject
                                     </th>
                                     <th
-                                        onClick={() => playAudio(verboAuxiliarAudio)}
+                                        onClick={() => playAudio(verbo_auxiliarAudio)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         Auxiliary <br /> Verb
@@ -127,7 +148,7 @@ const Pagina5 = () => {
                                         Verb(s)
                                     </th>
                                     <th
-                                        onClick={() => playAudio(objetoComplementoAudio)}
+                                        onClick={() => playAudio(objeto_complemento_audio)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         Object <br /> Complement
@@ -195,7 +216,7 @@ const Pagina5 = () => {
                                         Subject
                                     </th>
                                     <th
-                                        onClick={() => playAudio(verboAuxiliarAudio)}
+                                        onClick={() => playAudio(verbo_auxiliarAudio)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         Auxiliary <br /> Verb
@@ -213,7 +234,7 @@ const Pagina5 = () => {
                                         Verb(s)
                                     </th>
                                     <th
-                                        onClick={() => playAudio(objetoComplementoAudio)}
+                                        onClick={() => playAudio(objeto_complemento_audio)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         Object <br /> Complement

@@ -1,31 +1,32 @@
 import React, { useState, useRef, useEffect } from 'react';
+
 import styles from './pagina38.module.css';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import microphone_icon from '../assets/icons/microphone_icon.webp';
+import megaphone_icon from '../assets/icons/megaphone_icon.webp';
+
+import pagina38_imagem1 from '../assets/images/pagina38_imagem1.webp';
 
 import pg38_audio1e from '../assets/audios/pg38_audio1e.mp3';
 import pg38_audio1p from '../assets/audios/pg38_audio1p.mp3';
 import pg38_audio2e from '../assets/audios/pg38_audio2e.mp3';
 import pg38_audio2p from '../assets/audios/pg38_audio2p.mp3';
-
-
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-import microfone from '../assets/icons/microfone.png';
-import megafone from '../assets/icons/megafone.png';
-import pagina38_imagem1 from '../assets/images/pagina38_imagem1.webp';
 import Pagina38_a1 from '../assets/audios/pg38_a1.mp3';
-import Pagina38_a2 from '../assets/audios/Pagina38_a2.mp3';
+import Pagina38_a2 from '../assets/audios/pagina38_a2.mp3';
 import Pagina38_b1 from '../assets/audios/pg38_b1.mp3';
-import Pagina38_b2 from '../assets/audios/Pagina38_b2.mp3';
+import Pagina38_b2 from '../assets/audios/pagina38_b2.mp3';
 import Pagina38_c1 from '../assets/audios/pg38_c1.mp3';
-import Pagina38_c2 from '../assets/audios/Pagina38_c2.mp3';
+import Pagina38_c2 from '../assets/audios/pagina38_c2.mp3';
 import Pagina38_d1 from '../assets/audios/pg38_d1.mp3';
-import Pagina38_d2 from '../assets/audios/Pagina38_d2.mp3';
+import Pagina38_d2 from '../assets/audios/pagina38_d2.mp3';
 
 const Pagina38 = () => {
     const [audioPlaying, setAudioPlaying] = useState(null);
     const [gravando, setGravando] = useState(null);
     const [recordedAudios, setRecordedAudios] = useState({});
-    const [megafonePulsando, setMegafonePulsando] = useState(null);
+    const [megaphone_iconPulsando, setmegaphone_iconPulsando] = useState(null);
 
 
     // Referências para os áudios
@@ -104,11 +105,11 @@ const Pagina38 = () => {
         if (recordedAudios[blocoId]) {
             const audio = new Audio(recordedAudios[blocoId]);
 
-            setMegafonePulsando(blocoId);
+            setmegaphone_iconPulsando(blocoId);
 
             audio.play();
             audio.onended = () => {
-                setMegafonePulsando(null);
+                setmegaphone_iconPulsando(null);
             };
         }
     };
@@ -120,13 +121,13 @@ const Pagina38 = () => {
                     <h1 className={styles.pg38AudioText}>
                         Dialogue Practice
                         <img
-                            src={eIcon}
+                            src={eng_audio_icon}
                             alt="English Audio"
                             style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
                             onClick={() => tocarAudio('pg38_audio1e')}
                         />
                         <img
-                            src={pIcon}
+                            src={ptbr_audio_icon}
                             alt="Portuguese Audio"
                             style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
                             onClick={() => tocarAudio('pg38_audio1p')}
@@ -135,13 +136,13 @@ const Pagina38 = () => {
                     <h2 className={styles.pg38AudioText}>
                         Listening & Speaking
                         <img
-                            src={eIcon}
+                            src={eng_audio_icon}
                             alt="English Audio"
                             style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
                             onClick={() => tocarAudio('pg38_audio2e')}
                         />
                         <img
-                            src={pIcon}
+                            src={ptbr_audio_icon}
                             alt="Portuguese Audio"
                             style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
                             onClick={() => tocarAudio('pg38_audio2p')}
@@ -194,14 +195,14 @@ const Pagina38 = () => {
             <div key={id} className={styles.pg38DialogBlock}>
                 <div className={styles.pg38AudioControls}>
                     <img
-                        src={microfone}
+                        src={microphone_icon}
                         className={`${styles.pg38Icon} ${gravando === id ? styles.pulsando : ''}`}
                         alt="Gravar áudio"
                         onClick={() => gravarAudio(id)}
                     />
                     <img
-                        src={megafone}
-                        className={`${styles.pg38Icon} ${megafonePulsando === id ? styles.pulsando : ''}`}
+                        src={megaphone_icon}
+                        className={`${styles.pg38Icon} ${megaphone_iconPulsando === id ? styles.pulsando : ''}`}
                         alt="Reproduzir áudio gravado"
                         onClick={() => tocarAudioGravado(id)}
                     />
@@ -213,14 +214,14 @@ const Pagina38 = () => {
                 </div>
                 <div className={styles.pg38AudioIcons}>
                     <img
-                        src={eIcon}
-                        className={`${styles.pg38Icon} ${audioPlaying?.icon === `eIcon${id}` ? styles.pulsando : ''}`}
+                        src={eng_audio_icon}
+                        className={`${styles.pg38Icon} ${audioPlaying?.icon === `eng_audio_icon${id}` ? styles.pulsando : ''}`}
                         alt="English Audio"
                         onClick={() => tocarAudio(audioEn)}
                     />
                     <img
-                        src={pIcon}
-                        className={`${styles.pg38Icon} ${audioPlaying?.icon === `pIcon${id}` ? styles.pulsando : ''}`}
+                        src={ptbr_audio_icon}
+                        className={`${styles.pg38Icon} ${audioPlaying?.icon === `ptbr_audio_icon${id}` ? styles.pulsando : ''}`}
                         alt="Portuguese Audio"
                         onClick={() => tocarAudio(audioPt)}
                     />

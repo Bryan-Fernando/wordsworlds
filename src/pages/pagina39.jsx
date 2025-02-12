@@ -1,5 +1,18 @@
 import React, { useState } from 'react';
+
 import styles from './pagina39.module.css';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import slow_audio_icon from '../assets/icons/slow_audio_icon.webp';
+
+import pagina39_imagem1 from '../assets/images/pagina39_imagem1.webp';
+import pagina39_imagem2 from '../assets/images/pagina39_imagem2.webp';
+import pagina39_imagem3 from '../assets/images/pagina39_imagem3.webp';
+import pagina39_imagem4 from '../assets/images/pagina39_imagem4.webp';
+import pagina39_imagem5 from '../assets/images/pagina39_imagem5.webp';
 
 import pg39_audio1e from '../assets/audios/pg39_audio1e.mp3';
 import pg39_audio1p from '../assets/audios/pg39_audio1p.mp3';
@@ -7,28 +20,16 @@ import pg39_audio2e from '../assets/audios/pg39_audio2e.mp3';
 import pg39_audio2p from '../assets/audios/pg39_audio2p.mp3';
 import pg39_audio3e from '../assets/audios/pg39_audio3e.mp3';
 import pg39_audio3p from '../assets/audios/pg39_audio3p.mp3';
-
-
-import pagina39_imagem1 from '../assets/images/pagina39_imagem1.webp';
-import pagina39_imagem2 from '../assets/images/pagina39_imagem2.webp';
-import pagina39_imagem3 from '../assets/images/pagina39_imagem3.webp';
-import pagina39_imagem4 from '../assets/images/pagina39_imagem4.webp';
-import pagina39_imagem5 from '../assets/images/pagina39_imagem5.webp';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-import volumeReduzidoIcon from '../assets/icons/volumeReduzido.png';
 import Pagina39_audioA from '../assets/audios/pagina39_audioA.mp3';
 import Pagina39_audioB from '../assets/audios/pagina39_audioB.mp3';
 import Pagina39_audioC from '../assets/audios/pagina39_audioC.mp3';
 import Pagina39_audioD from '../assets/audios/pagina39_audioD.mp3';
 import Pagina39_audioE from '../assets/audios/pagina39_audioE.mp3';
-import Pagina39_audio1 from '../assets/audios/Pagina39_audio1.mp3';
-import Pagina39_audio2 from '../assets/audios/Pagina39_audio2.mp3';
-import Pagina39_audio3 from '../assets/audios/Pagina39_audio3.mp3';
-import Pagina39_audio4 from '../assets/audios/Pagina39_audio4.mp3';
-import Pagina39_audio5 from '../assets/audios/Pagina39_audio5.mp3';
+import Pagina39_audio1 from '../assets/audios/pagina39_audio1.mp3';
+import Pagina39_audio2 from '../assets/audios/pagina39_audio2.mp3';
+import Pagina39_audio3 from '../assets/audios/pagina39_audio3.mp3';
+import Pagina39_audio4 from '../assets/audios/pagina39_audio4.mp3';
+import Pagina39_audio5 from '../assets/audios/pagina39_audio5.mp3';
 
 const Pagina39 = () => {
     const [inputValues, setInputValues] = useState(['', '', '', '', '']);
@@ -144,13 +145,13 @@ const Pagina39 = () => {
                 <h1 className={styles.pg39AudioText} style={{ color: '#A61C28'}}>
                     Exercise:
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English Audio"
                         style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
                         onClick={() => tocarAudio(pg39_audio1e)}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese Audio"
                         style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
                         onClick={() => tocarAudio(pg39_audio1p)}
@@ -159,13 +160,13 @@ const Pagina39 = () => {
                 <h2 className={styles.pg39AudioText} style={{ marginLeft: '-1.5rem' }}>
                     2. Matching Exercises (Match the sentence with the correct image/description)
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English Audio"
                         style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
                         onClick={() => tocarAudio(pg39_audio2e)}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese Audio"
                         style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
                         onClick={() => tocarAudio(pg39_audio2p)}
@@ -174,18 +175,20 @@ const Pagina39 = () => {
                 <p className={styles.pg39AudioText}>
                     Match the sentence (A-E) with the correct picture or description (1-5):
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English Audio"
                         style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
                         onClick={() => tocarAudio(pg39_audio3e)}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese Audio"
                         style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
                         onClick={() => tocarAudio(pg39_audio3p)}
                     />
                 </p>
+                <p className={styles.page__paragraph}>Clique ou digite</p>
+
             </header>
 
             <main className={styles.pg39Main}>
@@ -207,7 +210,7 @@ const Pagina39 = () => {
                                 />
                                 {results[index] !== null && (
                                     <img
-                                        src={results[index] ? vSquare : xSquare}
+                                        src={results[index] ? correct_icon : wrong_icon}
                                         alt={results[index] ? "Correct" : "Incorrect"}
                                         className={styles.pg39CheckmarkImage}
                                     />
@@ -223,21 +226,21 @@ const Pagina39 = () => {
                             <p><strong>{String.fromCharCode(65 + index)}) {sentence}</strong></p>
                             <div className={styles.pg39IconsContainer}>
                                 <img
-                                    src={eIcon}
+                                    src={eng_audio_icon}
                                     alt="English Audio Icon"
                                     className={`${styles.pg39AudioIcon} ${pulsingAudioEnglishIndex === index ? styles.pg39Pulsing : ''}`}
                                     onClick={(e) => handleAudioClick(index, false, e)}
                                 />
                                 <img
-                                    src={pIcon}
+                                    src={ptbr_audio_icon}
                                     alt="Portuguese Audio Icon"
-                                    className={`${styles.pg39PortugueseIcon} ${pulsingAudioPortugueseIndex === index ? styles.pg39Pulsing : ''}`}
+                                    className={`${styles.pg39Portugueseng_audio_icon} ${pulsingAudioPortugueseIndex === index ? styles.pg39Pulsing : ''}`}
                                     onClick={(e) => handleAudioClick(index, true, e)}
                                 />
                                 <img
-                                    src={volumeReduzidoIcon}
+                                    src={slow_audio_icon}
                                     alt="Reduce Speed Icon"
-                                    className={`${styles.pg39VolumeIcon} ${isSpeedReduced[index] ? styles.pg39Active : ''}`}
+                                    className={`${styles.pg39Volumeng_audio_icon} ${isSpeedReduced[index] ? styles.pg39Active : ''}`}
                                     onClick={(e) => reduzirVelocidade(index, e)}
                                 />
                             </div>

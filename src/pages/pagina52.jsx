@@ -1,13 +1,17 @@
 import React, { useRef } from 'react';
+
 import styles from './pagina52.module.css';
-import pagina52_imagem1 from '../assets/Images/pagina52_imagem1.webp';
-import pagina52_imagem2 from '../assets/Images/pagina52_imagem2.webp';
-import pagina52_imagem3 from '../assets/Images/pagina52_imagem3.webp';
-import pagina52_imagem4 from '../assets/Images/pagina52_imagem4.webp';
-import pagina52_imagem5 from '../assets/Images/pagina52_imagem5.webp';
-import pagina52_imagem6 from '../assets/Images/pagina52_imagem6.webp';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
+import pagina52_imagem1 from '../assets/images/pagina52_imagem1.webp';
+import pagina52_imagem2 from '../assets/images/pagina52_imagem2.webp';
+import pagina52_imagem3 from '../assets/images/pagina52_imagem3.webp';
+import pagina52_imagem4 from '../assets/images/pagina52_imagem4.webp';
+import pagina52_imagem5 from '../assets/images/pagina52_imagem5.webp';
+import pagina52_imagem6 from '../assets/images/pagina52_imagem6.webp';
+
 import audio1e from '../assets/audios/pg50_audio1e.mp3';
 import audio1p from '../assets/audios/pg50_audio1p.mp3';
 import audio2h from '../assets/audios/pg52_audio2H.mp3';
@@ -50,8 +54,8 @@ const Pagina52 = () => {
                 <header className={styles.pg52Header}>
                     <h1 className={styles.pg52HeaderH1}>
                         Grammar - Demonstrative Pronouns
-                        <img src={eIcon} alt="English Audio" className={styles.pg52Icon} onClick={() => playAudio('pg52_audio1e')} />
-                        <img src={pIcon} alt="Portuguese Audio" className={styles.pg52Icon} onClick={() => playAudio('pg52_audio1p')} />
+                        <img src={eng_audio_icon} alt="English Audio" className={styles.pg52Icon} onClick={() => playAudio('pg52_audio1e')} />
+                        <img src={ptbr_audio_icon} alt="Portuguese Audio" className={styles.pg52Icon} onClick={() => playAudio('pg52_audio1p')} />
                     </h1>
                     <div className={styles.pg52HeaderH2H3}>
                         <h2 className={styles.pg52HeaderH2} onClick={() => playAudio('pg52_audio2H')}>

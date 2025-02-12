@@ -1,10 +1,12 @@
 import React from 'react';
-import styles from './pagina61.module.css';
-import pagina61_imagem1 from '../assets/images/pagina61_imagem1.webp';
-import global_audio_grammar from '../assets/audios/global_grammar.mp3';
-import global_whatTie from '../assets/audios/global_whatTie.mp3';
-import global_whatTip from '../assets/audios/global_whatTip.mp3';
 
+import styles from './pagina61.module.css';
+
+import pagina61_imagem1 from '../assets/images/pagina61_imagem1.webp';
+
+import global_audio_grammar from '../assets/audios/global_grammar.mp3';
+import global_what_ti_e from '../assets/audios/global_what_ti_e.mp3';
+import global_what_ti_p from '../assets/audios/global_what_ti_p.mp3';
 import pg61_audio1 from '../assets/audios/pg61_audio1.mp3';
 import pg61_audio2 from '../assets/audios/pg61_audio2.mp3';
 import pg61_audio3 from '../assets/audios/pg61_audio3.mp3';
@@ -77,14 +79,14 @@ const Pagina61 = () => {
                     <div className={styles.page60HeaderSubtitleContainer}>
                         <h2
                             className={styles.page60HeaderSubtitleText}
-                            onClick={() => playAudio(global_whatTie)}
+                            onClick={() => playAudio(global_what_ti_e)}
                             style={{ cursor: 'pointer' }}
                         >
                             What time is it?
                         </h2>
                         <p
                             className={styles.page60Translation}
-                            onClick={() => playAudio(global_whatTip)}
+                            onClick={() => playAudio(global_what_ti_p)}
                             style={{ cursor: 'pointer' }}
                         >
                             Que horas são?

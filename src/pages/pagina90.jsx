@@ -1,5 +1,7 @@
 import React from 'react';
+
 import styles from './pagina90.module.css';
+
 import pagina90_imagem1 from '../assets/images/pagina90_imagem1.webp';
 import pagina90_imagem2 from '../assets/images/pagina90_imagem2.webp';
 import pagina90_imagem3 from '../assets/images/pagina90_imagem3.webp';
@@ -7,11 +9,7 @@ import pagina90_imagem4 from '../assets/images/pagina90_imagem4.webp';
 import pagina90_imagem5 from '../assets/images/pagina90_imagem5.webp';
 import pagina90_imagem6 from '../assets/images/pagina90_imagem6.webp';
 
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-
 import global_grammar from '../assets/audios/global_grammar.mp3';
-
 import pg90_audio1 from '../assets/audios/pg90_audio1.mp3';
 import pg90_audio2 from '../assets/audios/pg90_audio2.mp3';
 import pg90_audio3 from '../assets/audios/pg90_audio3.mp3';

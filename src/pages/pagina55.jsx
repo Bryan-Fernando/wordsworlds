@@ -1,19 +1,19 @@
 import React, { useRef } from 'react';
-import styles from './pagina55.module.css';
-import pg55IconNotes from '../assets/Icons/Icon-Notes.png';
-import pagina55Imagem1 from '../assets/Images/pagina55_imagem1.webp';
-import pagina55Imagem2 from '../assets/Images/pagina55_imagem2.webp';
-import pagina55Imagem3 from '../assets/Images/pagina55_imagem3.webp';
-import pagina55Imagem4 from '../assets/Images/pagina55_imagem4.webp';
-import pagina55Imagem5 from '../assets/Images/pagina55_imagem5.webp';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
 
-// Importação dos áudios do cabeçalho
+import styles from './pagina55.module.css';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import pg55IconNotes from '../assets/icons/notes_icon.webp';
+
+import pagina55Imagem1 from '../assets/images/pagina55_imagem1.webp';
+import pagina55Imagem2 from '../assets/images/pagina55_imagem2.webp';
+import pagina55Imagem3 from '../assets/images/pagina55_imagem3.webp';
+import pagina55Imagem4 from '../assets/images/pagina55_imagem4.webp';
+import pagina55Imagem5 from '../assets/images/pagina55_imagem5.webp';
+
 import pg55Audio1e from '../assets/audios/pg55_audio1e.mp3';
 import pg55Audio1p from '../assets/audios/pg55_audio1p.mp3';
-
-// Importação dos áudios dos nomes/títulos
 import pg55Audio2 from '../assets/audios/pg55_audio2.mp3';
 import pg55Audio3 from '../assets/audios/pg55_audio3.mp3';
 import pg55Audio4 from '../assets/audios/pg55_audio4.mp3';
@@ -56,13 +56,13 @@ const Pagina55 = () => {
                     <h1 className={styles['page55__title']}>
                         Names and Titles (Mr. Mrs. Miss. Ms. Ma’am)
                         <img
-                            src={eIcon}
+                            src={eng_audio_icon}
                             alt="English Audio"
                             className={styles['page55__icon']}
                             onClick={() => playAudio('pg55-audio1e')}
                         />
                         <img
-                            src={pIcon}
+                            src={ptbr_audio_icon}
                             alt="Portuguese Audio"
                             className={styles['page55__icon']}
                             onClick={() => playAudio('pg55-audio1p')}

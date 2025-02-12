@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
+
 import styles from './pagina87.module.css';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import slow_audio_icon from '../assets/icons/slow_audio_icon.webp';
+
 import pagina87_imagem1 from '../assets/images/pagina87_imagem1.webp';
 import pagina87_imagem2 from '../assets/images/pagina87_imagem2.webp';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-import volumeReduzidoIcon from '../assets/icons/volumeReduzido.png';
 
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import pg87_audio1 from '../assets/audios/pg87_audio1.mp3';
 import pg87_audio2 from '../assets/audios/pg87_audio2.mp3';
 import pg87_audio3 from '../assets/audios/pg87_audio3.mp3';
@@ -18,8 +21,8 @@ import pg87_audio5 from '../assets/audios/pg87_audio5.mp3';
 import pg87_audio6 from '../assets/audios/pg87_audio6.mp3';
 
 const audioMap = {
-    global_learningLEe,
-    global_learningLEp,
+    global_learning_le_e,
+    global_learning_le_p,
     pg87_audio1,
     pg87_audio2,
     pg87_audio3,
@@ -72,16 +75,16 @@ const Pagina87 = () => {
                 <h1 className={styles["page87__title"]}>
                     Learning Language Exercises
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles["page87__header-icon"]}
-                        onClick={() => playAudio("global_learningLEe")}
+                        onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles["page87__header-icon"]}
-                        onClick={() => playAudio("global_learningLEp")}
+                        onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
                 <h2 className={styles["page87__subtitle"]}>
@@ -137,21 +140,21 @@ const Pagina87 = () => {
                                     <div className={styles["page87__icons-container"]}>
                                         {results[index] !== null && (
                                             <img
-                                                src={results[index] ? vSquare : xSquare}
+                                                src={results[index] ? correct_icon : wrong_icon}
                                                 alt={results[index] ? "Correct" : "Incorrect"}
                                                 className={styles["page87__icon-check"]}
                                             />
                                         )}
 
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles["page87__icon"]}
                                             onClick={() => playAudio(audioKey)}
                                         />
 
                                         <img
-                                            src={volumeReduzidoIcon}
+                                            src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
                                             className={`${styles["page87__icon"]} ${isSpeedReduced[audioKey] ? styles["page87__icon--pulsing"] : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}

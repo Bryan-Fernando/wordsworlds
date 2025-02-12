@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
+
 import styles from './pagina83.module.css';
-import pg83IconNotes from '../assets/Icons/Icon-Notes.png';
+
+import pg83IconNotes from '../assets/icons/notes_icon.webp';
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import slow_audio_icon from '../assets/icons/slow_audio_icon.webp';
+
 import pagina83_imagem1 from '../assets/images/pagina83_imagem1.webp';
 import pagina83_imagem2 from '../assets/images/pagina83_imagem2.webp';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
 
-import volumeReduzidoIcon from '../assets/icons/volumeReduzido.png';
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import global_affirmativee from '../assets/audios/global_affirmativee.mp3';
 import global_affirmativep from '../assets/audios/global_affirmativep.mp3';
 import global_negativee from '../assets/audios/global_negativee.mp3';
 import global_negativep from '../assets/audios/global_negativep.mp3';
-
 import pg83_audio1 from '../assets/audios/pg83_audio1.mp3';
 import pg83_audio2 from '../assets/audios/pg83_audio2.mp3';
 import pg83_audio3 from '../assets/audios/pg83_audio3.mp3';
@@ -28,8 +30,8 @@ import pg83_audio9 from '../assets/audios/pg83_audio9.mp3';
 import pg83_audio10 from '../assets/audios/pg83_audio10.mp3';
 
 const audioMap = {
-    global_learningLEe,
-    global_learningLEp,
+    global_learning_le_e,
+    global_learning_le_p,
     global_affirmativee,
     global_affirmativep,
     global_negativee,
@@ -97,16 +99,16 @@ const Pagina83 = () => {
                 <h1 className={styles.pg83H1}>
                     Learning Language Exercises
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles.pg83HeaderIcon}
-                        onClick={() => playAudio("global_learningLEe")}
+                        onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles.pg83HeaderIcon}
-                        onClick={() => playAudio("global_learningLEp")}
+                        onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
                 <h2 className={styles.pg83H2}>
@@ -136,13 +138,13 @@ const Pagina83 = () => {
                         <p className={styles.pg83ATituloQuestion}>
                             Negative:
                             <img
-                                src={eIcon}
+                                src={eng_audio_icon}
                                 alt="English audio"
                                 className={styles.pg83HeaderIcon}
                                 onClick={() => playAudio("global_negativee")}
                             />
                             <img
-                                src={pIcon}
+                                src={ptbr_audio_icon}
                                 alt="Portuguese audio"
                                 className={styles.pg83HeaderIcon}
                                 onClick={() => playAudio("global_negativep")}
@@ -177,7 +179,7 @@ const Pagina83 = () => {
                                         {/* Ícones de Correção */}
                                         {results[index] !== null && (
                                             <img
-                                                src={results[index] ? vSquare : xSquare}
+                                                src={results[index] ? correct_icon : wrong_icon}
                                                 alt={results[index] ? "Correct" : "Incorrect"}
                                                 className={styles.pg83CheckmarkImage}
                                             />
@@ -185,7 +187,7 @@ const Pagina83 = () => {
 
                                         {/* Ícone de Áudio */}
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles.pg83AdditionalIcon}
                                             onClick={() => playAudio(audioKey)}
@@ -193,7 +195,7 @@ const Pagina83 = () => {
 
                                         {/* Ícone de Volume Reduzido */}
                                         <img
-                                            src={volumeReduzidoIcon}
+                                            src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
                                             className={`${styles.pg83AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg83Pulsing : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
@@ -242,13 +244,13 @@ const Pagina83 = () => {
                         <p className={styles.pg83ATituloQuestion}>
                             Negative:
                             <img
-                                src={eIcon}
+                                src={eng_audio_icon}
                                 alt="English audio"
                                 className={styles.pg83HeaderIcon}
                                 onClick={() => playAudio("global_negativee")}
                             />
                             <img
-                                src={pIcon}
+                                src={ptbr_audio_icon}
                                 alt="Portuguese audio"
                                 className={styles.pg83HeaderIcon}
                                 onClick={() => playAudio("global_negativep")}
@@ -283,7 +285,7 @@ const Pagina83 = () => {
                                         {/* Ícones de Correção */}
                                         {results[index + 5] !== null && (
                                             <img
-                                                src={results[index + 5] ? vSquare : xSquare}
+                                                src={results[index + 5] ? correct_icon : wrong_icon}
                                                 alt={results[index + 5] ? "Correct" : "Incorrect"}
                                                 className={styles.pg83CheckmarkImage}
                                             />
@@ -291,7 +293,7 @@ const Pagina83 = () => {
 
                                         {/* Ícone de Áudio */}
                                         <img
-                                            src={eIcon}
+                                            src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles.pg83AdditionalIcon}
                                             onClick={() => playAudio(audioKey)}
@@ -299,7 +301,7 @@ const Pagina83 = () => {
 
                                         {/* Ícone de Volume Reduzido */}
                                         <img
-                                            src={volumeReduzidoIcon}
+                                            src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
                                             className={`${styles.pg83AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg83Pulsing : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}

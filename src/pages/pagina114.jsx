@@ -1,13 +1,16 @@
 import React, { useState, useRef } from 'react';
-import styles from './pagina114.module.css';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-import pagina114_imagem1 from '../assets/images/pagina114_imagem1.webp';
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
 
+import styles from './pagina114.module.css';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
+import pagina114_imagem1 from '../assets/images/pagina114_imagem1.webp';
+
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import pg114_audio1 from '../assets/audios/pg114_audio1.mp3';
 import pg114_audio2 from '../assets/audios/pg114_audio2.mp3';
 import pg114_audio3 from '../assets/audios/pg114_audio3.mp3';
@@ -23,6 +26,7 @@ import pg114_audio12 from '../assets/audios/pg114_audio12.mp3';
 import pg114_audio13 from '../assets/audios/pg114_audio13.mp3';
 import pg114_audio14 from '../assets/audios/pg114_audio14.mp3';
 import pg114_audio15 from '../assets/audios/pg114_audio15.mp3';
+
 const pagina114 = () => {
     const [inputValues, setInputValues] = useState({
         questions1: Array(4).fill(''),
@@ -106,17 +110,17 @@ const pagina114 = () => {
             <main className={styles.pg114Main}>
                 <header className={styles.pg114Header}>
                     <h1 className={styles.pg114H1}>Learning Language Exercises <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles.pg114HeaderIcon}
-                        onClick={() => playAudio(global_learningLEe)}
+                        onClick={() => playAudio(global_learning_le_e)}
 
                     />
                         <img
-                            src={pIcon}
+                            src={ptbr_audio_icon}
                             alt="Portuguese audio"
                             className={styles.pg114HeaderIcon}
-                            onClick={() => playAudio(global_learningLEp)}
+                            onClick={() => playAudio(global_learning_le_p)}
 
                         /></h1>
                     <p className={styles.pg114TextoExplicativo}>Complete the questions using the correct question words: <strong> What | Where | When | What time | How;</strong>
@@ -183,7 +187,7 @@ const pagina114 = () => {
                                 />
                                 {question}
                                 <img
-                                    src={eIcon}
+                                    src={eng_audio_icon}
                                     alt="Play Audio"
                                     className={styles.pg114AudioIcon}
                                     onClick={() => playAudio(eval(`pg114_audio${index + 1}`))}
@@ -191,7 +195,7 @@ const pagina114 = () => {
                                 />
                                 {results.questions1[index] !== null && (
                                     <img
-                                        src={results.questions1[index] ? vSquare : xSquare}
+                                        src={results.questions1[index] ? correct_icon : wrong_icon}
                                         alt={results.questions1[index] ? "Correct" : "Incorrect"}
                                         className={styles.pg114CheckmarkImage}
                                     />
@@ -228,7 +232,7 @@ const pagina114 = () => {
                                 />
                                 {question}
                                 <img
-                                    src={eIcon}
+                                    src={eng_audio_icon}
                                     alt="Play Audio"
                                     className={styles.pg114AudioIcon}
                                     onClick={() => playAudio(eval(`pg114_audio${index + 5}`))}
@@ -236,7 +240,7 @@ const pagina114 = () => {
                                 />
                                 {results.questions2[index] !== null && (
                                     <img
-                                        src={results.questions2[index] ? vSquare : xSquare}
+                                        src={results.questions2[index] ? correct_icon : wrong_icon}
                                         alt={results.questions2[index] ? "Correct" : "Incorrect"}
                                         className={styles.pg114CheckmarkImage}
                                     />
@@ -270,7 +274,7 @@ const pagina114 = () => {
                                     className={styles.pg114InputBoxSmall}
                                 />{question}
                                 <img
-                                    src={eIcon}
+                                    src={eng_audio_icon}
                                     alt="Play Audio"
                                     className={styles.pg114AudioIcon}
                                     onClick={() => playAudio(eval(`pg114_audio${index + 9}`))}
@@ -278,7 +282,7 @@ const pagina114 = () => {
                                 />
                                 {results.questions3[index] !== null && (
                                     <img
-                                        src={results.questions3[index] ? vSquare : xSquare}
+                                        src={results.questions3[index] ? correct_icon : wrong_icon}
                                         alt={results.questions3[index] ? "Correct" : "Incorrect"}
                                         className={styles.pg114CheckmarkImage}
                                     />
@@ -312,7 +316,7 @@ const pagina114 = () => {
                                     className={styles.pg114InputBoxSmall}
                                 /> {question}
                                 <img
-                                    src={eIcon}
+                                    src={eng_audio_icon}
                                     alt="Play Audio"
                                     className={styles.pg114AudioIcon}
                                     onClick={() => playAudio(eval(`pg114_audio${index + 12}`))}
@@ -320,7 +324,7 @@ const pagina114 = () => {
                                 />
                                 {results.questions4[index] !== null && (
                                     <img
-                                        src={results.questions4[index] ? vSquare : xSquare}
+                                        src={results.questions4[index] ? correct_icon : wrong_icon}
                                         alt={results.questions4[index] ? "Correct" : "Incorrect"}
                                         className={styles.pg114CheckmarkImage}
                                     />

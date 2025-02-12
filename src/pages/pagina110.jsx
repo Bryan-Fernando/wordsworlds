@@ -1,10 +1,15 @@
 import React from 'react';
+
 import styles from './pagina110.module.css';
-import pagina110_imagem1 from '../assets/Images/pagina110_imagem1.webp';
-import pagina110_imagem2 from '../assets/Images/pagina110_imagem2.webp';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
+import pagina110_imagem1 from '../assets/images/pagina110_imagem1.webp';
+import pagina110_imagem2 from '../assets/images/pagina110_imagem2.webp';
+
 import global_vocabularye from '../assets/audios/global_vocabularye.mp3';
 import global_vocabularyp from '../assets/audios/global_vocabularyp.mp3';
-
 import pg110_audio1 from '../assets/audios/pg110_audio1.mp3';
 import pg110_audio2 from '../assets/audios/pg110_audio2.mp3';
 import pg110_audio3 from '../assets/audios/pg110_audio3.mp3';
@@ -21,9 +26,6 @@ import pg110_audio13 from '../assets/audios/pg110_audio13.mp3';
 import pg110_audio14 from '../assets/audios/pg110_audio14.mp3';
 import pg110_audio15 from '../assets/audios/pg110_audio15.mp3';
 import pg110_audio16 from '../assets/audios/pg110_audio16.mp3';
-
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
 
 const labelsWomen = [
     { text: 'bracelet\n(pulseira)', top: '20%', left: '9%', audio: "pg110_audio2" },
@@ -87,13 +89,13 @@ const Pagina110 = () => {
                     <h1 className={styles.pg110HeaderH1}>
                         Vocabulary
                         <img
-                            src={eIcon}
+                            src={eng_audio_icon}
                             alt="English audio"
                             className={styles.pg110AudioIcon}
                             onClick={() => playAudio("global_vocabularye")}
                         />
                         <img
-                            src={pIcon}
+                            src={ptbr_audio_icon}
                             alt="Portuguese audio"
                             className={styles.pg110AudioIcon}
                             onClick={() => playAudio("global_vocabularyp")}

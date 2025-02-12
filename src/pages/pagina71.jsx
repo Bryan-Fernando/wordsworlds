@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
+
 import styles from './pagina71.module.css';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
 import pagina71_imagem1 from '../assets/images/pagina71_imagem1.webp';
 import pagina71_imagem2 from '../assets/images/pagina71_imagem2.webp';
-import vSquare from '../assets/Icons/vSquare.png';
-import xSquare from '../assets/Icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-import volumeReduzido from '../assets/icons/volumeReduzido.png';
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
-import global_readingCompe from '../assets/audios/global_readingCompe.mp3';
-import global_readingCompp from '../assets/audios/global_readingCompp.mp3';
+
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
+import global_reading_compe from '../assets/audios/global_reading_compe.mp3';
+import global_reading_compp from '../assets/audios/global_reading_compp.mp3';
 import pg71_audio1 from "../assets/audios/pg71_audio1.mp3";
 import pg71_audio2 from "../assets/audios/pg71_audio2.mp3";
 import pg71_audio3e from "../assets/audios/pg71_audio3e.mp3";
@@ -52,10 +55,10 @@ const Pagina71 = () => {
     ];
 
     const audioMap = {
-        global_learningLEe,
-        global_learningLEp,
-        global_readingCompe,
-        global_readingCompp,
+        global_learning_le_e,
+        global_learning_le_p,
+        global_reading_compe,
+        global_reading_compp,
         pg71_audio1,
         pg71_audio2,
         pg71_audio3e,
@@ -92,8 +95,8 @@ const Pagina71 = () => {
     const handleCheckClick = () => {
         const newResults = userAnswers.map((answer, index) => {
             return answer.trim().toLowerCase() === correctAnswers[index].trim().toLowerCase()
-                ? vSquare
-                : xSquare;
+                ? correct_icon
+                : wrong_icon;
         });
         setResults(newResults);
     };
@@ -115,32 +118,32 @@ const Pagina71 = () => {
                 <h1 className={styles.pg71HeaderH1}>
                     Learning Language Exercises
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles.pg71AudioIcon}
-                        onClick={() => playAudio("global_learningLEe")}
+                        onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles.pg71AudioIcon}
-                        onClick={() => playAudio("global_learningLEp")}
+                        onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
 
                 <h2 className={styles.pg71HeaderH2}>
                     Reading Comprehension
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles.pg71AudioIcon}
-                        onClick={() => playAudio("global_readingCompe")}
+                        onClick={() => playAudio("global_reading_compe")}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles.pg71AudioIcon}
-                        onClick={() => playAudio("global_readingCompp")}
+                        onClick={() => playAudio("global_reading_compp")}
                     />
                 </h2>
             </header>
@@ -178,29 +181,29 @@ const Pagina71 = () => {
                         <h1 className={styles.pg71HeaderH1}>
                             Learning Language Exercises
                             <img
-                                src={eIcon}
+                                src={eng_audio_icon}
                                 alt="English audio"
                                 className={styles.pg71AudioIcon}
-                                onClick={() => playAudio("global_learningLEe")}
+                                onClick={() => playAudio("global_learning_le_e")}
                             />
                             <img
-                                src={pIcon}
+                                src={ptbr_audio_icon}
                                 alt="Portuguese audio"
                                 className={styles.pg71AudioIcon}
-                                onClick={() => playAudio("global_learningLEp")}
+                                onClick={() => playAudio("global_learning_le_p")}
                             />
                         </h1>
                         <div>
                             <h2 className={styles.pg71HeaderH2}>
                                 Read the Statements and give complete answers according to the texts. <br />
                                 <img
-                                    src={eIcon}
+                                    src={eng_audio_icon}
                                     alt="English audio"
                                     className={styles.pg71AudioIcon}
                                     onClick={() => playAudio("pg71_audio3e")}
                                 />
                                 <img
-                                    src={pIcon}
+                                    src={ptbr_audio_icon}
                                     alt="Portuguese audio"
                                     className={styles.pg71AudioIcon}
                                     onClick={() => playAudio("pg71_audio3p")}
@@ -212,13 +215,13 @@ const Pagina71 = () => {
                     <p className={styles.pg71QuestionText}>
                         The questions about Karen Brandon.
                         <img
-                            src={eIcon}
+                            src={eng_audio_icon}
                             alt="English audio"
                             className={styles.pg71AudioIcon}
                             onClick={() => playAudio("pg71_audio4e")}
                         />
                         <img
-                            src={pIcon}
+                            src={ptbr_audio_icon}
                             alt="Portuguese audio"
                             className={styles.pg71AudioIcon}
                             onClick={() => playAudio("pg71_audio4p")}
@@ -252,13 +255,13 @@ const Pagina71 = () => {
                     <p className={styles.pg71QuestionText}>
                         The questions about Leo Santander.
                         <img
-                            src={eIcon}
+                            src={eng_audio_icon}
                             alt="English audio"
                             className={styles.pg71AudioIcon}
                             onClick={() => playAudio("pg71_audio11e")}
                         />
                         <img
-                            src={pIcon}
+                            src={ptbr_audio_icon}
                             alt="Portuguese audio"
                             className={styles.pg71AudioIcon}
                             onClick={() => playAudio("pg71_audio11p")}

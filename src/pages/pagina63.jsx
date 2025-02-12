@@ -1,11 +1,14 @@
 import React from 'react';
-import styles from './pagina63.module.css';
-import pagina63_imagem1 from '../assets/images/pagina63_imagem1.webp';
-import pg63IconNotes from '../assets/Icons/Icon-Notes.png';
-import global_audio_grammar from '../assets/audios/global_grammar.mp3';
-import global_whatTie from '../assets/audios/global_whatTie.mp3';
-import global_whatTip from '../assets/audios/global_whatTip.mp3';
 
+import styles from './pagina63.module.css';
+
+import pg63IconNotes from '../assets/icons/notes_icon.webp';
+
+import pagina63_imagem1 from '../assets/images/pagina63_imagem1.webp';
+
+import global_audio_grammar from '../assets/audios/global_grammar.mp3';
+import global_what_ti_e from '../assets/audios/global_what_ti_e.mp3';
+import global_what_ti_p from '../assets/audios/global_what_ti_p.mp3';
 import pg62_audio1 from '../assets/audios/pg62_audio1.mp3';
 import pg62_audio2 from '../assets/audios/pg62_audio2.mp3';
 import pg62_audio3 from '../assets/audios/pg62_audio3.mp3';
@@ -21,13 +24,12 @@ import pg62_audio12 from '../assets/audios/pg62_audio12.mp3';
 import pg62_audio13 from '../assets/audios/pg62_audio13.mp3';
 import pg62_audio14 from '../assets/audios/pg62_audio14.mp3';
 
-
 const Pagina63 = () => {
 
     const audioMap = {
         global_audio_grammar: global_audio_grammar,
-        global_whatTie: global_whatTie,
-        global_whatTip: global_whatTip,
+        global_what_ti_e: global_what_ti_e,
+        global_what_ti_p: global_what_ti_p,
         pg62_audio1: pg62_audio1,
         pg62_audio2: pg62_audio2,
         pg62_audio3: pg62_audio3,
@@ -70,14 +72,14 @@ const Pagina63 = () => {
                         <div className={styles["page63__subtitle-container"]}>
                             <h2
                                 className={styles["page63__subtitle-text"]}
-                                onClick={() => playAudio('global_whatTie')}
+                                onClick={() => playAudio('global_what_ti_e')}
                                 style={{ cursor: 'pointer' }}
                             >
                                 What time is it?
                             </h2>
                             <p
                                 className={styles["page63__subtext"]}
-                                onClick={() => playAudio('global_whatTip')}
+                                onClick={() => playAudio('global_what_ti_p')}
                                 style={{ cursor: 'pointer' }}
                             >
                                 Que horas são?

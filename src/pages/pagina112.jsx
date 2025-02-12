@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
+
 import styles from './pagina112.module.css';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
 import pagina112_imagem1 from '../assets/images/pagina112_imagem1.webp';
 import pagina112_imagem2 from '../assets/images/pagina112_imagem2.webp';
 import pagina112_imagem3 from '../assets/images/pagina112_imagem3.webp';
@@ -14,6 +19,7 @@ import pagina112_imagem11 from '../assets/images/pagina112_imagem11.webp';
 import pagina112_imagem12 from '../assets/images/pagina112_imagem12.webp';
 import pagina112_imagem13 from '../assets/images/pagina112_imagem13.webp';
 import pagina112_imagem14 from '../assets/images/pagina112_imagem14.webp';
+
 import global_vocabularye from '../assets/audios/global_vocabularye.mp3';
 import global_vocabularyp from '../assets/audios/global_vocabularyp.mp3';
 import pg111_audio1 from '../assets/audios/pg111_audio1.mp3';
@@ -32,10 +38,6 @@ import pg112_audio12 from '../assets/audios/pg112_audio12.mp3';
 import pg112_audio13 from '../assets/audios/pg112_audio13.mp3';
 import pg112_audio14 from '../assets/audios/pg112_audio14.mp3';
 
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-
-
 const Pagina112 = () => {
 
     const playAudio = (audioSrc) => {
@@ -52,13 +54,13 @@ const Pagina112 = () => {
                         Vocabulary
                         <div className={styles.pg112HeaderIcons}>
                             <img
-                                src={eIcon}
+                                src={eng_audio_icon}
                                 alt="English Audio"
                                 className={styles.pg112HeaderIcon}
                                 onClick={() => playAudio(global_vocabularye)}
                             />
                             <img
-                                src={pIcon}
+                                src={ptbr_audio_icon}
                                 alt="Portuguese Audio"
                                 className={styles.pg112HeaderIcon}
                                 onClick={() => playAudio(global_vocabularyp)}

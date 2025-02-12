@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import styles from './pagina70.module.css';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
 import pagina70_imagem1 from '../assets/images/pagina70_imagem1.webp';
 import pagina70_imagem2 from '../assets/images/pagina70_imagem2.webp';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
+
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import pg70_audio1e from "../assets/audios/pg70_audio1e.mp3";
 import pg70_audio1p from "../assets/audios/pg70_audio1p.mp3";
 import pg70_audio2e from "../assets/audios/pg70_audio2e.mp3";
@@ -152,16 +155,16 @@ const pagina70 = () => {
                 <h1 className={styles.pg70HeaderH1}>
                     Learning Language Exercises
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles.pg70AudioIcon}
-                        onClick={() => playAudio(global_learningLEe)}
+                        onClick={() => playAudio(global_learning_le_e)}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles.pg70AudioIcon}
-                        onClick={() => playAudio(global_learningLEp)}
+                        onClick={() => playAudio(global_learning_le_p)}
                     />
                 </h1>
                 <p><span className={styles.pg70RedText}>Word Order:</span> Unscramble the words to form questions.</p>
@@ -223,26 +226,26 @@ const pagina70 = () => {
     <>
         {resultados[fraseIndex] ? (
             <>
-                <img src={vSquare} alt="Correto" className={styles.checkIcon} />
+                <img src={correct_icon} alt="Correto" className={styles.checkIcon} />
 
                 <img
-                    src={eIcon}
+                    src={eng_audio_icon}
                     alt="Play English Audio"
-                    className={styles.eIcon}
+                    className={styles.eng_audio_icon}
                     onClick={() => playAudio(`pg70_audio${fraseIndex + 1}e`)}
                     style={{ cursor: "pointer" }}
                 />
 
                 <img
-                    src={pIcon}
+                    src={ptbr_audio_icon}
                     alt="Play Portuguese Audio"
-                    className={styles.pIcon}
+                    className={styles.ptbr_audio_icon}
                     onClick={() => playAudio(`pg70_audio${fraseIndex + 1}p`)}
                     style={{ cursor: "pointer" }}
                 />
             </>
         ) : (
-            <img src={xSquare} alt="Errado" className={styles.checkIcon} />
+            <img src={wrong_icon} alt="Errado" className={styles.checkIcon} />
         )}
     </>
 )}

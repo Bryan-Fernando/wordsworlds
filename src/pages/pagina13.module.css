@@ -99,7 +99,7 @@
     width: calc(10vw * 0.85);
 }
 
-.pg13VerboAuxiliar {
+.pg13verbo_auxiliar {
     width: calc(10vw * 0.85)
 }
 
@@ -163,10 +163,33 @@
     padding: 1vw;
 }
 
-.pg13AudioText {
+.pg13Icon {
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
+    margin-left: 0.5rem;
+    position: relative;
+    top: 0.3rem;
+    transition: transform 0.2s ease-in-out;
 }
 
+.pg13Icon:hover {
+    transform: scale(1.2);
+}
+
+.page__icon__left {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    position: relative;
+    right: 36%;
+    top: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page__icon__left:hover {
+    transform: scale(1.2);
+}
 
 @media (max-width: 1024px) {
     .pg13StyledTable {

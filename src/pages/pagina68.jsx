@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
+
 import styles from './pagina68.module.css';
-import CarolJohnImage from '../assets/Images/pagina68_imagem1.webp';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
+import CarolJohnImage from '../assets/images/pagina68_imagem1.webp';
+
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import pg68_audio1e from "../assets/audios/pg68_audio1e.mp3";
 import pg68_audio1p from "../assets/audios/pg68_audio1p.mp3";
 import pg68_audio2e from "../assets/audios/pg68_audio2e.mp3";
@@ -24,8 +28,6 @@ import pg68_audio12e from "../assets/audios/pg68_audio12e.mp3";
 import pg68_audio13e from "../assets/audios/pg68_audio13e.mp3";
 import pg68_audio14e from "../assets/audios/pg68_audio14e.mp3";
 import pg68_audio15e from "../assets/audios/pg68_audio15e.mp3";
-
-
 
 const allowedAnswers = [
 
@@ -69,8 +71,8 @@ const allowedAnswers = [
 const Pagina68 = () => {
 
     const audioMap = {
-        global_learningLEe: global_learningLEe,
-        global_learningLEp: global_learningLEp,
+        global_learning_le_e: global_learning_le_e,
+        global_learning_le_p: global_learning_le_p,
         pg68_audio1e: pg68_audio1e,
         pg68_audio1p: pg68_audio1p,
         pg68_audio2e: pg68_audio2e,
@@ -130,28 +132,28 @@ const Pagina68 = () => {
                 <h1 className={styles["page68__title"]}>
                     Learning Language Exercises
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles["page68__audio-icon"]}
-                        onClick={() => playAudio('global_learningLEe')}
+                        onClick={() => playAudio('global_learning_le_e')}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles["page68__audio-icon"]}
-                        onClick={() => playAudio('global_learningLEp')}
+                        onClick={() => playAudio('global_learning_le_p')}
                     />
                 </h1>
                 <h2 className={styles["page68__subtitle"]}>
                     Phone numbers and email addresses.
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles["page68__audio-icon"]}
                         onClick={() => playAudio('pg68_audio1e')}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles["page68__audio-icon"]}
                         onClick={() => playAudio('pg68_audio1p')}
@@ -161,13 +163,13 @@ const Pagina68 = () => {
                 <p className={styles["page68__instructions"]}>
                     Click on the correct word-box to complete the questions/statements.
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles["page68__audio-icon"]}
                         onClick={() => playAudio('pg68_audio2e')}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles["page68__audio-icon"]}
                         onClick={() => playAudio('pg68_audio2p')}
@@ -187,7 +189,7 @@ const Pagina68 = () => {
                                 className={styles["page68__input-box"]}
                             />
                             {results[0] !== null && (
-                                <img src={results[0] ? vSquare : xSquare} alt={results[0] ? "Correct" : "Incorrect"} className={styles["page68__checkmark-image"]} />
+                                <img src={results[0] ? correct_icon : wrong_icon} alt={results[0] ? "Correct" : "Incorrect"} className={styles["page68__checkmark-image"]} />
                             )}
                         </div>
 
@@ -212,7 +214,7 @@ const Pagina68 = () => {
                                 className={styles["page68__input-box"]}
                             />
                             {results[2] !== null && (
-                                <img src={results[2] ? vSquare : xSquare} alt={results[2] ? "Correct" : "Incorrect"} className={styles["page68__checkmark-image"]} />
+                                <img src={results[2] ? correct_icon : wrong_icon} alt={results[2] ? "Correct" : "Incorrect"} className={styles["page68__checkmark-image"]} />
                             )}
                         </div>
 
@@ -237,7 +239,7 @@ const Pagina68 = () => {
                                 className={styles["page68__input-box"]}
                             />
                             {results[4] !== null && (
-                                <img src={results[4] ? vSquare : xSquare} alt={results[4] ? "Correct" : "Incorrect"} className={styles["page68__checkmark-image"]} />
+                                <img src={results[4] ? correct_icon : wrong_icon} alt={results[4] ? "Correct" : "Incorrect"} className={styles["page68__checkmark-image"]} />
                             )}
                         </div>
 
@@ -262,7 +264,7 @@ const Pagina68 = () => {
                                 className={styles["page68__input-box"]}
                             />
                             {results[6] !== null && (
-                                <img src={results[6] ? vSquare : xSquare} alt={results[6] ? "Correct" : "Incorrect"} className={styles["page68__checkmark-image"]} />
+                                <img src={results[6] ? correct_icon : wrong_icon} alt={results[6] ? "Correct" : "Incorrect"} className={styles["page68__checkmark-image"]} />
                             )}
                         </div>
 

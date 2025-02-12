@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import styles from './pagina69.module.css';
+
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
 import pagina69_imagem1 from '../assets/images/pagina69_imagem1.webp';
 import pagina69_imagem2 from '../assets/images/pagina69_imagem2.webp';
-import vSquare from '../assets/icons/vSquare.png';
-import xSquare from '../assets/icons/xSquare.png';
-import eIcon from '../assets/icons/eIcon.png';
-import pIcon from '../assets/icons/pIcon.png';
-import volumeReduzido from '../assets/icons/volumeReduzido.png';
-import global_learningLEe from '../assets/audios/global_learningLEe.mp3';
-import global_learningLEp from '../assets/audios/global_learningLEp.mp3';
+
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import pg69_audio1e from "../assets/audios/pg69_audio1e.mp3";
 import pg69_audio1p from "../assets/audios/pg69_audio1p.mp3";
 import pg69_audio2e from "../assets/audios/pg69_audio2e.mp3";
@@ -37,7 +39,6 @@ const pagina69 = () => {
     const [frasesEmbaralhadas, setFrasesEmbaralhadas] = useState({});
     const [palavrasClicadas, setPalavrasClicadas] = useState({});
     const [resultados, setResultados] = useState([]);
-    const navigate = useNavigate();
     const [velocidadeAudio, setVelocidadeAudio] = useState({});
 
     const respostasCorretas = [
@@ -54,8 +55,8 @@ const pagina69 = () => {
     ];
 
     const audioMap = {
-        global_learningLEe: global_learningLEe,
-        global_learningLEp: global_learningLEp,
+        global_learning_le_e: global_learning_le_e,
+        global_learning_le_p: global_learning_le_p,
         pg69_audio1e, pg69_audio1p,
         pg69_audio2e, pg69_audio2p,
         pg69_audio3e, pg69_audio3p,
@@ -156,16 +157,16 @@ const playAudio = (audioKey, speed = 1.0) => {
                 <h1 className={styles["page69__header-title"]}>
                     Learning Language Exercises
                     <img
-                        src={eIcon}
+                        src={eng_audio_icon}
                         alt="English audio"
                         className={styles["page69__audio-icon"]}
-                        onClick={() => playAudio('global_learningLEe')}
+                        onClick={() => playAudio('global_learning_le_e')}
                     />
                     <img
-                        src={pIcon}
+                        src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles["page69__audio-icon"]}
-                        onClick={() => playAudio('global_learningLEp')}
+                        onClick={() => playAudio('global_learning_le_p')}
                     />
                 </h1>
                 <p><span className={styles["page69__text--red"]}>Word Order:</span> Unscramble the words to form questions.</p>
@@ -228,14 +229,14 @@ const playAudio = (audioKey, speed = 1.0) => {
                                                 <>
                                                     {/* Ícone de Correto */}
                                                     <img
-                                                        src={vSquare}
+                                                        src={correct_icon}
                                                         alt="Correto"
                                                         className={styles["page69__icon--correct"]}
                                                     />
     
                                                     {/* Ícone de Áudio Inglês */}
                                                     <img
-                                                        src={eIcon}
+                                                        src={eng_audio_icon}
                                                         alt="Play English Audio"
                                                         className={styles["icon--english"]}
                                                         onClick={() => playAudio(`pg69_audio${fraseIndex + 1}e`)}
@@ -244,7 +245,7 @@ const playAudio = (audioKey, speed = 1.0) => {
     
                                                     {/* Ícone de Áudio Português */}
                                                     <img
-                                                        src={pIcon}
+                                                        src={ptbr_audio_icon}
                                                         alt="Play Portuguese Audio"
                                                         className={styles["icon--portuguese"]}
                                                         onClick={() => playAudio(`pg69_audio${fraseIndex + 1}p`)}
@@ -253,7 +254,7 @@ const playAudio = (audioKey, speed = 1.0) => {
                                                 </>
                                             ) : (
                                                 <img
-                                                    src={xSquare}
+                                                    src={wrong_icon}
                                                     alt="Errado"
                                                     className={styles["page69__icon--wrong"]}
                                                 />

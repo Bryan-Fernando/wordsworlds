@@ -281,22 +281,22 @@
     height: 2rem;
 }
 
-.pg71EIcon, .pg71PIcon, .pg71VolumeReduzidoIcon {
+.pg71eng_audio_icon, .pg71ptbr_audio_icon, .pg71slow_audio_icon {
     position: absolute;
     width: 2rem;
     height: 2rem;
     cursor: pointer;
 }
 
-.pg71EIcon {
+.pg71eng_audio_icon {
     right: 9rem;
 }
 
-.pg71PIcon {
+.pg71ptbr_audio_icon {
     right: 6rem;
 }
 
-.pg71VolumeReduzidoIcon {
+.pg71slow_audio_icon {
     right: 3rem;
     top: 2%;
 }
@@ -312,7 +312,7 @@
     transform: scale(1.1);
 }
 
-.pg71VolumeIcon {
+.pg71Volumeng_audio_icon {
     width: 1.8rem;
     height: 1.8rem;
     cursor: pointer;
@@ -320,7 +320,7 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg71VolumeIcon:hover {
+.pg71Volumeng_audio_icon:hover {
     transform: scale(1.1);
 }
 

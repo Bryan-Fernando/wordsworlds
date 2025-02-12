@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import styles from './pagina60.module.css';
+
+import styles from './pagina75.module.css';
 
 const Pagina75 = () => {
     const [inputValues, setInputValues] = useState(
