@@ -4,6 +4,7 @@ import styles from './pagina35.module.css';
 
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import white_play_icon from '../assets/icons/white_play_icon.png'
 
 import global_verbo_to_be from '../assets/audios/global_verbo_to_be.mp3';
 import global_grammar from '../assets/audios/global_grammar.mp3';
@@ -86,8 +87,8 @@ const Pagina35 = () => {
                             style={{ cursor: 'pointer' }}
                         >
                             <img
-                                src={ptbr_audio_icon}
-                                alt="Portuguese Audio"
+                                src={white_play_icon}
+                                alt="White icon"
                                 className={styles.page__icon__left}
                             />
                             NEGATIVE
@@ -132,10 +133,10 @@ const Pagina35 = () => {
                                     <td className={styles.pg35Adverbio}></td>
                                     <td className={styles.pg35Verbo}></td>
                                     <td className={styles.pg35ObjetivoComplemento} onClick={() => playAudio(pg35Audio1)} style={{ cursor: 'pointer' }}>
-                                        in Maringá
+                                        in Miami
                                     </td>
                                     <td className={styles.pg35Traducao} onClick={() => playAudio(traducaoAudio1)} style={{ cursor: 'pointer' }}>
-                                        Nós não estamos em Maringá
+                                        Nós não estamos em Miami
                                     </td>
                                 </tr>
                                 <tr>

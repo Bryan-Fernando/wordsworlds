@@ -24,16 +24,16 @@ const Pagina116 = () => {
 
     return (
         <div>
-            <div className={styles.pg115Container}>
-                <header className={styles.pg115Header}>
+            <div className={styles.pg116Container}>
+                <header className={styles.pg116Header}>
                     <h1>Grammar</h1>
-                    <h2 className={styles.pg115HeaderH2}>Simple Present (Presente Simples)</h2>
+                    <h2 className={styles.pg116HeaderH2}>Simple Present (Presente Simples)</h2>
                     <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
                 </header>
-                <main className={styles.pg115Main}>
+                <main className={styles.pg116Main}>
                     <div>
-                        <div className={styles.pg115TableHeader}>INTERROGATIVE</div>
-                        <table className={styles.pg115StyledTable}>
+                        <div className={styles.pg116TableHeader}>INTERROGATIVE</div>
+                        <table className={styles.pg116StyledTable}>
                             <thead>
                                 <tr>
                                     <th>Palavras interrogativas</th>
@@ -50,7 +50,7 @@ const Pagina116 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.pg115InputCell}
+                                                    className={styles.pg116InputCell}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) =>
@@ -69,8 +69,8 @@ const Pagina116 = () => {
                             </tbody>
                         </table>
 
-                        <div className={styles.pg115TableHeader}>AFFIRMATIVE</div>
-                        <table className={styles.pg115StyledTable}>
+                        <div className={styles.pg116TableHeader}>AFFIRMATIVE</div>
+                        <table className={styles.pg116StyledTable}>
                             <thead>
                                 <tr>
                                     <th>Introdução</th>
@@ -88,7 +88,7 @@ const Pagina116 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.pg115InputCell}
+                                                    className={styles.pg116InputCell}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) =>
@@ -107,8 +107,8 @@ const Pagina116 = () => {
                             </tbody>
                         </table>
 
-                        <div className={styles.pg115TableHeader}>NEGATIVE</div>
-                        <table className={styles.pg115StyledTable}>
+                        <div className={styles.pg116TableHeader}>NEGATIVE</div>
+                        <table className={styles.pg116StyledTable}>
                             <thead>
                                 <tr>
                                 <th>Introdução</th>
@@ -125,7 +125,7 @@ const Pagina116 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.pg115InputCell}
+                                                    className={styles.pg116InputCell}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) =>

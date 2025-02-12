@@ -4,6 +4,7 @@ import styles from './pagina34.module.css';
 
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import white_play_icon from '../assets/icons/white_play_icon.png'
 
 import global_verbo_to_be from '../assets/audios/global_verbo_to_be.mp3';
 import global_grammar from '../assets/audios/global_grammar.mp3';
@@ -19,6 +20,9 @@ import pg34Audio1 from '../assets/audios/pg34_audio1.mp3';
 import pg34Audio2 from '../assets/audios/pg34_audio2.mp3';
 import pg34Audio3 from '../assets/audios/pg34_audio3.mp3';
 import pg34Audio4 from '../assets/audios/pg34_audio4.mp3';
+import pg34Audio2_1 from '../assets/audios/pg34_audio2_1.mp3';
+import pg34Audio3_1 from '../assets/audios/pg34_audio3_1.mp3';
+import pg34Audio4_1 from '../assets/audios/pg34_audio4_1.mp3';
 import traducaoAudio1 from '../assets/audios/pg34_trad1.mp3';
 import traducaoAudio2 from '../assets/audios/pg34_trad2.mp3';
 import traducaoAudio3 from '../assets/audios/pg34_trad3.mp3';
@@ -27,10 +31,16 @@ import pg5Audio2 from '../assets/audios/pg5_audio2.mp3';
 import traducao5Audio1 from '../assets/audios/pg5_trad1.mp3';
 import pg26Audio2 from '../assets/audios/pg26_audio2.mp3';
 import pg9Audio1 from '../assets/audios/pg9_audio1.mp3';
+import pg26Audio2_1 from '../assets/audios/pg26_audio2_1.mp3';
+import pg9Audio1_1 from '../assets/audios/pg9_audio1_1.mp3';
 import traducao9Audio1 from '../assets/audios/pg9_trad1.mp3';
 import traducao26Audio2 from '../assets/audios/pg26_trad2.mp3';
 import pg30Audio1 from '../assets/audios/pg30_audio1.mp3';
+import pg30Audio1_1 from '../assets/audios/pg30_audio1_1.mp3';
 import traducao30Audio1 from '../assets/audios/pg30_trad1.mp3';
+
+
+
 const Pagina34 = () => {
     const [inputValues, setInputValues] = useState(
         Array(2).fill(Array(6).fill(''))
@@ -95,8 +105,8 @@ const Pagina34 = () => {
                             style={{ cursor: 'pointer' }}
                         >
                             <img
-                                src={ptbr_audio_icon}
-                                alt="Portuguese Audio"
+                                src={white_play_icon}
+                                alt="White icon"
                                 className={styles.page__icon__left}
                             />
                             AFFIRMATIVE
@@ -145,6 +155,7 @@ const Pagina34 = () => {
                                     <td className={styles.page__table__translation} onClick={() => playAudio(traducao5Audio1)}
                                     style={{ cursor: 'pointer'}}>Eu estou no trabalho</td>
                                 </tr>
+                                
                                 <tr>
                                     <td className={styles.pg34Sujeito} onClick={() => playAudio(pg34Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         I
@@ -212,6 +223,22 @@ const Pagina34 = () => {
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td className={styles.pg34Sujeito} onClick={() => playAudio(pg34Audio2_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                        He
+                                    </td>
+                                    <td className={styles.pg34verbo_auxiliar} onClick={() => playAudio(pg34Audio2_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                        's
+                                    </td>
+                                    <td className={styles.pg34Adverbio}></td>
+                                    <td className={styles.pg34Verbo}></td>
+                                    <td className={styles.pg34ObjetivoComplemento} onClick={() => playAudio(pg34Audio2_1)} style={{ cursor: 'pointer' }}>
+                                        at work
+                                    </td>
+                                    <td className={styles.pg34Traducao} onClick={() => playAudio(traducaoAudio2)} style={{ cursor: 'pointer' }}>
+                                        Ele  está no trabalho
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td className={styles.pg34Sujeito} onClick={() => playAudio(pg34Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         She
                                     </td>
@@ -228,6 +255,22 @@ const Pagina34 = () => {
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td className={styles.pg34Sujeito} onClick={() => playAudio(pg34Audio3_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                        She
+                                    </td>
+                                    <td className={styles.pg34verbo_auxiliar} onClick={() => playAudio(pg34Audio3_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                        's
+                                    </td>
+                                    <td className={styles.pg34Adverbio}></td>
+                                    <td className={styles.pg34Verbo}></td>
+                                    <td className={styles.pg34ObjetivoComplemento} onClick={() => playAudio(pg34Audio3_1)} style={{ cursor: 'pointer' }}>
+                                        27 years old
+                                    </td>
+                                    <td className={styles.pg34Traducao} onClick={() => playAudio(traducaoAudio3)} style={{ cursor: 'pointer' }}>
+                                        Ela  tem 27 anos
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td className={styles.pg34Sujeito} onClick={() => playAudio(pg34Audio4)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         It
                                     </td>
@@ -237,6 +280,22 @@ const Pagina34 = () => {
                                     <td className={styles.pg34Adverbio}></td>
                                     <td className={styles.pg34Verbo}></td>
                                     <td className={styles.pg34ObjetivoComplemento} onClick={() => playAudio(pg34Audio4)} style={{ cursor: 'pointer' }}>
+                                        sunny
+                                    </td>
+                                    <td className={styles.pg34Traducao} onClick={() => playAudio(traducaoAudio4)} style={{ cursor: 'pointer' }}>
+                                        Está ensolarado
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className={styles.pg34Sujeito} onClick={() => playAudio(pg34Audio4_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                        It
+                                    </td>
+                                    <td className={styles.pg34verbo_auxiliar} onClick={() => playAudio(pg34Audio4_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                        's
+                                    </td>
+                                    <td className={styles.pg34Adverbio}></td>
+                                    <td className={styles.pg34Verbo}></td>
+                                    <td className={styles.pg34ObjetivoComplemento} onClick={() => playAudio(pg34Audio4_1)} style={{ cursor: 'pointer' }}>
                                         sunny
                                     </td>
                                     <td className={styles.pg34Traducao} onClick={() => playAudio(traducaoAudio4)} style={{ cursor: 'pointer' }}>
@@ -298,7 +357,7 @@ const Pagina34 = () => {
                                         onClick={() => playAudio(pg26Audio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        at the (cinema/the movie/theater)
+                                        at the ( cinema/the movie/theater )
                                     </td>
                                     <td
                                         className={styles.pg26Traducao}
@@ -310,15 +369,48 @@ const Pagina34 = () => {
                                 </tr>
                                 <tr>
                                     <td
+                                        className={styles.pg26Sujeito}
+                                        onClick={() => playAudio(pg26Audio2_1)}
+                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                    >
+                                        We
+                                    </td>
+                                    <td
+                                        className={styles.pg26verbo_auxiliar}
+                                        onClick={() => playAudio(pg26Audio2_1)}
+                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                    >
+                                        're
+                                    </td>
+                                    <td className={styles.pg26Adverbio}></td>
+                                    <td className={styles.pg26Verbo}></td>
+                                    <td
+                                        className={styles.pg26ObjetivoComplemento}
+                                        onClick={() => playAudio(pg26Audio2_1)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        at the ( cinema/the movie/theater )
+                                    </td>
+                                    <td
+                                        className={styles.pg26Traducao}
+                                        onClick={() => playAudio(traducao26Audio2)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        Nós estamos no cinema
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td
                                         className={styles.pg9Sujeito}
-                                        onClick={() => playAudio(pg9Audio1)}
+                                        onClick={() => playAudio(pg9Audio1_1)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         You
                                     </td>
                                     <td
                                         className={styles.pg9verbo_auxiliar}
-                                        onClick={() => playAudio(pg9Audio1)}
+                                        onClick={() => playAudio(pg9Audio1_1)}
                                         style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         are
@@ -327,7 +419,39 @@ const Pagina34 = () => {
                                     <td className={styles.pg9Verbo}></td>
                                     <td
                                         className={styles.pg9ObjetivoComplemento}
-                                        onClick={() => playAudio(pg9Audio1)}
+                                        onClick={() => playAudio(pg9Audio1_1)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        the new director
+                                    </td>
+                                    <td
+                                        className={styles.pg9Traducao}
+                                        onClick={() => playAudio(traducao9Audio1)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        Você é o novo diretor.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        className={styles.pg9Sujeito}
+                                        onClick={() => playAudio(pg9Audio1_1)}
+                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                    >
+                                        You
+                                    </td>
+                                    <td
+                                        className={styles.pg9verbo_auxiliar}
+                                        onClick={() => playAudio(pg9Audio1_1)}
+                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                    >
+                                        're
+                                    </td>
+                                    <td className={styles.pg9Adverbio}></td>
+                                    <td className={styles.pg9Verbo}></td>
+                                    <td
+                                        className={styles.pg9ObjetivoComplemento}
+                                        onClick={() => playAudio(pg9Audio1_1)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         the new director
@@ -369,7 +493,39 @@ const Pagina34 = () => {
                                         onClick={() => playAudio(traducao30Audio1)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        Eles/Elas são do Brasil.
+                                        Eles / Elas são do Brasil.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        className={styles.pg30Sujeito}
+                                        onClick={() => playAudio(pg30Audio1_1)}
+                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                    >
+                                        They
+                                    </td>
+                                    <td
+                                        className={styles.pg30verbo_auxiliar}
+                                        onClick={() => playAudio(pg30Audio1_1)}
+                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                    >
+                                        're
+                                    </td>
+                                    <td className={styles.pg30Adverbio}></td>
+                                    <td className={styles.pg30Verbo}></td>
+                                    <td
+                                        className={styles.pg30ObjetivoComplemento}
+                                        onClick={() => playAudio(pg30Audio1_1)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        from Brazil
+                                    </td>
+                                    <td
+                                        className={styles.pg30Traducao}
+                                        onClick={() => playAudio(traducao30Audio1)}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        Eles / Elas são do Brasil.
                                     </td>
                                 </tr>
                             </tbody>

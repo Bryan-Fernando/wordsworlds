@@ -100,7 +100,6 @@ const Pagina2 = () => {
                             className={styles["page2__icon"]}
                             onClick={() => playAudio(pg2Audio1p)}
                         /></h1>
-
                 </header>
 
                 <main className={styles["page2__main"]}>

@@ -5,6 +5,7 @@ import styles from './pagina6.module.css';
 import pg6IconNotes from '../assets/icons/notes_icon.webp';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import white_play_icon from '../assets/icons/white_play_icon.png'
 
 import globalVerboToBe from '../assets/audios/global_verbo_to_be.mp3';
 import globalGrammar from '../assets/audios/global_grammar.mp3';
@@ -94,8 +95,8 @@ const Pagina6 = () => {
                             style={{ cursor: 'pointer' }}
                         >
                             <img
-                                src={ptbr_audio_icon}
-                                alt="Portuguese Audio"
+                                src={white_play_icon}
+                                alt="White Icon"
                                 className={styles.page__icon__left}
                             />
                             NEGATIVE

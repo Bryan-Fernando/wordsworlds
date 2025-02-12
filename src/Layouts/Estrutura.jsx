@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+
 import './Estrutura.css';
+
 import { useNavigate, useLocation } from 'react-router-dom';
 
 function Estrutura({ children, backgroundColor, routes = [] }) {
@@ -74,7 +76,7 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
       <main
         className="mainEstrutura"
         style={{ backgroundColor: backgroundColor || 'white' }}
-      >
+       >
         <div className="side">
           <p className="wordside">Words and Worlds</p>
           <p className="englishside">ENGLISH COURSE</p>

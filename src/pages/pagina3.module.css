@@ -1,28 +1,28 @@
-.page__container {
+.page3__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.page__header {
+.page3__header {
     width: 100%;
     text-align: left;
     color: #a61c28;
 }
 
-.page__main {
+.page3__main {
     width: 100%;
     text-align: center;
 }
 
-.page__main img {
+.page3__main img {
     width: 25%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
 }
 
-.page__aside {
+.page3__aside {
     margin: 0;
     height: 20rem;
     width: 100%;
@@ -31,18 +31,18 @@
     list-style-position: inside;
 }
 
-.page__aside__header {
+.page3__aside-header {
     width: 45%;
     color: #a61c28;
 }
 
-.page__aside__list {
+.page3__aside-list {
     width: 50%;
     font-size: 2.2rem;
     margin-top: 1rem;
 }
 
-.page__icon {
+.page3__icon {
     width: 2rem;
     height: 2rem;
     margin-left: 0.5rem;
@@ -50,31 +50,29 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.page__icon:hover {
+.page3__icon:hover {
     transform: scale(1.1);
 }
 
-
-
 @media (max-width: 1024px) {
-    .page__main {
+    .page3__main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 0.1rem;
     }
 
-    .page__main img {
+    .page3__main img {
         width: 100%;
         aspect-ratio: 1 / 1;
         object-fit: cover;
     }
 
-    .page__aside {
+    .page3__aside {
         flex-direction: column;
         height: 100%;
     }
 
-    .page__aside div {
+    .page3__aside div {
         width: 100%;
     }
 }

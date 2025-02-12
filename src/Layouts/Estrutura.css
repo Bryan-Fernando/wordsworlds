@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* 
@@ -63,14 +62,15 @@ aside {
     height: 100%;
     margin: auto;
     display: flex;
-    /* Usando Flexbox */
     position: relative;
+    flex-wrap: nowrap;
+    overflow: hidden;
 }
 
 .side {
     width: 8%;
     height: auto;
-    min-height: 100%;
+    min-height: auto;
     background-color: #A61C28;
     position: relative;
     border-top-right-radius: 1rem;

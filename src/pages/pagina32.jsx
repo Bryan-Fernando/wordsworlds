@@ -4,6 +4,7 @@ import styles from './pagina32.module.css';
 
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import white_play_icon from '../assets/icons/white_play_icon.png'
 
 import global_verbo_to_be from '../assets/audios/global_verbo_to_be.mp3';
 import global_grammar from '../assets/audios/global_grammar.mp3';
@@ -86,8 +87,8 @@ const Pagina32 = () => {
                             style={{ cursor: 'pointer' }}
                         >
                             <img
-                                src={ptbr_audio_icon}
-                                alt="Portuguese Audio"
+                                src={white_play_icon}
+                                alt="White icon"
                                 className={styles.page__icon__left}
                             />
                             AFFIRMATIVE INTERROGATIVE

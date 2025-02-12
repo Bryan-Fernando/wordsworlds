@@ -4,6 +4,7 @@ import styles from './pagina8.module.css';
 
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import white_play_icon from '../assets/icons/white_play_icon.png'
 
 import interrogativa_nAudio from '../assets/audios/interrogativa_n.mp3';
 import global_verbo_to_be from '../assets/audios/global_verbo_to_be.mp3';
@@ -88,8 +89,8 @@ const Pagina8 = () => {
                             style={{ cursor: 'pointer' }}
                         >
                             <img
-                                src={ptbr_audio_icon}
-                                alt="Portuguese Audio"
+                                src={white_play_icon}
+                                alt="White icon"
                                 className={styles.page__icon__left}
                             />
                             NEGATIVE INTERROGATIVE

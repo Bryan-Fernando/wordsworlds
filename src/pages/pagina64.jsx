@@ -5,7 +5,7 @@ import styles from "./pagina64.module.css";
 import eng_audio_icon from "../assets/icons/eng_audio_icon.webp";
 import ptbr_audio_icon from "../assets/icons/ptbr_audio_icon.webp";
 
-import imagemUnica from "../assets/images/pagina64_imagem1.png"; 
+import imagemUnica from "../assets/images/pagina64_imagem1.webp"; 
 import segundaImagem from "../assets/images/pagina64_imagem2.webp"; 
 import terceiraImagem from "../assets/images/pagina64_imagem3.webp";  
 import quartaImagem from "../assets/images/pagina64_imagem4.webp";  

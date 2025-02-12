@@ -7,14 +7,18 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Node modules e builds
 node_modules
 dist
 dist-ssr
 *.local
 
-# Editor directories and files
-.vscode/*
+# Arquivos de dependências gerados
+.vite/*
 !.vscode/extensions.json
+
+# Configurações de IDE
+.vscode/*
 .idea
 .DS_Store
 *.suo
@@ -22,3 +26,16 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Lockfiles
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Ignore package.json em subdiretórios específicos (como .vite/deps)
+.vite/deps/package.json
+.vite/deps/_metadata.json
+.vite/deps/react.js
+.vite/deps/react.js.map
+
+

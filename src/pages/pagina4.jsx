@@ -55,15 +55,15 @@ const Pagina4 = () => {
     };
 
     return (
-        <div className={styles.page}>
-            <div className={styles.page__container}>
-                <header className={styles.page__header}>
-                    <h1 className={styles.page__header__title}>
+        <div className={styles["page4"]}>
+            <div className={styles["page4__container"]}>
+                <header className={styles["page4__header"]}>
+                    <h1 className={styles["page4__header-title"]}>
                         Grammar To Be (Be)
                         <img
                             src={eng_audio_icon}
                             alt="English Audio"
-                            className={styles.page__icon}
+                            className={styles["page4__icon"]}
                             onClick={(e) => {
                                 e.stopPropagation();
                                 playAudio(pg4_audio1e);
@@ -72,19 +72,19 @@ const Pagina4 = () => {
                         <img
                             src={ptbr_audio_icon}
                             alt="Portuguese Audio"
-                            className={styles.page__icon}
+                            className={styles["page4__icon"]}
                             onClick={(e) => {
                                 e.stopPropagation();
                                 playAudio(pg4_audio1p);
                             }}
                         />
                     </h1>
-                    <h2 className={styles.page__header__subtitle}>
+                    <h2 className={styles["page4__header-subtitle"]}>
                         Subject Pronouns
                         <img
                             src={eng_audio_icon}
                             alt="English Audio"
-                            className={styles.page__icon}
+                            className={styles["page4__icon"]}
                             onClick={(e) => {
                                 e.stopPropagation();
                                 playAudio(pg4_audio2e);
@@ -93,7 +93,7 @@ const Pagina4 = () => {
                         <img
                             src={ptbr_audio_icon}
                             alt="Portuguese Audio"
-                            className={styles.page__icon}
+                            className={styles["page4__icon"]}
                             onClick={(e) => {
                                 e.stopPropagation();
                                 playAudio(pg4_audio2p);
@@ -101,268 +101,268 @@ const Pagina4 = () => {
                         />
                     </h2>
                 </header>
-                <main className={styles.page__main}>
-                    <table className={styles.page__table}>
+                <main className={styles["page4__main"]}>
+                    <table className={styles["page4__table"]}>
                         <thead>
                             <tr>
-                                <th className={styles.page__table__header}>I</th>
-                                <th className={styles.page__table__header}>He</th>
-                                <th className={styles.page__table__header}>She</th>
-                                <th className={styles.page__table__header}>It</th>
-                                <th className={styles.page__table__header}>We</th>
-                                <th className={styles.page__table__header}>You</th>
-                                <th className={styles.page__table__header}>You and...</th>
-                                <th className={styles.page__table__header}>They</th>
+                                <th className={styles["page4__table-header"]}>I</th>
+                                <th className={styles["page4__table-header"]}>He</th>
+                                <th className={styles["page4__table-header"]}>She</th>
+                                <th className={styles["page4__table-header"]}>It</th>
+                                <th className={styles["page4__table-header"]}>We</th>
+                                <th className={styles["page4__table-header"]}>You</th>
+                                <th className={styles["page4__table-header"]}>You and...</th>
+                                <th className={styles["page4__table-header"]}>They</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td className={styles.page__table__cell}>Eu</td>
-                                <td className={styles.page__table__cell}>Ele</td>
-                                <td className={styles.page__table__cell}>Ela</td>
-                                <td className={styles.page__table__cell}>(Não traduzir)</td>
-                                <td className={styles.page__table__cell}>Nós</td>
-                                <td className={styles.page__table__cell}>Você</td>
-                                <td className={styles.page__table__cell}>Você e... / Vocês</td>
-                                <td className={styles.page__table__cell}>Eles/Elas</td>
+                                <td className={styles["page4__table-cell"]}>Eu</td>
+                                <td className={styles["page4__table-cell"]}>Ele</td>
+                                <td className={styles["page4__table-cell"]}>Ela</td>
+                                <td className={styles["page4__table-cell"]}>(Não traduzir)</td>
+                                <td className={styles["page4__table-cell"]}>Nós</td>
+                                <td className={styles["page4__table-cell"]}>Você</td>
+                                <td className={styles["page4__table-cell"]}>Você e... / Vocês</td>
+                                <td className={styles["page4__table-cell"]}>Eles/Elas</td>
                             </tr>
                             <tr>
-                                <td className={`${styles.page__table__cell} ${styles.page__table__highlight}`}>I am</td>
-                                <td colSpan="3" className={`${styles.page__table__cell} ${styles.page__table__highlight}`}>He is/ She is/ It is</td>
-                                <td colSpan="4" className={`${styles.page__table__cell} ${styles.page__table__highlight}`}>We are/ You are/ They are</td>
+                                <td className={`${styles["page4__table-cell"]} ${styles["page4__table-highlight"]}`}>I am</td>
+                                <td colSpan="3" className={`${styles["page4__table-cell"]} ${styles["page4__table-highlight"]}`}>He is/ She is/ It is</td>
+                                <td colSpan="4" className={`${styles["page4__table-cell"]} ${styles["page4__table-highlight"]}`}>We are/ You are/ They are</td>
                             </tr>
                         </tbody>
                     </table>
                 </main>
-                <hr className={styles.page__divider} />
-                <aside className={styles["page__aside"]}>
-                    <div className={styles["page__aside__affirmative"]}>
+                <hr className={styles["page4__divider"]} />
+
+                <aside className={styles["page4__aside"]}>
+                    <div className={styles["page4__aside-affirmative"]}>
                         <div>
-                            <h3 className={styles["page__aside__title"]}>AFFIRMATIVE</h3>
-                            <p className={styles["page__clickable"]}>
+                            <h3 className={styles["page4__aside-title"]}>AFFIRMATIVE</h3>
+                            <p>
                                 I am = I’m a student
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(imastu)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(pg4_audio3p)}
                                 />
                             </p>
                             <hr />
-                            <p className={styles["page__clickable"]}>
+                            <p>
                                 He is = He’s a teacher
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(heisateacher)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(pg4_audio4p)}
                                 />
                             </p>
-                            <p className={styles["page__clickable"]}>
+                            <p>
                                 She is = She’s married
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(sheismarried)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(pg4_audio5p)}
                                 />
                             </p>
-                            <p className={styles["page__clickable"]}>
+                            <p>
                                 It is = It’s hot
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(itshot)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(pg4_audio6p)}
                                 />
                             </p>
                             <hr />
-                            <p className={styles["page__clickable"]}>
+                            <p>
                                 We are = We’re Brazilians
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(wearebrazil)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(pg4_audio7p)}
                                 />
                             </p>
-                            <p className={styles["page__clickable"]}>
+                            <p>
                                 You are = You’re single
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(youaresingle)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(pg4_audio8p)}
                                 />
                             </p>
-                            <p className={styles["page__clickable"]}>
+                            <p>
                                 They are = They’re from Portugal
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(theyarefromport)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(pg4_audio9p)}
                                 />
                             </p>
                         </div>
                     </div>
 
-                    <div className={styles["page__aside__negative"]}>
+                    <div className={styles["page4__aside-negative"]}>
                         <div>
-                            <h3 className={styles["page__aside__title"]}>NEGATIVE</h3>
-                            <p className={styles["page__clickable"]}>
+                            <h3 className={styles["page4__aside-title"]}>NEGATIVE</h3>
+                            <p>
                                 I’m not Spanish
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(imnotspanish)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(pg4_audio10p)}
                                 />
                             </p>
                             <hr />
-                            <p className={styles["page__clickable"]}>
+                            <p>
                                 He’s not a lawyer
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(heisnotalaw)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(pg4_audio11p)}
                                 />
                             </p>
-                            <p className={styles["page__clickable"]}>
+                            <p>
                                 She’s not single
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(sheisnotsingle)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(pg4_audio12p)}
                                 />
                             </p>
-                            <p className={styles["page__clickable"]}>
+                            <p>
                                 It’s not cold
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(itsnotcold)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(pg4_audio13p)}
                                 />
                             </p>
                             <hr />
-                            <p className={styles["page__clickable"]}>
+                            <p>
                                 We’re not Portuguese
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(werenotportuguese)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(pg4_audio14p)}
                                 />
                             </p>
-                            <p className={styles["page__clickable"]}>
+                            <p>
                                 You’re not Italian
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(yourenotitalian)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(pg4_audio15p)}
                                 />
                             </p>
-                            <p className={styles["page__clickable"]}>
+                            <p>
                                 They’re not Brazilians
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(theyarenotbrazil)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles["page__icon"]}
+                                    className={styles["page4__icon"]}
                                     onClick={() => playAudio(pg4_audio16p)}
                                 />
                             </p>
                         </div>
                     </div>
                 </aside>
-
             </div>
         </div>
     );

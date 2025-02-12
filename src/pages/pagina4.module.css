@@ -1,10 +1,10 @@
-.page__container {
+.page4__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.page__table {
+.page4__table {
     table-layout: auto;
     border-collapse: collapse;
     width: 100%;
@@ -14,61 +14,61 @@
     overflow: hidden;
 }
 
-.page__table__header,
-.page__table__cell {
+.page4__table-header,
+.page4__table-cell {
     border: 0.1rem solid #ddd;
     padding: 1.2rem;
     text-align: center;
     width: 0;
 }
 
-.page__table__header {
+.page4__table-header {
     background-color: #e7f3f9;
     font-weight: bold;
     font-size: 2rem;
     color: black !important;
 }
 
-.page__table__cell {
+.page4__table-cell {
     background-color: #f9fbfc;
     font-size: 2.5rem;
 }
 
-.page__table tr:nth-child(even) td {
+.page4__table tr:nth-child(even) td {
     background-color: #f3f8fc;
     font-size: 2.5rem;
 }
 
-.page__divider {
+.page4__divider {
     border: 0.3rem solid #b30000;
     width: 100%;
     margin: 2rem 0;
 }
 
-.page__table__highlight {
+.page4__table-highlight {
     font-weight: bold;
     color: #b30000;
 }
 
-.page__header {
+.page4__header {
     height: 100%;
     width: 100%;
     text-align: left;
     color: #a61c28;
 }
 
-.page__header__title,
-.page__header__subtitle {
+.page4__header-title,
+.page4__header-subtitle {
     color: inherit;
 }
 
-.page__main {
+.page4__main {
     height: 100%;
     width: 100%;
     text-align: center;
 }
 
-.page__aside {
+.page4__aside {
     margin: 0;
     height: 100%;
     width: 100%;
@@ -77,23 +77,23 @@
     list-style-position: inside;
 }
 
-.page__aside__affirmative,
-.page__aside__negative {
+.page4__aside-affirmative,
+.page4__aside-negative {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.page__aside__title {
+.page4__aside-title {
     font-size: 3rem;
     color: #a61c28;
 }
 
-.page__clickable {
+.page4__clickable {
     cursor: pointer;
 }
 
-.page__icon {
+.page4__icon {
     width: 2rem;
     height: 2rem;
     margin-left: 0.5rem;
@@ -101,11 +101,11 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.page__icon:hover {
+.page4__icon:hover {
     transform: scale(1.1);
 }
 
-.page__icon {
+.page4__icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -115,26 +115,25 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.page__icon:hover {
+.page4__icon:hover {
     transform: scale(1.2);
 }
 
-
 @media (max-width: 1080px) {
-    .page__table__header,
-    .page__table__cell {
+    .page4__table-header,
+    .page4__table-cell {
         font-size: 2vw;
         padding: 0.8rem;
     }
 }
 
 @media (max-width: 1024px) {
-    .page__table__header,
-    .page__table__cell {
+    .page4__table-header,
+    .page4__table-cell {
         padding: 0.8rem;
     }
 
-    .page__divider {
+    .page4__divider {
         margin: 0.5rem 0;
     }
 }
